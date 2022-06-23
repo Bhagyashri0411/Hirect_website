@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Satisfied Clientele</h3>
+                <h3>The Influencers' Take on Hirect</h3>
                 <div class="testimonial-carousel">
                     <VueSlickCarousel v-bind="settings" class="carousel">
                         <div class="testimonial-card">
