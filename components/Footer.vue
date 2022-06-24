@@ -1,147 +1,148 @@
 <template>
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="footer-box">
-                    <div class="footer-logo">
-                        <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" alt="" />
-                        </NuxtLink>
-                        <p>
-                            Hire Instantly for Your Startup. <br />Trusted by 2.3M+ verified Jobseekers & <br>verified 120K+ Startups!
-                        </p>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="footer-box">
+                        <div class="footer-logo">
+                            <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" alt="" />
+                            </NuxtLink>
+                            <p>
+                                Hire Instantly for Your Startup. <br /> Already trusted by 2M+ Indians.
+                            </p>
+                        </div>
+                        <div class="footer-whatsapp">
+                            <img src="~/assets/img/whatsapp-icon.svg" alt="" /><a
+                                href="https://api.whatsapp.com/send?phone=+918446164920">+918446164920</a>
+                        </div>
                     </div>
-                    <div class="footer-whatsapp">
-                        <img src="~/assets/img/whatsapp-icon.svg" alt="" /><a href="https://api.whatsapp.com/send?phone=+918446164920">+918446164920</a>
-                    </div>
-                    <ul class="footer-social-link">
-                        <li>
-                            <a href="https://twitter.com/HirectIndia" target="_blank">
-                                <font-awesome-icon :icon="['fab', 'twitter']" /></a>
-                        </li>
-                        <li>
-                            <a href="https://in.linkedin.com/company/hirectapp" target="_blank">
-                                <font-awesome-icon :icon="['fab', 'linkedin']" /></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/hirectindia/" target="_blank">
-                                <font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ" target="_blank">
-                                <font-awesome-icon :icon="['fab', 'youtube']" /></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/hirect_india/" target="_blank">
-                                <font-awesome-icon :icon="['fab', 'instagram']" /></a>
-                        </li>
-                    </ul>
+
                 </div>
-            </div>
-            <div class="col-md-7">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="footer-link">
-                            <h4>Hirect</h4>
-                            <ul>
-                                <li>
-                                    <NuxtLink to="/">Home</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/aboutus">About Us</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/features-in">Features</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/connect">Recruiters</NuxtLink>
-                                </li>
-                                <li><a href="https://www.hirect.in/blog/">Blog</a></li>
-                                <li>
-                                    <NuxtLink to="/job-seeker">Job Seekers</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/startup-hiring">For Startup Hiring</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/contact-us">Contact us</NuxtLink>
-                                </li>
-                            </ul>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="footer-link">
+                                <h4>Hirect</h4>
+                                <ul>
+                                    <li>
+                                        <NuxtLink to="/">Home</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/aboutus">About Us</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/features-in">Features</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/connect">Recruiters</NuxtLink>
+                                    </li>
+                                    <li><a href="https://www.hirect.in/blog/">Blog</a></li>
+                                    <li>
+                                        <NuxtLink to="/job-seeker">Job Seekers</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/startup-hiring">For Startup Hiring</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/contact-us">Contact us</NuxtLink>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-link">
-                            <h4>Support</h4>
-                            <ul>
-                                <li>
-                                    <a href="mailto:support@hirect.in">Support@hirect.in</a>
-                                </li>
-                                <li>
-                                    <a @click="ScheduleACall">For Recruiters<br />
-                                        Schedule a Call</a>
-                                </li>
-                            </ul>
+                        <div class="col-md-4">
+                            <div class="footer-link">
+                                <h4>Support</h4>
+                                <ul>
+                                    <li>
+                                        <a href="mailto:support@hirect.in">Support@hirect.in</a>
+                                    </li>
+                                    <li>
+                                        <a @click="ScheduleACall">For Recruiters<br />
+                                            Schedule a Call</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-link">
-                            <h4>Legal</h4>
-                            <ul>
-                                <li>
-                                    <NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/termsconditions">Terms & Conditions</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/product-pricing">Product & Pricing</NuxtLink>
-                                </li>
-                                <li>
-                                    <NuxtLink to="/refund-cancellation-policy">Refund Policy</NuxtLink>
-                                </li>
-                                <!-- <li>
+                        <div class="col-md-4">
+                            <div class="footer-link">
+                                <h4>Legal</h4>
+                                <ul>
+                                    <li>
+                                        <NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/termsconditions">Terms & Conditions</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/product-pricing">Product & Pricing</NuxtLink>
+                                    </li>
+                                    <li>
+                                        <NuxtLink to="/refund-cancellation-policy">Refund Policy</NuxtLink>
+                                    </li>
+                                    <!-- <li>
                                     <NuxtLink to="/purchase-flow">Purchase Flow</NuxtLink>
                                 </li> -->
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="copy-right-footer">
-            <div class="row">
-                <div class="col-md-6 copy-right-text">
-                    <h3>© Elephantjob Private Limited. All Rights Reserved.</h3>
-                </div>
-                <div class="col-md-6">
-                    <!-- <div class="change-flage">
-              <a href="https://hirect.us/">
-                <img src="~/assets/img/country-flag.svg" alt="" />
-                <h6>Change Region</h6>
-              </a>
-            </div> -->
-                    <div class="change-flage">
-                        <div class="dropdown">
-                            <a class="dropbtn">
-                                <img src="~/assets/img/country-flag.svg" alt="" />
-                                <h6>Change Region</h6>
-                            </a>
-                            <div class="dropdown-content">
-                                <a class="dropbtn" href="https://hirect.us?changeregion=1">
-                                    <img src="~/assets/img/us-logo.png" alt="" />
-                                    <h6>United States</h6>
+            <div class="copy-right-footer">
+                <ul class="footer-social-link">
+                    <li>
+                        <a href="https://twitter.com/HirectIndia" target="_blank">
+                            <font-awesome-icon :icon="['fab', 'twitter']" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://in.linkedin.com/company/hirectapp" target="_blank">
+                            <font-awesome-icon :icon="['fab', 'linkedin']" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/hirectindia/" target="_blank">
+                            <font-awesome-icon :icon="['fab', 'facebook-f']" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ" target="_blank">
+                            <font-awesome-icon :icon="['fab', 'youtube']" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/hirect_india/" target="_blank">
+                            <font-awesome-icon :icon="['fab', 'instagram']" />
+                        </a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>© Elephantjob Private Limited. All Rights Reserved.</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="change-flage">
+                            <div class="dropdown">
+                                <a class="dropbtn">
+                                    <img src="~/assets/img/country-flag.svg" alt="" />
+                                    <h6>Change Region ^</h6>
                                 </a>
+                                <div class="dropdown-content">
+                                    <a class="dropbtn" href="https://hirect.us?changeregion=1">
+                                        <img src="~/assets/img/us-logo.png" alt="" />
+                                        <h6>United States</h6>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <el-dialog :visible.sync="ScheduleCallVisible" class="schedule-dialog">
+            <ScheduleACall />
+        </el-dialog>
     </div>
-    <el-dialog :visible.sync="ScheduleCallVisible" class="schedule-dialog">
-        <ScheduleACall />
-    </el-dialog>
-</div>
 </template>
 
 <script>
@@ -165,20 +166,20 @@ export default {
 <style lang="scss" scoped>
 .footer {
     background-color: #333333;
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 40px;
 }
 
 .footer-logo p {
     color: #ffffff;
     font-family: Helvetica;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
-    line-height: 24px;
+    line-height: 27px;
     margin-top: 32px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .footer-whatsapp a {
@@ -192,17 +193,20 @@ export default {
     padding-left: 30px;
     text-decoration: none;
 }
+
 .footer-social-link li a svg {
     display: var(--fa-display, inline-block);
     height: 1em;
     overflow: visible;
     vertical-align: -0.125em;
 }
+
 .footer-social-link {
     padding: 0;
     margin: 0;
     list-style: none;
     margin-top: 45px;
+    margin-bottom: 10px;
     display: flex;
 }
 
@@ -243,16 +247,9 @@ export default {
     cursor: pointer;
 }
 
-.copy-right-footer {
-    margin-top: 90px;
-}
-
 .copy-right-footer .row {
     align-items: center;
-}
-
-.copy-right-text {
-    padding-top: 15px;
+    border-top: 2px solid #2ce2a2;
 }
 
 .copy-right-footer h3 {
@@ -332,12 +329,8 @@ export default {
 
 @media only screen and (min-width: 768px) and (max-width: 1299px) {
     .footer {
-        padding-top: 60px;
+        padding-top: 30px;
         padding-bottom: 30px;
-    }
-
-    .copy-right-footer {
-        margin-top: 70px;
     }
 }
 
@@ -350,11 +343,12 @@ export default {
     .footer-logo p {
         font-size: 15px;
         margin-top: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
 
     .footer-social-link {
         margin-top: 35px;
+        margin-bottom: 8px;
     }
 
     .footer-link ul li a {
@@ -374,10 +368,6 @@ export default {
         padding: 2px 5px;
         margin-right: 15px;
         line-height: normal;
-    }
-
-    .copy-right-footer {
-        margin-top: 50px;
     }
 
     .copy-right-footer h3 {
@@ -414,16 +404,13 @@ export default {
 
     .footer-social-link {
         margin-top: 28px;
+        margin-bottom: 6px;
     }
 
     .footer-social-link li a {
         font-size: 19px;
         padding: 1px 5px;
         margin-right: 10px;
-    }
-
-    .copy-right-footer {
-        margin-top: 45px;
     }
 
     .copy-right-footer h3 {
@@ -438,14 +425,14 @@ export default {
     }
 
     .footer {
-        padding-top: 50px;
+        padding-top: 25px;
         padding-bottom: 25px;
     }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
     .footer {
-        padding-top: 50px;
+        padding-top: 25px;
         padding-bottom: 25px;
     }
 
@@ -476,6 +463,7 @@ export default {
 
     .footer-social-link {
         margin-top: 25px;
+        margin-bottom: 9px;
         align-items: center;
         justify-content: center;
     }
@@ -515,10 +503,6 @@ export default {
 
     .footer-link ul li {
         margin-bottom: 4px;
-    }
-
-    .copy-right-footer {
-        margin-top: 15px;
     }
 
     .copy-right-footer h3 {
