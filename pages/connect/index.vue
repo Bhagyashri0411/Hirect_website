@@ -9,7 +9,8 @@
               <div class="px-0.5 py-0.5">
                 <div class="recruiter-banner-details">
                   <h3 class="title-md">
-                    Want to Hire Instantly?
+                    Want to <span style="color: #2ce2a2"> Hire </span> <br />
+                    Instantly?
                     <!-- <br />Chat Directly and Hire Now! -->
                   </h3>
                   <p>
@@ -18,7 +19,7 @@
                     without consultants, and with 100% data privacy!
                   </p>
                   <div class="recruiter-banner-img">
-                    <img src="~/assets/img/recruiter-banner.svg" alt="" />
+                    <img src="~/assets/imgs/recruiter-banner.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -35,15 +36,49 @@
       </div>
     </section>
 
+    <section class="job-available-section">
+      <div class="hire-chat">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="hire-now">
+                <h2>
+                  <span style="color: #2ce2a2"> Hirect </span> - India's First
+                  Job App
+                </h2>
+                <p>
+                  Hirect app is the best job portal for SMEs and Startups. This
+                  mobile-first chat-based platform houses 120K+ verified
+                  startups who are pleased to be a part of the startup ecosystem
+                  hiring on this job portal website. Since zero consultants are
+                  involved, it eliminates any spam or scam calls, and the entire
+                  recruitment process is 100% secure.
+                </p>
+                <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
+                                Instant Hiring
+                            </a> -->
+                <NuxtLink class="btn default-btn button-sm" to="/connect"
+                  >Hire Now</NuxtLink
+                >
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="hire-now-img">
+                <img src="~/assets/imgs/india's-first-job.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!----startup start----------->
     <section class="recruiter-startup-section startup-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="startup-section-heading">
-              <h3 class="title-md">
-                Direct and Instant Hiring. Join the list of leading companies.
-              </h3>
+              <h3 class="title-md">Seamless Hiring Process in 3 Steps</h3>
             </div>
           </div>
         </div>
@@ -75,83 +110,135 @@
     </section>
     <!----startup end----------->
 
-    <!--======= Login Recruiter Popup =======-->
-    <!-- <el-dialog
-      :visible.sync="RecruiterLoginDialogVisible"
-      class="recruiter-dialog"
-    >
-      <section class="recruiter-login-popup">
+    <section class="job-available-section">
+      <div class="hire-chat">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
-              <h3 class="title-md">
-                Are you a recruiter? Log in <br />to Hire people.
-              </h3>
-              <div class="recruiter-form">
-                <form>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Email / Number"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Password"
-                    />
-                    <button type="button" class="btn eye-button">
-                      <font-awesome-icon :icon="['fas', 'eye']" />
-                    </button>
-                  </div>
-                  <div class="form-pageLink">
-                    <NuxtLink class="forget-password" to=""
-                      >Forgot password</NuxtLink
-                    >
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn default-btn button-sm login-btn"
-                  >
-                    Log in
-                  </button>
-                </form>
-                <div class="recruiter-social-login">
-                  <p>Or</p>
-                  <h5>Sign in with Google</h5>
-                  <ul>
-                    <li>
-                      <NuxtLink class="forget-password" to=""
-                        ><img src="~/assets/img/google-icon.svg" alt=""
-                      /></NuxtLink>
-                    </li>
-                    <li>
-                      <NuxtLink class="forget-password" to=""
-                        ><img src="~/assets/img/linkedin-icon.svg" alt=""
-                      /></NuxtLink>
-                    </li>
-                    <li>
-                      <NuxtLink class="forget-password" to=""
-                        ><img src="~/assets/img/facebook-icon.svg" alt=""
-                      /></NuxtLink>
-                    </li>
-                  </ul>
-                </div>
+            <div class="col-md-7">
+              <div class="hire-now-img">
+                <img src="~/assets/imgs/simplify-hiring-rocess.png" alt="" />
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="recruiter-form-img">
-                <img src="~/assets/img/recruiter-login.svg" alt="" />
+            <div class="col-md-5">
+              <div class="hire-now">
+                <h2>Simplify Hiring Process for Startups and SMEs</h2>
+                <p>
+                  Hirect is India's 1st direct hiring platform focused on
+                  solving the unique problem of the longwinded traditional
+                  hiring process. Hirect app is designed specifically for
+                  recruiters who can instantly connect with candidates searching
+                  for jobs in Indian Startups. This chat-based, direct hiring
+                  platform is designed for high-growth startups to meet their
+                  hiring needs without consultants.
+                </p>
+                <p>
+                  Hirect is a direct hiring app for hiring managers. There are
+                  about 2.8 Million job seekers on this app across 70+
+                  categories. The AI algorithm of this job app will filter only
+                  the best-fit candidate, thus helping the hiring managers to
+                  reach out to only candidates with the best skills and
+                  experience. Recruiters vouch for this new job app as it helps
+                  nurture the talent pipeline and speed up the hiring process
+                  without compromising the quality of the candidates. The app
+                  allows the hiring managers to chat directly with candidates
+                  and get instant feedback.
+                </p>
+                <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
+                                Instant Hiring
+                            </a> -->
+                <NuxtLink class="btn default-btn button-hire-now" to="/connect"
+                  >Hire Now</NuxtLink
+                >
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </el-dialog> -->
+      </div>
+    </section>
 
-    <!--=======  end Login Recruiter Popup =======-->
+    <section class="recruiter-startup-section startup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="startup-section-heading">
+              <h3 class="title-md">Key Features of Hirect</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="startups-logo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="jobs-list">
+                <ul class="startups-logo-list">
+                  <li>
+                    <img
+                      src="~/assets/imgs/Chat-Directly-and-Get-Instant-Response.svg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="~/assets/imgs/AI-Algorithm-Matched-Candidates.svg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="~/assets/imgs/100%-Secure-Video-Interviews.svg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="~/assets/imgs/Direct-and-Instant-Notifications.svg"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recruiter-startup-section startup-section ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="startup-section-heading">
+              <h3 class="title-md">FAQs</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="startups-logo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="jobs-list">
+                <ul class="startups-logo-list">
+                  <li><img src="~/assets/img/lenskart-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/byju-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/ajio-logo.png" alt="" /></li>
+                  <li>
+                    <img src="~/assets/img/square-yard-logo.png" alt="" />
+                  </li>
+                  <li><img src="~/assets/img/flipkart-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/udaan-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/amazon-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/upgrad-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/freecharge-logo.png" alt="" /></li>
+                  <li><img src="~/assets/img/walmart-logo.png" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <GetAppPage :eventName="'in_recruiters_bottom'" />
     <Footer />
   </div>
@@ -243,34 +330,141 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.recruiter-banner-details h3.title-md {
+  //  position: absolute;
+  width: 522px;
+  height: 120px;
+  left: 131px;
+  top: 154px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 60px;
+}
+
+.recruiter-section {
+  padding-bottom: 102px;
+}
 .recruiter-banner {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .recruiter-banner-img {
-  text-align: center;
-  padding-top: 45px;
+  // position: absolute;
+  width: 558px;
+  height: 356px;
+  left: 131px;
+  top: 450px;
+  background: #c4c4c4;
+  border-radius: 15px;
 }
 
-// startups-logo
-.startups-logo {
-  background-color: rgba(109, 141, 173, 0.1);
-  padding-top: 30px;
+// Hire Chat Section
+.hire-chat-section {
+  padding-bottom: 30px;
 }
+
+.hire-chat .row {
+  align-items: center;
+}
+
+.hire-now h2 {
+  // position: absolute;
+  width: 512px;
+  height: 40px;
+  left: 130px;
+  padding-bottom: 120px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.hire-now p {
+  // position: absolute;
+  width: 550px;
+  // height: 120px;
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #76787a;
+}
+
+.hire-now-img {
+  // position: absolute;
+  width: 508px;
+  height: 325px;
+  left: 874px;
+  top: 981px;
+  // background: #c4c4c4;
+  border-radius: 15px;
+}
+
+// end Hire Chat Section
+// jobs-available
+.job-available-section,
+.startup-section {
+  padding-bottom: 102px;
+}
+
+.jobs-available {
+  background-color: #f1f1f1;
+  padding: 35px 0;
+}
+
+.available-list li {
+  border-radius: 25px;
+  background-color: #ffffff;
+  display: flex;
+  padding: 0px 14px;
+  width: 100%;
+  color: #000000;
+  font-size: 18px;
+  //   font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 244px;
+  height: 160px;
+
+  .candi-value {
+    font-size: 14px;
+    color: #808080;
+  }
+}
+
+.available-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.available-list li {
+  width: 224%;
+  margin-bottom: 30px;
+}
+
+.available-list li:nth-child(6n) {
+  margin-right: 0;
+}
+
+// end jobs-available
 
 .startups-logo-list {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .startups-logo-list li {
-  width: 12%;
-  margin-bottom: 45px;
+  // width: 12%;
+  // margin-bottom: 45px;
 }
 
 .startup-section-heading {
@@ -331,6 +525,14 @@ export default {
 .recruiter-form-call .form-group input::placeholder,
 .recruiter-form-call .input-group input::placeholder {
   color: #b4b4b4;
+}
+
+.button-hire-now {
+    height: 42px;
+    width: 156px;
+    border-radius: 100px;
+    background: #2ce2a2;
+    padding: 10px 0;
 }
 
 button.btn.eye-button {
@@ -566,9 +768,9 @@ button.btn.eye-button {
   text-align: center;
 }
 
-.startups-logo-list li img {
-  filter: grayscale(100%);
-}
+// .startups-logo-list li img {
+//   filter: grayscale(100%);
+// }
 
 .form-check-input:checked {
   background-color: #000000;
@@ -578,14 +780,19 @@ button.btn.eye-button {
 .recruiter-banner-details {
   width: 100%;
   max-width: 540px;
-  padding-top: 35px;
 }
 
 .recruiter-banner-details p {
-  font-size: 20px;
-  line-height: 32px;
+  // position: absolute;
+  width: 559px;
+  height: 74px;
+  left: 131px;
+  margin-bottom: 60px;
+  font-style: normal;
   font-weight: 400;
-  color: #808080;
+  font-size: 16px;
+  line-height: 24px;
+  color: #76787a;
 }
 
 .recruiter-form-call {
@@ -603,11 +810,12 @@ button.btn.eye-button {
 
 .Schedule-call {
   background: #ffffff;
-  box-shadow: 6px 6px 30px #6d8dad26;
-  border-radius: 12px;
-  padding: 25px 50px 40px;
-  max-width: 526px;
-  margin-left: auto;
+  box-shadow: 6px 6px 30px rgba(109, 141, 173, 0.25);
+  border-radius: 24px;
+  max-width: 476px;
+  position: absolute;
+  height: 648px;
+  right: 130px;
 }
 
 // end startups-logo

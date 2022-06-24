@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="schedule-a-call contact-ue-form">
-      <p class="schedule-title">Schedule a call now!</p>
-      <p class="schedule-text">Your next hire is right here. Get started.</p>
+      <p class="schedule-title">Take Your First Step to Register</p>
+      <p class="schedule-text">Your Next Hire is Right Here. Get Started Soon.</p>
       <div class="input-container">
         <el-input
           id="user-name"
@@ -374,12 +374,12 @@ export default {
 .schedule-a-call.contact-ue-form p.schedule-title {
   color: #333333;
   font-family: Helvetica;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   font-style: normal;
   letter-spacing: normal;
-  line-height: normal;
-  margin: 0;
+  line-height: 30px;
+  text-align: center;
 }
 
 .schedule-a-call.contact-ue-form .submitButton {
@@ -398,14 +398,15 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form p.schedule-text {
-  color: #808080;
+  color: #4D5358;
   font-family: Helvetica;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
   line-height: 24px;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 h3.allredy-link {
@@ -427,17 +428,14 @@ h3.allredy-link a {
 }
 
 .schedule-a-call /deep/ .el-input__inner {
-  height: 48px;
-  border-radius: 2px;
-  background-color: #f7f7f7;
-  color: #0e101a;
-  font-family: Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  border-color: #f7f7f7 !important;
+  width: 388px;
+    height: 42px;
+    border-radius: 50px;
+    background-color: #F2F4F8;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 24px;
+    border-color: #f7f7f7 !important;
 }
 
 .schedule-a-call /deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
