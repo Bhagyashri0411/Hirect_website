@@ -6,25 +6,53 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>
-              Direct <span style="color: #2ce2a2"> Hiring</span> App for
-              Founders, <br />
+            <h1>Direct <span style="color:#2ce2a2"> Hiring</span> App for Founders, <br />
               Team Leaders and HRs
             </h1>
             <p>
-              Sifting through various resumes and shortlisting candidates can be
-              time-consuming Scheduling numerous interviews
+              Sifting through various resumes and shortlisting candidates can be time-consuming Scheduling
+              numerous interviews
               <br />
-              only to hit a dead-end can also be frustrating Outsourcing the
-              process ends up being expensive
+              only to hit a dead-end can also be frustrating Outsourcing the process ends up being
+              expensive
             </p>
             <p>
-              Hirect solves this problem Hiring Direct is the way to go. Hirect,
-              the mobile-first chat based hiring app, enables the
+              Hirect solves this problem Hiring Direct is the way to go. Hirect, the mobile-first chat
+              based hiring app, enables the
               <br />
-              Recruiters to chat directly with the candidates, who are 100%
-              verified With Hirect hiring is instant and direct.
+              Recruiters to chat directly with the candidates, who are 100% verified With Hirect hiring is
+              instant and direct.
             </p>
+          </div>
+          <div class="col-md-12">
+            <div class="form-search">
+              <div class="autocomplete">
+                <div class="MuiAutocomplete-fullWidth" role="combobox" aria-expanded="false">
+                  <div class="location">
+
+                    <font-awesome-icon icon="fa-solid fa-briefcase-blank" />
+                    <span class="label"> Candidate's Skillsets </span>
+                  </div>
+                </div>
+              </div>
+              <div class="autocomplete">
+                <div class="MuiAutocomplete-fullWidth" role="combobox" aria-expanded="false">
+                  <div class="location" style="border-right: 0;">
+                    <i class="fa-regular fa-briefcase-blank"></i>
+                    <span class="label"> Hiring location </span>
+                  </div>
+                </div>
+              </div>
+              <div class="autocomplete"> <button type="button" class="start-hiring">
+                  Start Hiring
+                </button>
+              </div>
+
+            </div>
+
+
+
+
           </div>
         </div>
       </div>
@@ -69,16 +97,9 @@
                 </div> -->
                 <div class="input-container">
                   <div class="Sgdef">+65</div>
-                  <el-input
-                    @focus="inputFocus(2)"
-                    maxlength="8"
-                    placeholder="XXXX-YYYY"
-                    class="input-item"
-                  >
+                  <el-input @focus="inputFocus(2)" maxlength="8" placeholder="XXXX-YYYY" class="input-item">
                   </el-input>
-                  <NuxtLink class="btn default-btn button-sm" to="/connect"
-                    >Get App</NuxtLink
-                  >
+                  <NuxtLink class="btn default-btn button-sm" to="/connect">Get App</NuxtLink>
                 </div>
               </div>
             </div>
@@ -102,58 +123,30 @@
               <div class="jobs-list">
                 <ul class="available-list">
                   <li>
-                    <span
-                      >IT Sector <br /><span class="candi-value"
-                        >68 Candidate available</span
-                      ></span
-                    >
+                    <span>IT Sector <br /><span class="candi-value">68 Candidate available</span></span>
                   </li>
                   <li>
-                    <span
-                      >Design & Development <br /><span class="candi-value"
-                        >124 Candidate available</span
-                      ></span
-                    >
+                    <span>Design & Development <br /><span class="candi-value">124 Candidate available</span></span>
                   </li>
                   <li>
-                    <span
-                      >Business & Consulting <br /><span class="candi-value"
-                        >26 Candidate available</span
-                      ></span
-                    >
+                    <span>Business & Consulting <br /><span class="candi-value">26 Candidate available</span></span>
                   </li>
                   <li>
-                    <span
-                      >Project Management <br />
-                      <span class="candi-value"
-                        >68 Candidate available</span
-                      ></span
-                    >
+                    <span>Project Management <br />
+                      <span class="candi-value">68 Candidate available</span></span>
                   </li>
                 </ul>
               </div>
               <div class="jobs-list">
                 <ul class="available-list">
                   <li>
-                    <span
-                      >Marketing & Communication <br /><span class="candi-value"
-                        >68 Candidate available</span
-                      ></span
-                    >
+                    <span>Marketing & Communication <br /><span class="candi-value">68 Candidate available</span></span>
                   </li>
                   <li>
-                    <span
-                      >Human Resources <br /><span class="candi-value"
-                        >124 Candidate available</span
-                      ></span
-                    >
+                    <span>Human Resources <br /><span class="candi-value">124 Candidate available</span></span>
                   </li>
                   <li>
-                    <span
-                      >Customer & Support Care <br /><span class="candi-value"
-                        >26 Candidate available</span
-                      ></span
-                    >
+                    <span>Customer & Support Care <br /><span class="candi-value">26 Candidate available</span></span>
                   </li>
                   <li><span>View All</span></li>
                 </ul>
@@ -183,9 +176,7 @@
                 <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
                                 Instant Hiring
                             </a> -->
-                <NuxtLink class="btn default-btn button-sm" to="/connect"
-                  >Instant Hiring</NuxtLink
-                >
+                <NuxtLink class="btn default-btn button-sm" to="/connect">Instant Hiring</NuxtLink>
               </div>
             </div>
             <div class="col-md-7">
@@ -215,9 +206,7 @@
                 <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
                                 Instant Hiring
                             </a> -->
-                <NuxtLink class="btn default-btn button-sm" to="/connect"
-                  >Instant Hiring</NuxtLink
-                >
+                <NuxtLink class="btn default-btn button-sm" to="/connect">Instant Hiring</NuxtLink>
               </div>
             </div>
           </div>
@@ -405,6 +394,7 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+
 .Sgdef {
   width: 70px;
   background-color: #e0e0e0;
@@ -419,32 +409,112 @@ export default {
   padding: 0 20px;
   cursor: pointer;
 }
+
 .candi-value {
   font-size: 14px;
 }
 
-// banner
+// 1 st div
 .direct-banner {
   padding: 110px 0;
 }
 
 .direct-banner h1 {
-  color: #0e101a;
-  font-size: 50px;
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
-  text-align: center;
-  margin-bottom: 30px;
+    color: #0e101a;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .direct-banner p {
-  color: #808080;
-  text-align: center;
-  font-size: 14px;
-  margin-bottom: 15px;
+    color: #808080;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
+
+.form-search {
+    display: flex;
+    position: relative;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: auto;
+    height: 55px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0px 10px 0px 26px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(223, 225, 230);
+    // box-shadow: rgb(0 0 0 / 16%) 0px 0px 2px, rgb(0 0 0 / 8%) 0px 4px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    border-radius: 32px;
+
+    .autocomplete {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        max-width: 30%;
+
+        .MuiAutocomplete-fullWidth {
+            width: 100%;
+        }
+    }
+
+    .autocomplete:nth-child(3) {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.start-hiring {
+    height: 55px;
+    background-color: #2ce2a2;
+    display: flex;
+    color: #000;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 15px;
+    border: none;
+    padding: 15px 30px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+.location {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-right: 2px solid #808080;
+}
+
+.location span.label {
+    min-width: max-content;
+    margin-left: 10px;
+    font-size: 13px;
+    color: #808080;
+}
+
+.location input {
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    color: rgb(23, 43, 77);
+    max-width: 180px;
+}
+
+.location .MuiAutocomplete-endAdornment {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+// end 1st div
 .direct-Candidates.two {
   padding-left: 56px;
 }
@@ -564,7 +634,7 @@ export default {
   width: 100%;
   color: #000000;
   font-size: 18px;
-//   font-weight: bold;
+  //   font-weight: bold;
   line-height: 24px;
   text-align: center;
   align-items: center;
@@ -572,7 +642,7 @@ export default {
   max-width: 244px;
   height: 160px;
 
-  .candi-value{
+  .candi-value {
     font-size: 14px;
     color: #808080;
   }
@@ -657,6 +727,7 @@ export default {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
   .hire-now h2,
   .direct-banner h1,
   .direct-text h2 {
