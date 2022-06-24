@@ -71,41 +71,16 @@
                   We will send you a link to your phone open <br />
                   it to download the app.
                 </p>
-                <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
-                                Get Connected
-                            </a> -->
-
-                <!-- <div class="input-container">
-                  <el-input
-                    @focus="inputFocus(2)"
-                    maxlength="10"
-                    placeholder="Enter 10 digit mobile number"
-                    class="input-item"
-                    style="width: 440px;"
-                  >
-                    <el-select
-                      slot="prepend"
-                      placeholder="+91"
-                      style="width: 70px; border-radius: 50px;"
-                    >
-                      <el-option label="+91" value="+91"></el-option>
-                    </el-select>
-                  </el-input>
-                  <NuxtLink class="btn default-btn button-sm" to="/connect"
-                    >Get App</NuxtLink
-                  >
-                </div> -->
                 <div class="input-container">
-                  <div class="Sgdef">+65</div>
-                  <el-input @focus="inputFocus(2)" maxlength="8" placeholder="XXXX-YYYY" class="input-item">
-                  </el-input>
-                  <NuxtLink class="btn default-btn button-sm" to="/connect">Get App</NuxtLink>
+                  <div class="Sgdef">+91 |</div>
+                  <input type="text" class="form-search-mob" placeholder="Enter Mobile Number..." />
+                  <button class=" btn btn-app">Get App</button>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="hire-now-img">
-                <img src="~/assets/imgs/chat-directly-new.png" alt="" />
+                <img src="~/assets/imgs/chat-directly-new.png" alt="" style="margin-left:150px" />
               </div>
             </div>
           </div>
@@ -392,22 +367,48 @@ export default {
 /******** Home Page **********/
 .input-container {
   display: flex;
-  justify-content: space-between;
+  align-items: stretch;
 }
 
 .Sgdef {
-  width: 70px;
-  background-color: #e0e0e0;
   position: absolute;
   color: #b0b2b8;
+  z-index: 1;
+  font-size: 13px;
+  padding: 13px 20px;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 5px 0px 0px 5px;
-  border: 0px;
-  height: 8%;
-  z-index: 1;
-  padding: 0 20px;
-  cursor: pointer;
+}
+
+.btn-app {
+  border-radius: 20px;
+  background-color: #2ce2a2;
+  border-color: #2ce2a2;
+  color: #0E101A;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 30px;
+  line-height: normal;
+  margin-left: 20px;
+}
+
+.form-search-mob {
+  display: flex;
+  position: relative;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 45px;
+  width: 65%;
+  color: #808080;
+  font-size: 13px;
+  padding: 0px 10px 0px 60px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(223, 225, 230);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  border-radius: 32px;
 }
 
 .candi-value {
@@ -420,100 +421,101 @@ export default {
 }
 
 .direct-banner h1 {
-    color: #0e101a;
-    font-size: 50px;
-    font-weight: bold;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: center;
-    margin-bottom: 30px;
+  color: #0e101a;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .direct-banner p {
-    color: #808080;
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 15px;
+  color: #808080;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 
 .form-search {
-    display: flex;
-    position: relative;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: auto;
-    height: 55px;
-    max-width: 700px;
-    width: 100%;
-    margin-top: 30px;
-    padding: 0px 10px 0px 26px;
-    background: rgb(255, 255, 255);
-    border: 2px solid rgb(223, 225, 230);
-    // box-shadow: rgb(0 0 0 / 16%) 0px 0px 2px, rgb(0 0 0 / 8%) 0px 4px 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
-    border-radius: 32px;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: auto;
+  height: 55px;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0px 10px 0px 26px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(223, 225, 230);
+  // box-shadow: rgb(0 0 0 / 16%) 0px 0px 2px, rgb(0 0 0 / 8%) 0px 4px 8px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  border-radius: 32px;
 
-    .autocomplete {
-        -webkit-box-flex: 1;
-        flex-grow: 1;
-        max-width: 30%;
+  .autocomplete {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 30%;
 
-        .MuiAutocomplete-fullWidth {
-            width: 100%;
-        }
+    .MuiAutocomplete-fullWidth {
+      width: 100%;
     }
+  }
 
-    .autocomplete:nth-child(3) {
-        position: absolute;
-        right: 0;
-    }
+  .autocomplete:nth-child(3) {
+    position: absolute;
+    right: 0;
+  }
 }
 
 .start-hiring {
-    height: 55px;
-    background-color: #2ce2a2;
-    display: flex;
-    color: #000;
-    font-weight: bold;
-    justify-content: center;
-    font-size: 15px;
-    border: none;
-    padding: 15px 30px;
-    border-top-right-radius: 32px;
-    border-bottom-right-radius: 32px;
+  height: 55px;
+  background-color: #2ce2a2;
+  display: flex;
+  color: #000;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 15px;
+  border: none;
+  padding: 15px 30px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 
 .location {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border-right: 2px solid #808080;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border-right: 2px solid #808080;
 }
 
 .location span.label {
-    min-width: max-content;
-    margin-left: 10px;
-    font-size: 13px;
-    color: #808080;
+  min-width: max-content;
+  margin-left: 10px;
+  font-size: 13px;
+  color: #808080;
 }
 
 .location input {
-    border: none;
-    background: transparent;
-    font-weight: 500;
-    color: rgb(23, 43, 77);
-    max-width: 180px;
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  color: rgb(23, 43, 77);
+  max-width: 180px;
 }
 
 .location .MuiAutocomplete-endAdornment {
-    position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
 }
+
 // end 1st div
 .direct-Candidates.two {
   padding-left: 56px;
