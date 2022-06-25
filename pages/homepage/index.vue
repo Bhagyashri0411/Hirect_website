@@ -87,7 +87,7 @@
             </div>
             <div class="col-md-6">
               <div class="hire-now-img">
-                <img src="~/assets/imgs/chat-directly-new.png" alt="" style="margin-left:150px" />
+                <img src="~/assets/imgs/chat-directly-new.png" alt="" />
               </div>
             </div>
           </div>
