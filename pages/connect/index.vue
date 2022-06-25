@@ -64,7 +64,7 @@
             </div>
             <div class="col-md-5">
               <div class="hire-now-img">
-                <img src="~/assets/imgs/india's-first-job.png" alt="" />
+                <img src="~/assets/imgs/india_s-first-job.png" alt="" />
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@
                   </li>
                   <li>
                     <img
-                      src="~/assets/imgs/100%-Secure-Video-Interviews.svg"
+                      src="~/assets/imgs/100_-Secure-Video-Interviews.svg"
                       alt=""
                     />
                   </li>
@@ -210,6 +210,7 @@
           <div class="col-md-12">
             <div class="startup-section-heading">
               <h3 class="title-md">FAQs</h3>
+              <Faq :FaqData="faqList"/>
             </div>
           </div>
         </div>
@@ -289,6 +290,38 @@ export default {
           value: "Others",
           label: "Others",
         },
+      ],
+      faqList:[
+        {
+            id: 1,
+            isShown:false,
+            question: "Question 1",
+            answer: "Answer 1"
+          },
+          {
+            id: 2,
+            isShown:false,
+            question: "Question 2",
+            answer: "Answer 2"
+          },
+          {
+            id: 3,
+            isShown:false,
+            question: "Question 3 ",
+            answer: "Answer 3"
+          },
+          {
+            id: 4,
+            isShown:false,
+            question: "Question 4",
+            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec rutrum purus, ut tempor dui. Quisque euismod nec ex ac volutpat. Maecenas interdum tortor vel turpis condimentum congue. Fusce porttitor ac ipsum at tempus. Nulla placerat aliquet augue, nec porta enim pharetra ac. Phasellus imperdiet vel augue non condimentum. Cras."
+          },
+          {
+            id: 5,
+            isShown:false,
+            question: "Question 5",
+            answer: "Answer 5"
+          }
       ],
       getUserInf: {
         userPosition: "",
@@ -460,11 +493,6 @@ export default {
   list-style: none;
   display: flex;
   justify-content: space-between;
-}
-
-.startups-logo-list li {
-  // width: 12%;
-  // margin-bottom: 45px;
 }
 
 .startup-section-heading {

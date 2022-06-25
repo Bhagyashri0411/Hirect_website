@@ -2,7 +2,9 @@
   <div>
     <div class="schedule-a-call contact-ue-form">
       <p class="schedule-title">Take Your First Step to Register</p>
-      <p class="schedule-text">Your Next Hire is Right Here. Get Started Soon.</p>
+      <p class="schedule-text">
+        Your Next Hire is Right Here. Get Started Soon.
+      </p>
       <div class="input-container">
         <el-input
           id="user-name"
@@ -26,7 +28,7 @@
             v-model="getUserInf.phoneArea"
             slot="prepend"
             placeholder="+91"
-            style="width: 100px"
+            style="width: 68px"
           >
             <el-option label="+91" value="+91"></el-option>
             <el-option label="+1" value="+1"></el-option>
@@ -82,7 +84,7 @@
       <el-checkbox
         v-model="getUserInf.isReceive"
         class="schedule-checkbox"
-        style="color: #78787a"
+        style="color: #78787a; margin-left: 22px"
         >I would like to receive updates via whatsapp.</el-checkbox
       >
       <el-button
@@ -90,7 +92,15 @@
         class="submitButton"
         :loading="isButtonLoading"
         @click="submitClick"
-        >Submit</el-button
+        >Sign Up</el-button
+      >
+      <div class="next-or"><span>-OR-</span></div>
+      <el-button
+        type="primary outline-dark"
+        class="Scheduleacallnow"
+        :loading="isButtonLoading"
+        @click="submitClick"
+        >Schedule a call now!</el-button
       >
       <!-- <h3 class="allredy-link">
             Already registered user?<a target="blink" href="https://recruiter.hirect.in/">Login
@@ -383,22 +393,41 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .submitButton {
-  border-radius: 2px;
+ border-radius: 50px;
   background-color: #2ce2a2;
-  color: #ffffff;
-  font-family: Helvetica;
+  color: #000000;
   font-size: 16px;
+  height: 42px;
+  width: 388px;
+  left: 44px;
+  top: 492px;
+}
+
+.schedule-a-call.contact-ue-form .next-or {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b4b4b4;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.schedule-a-call.contact-ue-form .Scheduleacallnow {
+  box-sizing: border-box;
+  position: absolute;
+  width: 388px;
+  height: 42px;
+  // left: 44px;
+  top: 574px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #000000;
   font-weight: 700;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
-  text-align: center;
-  height: unset;
-  padding: 12px 0;
 }
 
 .schedule-a-call.contact-ue-form p.schedule-text {
-  color: #4D5358;
+  color: #4d5358;
   font-family: Helvetica;
   font-size: 16px;
   font-weight: 400;
@@ -429,13 +458,13 @@ h3.allredy-link a {
 
 .schedule-a-call /deep/ .el-input__inner {
   width: 388px;
-    height: 42px;
-    border-radius: 50px;
-    background-color: #F2F4F8;
-    font-weight: 400;
-    letter-spacing: normal;
-    line-height: 24px;
-    border-color: #f7f7f7 !important;
+  height: 42px;
+  border-radius: 50px;
+  background-color: #f2f4f8;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+  border-color: #f7f7f7 !important;
 }
 
 .schedule-a-call /deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
@@ -471,6 +500,7 @@ h3.allredy-link a {
   // box-shadow: 0px 23px 47px 0px rgba(0, 0, 0, 0.12);
   border-radius: 16px;
   text-align: left;
+  padding: 0 20px;
 
   .schedule-title {
     font-size: 48px;
