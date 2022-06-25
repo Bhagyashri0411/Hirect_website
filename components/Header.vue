@@ -2,87 +2,62 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <NuxtLink class="navbar-brand" to="/"
-          ><img src="~/assets/img/hirect-logo.png" alt=""
-        /></NuxtLink>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <NuxtLink class="navbar-brand" to="/"><img src="~/assets/img/hirect-logo.png" alt="" /></NuxtLink>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="
+          <ul class="
               navbar-nav
               ms-auto
               my-2 my-lg-0
               navbar-nav-scroll
               nav-dropdown-link
-            "
-          >
+            ">
             <li class="nav-item">
               <NuxtLink exact class="nav-link" to="/">Home</NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
             </li>
-            <!-- <li class="nav-item">
-              <NuxtLink class="nav-link" to="/aboutus"> Recruiters</NuxtLink>
-            </li> -->
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/features-in">
-                Enteriprise Hiring</NuxtLink
-              >
+                Enteriprise Hiring</NuxtLink>
             </li>
             <!-- <li class="nav-item">
               <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
             </li> -->
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/job-seeker">
-                Job Seekers</NuxtLink
-              >
+                Job Seekers</NuxtLink>
             </li>
             <li class="nav-item">
-              <button
-                type="button"
-                class="btn default-btn button-sm download-btn"
-                @click="downloadDialogShow"
-              >
+              <button type="button" class="btn default-btn button-sm download-btn" @click="downloadDialogShow">
                 Download App
               </button>
             </li>
-            <li class="nav-item">
-              <input id="menu__toggle" type="checkbox" />
-              <label class="menu__btn" for="menu__toggle"> </label>
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#secondnavbar" aria-controls="navbarScroll"
+              aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse nav-coll" id="secondnavbar">
+              <ul>
+                <li class="nav-item">
+                  <NuxtLink class="sec-nav-link" to="/aboutus"> About us</NuxtLink>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.hirect.in/blog/" class="sec-nav-link"> Blog</a>
+                </li>
+              </ul>
+            </div>
 
-               <ul class="menu__box">
-             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/aboutus"> About us</NuxtLink>
-            </li>
-           <li class="nav-item">
-              <a href="https://www.hirect.in/blog/" class="nav-link"> Blog</a>
-              </li>
-        </ul>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
     <el-dialog :visible.sync="videoDialogVisible" class="watch-demo-popup">
-      <video
-        width="100%"
-        controls
-        preload="none"
-        autoplay="autoplay"
-        id="videoPlay"
-      >
+      <video width="100%" controls preload="none" autoplay="autoplay" id="videoPlay">
         <source src="~/assets/video/hirect-demo-video.mp4" type="video/mp4" />
       </video>
     </el-dialog>
@@ -131,64 +106,89 @@ export default {
 
 <style scoped>
 /* new css */
- #menu__toggle {
-        opacity: 0;
-    }
- #menu__toggle:checked~.menu__box {
-        right: 0 !important;
-    }
 
-  
+.nav-coll {
+  position: absolute;
+  top: 78px;
+  right: 0;
+  z-index: 999;
+  background-color: #ffffff !important;
+  padding: 20px 60px;
+  box-shadow: 0 10px 20px 0 #e3e3e340;
+}
+  .navbar-light .navbar-nav .nav-item .sec-nav-link {
+    color: #333333;
+    font-family: Helvetica;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 70px;
+    position: relative;
+    cursor: pointer;
+  }
+.nav-coll ul {
+  list-style: none;
+  padding: 0;
+}
 
-    .menu__btn>span,
-    .menu__btn>span::before,
-    .menu__btn>span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #616161;
-        transition-duration: .25s;
-    }
+#menu__toggle {
+  opacity: 0;
+}
 
-    .menu__btn>span::before {
-        content: '';
-        top: -8px;
-    }
+#menu__toggle:checked~.menu__box {
+  right: 0 !important;
+}
 
-    .menu__btn>span::after {
-        content: '';
-        top: 8px;
-    }
 
-    .menu__box {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100px;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background-color: #ECEFF1;
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-        transition-duration: .25s;
-    }
 
-    .menu__item {
-        display: block;
-        padding: 12px 24px;
-        color: #333;
-        font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-weight: 600;
-        text-decoration: none;
-        transition-duration: .25s;
-    }
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
 
-    .menu__item:hover {
-        background-color: #CFD8DC;
-    }
+.menu__btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100px;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
 
 /* end  */
 .navbar-light .navbar-nav .nav-link {

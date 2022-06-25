@@ -125,7 +125,7 @@
                             <div class="dropdown">
                                 <a class="dropbtn">
                                     <img src="~/assets/img/country-flag.svg" alt="" />
-                                    <h6>Change Region ^</h6>
+                                    <h6>Change Region </h6>
                                 </a>
                                 <div class="dropdown-content">
                                     <a class="dropbtn" href="https://hirect.us?changeregion=1">
