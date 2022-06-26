@@ -1,128 +1,96 @@
 <template>
-<div class="client-testimonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Satisfied Clientele</h3>
-                <div class="testimonial-carousel">
-                    <VueSlickCarousel v-bind="settings" class="carousel">
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-user">
-                                <div class="client-img">
-                                    <img src="~/assets/img/hemant-shah.png" alt="" />
-                                </div>
-                                <div class="testimonial-info">
-                                    <h4>Hemant Shah</h4>
-                                    <h5>Founder <br />Gfxbandits & ITEdvantage</h5>
-                                </div>
-                            </div>
-                            <p>
-                                Recently we came across Hirect, the best job app to use.
-                                User-friendly and free of cost. Job seekers found on Hirect
-                                are very professional. I recommend this app because Hirect
-                                takes only the valid and correct information from the
-                                employers and then approves. The app has a great pool of
-                                candidates. I Highly recommend this application.
-                            </p>
-                        </div>
+<div>
+    <div class="client-testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3> The Influencers' Take on Hirect</h3>
+                    <div class="testimonial-carousel">
 
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-user">
-                                <div class="client-img">
-                                    <img src="~/assets/img/rhea-nair.png" alt="" />
-                                </div>
-                                <div class="testimonial-info">
-                                    <h4>Rhea Nair</h4>
-                                    <h5>Recruitment Executive Expertrons</h5>
-                                </div>
-                            </div>
-                            <p>
-                                Hirect App is very convenient and easy-going. We were able to
-                                set up the profile easily with the guide. The registration
-                                process was quick. Thanks to this job application, we were
-                                able to get candidates with a click, and we could also screen
-                                them very easily. Highly recommended to all the Recruiters and
-                                Jobseekers.
-                            </p>
-                        </div>
+                        <VueSlickCarousel v-bind="settings">
+                            <div class="testimonial-card">
+                                <div class="testimonial-card-user">
+                                    <div class="client-img">
+                                        <img src="~/assets/imgs/Ankur.png" alt="" />
+                                    </div>
 
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-user">
-                                <div class="client-img">
-                                    <img src="~/assets/img/pravin.png" alt="" />
-                                </div>
-                                <div class="testimonial-info">
-                                    <h4>Pravin Vidhyadharan</h4>
-                                    <h5>Founder & CEO <br />Namas industries</h5>
+                                    <div class="testimonial-info">
+                                        <h4>Ankur Warikoo</h4>
+                                        <h5>Entrepreneur, Public speaker, Angel investor</h5>
+                                        <p>
+                                            "Recently, I'd done a story on the perks that people get as a part of the
+                                            warikroo team that we have, and we got a lot of amazing responses. But, on
+                                            such a big scale, hiring becomes a bit easy. What if you are actually small?
+                                            What if you are just starting out? What if you are an HR Recruiter looking
+                                            for some finite specific skills? It becomes hard, and that's why Hirect.
+                                            Hirect allows you to chat directly with 23 Million candidates. There is 100%
+                                            privacy. It's like WhatsApp chatting with people that your would want to
+                                            recruit. And that's why it's become such a meaningful way to get straight
+                                            into the talent without any consultants involved. Check them out!"
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <p>
-                                Hirect App is very user-friendly. I managed to set up my
-                                profile within a few minutes and see the candidates that
-                                matched my job requirement instantly. I would highly recommend
-                                all recruiters to the user the Hirect App!
-                            </p>
-                        </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-card-user">
+                                    <div class="client-img">
+                                        <img src="~/assets/imgs/Kenny.png" alt="" />
+                                    </div>
 
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-user">
-                                <div class="client-img">
-                                    <img src="~/assets/img/younus.png" alt="" />
-                                </div>
-                                <div class="testimonial-info">
-                                    <h4>Younus Shaik</h4>
-                                    <h5>
-                                        Senior HR-Specialist <br />NStarX India Private Limited
-                                    </h5>
+                                    <div class="testimonial-info">
+                                        <h4>Kenny Sebastian</h4>
+                                        <h5>Comedian</h5>
+                                        <p>
+                                            "Hey, Are you in the market, looking for a job? If not, you can ignore this.
+                                            If you hate everyone
+                                            in
+                                            your office, you can check out the Hirect app. Hirect lets you cut through
+                                            the consultants and
+                                            directly talk to the Founders and the recruiters or even the CEO in all majo
+                                            cities like Delhi,
+                                            Hyderabad, Chennai, and Bangalore they've covered everywhere. Every sector
+                                            like IT, EduTech,
+                                            FinTech, and eCommerce they're there. Clients like Lenskart.com UpGrad
+                                            everyone, Hireet has your
+                                            back. So go find that job you want, man and stop dealing with your
+                                            colleagues"
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <p>
-                                Hirect is the best job app to use as it enables direct chat
-                                between recruiters and job seekers. Those seeking work or even
-                                those looking to hire should check out this app. It's a free
-                                application.
-                            </p>
-                        </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-card-user">
+                                    <div class="client-img">
+                                        <img src="~/assets/imgs/Mithila.png" alt="" />
+                                    </div>
 
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-user">
-                                <div class="client-img">
-                                    <img src="~/assets/img/ved-anand.png" alt="" />
-                                </div>
-                                <div class="testimonial-info">
-                                    <h4>Ved Anand</h4>
-                                    <h5>
-                                        TripCart
-                                    </h5>
+                                    <div class="testimonial-info">
+                                        <h4>Mithila Palkar</h4>
+                                        <h5>Indian TV Actress</h5>
+                                        <p>
+                                            "Everyone needs money. That's why you do a good job, right? But, where will
+                                            you get a good joo?
+                                            College placements are just for namesake. You download Hirect and chat
+                                            directly with the Startup
+                                            Founders without any interference from any consultant. Click on the link and
+                                            go go go."
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <p>
-                                Hirect India - Startup Jobs & Hiring App is very user friendly. It is very easy to use. I set up my profile within a few minutes and instantly saw candidates that matched my job requirement. This application has a great pool of candidates, and I was able to hire 2 candidates for my company. I would highly recommend all recruiters to use the Hirect App.
-                            </p>
-                        </div>
+                        </VueSlickCarousel>
 
-                        <div class="testimonial-card">
-                            <div class="testimonial-card-user">
-                                <div class="client-img">
-                                    <img src="~/assets/img/akshay-chavan.png" alt="" />
-                                </div>
-                                <div class="testimonial-info">
-                                    <h4>Akshay Chavan</h4>
-                                    <h5>
-                                        Bosch India
-                                    </h5>
-                                </div>
-                            </div>
-                            <p>
-                                Hirect app is a platform where the recruiter can hire the candidate and jobseeker can get the job. Direct connectivity between recruiter and jobseeker is possible with no consultancy involved. All the recruiters are verified with proper documents, and job seekers' profiles are verified. The app enables direct chat between the recruiter and jobseeker. I recommend the Hirect app to everyone looking to hire or even for jobs.
-                            </p>
-                        </div>
-                    </VueSlickCarousel>
+                    </div>
                 </div>
             </div>
         </div>
+       
     </div>
-</div>
+    
+    <div class="viewall" style="text-align:center">
+                <button class="view-btn"> View More</button>
+              </div>
+     </div>
 </template>
 
 <script>
@@ -136,37 +104,13 @@ export default {
     data() {
         return {
             settings: {
-                arrows: false,
-                dots: true,
-                infinite: false,
-                speed: 500,
-                slidesToShow: 3,
-                initialSlide: 0,
-                responsive: [{
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2,
-                            centerMode: false,
-                            centerPadding: "0px"
-                        }
-                    },
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 1,
-                            centerMode: false,
-                            centerPadding: "0px"
-                        }
-                    },
-                    {
-                        breakpoint: 599,
-                        settings: {
-                            slidesToShow: 1,
-                            centerMode: false,
-                            centerPadding: "0px"
-                        }
-                    }
-                ]
+                "centerMode": true,
+                "centerPadding": "150px",
+                "focusOnSelect": true,
+                "infinite": true,
+                "dots" :true,
+                'slidesToShow': 1,
+                'slidesToScroll': 1,
             }
         };
     }
@@ -174,77 +118,108 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.view-btn {
+  border-radius: 20px;
+  background-color: #fff ;
+  border:1px solid #000;
+  color: #0E101A;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin: 20px 0 60px;
+}
+.slick-active .testimonial-card .client-img {
+    width: 253px;
+    height: 325px;
+    position: relative;
+    width: 253px;
+    height: 325px;
+    background-size: cover;
+    background: center no-repeat;
+    overflow: hidden;
+    filter: grayscale(0);
+}
+
+.testimonial-card .client-img {
+   width: 253px;
+    height: 325px;
+    position: relative;
+    width: 253px;
+    height: 325px;
+    background-size: cover;
+    background: center no-repeat;
+    overflow: hidden;
+    filter: grayscale(1);
+}
 .client-testimonial {
     padding: 40px 0 70px;
-    background: #f1f4f7;
+    padding-top: 0;
 }
 
 .client-testimonial h3 {
     color: #0e101a;
-    font-size: 48px;
+    font-size: 35px;
     font-weight: bold;
     line-height: normal;
-    text-align: left;
+    text-align: center;
     margin-bottom: 40px;
 }
 
 .testimonial-carousel {
-    padding-bottom: 50px;
+    width: 85%;
+    margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 .testimonial-card {
-    height: 460px;
-    border-radius: 10px;
+    // height: 460px;
+    // border-radius: 10px;
     background-color: #fff;
-    padding: 25px 30px;
-    width: 95% !important;
+    padding: 25px 0px;
 }
 
 .slick-list {
     padding: 0px !important;
 }
 
-.testimonial-card .client-img {
-    margin-bottom: 0px;
-}
+
 
 .testimonial-card .client-img img {
-    width: 113px;
-    height: 113px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
 }
 
 .testimonial-card-user {
     display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+    align-items: flex-start;
 }
 
 .testimonial-card h4 {
     color: #0e101a;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
-    line-height: 28px;
+    line-height: 25px;
     text-align: left;
-    margin-bottom: 10px;
 }
 
 .testimonial-card h5 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 15px;
+    line-height: 15px;
     color: #000000;
+    margin-bottom: 15px;
 }
 
 .testimonial-info {
-    padding-left: 20px;
-    width: calc(100% - 113px);
+    padding: 0 50px;
+    width: calc(100% - 200px);
 }
 
 .testimonial-card p {
     color: #808080;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
-    line-height: 24px;
+    line-height: 20px;
     text-align: left;
 }
 
@@ -368,6 +343,8 @@ export default {
 
     .testimonial-carousel {
         padding-bottom: 25px;
+        width: 80%;
+        margin: auto;
     }
 
     .client-testimonial {
