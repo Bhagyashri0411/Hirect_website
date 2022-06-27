@@ -25,13 +25,15 @@
     width: 100%;
     align-items: center;
 }
-.faq-list{
+/* .faq-list{
     width:100%;
     height: auto;
-}
+} */
 
 .question-block{
-    width: 100%;
+   width: 874px;
+    height: 72px;
+    border-radius: 12px;
     background-color: #f2f4f8;
     align-items: center;
     margin: 15px;
@@ -41,11 +43,13 @@
 }
 
 .answer-block{
-    width: 100%;
+    width: 874px;
+    border-radius: 12px;
     padding: 10px;
     margin: 15px;
+    text-align: left;
     margin-top: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%)
 }
 
 .question{

@@ -80,33 +80,30 @@
             <div class="startup-section-heading">
               <h3 class="title-md">Seamless Hiring Process in 3 Steps</h3>
             </div>
+            <MultiStepSegment :stepData="stepFeedData" />
           </div>
         </div>
+        <div class="row">Create Profile Post a Job in 5 Minutes Chat with AI Matched Candidates</div>
+        <NuxtLink class="btn default-btn button-hire-now-seamless" to="/connect"
+                  >Hire Now</NuxtLink>
       </div>
-      <div class="startups-logo">
+      <!-- <div class="startups-logo">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="jobs-list">
                 <ul class="startups-logo-list">
-                  <li><img src="~/assets/img/lenskart-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/byju-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/ajio-logo.png" alt="" /></li>
-                  <li>
-                    <img src="~/assets/img/square-yard-logo.png" alt="" />
-                  </li>
-                  <li><img src="~/assets/img/flipkart-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/udaan-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/amazon-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/upgrad-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/freecharge-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/walmart-logo.png" alt="" /></li>
+                  <li><img src="~/assets/imgs/Create Profile.png" alt="" /></li>
+                  <li><img src="~/assets/imgs/Arrow1.png" alt="" /></li>
+                  <li><img src="~/assets/imgs/Post a Job in 5 Minutes.png" alt="" /></li>
+                  <li><img src="~/assets/imgs/Arrow2.png" alt="" /></li>
+                  <li><img src="~/assets/imgs/Chat with AI Matched Candidates.png" alt="" /></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     <!----startup end----------->
 
@@ -204,37 +201,13 @@
       </div>
     </section>
 
-    <section class="recruiter-startup-section startup-section ">
+    <section class="recruiter-startup-section startup-section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="startup-section-heading">
               <h3 class="title-md">FAQs</h3>
-              <Faq :FaqData="faqList"/>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="startups-logo">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="jobs-list">
-                <ul class="startups-logo-list">
-                  <li><img src="~/assets/img/lenskart-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/byju-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/ajio-logo.png" alt="" /></li>
-                  <li>
-                    <img src="~/assets/img/square-yard-logo.png" alt="" />
-                  </li>
-                  <li><img src="~/assets/img/flipkart-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/udaan-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/amazon-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/upgrad-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/freecharge-logo.png" alt="" /></li>
-                  <li><img src="~/assets/img/walmart-logo.png" alt="" /></li>
-                </ul>
-              </div>
+              <Faq :FaqData="faqList" />
             </div>
           </div>
         </div>
@@ -291,41 +264,56 @@ export default {
           label: "Others",
         },
       ],
-      faqList:[
+      faqList: [
         {
-            id: 1,
-            isShown:false,
-            question: "Question 1",
-            answer: "Answer 1"
-          },
-          {
-            id: 2,
-            isShown:false,
-            question: "Question 2",
-            answer: "Answer 2"
-          },
-          {
-            id: 3,
-            isShown:false,
-            question: "Question 3 ",
-            answer: "Answer 3"
-          },
-          {
-            id: 4,
-            isShown:false,
-            question: "Question 4",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec rutrum purus, ut tempor dui. Quisque euismod nec ex ac volutpat. Maecenas interdum tortor vel turpis condimentum congue. Fusce porttitor ac ipsum at tempus. Nulla placerat aliquet augue, nec porta enim pharetra ac. Phasellus imperdiet vel augue non condimentum. Cras."
-          },
-          {
-            id: 5,
-            isShown:false,
-            question: "Question 5",
-            answer: "Answer 5"
-          }
+          id: 1,
+          isShown: false,
+          question: "Question 1",
+          answer: "Answer 1",
+        },
+        {
+          id: 2,
+          isShown: false,
+          question: "Question 2",
+          answer: "Answer 2",
+        },
+        {
+          id: 3,
+          isShown: false,
+          question: "Question 3 ",
+          answer: "Answer 3",
+        },
+        {
+          id: 4,
+          isShown: false,
+          question: "Question 4",
+          answer:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec rutrum purus, ut tempor dui. Quisque euismod nec ex ac volutpat. Maecenas interdum tortor vel turpis condimentum congue. Fusce porttitor ac ipsum at tempus. Nulla placerat aliquet augue, nec porta enim pharetra ac. Phasellus imperdiet vel augue non condimentum. Cras.",
+        },
+        {
+          id: 5,
+          isShown: false,
+          question: "Question 5",
+          answer: "Answer 5",
+        },
       ],
       getUserInf: {
         userPosition: "",
       },
+      stepFeedData: [
+        {
+          step: 1,
+          imageSrc: "/_nuxt/assets/imgs/step-image.png",
+        },
+        {
+          step: 2,
+          imageSrc: "/_nuxt/assets/imgs/step-image.png",
+        },
+        {
+          step: 3,
+          imageSrc: "/_nuxt/assets/imgs/step-image.png",
+        },
+      ],
     };
   },
 
@@ -556,11 +544,20 @@ export default {
 }
 
 .button-hire-now {
-    height: 42px;
-    width: 156px;
-    border-radius: 100px;
-    background: #2ce2a2;
-    padding: 10px 0;
+  height: 42px;
+  width: 156px;
+  border-radius: 100px;
+  background: #2ce2a2;
+  padding: 10px 0;
+}
+
+.button-hire-now-seamless {
+  height: 42px;
+  width: 156px;
+  border-radius: 100px;
+  background: #2ce2a2;
+  padding: 10px 0;
+  margin: 50px 500px;
 }
 
 button.btn.eye-button {

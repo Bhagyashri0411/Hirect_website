@@ -41,11 +41,7 @@ h6 {
     margin: 0;
     font-family: 'Helvetica';
 }
-
-// .slick-list {
-//     padding-left: 0px !important;
-//     padding-right: 50px !important;
-// }
+  
 .schedule-a-call.contact-ue-form .el-input-group__append,
 .schedule-a-call.contact-ue-form .el-input-group__prepend {
     width: 70px;
@@ -952,10 +948,14 @@ section.recruiter-login-popup .recruiter-form-img {
   }
   .available-list li:hover {
     background-color: #2ce2a2;
+    
+    .candi-value{
+        color: #000000;
+    }
   }
   
   .available-list li {
-    border-radius: 25px;
+    border-radius: 50px 50px 50px 50px / 40px 40px 40px 40px;
     cursor: pointer;
     background-color: #ffffff;
     display: flex;

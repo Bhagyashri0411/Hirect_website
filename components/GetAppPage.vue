@@ -16,7 +16,7 @@
                     ><img
                       id="download-hirect-qrcode"
                       class="qr-code-img"
-                      src="~/assets/img/qr-code-scan23.png"
+                      src="~/assets/imgs/Qr_code_Updated 1.svg"
                       alt=""
                   /></a>
                 </li>
@@ -24,14 +24,14 @@
                   <a
                     href="https://apps.apple.com/US/app/id1518442417?mt=8"
                     target="_blank"
-                    ><img src="~/assets/img/app-store-logo.svg" alt=""
+                    ><img src="~/assets/imgs/bi_apple.svg" alt=""
                   /></a>
                 </li>
                 <li>
                   <a
                     href="https://hirectin.onelink.me/TwhD/b0fe8b20"
                     target="_blank"
-                    ><img src="~/assets/img/google-play-logo.svg" alt=""
+                    ><img src="~/assets/imgs/ion_logo-google-playstore.svg" alt=""
                   /></a>
                 </li>
               </ul>
