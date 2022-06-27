@@ -1,96 +1,108 @@
 <template>
-<div>
-    <div class="client-testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3> The Influencers' Take on Hirect</h3>
-                    <div class="testimonial-carousel">
+    <div>
+        <div class="client-testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3> The Influencers' Take on Hirect</h3>
+                        <div class="testimonial-carousel">
 
-                        <VueSlickCarousel v-bind="settings">
-                            <div class="testimonial-card">
-                                <div class="testimonial-card-user">
-                                    <div class="client-img">
-                                        <img src="~/assets/imgs/Ankur.png" alt="" />
-                                    </div>
+                            <VueSlickCarousel v-bind="settings">
+                                <div class="testimonial-card">
+                                    <div class="testimonial-card-user">
+                                        <div class="client-img">
+                                            <img src="~/assets/imgs/Ankur.png" alt="" />
+                                        </div>
 
-                                    <div class="testimonial-info">
-                                        <h4>Ankur Warikoo</h4>
-                                        <h5>Entrepreneur, Public speaker, Angel investor</h5>
-                                        <p>
-                                            "Recently, I'd done a story on the perks that people get as a part of the
-                                            warikroo team that we have, and we got a lot of amazing responses. But, on
-                                            such a big scale, hiring becomes a bit easy. What if you are actually small?
-                                            What if you are just starting out? What if you are an HR Recruiter looking
-                                            for some finite specific skills? It becomes hard, and that's why Hirect.
-                                            Hirect allows you to chat directly with 23 Million candidates. There is 100%
-                                            privacy. It's like WhatsApp chatting with people that your would want to
-                                            recruit. And that's why it's become such a meaningful way to get straight
-                                            into the talent without any consultants involved. Check them out!"
-                                        </p>
+                                        <div class="testimonial-info">
+                                            <h4>Ankur Warikoo</h4>
+                                            <h5>Entrepreneur, Public speaker, Angel investor</h5>
+                                            <p>
+                                                "Recently, I'd done a story on the perks that people get as a part of
+                                                the
+                                                warikroo team that we have, and we got a lot of amazing responses. But,
+                                                on
+                                                such a big scale, hiring becomes a bit easy. What if you are actually
+                                                small?
+                                                What if you are just starting out? What if you are an HR Recruiter
+                                                looking
+                                                for some finite specific skills? It becomes hard, and that's why Hirect.
+                                                Hirect allows you to chat directly with 23 Million candidates. There is
+                                                100%
+                                                privacy. It's like WhatsApp chatting with people that your would want to
+                                                recruit. And that's why it's become such a meaningful way to get
+                                                straight
+                                                into the talent without any consultants involved. Check them out!"
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-card">
-                                <div class="testimonial-card-user">
-                                    <div class="client-img">
-                                        <img src="~/assets/imgs/Kenny.png" alt="" />
-                                    </div>
+                                <div class="testimonial-card">
+                                    <div class="testimonial-card-user">
+                                        <div class="client-img">
+                                            <img src="~/assets/imgs/Kenny.png" alt="" />
+                                        </div>
 
-                                    <div class="testimonial-info">
-                                        <h4>Kenny Sebastian</h4>
-                                        <h5>Comedian</h5>
-                                        <p>
-                                            "Hey, Are you in the market, looking for a job? If not, you can ignore this.
-                                            If you hate everyone
-                                            in
-                                            your office, you can check out the Hirect app. Hirect lets you cut through
-                                            the consultants and
-                                            directly talk to the Founders and the recruiters or even the CEO in all majo
-                                            cities like Delhi,
-                                            Hyderabad, Chennai, and Bangalore they've covered everywhere. Every sector
-                                            like IT, EduTech,
-                                            FinTech, and eCommerce they're there. Clients like Lenskart.com UpGrad
-                                            everyone, Hireet has your
-                                            back. So go find that job you want, man and stop dealing with your
-                                            colleagues"
-                                        </p>
+                                        <div class="testimonial-info">
+                                            <h4>Kenny Sebastian</h4>
+                                            <h5>Comedian</h5>
+                                            <p>
+                                                "Hey, Are you in the market, looking for a job? If not, you can ignore
+                                                this.
+                                                If you hate everyone
+                                                in
+                                                your office, you can check out the Hirect app. Hirect lets you cut
+                                                through
+                                                the consultants and
+                                                directly talk to the Founders and the recruiters or even the CEO in all
+                                                majo
+                                                cities like Delhi,
+                                                Hyderabad, Chennai, and Bangalore they've covered everywhere. Every
+                                                sector
+                                                like IT, EduTech,
+                                                FinTech, and eCommerce they're there. Clients like Lenskart.com UpGrad
+                                                everyone, Hireet has your
+                                                back. So go find that job you want, man and stop dealing with your
+                                                colleagues"
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="testimonial-card">
-                                <div class="testimonial-card-user">
-                                    <div class="client-img">
-                                        <img src="~/assets/imgs/Mithila.png" alt="" />
-                                    </div>
+                                <div class="testimonial-card">
+                                    <div class="testimonial-card-user">
+                                        <div class="client-img">
+                                            <img src="~/assets/imgs/Mithila.png" alt="" />
+                                        </div>
 
-                                    <div class="testimonial-info">
-                                        <h4>Mithila Palkar</h4>
-                                        <h5>Indian TV Actress</h5>
-                                        <p>
-                                            "Everyone needs money. That's why you do a good job, right? But, where will
-                                            you get a good joo?
-                                            College placements are just for namesake. You download Hirect and chat
-                                            directly with the Startup
-                                            Founders without any interference from any consultant. Click on the link and
-                                            go go go."
-                                        </p>
+                                        <div class="testimonial-info">
+                                            <h4>Mithila Palkar</h4>
+                                            <h5>Indian TV Actress</h5>
+                                            <p>
+                                                "Everyone needs money. That's why you do a good job, right? But, where
+                                                will
+                                                you get a good joo?
+                                                College placements are just for namesake. You download Hirect and chat
+                                                directly with the Startup
+                                                Founders without any interference from any consultant. Click on the link
+                                                and
+                                                go go go."
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </VueSlickCarousel>
+                            </VueSlickCarousel>
 
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-       
+
+        <div class="viewall" style="text-align:center">
+            <button class="view-btn"> View More</button>
+        </div>
     </div>
-    
-    <div class="viewall" style="text-align:center">
-                <button class="view-btn"> View More</button>
-              </div>
-     </div>
 </template>
 
 <script>
@@ -105,10 +117,10 @@ export default {
         return {
             settings: {
                 "centerMode": true,
-                "centerPadding": "150px",
+                "centerPadding": "30px",
                 "focusOnSelect": true,
-                "infinite": true,
-                "dots" :true,
+                "infinite": false,
+                "dots": true,
                 'slidesToShow': 1,
                 'slidesToScroll': 1,
             }
@@ -119,15 +131,16 @@ export default {
 
 <style lang="scss" scoped>
 .view-btn {
-  border-radius: 20px;
-  background-color: #fff ;
-  border:1px solid #000;
-  color: #0E101A;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 10px 30px;
-  margin: 20px 0 60px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #0E101A;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 30px;
+    margin: 20px 0 60px;
 }
+
 .slick-active .testimonial-card .client-img {
     width: 253px;
     height: 325px;
@@ -141,7 +154,7 @@ export default {
 }
 
 .testimonial-card .client-img {
-   width: 253px;
+    width: 253px;
     height: 325px;
     position: relative;
     width: 253px;
@@ -151,6 +164,7 @@ export default {
     overflow: hidden;
     filter: grayscale(1);
 }
+
 .client-testimonial {
     padding: 40px 0 70px;
     padding-top: 0;
@@ -166,9 +180,9 @@ export default {
 }
 
 .testimonial-carousel {
-    width: 85%;
+    width: 75%;
     margin: auto;
-      box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 .testimonial-card {

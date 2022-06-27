@@ -35,7 +35,9 @@
                         d="M4.625 3V1.75C4.625 1.05964 5.18464 0.5 5.875 0.5H12.125C12.8154 0.5 13.375 1.05964 13.375 1.75V3"
                         stroke="#0E101A" />
                     </svg>
-                    <span class="label"> Candidate's Skillsets </span>
+                    <span class="label" data-bs-target="#candidate-list" data-bs-toggle="collapse"
+                      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"> Candidate's
+                      Skillsets </span>
                   </div>
                 </div>
               </div>
@@ -58,7 +60,27 @@
                   Start Hiring
                 </button>
               </div>
-
+            </div>
+            <div class="collapse collapscandate" id="candidate-list">
+              <ul>
+                <li class="nav-item">
+                  <NuxtLink class="sec-nav-link" to="/homepage/It">IT</NuxtLink>
+                  <!-- <It v-show="showModal" @close-modal="showModal = false" />IT -->
+                  <!-- <a href="It.vue">IT</a> -->
+                </li>
+                <li class="nav-item">
+                  <NuxtLink class="sec-nav-link" to="/"> IT Manager</NuxtLink>
+                </li>
+                <li class="nav-item">
+                  <NuxtLink class="sec-nav-link" to="/"> IT Management</NuxtLink>
+                </li>
+                <li class="nav-item">
+                  <NuxtLink class="sec-nav-link" to="/"> Java Development</NuxtLink>
+                </li>
+                <li class="nav-item">
+                  <NuxtLink class="sec-nav-link" to="/"> Python</NuxtLink>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -172,7 +194,7 @@
           <div class="row">
             <div class="col-md-7">
               <div class="hire-now-img">
-               <img src="~/assets/imgs/hirect-chart.png" alt="" />
+                <img src="~/assets/imgs/hirect-chart.png" alt="" />
               </div>
             </div>
             <div class="col-md-5">
@@ -359,6 +381,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.collapscandate {
+  position: absolute;
+  font-size: 13px;
+  padding: 15px 50px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  margin-left: 270px;
+  margin-top: 7px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .sec-nav-link {
+      color: #333333;
+      font-family: Helvetica;
+      font-size: 13px;
+      line-height: 25px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+}
+
 // direct - banner
 .direct-banner {
   padding: 110px 0;
@@ -384,156 +432,17 @@ export default {
   .row {
     align-items: flex-end;
   }
-
-  .form-search {
-    display: flex;
-    position: relative;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: auto;
-    height: 55px;
-    max-width: 700px;
-    width: 100%;
-    margin-top: 30px;
-    padding: 0px 10px 0px 26px;
-    background: rgb(255, 255, 255);
-    border: 2px solid rgb(223, 225, 230);
-    // box-shadow: rgb(0 0 0 / 16%) 0px 0px 2px, rgb(0 0 0 / 8%) 0px 4px 8px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    border-radius: 32px;
-
-    .autocomplete {
-      -webkit-box-flex: 1;
-      flex-grow: 1;
-      max-width: 30%;
-
-      .MuiAutocomplete-fullWidth {
-        width: 100%;
-      }
-
-      .start-hiring {
-        height: 55px;
-        background-color: #2ce2a2;
-        display: flex;
-        color: #000;
-        font-weight: bold;
-        justify-content: center;
-        font-size: 15px;
-        border: none;
-        padding: 15px 30px;
-        border-top-right-radius: 32px;
-        border-bottom-right-radius: 32px;
-      }
-    }
-
-    .autocomplete:nth-child(3) {
-      position: absolute;
-      right: 0;
-    }
-
-    .location {
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      border-right: 2px solid #808080;
-
-      span.label {
-        min-width: max-content;
-        margin-left: 10px;
-        font-size: 13px;
-        color: #808080;
-      }
-    }
-
-
-  }
 }
 
 // End direct - banner
 
 // hirect mobile get app
-.hire-chat-section {
-  padding-bottom: 100px;
 
-  .hire-chat {
-    //   padding-bottom: 80px;
-    background-color: #f4fafd;
-  }
-
-  .hire-chat .row {
-    align-items: center;
-  }
-
-  .hire-now h2 {
-    color: #0e101a;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 66.8px;
-    margin: 30px 0;
-  }
-
-  .hire-now p {
-    color: #0e101a;
-    font-size: 17px;
-    font-weight: normal;
-    line-height: 27px;
-    margin-bottom: 30px;
-  }
-
-  .input-container {
-    display: flex;
-    align-items: stretch;
-
-    .Sgdef {
-      position: absolute;
-      color: #b0b2b8;
-      z-index: 1;
-      font-size: 13px;
-      padding: 13px 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-
-    .form-search-mob {
-      display: flex;
-      position: relative;
-      -webkit-box-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      align-items: center;
-      height: 45px;
-      width: 65%;
-      color: #808080;
-      font-size: 13px;
-      padding: 0px 10px 0px 60px;
-      background: rgb(255, 255, 255);
-      border: 2px solid rgb(223, 225, 230);
-      box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-      border-radius: 32px;
-    }
-
-    .hire-now-img {
-      text-align: end;
-    }
-  }
-}
 
 // end
 
 // Hirect Job
-.hire-chat-section {
-  h3.title-sm {
-    color: #0e101a;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: normal;
-    text-align: center;
-    margin-bottom: 45px;
-  }
-}
+
 
 //end
 
@@ -603,21 +512,6 @@ export default {
 }
 
 
-.jobs-list {
-  .city-logo {
-    padding: 0;
-    margin: 50px 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .city-logo li {
-    cursor: pointer;
-  }
-}
 
 /******** Home Page **********/
 
@@ -658,49 +552,7 @@ export default {
   padding: 35px 0;
 }
 
-.available-list li:hover {
-  background-color: #2ce2a2;
-}
 
-.available-list li {
-  border-radius: 25px;
-  cursor: pointer;
-  background-color: #ffffff;
-  display: flex;
-  padding: 0px 14px;
-  color: #000000;
-  font-size: 18px;
-  line-height: 20px;
-  align-items: center;
-  justify-content: center;
-  max-width: 244px;
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-
-  .candi-value {
-    font-size: 14px;
-    color: #808080;
-    line-height: 40px;
-  }
-}
-
-.available-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.available-list li {
-  width: 224%;
-  margin-bottom: 30px;
-}
-
-.available-list li:nth-child(6n) {
-  margin-right: 0;
-}
 
 // end jobs-available
 // startups-logo
@@ -996,5 +848,6 @@ export default {
     margin-bottom: 20px;
   }
 }
+
 /******* end Home Page ************/
 </style>
