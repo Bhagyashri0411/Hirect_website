@@ -1,735 +1,1372 @@
 <template>
-<div class="wrapper">
+  <div class="wrapper">
     <Header />
-    <section class="job-seeker">
-        <!-- <div class="job-seeker-banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="jobseeker-banner-content">
-                            <h1>Looking For a Job</h1>
-                        </div>
-                        <div class="jobseeker-banner-img">
-                            <div class="jobseeker-banner-scan">
-                                <img src="~/assets/img/qr-code-scan2.png" alt="" />
-                            </div>
-                            <img src="~/assets/img/job-seeker-banner.svg" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="jobseeker-banner-right">
-                            <div class="jobseeker-banner-content">
-                                <h1>Get the Hirect App</h1>
-                                <p>
-                                    We will send you a link, open it on your <br />phone to
-                                    download the app.
-                                </p>
-                            </div>
-                            <div class="download-form">
-                                <form>
-                                    <div class="download-form-field">
-                                        <div class="input-container">
-                                            <el-input id="phone-number" v-model="getUserInf.phoneNumber" maxlength="10" placeholder="Type Here..." class="input-item custom-phone-input">
-                                                <el-select v-model="getUserInf.phoneArea" slot="prepend" placeholder="+91">
-                                                    <el-option label="+91" value="+91"></el-option>
-                                                    <el-option label="+1" value="+1"></el-option>
-                                                    <el-option label="+65" value="+65"></el-option>
-                                                    <el-option label="+44" value="+44"></el-option>
-                                                </el-select>
-                                            </el-input>
-                                        </div>
-
-                                        <button type="submit" class="btn default-btn button-sm">
-                                            Get App Link
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="job-seeker-banner job-seeker-banner-old">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="jobseeker-banner-content">
-                            <h1>Looking <br />For a Job</h1>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="jobseeker-banner-img">
-                            <img src="~/assets/img/job-seeker-banner.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="building-profile">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="building-profile-content">
-                            <h3 class="title-md mb-65">
-                                Building The Profile and Landing the Right Job Takes Just 5
-                                minutes.
-                            </h3>
-                            <button type="button" class="btn default-btn button-sm" @click="downloadDialogShow">
-                                Search Jobs
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="building-profile-img">
-                            <img src="~/assets/img/build-your-resume.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="connect-instantly">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="connect-instantly-img">
-                            <img src="~/assets/img/connect-instantly-new.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="connect-instantly-content">
-                            <h3 class="title-md mb-65">
-                                Connect Instantly with Startup Founders and Get Hired.
-                            </h3>
-                            <button type="button" class="btn default-btn button-sm" @click="downloadDialogShow">
-                                Direct Chat
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="verified-recruiters">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="verified-recruiters-content">
-                            <h3 class="title-md mb-65">
-                                100% Verified Recruiters and 120K+ Startups trust Hirect.
-                            </h3>
-                            <button type="button" class="btn default-btn button-sm" @click="downloadDialogShow">
-                                Get Started
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="verified-recruiters-img">
-                            <img src="~/assets/img/100verified-new.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <section class="seeker-love-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="title-big">
-              Job Seekers Love Hirect, <br />Here’s Why ?
-            </h2>
-          </div>
-        </div>
-        <div class="seeker-love-slides">
+    <section class="hire-chat-section">
+      <div class="hire-chat">
+        <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <div class="seeker-love-card">
-                <div class="seeker-love-user">
-                  <div class="seekerLove-user-img">
-                    <img src="~/assets/img/job-seeker1.png" alt="" />
-                  </div>
-                  <div class="seekerLove-user-info">
-                    <div class="seekerLove-raiting">
-                      <ul>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                      </ul>
-                    </div>
-                    <h5>12/9/2020 <span>via google</span></h5>
-                  </div>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
-                  dictum cursus at a phasellus tellus felis. Nibh sem egestas
-                  suspendisse blandit non orci, gravida. Massa tempus sem tellus
-                  magna convallis sollicitudin sit volutpat
-                </p>
+              <div class="hire-now-img">
+                <img src="~/assets/imgs/js-banner-image.png" alt="" />
               </div>
             </div>
             <div class="col-md-6">
-              <div class="seeker-love-card">
-                <div class="seeker-love-user">
-                  <div class="seekerLove-user-img">
-                    <img src="~/assets/img/job-seeker2.png" alt="" />
-                  </div>
-                  <div class="seekerLove-user-info">
-                    <div class="seekerLove-raiting">
-                      <ul>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                        <li><img src="~/assets/img/star-icon.svg" alt="" /></li>
-                      </ul>
-                    </div>
-                    <h5>12/9/2020 <span>via google</span></h5>
-                  </div>
-                </div>
-                <h4>Lorem ipsum</h4>
+              <div class="hire-now">
+                <h1 class="hero-title">
+                  Get the <span style="color: #19e29e">Hirect</span> App
+                </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
-                  dictum cursus at a phasellus tellus felis. Nibh sem egestas
-                  suspendisse blandit non orci, gravida. Massa tempus sem tellus
-                  magna convallis sollicitudin sit volutpat
+                  We will send you a link to your phone open <br />
+                  it to download the app.
                 </p>
+                <div class="input-container">
+                  <div class="Sgdef">+91 |</div>
+                  <input
+                    type="text"
+                    class="form-search-mob"
+                    placeholder="Enter Mobile Number..."
+                  />
+                  <button
+                    class="btn default-btn button-sm"
+                    style="margin-left: 20px"
+                  >
+                    Get App
+                  </button>
+                </div>
+                <div class="app-scan-button">
+                  <a
+                    ><img
+                      id="download-hirect-qrcode"
+                      class="qr-code-img"
+                      src="~/assets/imgs/qr-frame.png"
+                      alt=""
+                  /></a>
+                  <a
+                    href="https://apps.apple.com/US/app/id1518442417?mt=8"
+                    target="_blank"
+                    ><img src="~/assets/imgs/logo_apple-store.png" alt=""
+                  /></a>
+                  <span
+                    class="line-seperator"
+                    style="height: 40px; border-left: 1px solid"
+                  ></span>
+                  <a
+                    href="https://hirectin.onelink.me/TwhD/b0fe8b20"
+                    target="_blank"
+                    ><img src="~/assets/imgs/logo-google-playstore.png" alt=""
+                  /></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <JobSeekerTestimonial />
-    <!----scan-app start----------->
-    <GetAppPage :eventName="'in_jobseekers_bottom'" />
-    <!----scan-app end----------->
+    <section class="job-available-section">
+      <div class="hire-chat">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="hire-now">
+                <h2>
+                  <span style="color: #2ce2a2"> Hirect </span> - Best Job Search
+                  App in India
+                </h2>
+                <p>
+                  Hirect is the job search app that enables a job seeker to find
+                  relevant job listings in minutes. This chat-based,
+                  mobile-first Hirect app connects the job seeker directly with
+                  the hiring manager, who may be their next employer. Building
+                  the candidate profile and landing the right job takes just 5
+                  minutes. Candidates on a job search can connect instantly with
+                  startup founders and get hired.
+                </p>
+                <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
+                                Instant Hiring
+                            </a> -->
+                <a class="btn default-btn button-sm" @click="showModal = true"
+                  >Get Hired</a
+                >
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="hire-now-img">
+                <img src="~/assets/imgs/india_s-first-job.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----startup start----------->
+    <section class="recruiter-startup-section startup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="startup-section-heading">
+              <h3 class="title-md">Seamless Hiring Process in 3 Steps</h3>
+            </div>
+            <MultiStepSegment :stepData="stepFeedData" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----startup end----------->
+
+    <section class="job-available-section">
+      <div class="hire-chat">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="hire-now-img">
+                <img src="~/assets/imgs/simplify-hiring-rocess.png" alt="" />
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="hire-now">
+                <h2>Get Hired Easily</h2>
+                <p>
+                  Hirect is a leading job portal in India that enables job
+                  seekers to get the latest job notifications during their job
+                  search. The job seeker looking for a job can instantly
+                  register on the site, upload their resume, get verified, and
+                  find a job. Hirect has over 3M+ verified job seekers searching
+                  for startup jobs across 70+ categories. Job seekers find it
+                  easy to connect with startup founders or hiring managers
+                  instantly and get hired. There are over 150K startups hiring
+                  on the Hirect app.
+                </p>
+                <p>
+                  The app is also helpful for freshers searching for jobs. All
+                  the recruiters on the Hirect app are 100% verified, and since
+                  there are no consultants on this job app, there are no spam or
+                  scam calls. Hirect streamlines the hiring process by directly
+                  connecting the job seeker who matches with the job openings to
+                  the hiring manager so they can chat instantly for free, unlike
+                  most traditional hiring processes, which are long-winded and
+                  charge job seekers.
+                </p>
+                <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
+                                Instant Hiring
+                            </a> -->
+                <a
+                  class="btn default-btn button-hire-now"
+                  @click="showModal = true"
+                  >Get Hired</a
+                >
+                <DownloadModal
+                  v-show="showModal"
+                  @close-modal="showModal = false"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recruiter-startup-section startup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="startup-section-heading">
+              <h3 class="title-md">Key Features of Hirect</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="startups-logo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="jobs-list">
+                <ul class="startups-logo-list">
+                  <li>
+                    <img
+                      src="~/assets/imgs/Chat-Directly-and-Get-Instant-Response.svg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="~/assets/imgs/AI-Algorithm-Matched-Candidates.svg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="~/assets/imgs/100_-Secure-Video-Interviews.svg"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="~/assets/imgs/Direct-and-Instant-Notifications.svg"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recruiter-startup-section startup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="startup-section-heading">
+              <h3 class="title-md">FAQs</h3>
+              <Faq :FaqData="faqList" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <GetAppPage :eventName="'in_recruiters_bottom'" />
     <Footer />
-    <DownloadModal v-show="showModal" @close-modal="showModal = false" />
-</div>
+  </div>
 </template>
 
 <script>
-import DownloadModal from "~/components/DownloadModal.vue";
+import { title } from "process";
+
 export default {
-    components: {
-        DownloadModal
-    },
-    head() {
-        return {
-            title: "Latest Job Openings in Startups | Best Job Search App - Hirect",
-            meta: [{
-                hid: "description",
-                name: "description",
-                content: "Free Job app enables candidates to chat directly in-app and get the relevant jobs. Download Hirect and apply to jobs online."
-            }]
-        };
-    },
-    data() {
-        return {
-            showModal: false,
-            isPhoneNumberError: false,
-            getUserInf: {
-                phoneNumber: "",
-                phoneArea: "+91"
-            }
-        };
-    },
+  components: {},
+  head() {
+    return {
+      title: "Free Job Posting for Employers | Best Recruitment App - Hirect",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online. ",
+        },
+      ],
+    };
+  },
+  data() {
+    return {
+      //RecruiterLoginDialogVisible: false,
+      isUserPositionError: false,
+      showModal: false,
+      positionOptions: [
+        {
+          value: "HR",
+          label: "HR",
+        },
+        {
+          value: "Founder/CEO",
+          label: "Founder/CEO",
+        },
+        {
+          value: "CTO",
+          label: "CTO",
+        },
+        {
+          value: "CMO",
+          label: "CMO",
+        },
+        {
+          value: "COO",
+          label: "COO",
+        },
+        {
+          value: "Others",
+          label: "Others",
+        },
+      ],
+      faqList: [
+        {
+          id: 1,
+          question:
+            "What are the essential steps to post my resume on the Hirect app? ",
+          answer:
+            "After downloading the Hirect app, job seekers can register online, upload their resumes, and get verified in minutes. After getting verified, they can find a relevant job and instantly start chatting with the hiring manager.",
+          isShown: false,
+        },
+        {
+          id: 2,
+          question: "Does it cost you to find a job on this app?",
+          answer:
+            "While most traditional job portals in India charge the job seeker to find a relevant job for their profile, after a duration, Hirect allows job seekers to post their resumes and chat with the recruiters completely free of cost. Also, there are no consultants or third-party recruiters on this job app, thus ensuring 100% data privacy.",
+          isShown: false,
+        },
+        {
+          id: 3,
+          question:
+            "How can job seekers secure themselves from any job frauds or scams on this app?",
+          answer:
+            "All the recruiters who post the jobs on this app are 100 % verified. And since there are no consultants involved, there is no interference in the form of spam or scam calls. Also, the AI ensures that the candidates are matched with only the relevant hiring posts or job profiles.",
+          isShown: false,
+        },
+        {
+          id: 4,
+          question:
+            "Would I need to follow up with the recruiter to get a response or feedback?",
+          answer:
+            "Yes. You can follow up with the recruiter directly to get feedback. Hirect app is such that it allows the job seekers to connect directly with the hiring managers who could end up being their prospective boss. Job seekers can chat with the recruiters, schedule video interviews, and get feedback within a day or two. The end-to-end process is completed within the app without any exchange of personal information.",
+          isShown: false,
+        },
+      ],
+      getUserInf: {
+        userPosition: "",
+      },
+      stepFeedData: [
+        {
+          step: 1,
+          imageSrc: "js-step1.png",
+          title: "Register on the app",
+        },
+        {
+          step: 2,
+          imageSrc: "js-step2.png",
+          title: "Build the resume",
+        },
+        {
+          step: 3,
+          imageSrc: "js-step3.png",
+          title: "Get the job you desreve",
+        },
+      ],
+    };
+  },
 
-    methods: {
-        downloadDialogShow() {
-            this.showModal = true
-            this.$sendToEsData('webQrcodeViewed', {
-                'region_id': 0,
-                'position': 'in_jobseekers_button_popop'
-            })
-        }
-    },
-
-    jsonld() {
-        return {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [{
-                "@type": "ListItem",
-                position: "1",
-                name: "Job Seeker",
-                item: "https://www.hirect.in/job-seeker"
-            }]
-        };
-    }
+  // methods: {
+  //   videoPlayClick() {
+  //     this.RecruiterLoginDialogVisible = true;
+  //   }
+  // }
+  jsonld() {
+    return {
+      "@context": "https://schema.org/",
+      "@type": "JobPosting",
+      title: "Job Posting for Employers",
+      description:
+        "Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online.",
+      hiringOrganization: {
+        "@type": "Organization",
+        name: "Hirect",
+        sameAs: "https://www.hirect.in/",
+        logo: "https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png",
+      },
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: "1",
+          name: "Features",
+          item: "https://www.hirect.in/connect",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-/******* Job Seeker Page ************/
-.download-form-field {
-    display: flex;
-    align-items: center;
+.recruiter-banner-details h3.title-md {
+  //  position: absolute;
+  width: 522px;
+  height: 120px;
+  left: 131px;
+  top: 154px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 60px;
 }
 
-.jobseeker-banner-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.recruiter-section {
+  padding-bottom: 102px;
 }
 
-.download-form-field button.btn {
-    margin-left: 13px;
-    width: 155px;
-    border-radius: 20px;
+.recruiter-banner {
+  padding: 50px 0;
 }
 
-.download-modal p {
-    padding: 45px 0;
+.recruiter-banner-img {
+  // position: absolute;
+  width: 558px;
+  height: 356px;
+  left: 131px;
+  top: 450px;
+  background: #c4c4c4;
+  border-radius: 15px;
+}
+
+// Hire Chat Section
+.hire-chat-section {
+  padding-bottom: 30px;
+}
+
+.hire-chat .row {
+  align-items: center;
+}
+
+.hire-now h2 {
+  // position: absolute;
+  width: 512px;
+  height: 40px;
+  padding-bottom: 120px;
+  left: 130px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.hero-title {
+  margin-top: 40px;
+  padding-bottom: 0px !important;
+}
+
+.hire-now p {
+  // position: absolute;
+  width: 550px;
+  // height: 120px;
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #76787a;
+}
+
+.hire-now-img {
+  // position: absolute;
+  width: 508px;
+  height: 325px;
+  left: 874px;
+  top: 981px;
+  // background: #c4c4c4;
+  border-radius: 15px;
+}
+
+// end Hire Chat Section
+// jobs-available
+.job-available-section,
+.startup-section {
+  padding-bottom: 102px;
+}
+
+.jobs-available {
+  background-color: #f1f1f1;
+  padding: 35px 0;
+}
+
+.available-list li {
+  border-radius: 25px;
+  background-color: #ffffff;
+  display: flex;
+  padding: 0px 14px;
+  width: 100%;
+  color: #000000;
+  font-size: 18px;
+  //   font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 244px;
+  height: 160px;
+
+  .candi-value {
+    font-size: 14px;
     color: #808080;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
+  }
 }
 
-section.job-seeker {
-    padding-bottom: 50px;
+.available-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-// job seeker banner
-.job-seeker-banner {
-    padding: 70px 0;
+.available-list li {
+  width: 224%;
+  margin-bottom: 30px;
 }
 
-// job seeker old banner
-.job-seeker-banner-old .container {
-    max-width: 630px !important;
+.available-list li:nth-child(6n) {
+  margin-right: 0;
 }
 
-.job-seeker-banner-old .jobseeker-banner-content {
-    padding-top: 50px;
+// end jobs-available
+
+.startups-logo-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
-.job-seeker-banner-old .jobseeker-banner-img {
-    max-width: 100%;
-    padding: 0;
-    display: inherit;
+.startups-logo-list li {
+  // width: 12%;
+  // margin-bottom: 45px;
 }
 
-.job-seeker-banner-old .jobseeker-banner-img img {
-    width: auto;
+.startup-section-heading {
+  width: 100%;
+  max-width: 645px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 35px;
 }
 
-// end job seeker old banner
-.jobseeker-banner-content h1 {
-    margin-bottom: 20px;
+.recruiter-startup-section .startups-logo {
+  padding-top: 60px;
 }
 
-.jobseeker-banner-content p {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 30px;
+.recruiter-form-section {
+  padding: 135px 0 170px;
 }
 
-.jobseeker-banner-img {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 75%;
-    padding: 0 20px;
+.recruiter-form {
+  width: 100%;
+  max-width: 410px;
 }
 
-.jobseeker-banner-img .jobseeker-banner-scan img {
-    width: 112px;
+.recruiter-form .form-control {
+  height: 48px;
+  border-radius: 24px;
+  background-color: #f7f7f7;
+  position: relative;
+  color: #0e101a;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 10px;
+  text-align: left;
+  padding: 5px 30px;
 }
 
-.jobseeker-banner-img img {
-    width: 150px;
+.recruiter-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
 }
 
-// end job seeker banner
-// building profile
-.building-profile {
-    padding: 70px 0;
+.recruiter-form .form-control::-webkit-input-placeholder,
+.recruiter-form-call .form-group input::-webkit-input-placeholder,
+.recruiter-form-call .input-group input::-webkit-input-placeholder {
+  /* Edge */
+  color: #b4b4b4;
 }
 
-.building-profile-content {
-    padding-top: 70px;
+.recruiter-form .form-control:-ms-input-placeholder,
+.recruiter-form-call .form-group input:-ms-input-placeholder,
+.recruiter-form-call .input-group input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #b4b4b4;
 }
 
-h3.title-md.mb-65 {
-    margin-bottom: 65px;
+.recruiter-form .form-control::placeholder,
+.recruiter-form-call .form-group input::placeholder,
+.recruiter-form-call .input-group input::placeholder {
+  color: #b4b4b4;
 }
 
-// end building profile
-// Connect Instantly and verified recruiters
-.connect-instantly,
-.verified-recruiters {
-    margin-bottom: 70px;
+.button-hire-now {
+  height: 42px;
+  width: 156px;
+  border-radius: 100px;
+  background: #2ce2a2;
+  padding: 10px 0;
 }
 
-.connect-instantly,
-.verified-recruiters {
-    margin-bottom: 70px;
+button.btn.eye-button {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 5px 10px;
+  right: 20px;
+  color: #b4b4b4;
 }
 
-.connect-instantly-img,
-.verified-recruiters-img {
-    text-align: center;
+.form-pageLink .forget-password {
+  color: #b4b4b4;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 10px;
+  text-decoration: underline;
 }
 
-.connect-instantly .row,
-.verified-recruiters .row {
-    align-items: center;
+.form-pageLink {
+  text-align: right;
+  padding: 0 20px;
 }
 
-// end Connect Instantly and verified recruiters
-// job seeker love
-section.seeker-love-section {
-    padding: 50px 0;
-    background-color: #f9fbff;
+.recruiter-form-section .btn.default-btn {
+  color: #000;
 }
 
-.seeker-love-card {
-    padding: 70px 70px;
+.recruiter-social-login p {
+  padding: 24px 0;
+  color: #76787a;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 10px;
 }
 
-.seeker-love-user {
-    display: flex;
-    align-items: center;
-    margin-bottom: 35px;
+.recruiter-social-login {
+  text-align: center;
 }
 
-.seekerLove-user-img img {
-    width: 113px;
-    height: 113px;
-    border-radius: 50%;
+.recruiter-social-login h5 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.seekerLove-user-info {
-    width: calc(100% - 113px);
-    padding-left: 30px;
+.recruiter-social-login ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-.seekerLove-raiting ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+.recruiter-social-login ul li {
+  margin-right: 35px;
 }
 
-.seekerLove-raiting ul li {
-    margin-right: 10px;
+.recruiter-social-login ul li:last-child {
+  margin-right: 0;
 }
 
-.seekerLove-raiting {
-    margin-bottom: 15px;
+.recruiter-form-now {
+  padding-top: 30px;
+  padding-bottom: 100px;
 }
 
-.seekerLove-user-info h5 {
-    color: #707070;
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 24px;
+.recruiter-form-call p {
+  color: #333333;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  margin-bottom: 30px;
 }
 
-.seeker-love-card h4 {
-    color: #000000;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.recruiter-form-call h3.title-md {
+  margin-bottom: 15px;
 }
 
-.seeker-love-card p {
-    color: #76787a;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 24px;
-    margin-bottom: 15px;
+.recruiter-form-call .form-group input {
+  height: 48px;
+  border-radius: 24px;
+  background-color: #f7f7f7;
+  color: #0e101a;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  margin-bottom: 22px;
+  border-color: #f7f7f7;
+  padding-left: 25px;
 }
 
-// end job seeker love
+.recruiter-form-call .input-group {
+  margin-bottom: 22px;
+}
 
-/******* end Job Seeker Page ************/
+.recruiter-form-call .input-group input {
+  height: 48px;
+  border-radius: 24px;
+  background-color: #f7f7f7;
+  color: #0e101a;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  border-color: #f7f7f7;
+}
 
-@media only screen and (min-width: 768px) and (max-width: 1299px) {
-    .building-profile {
-        padding: 60px 0;
-    }
+.recruiter-form-call .input-group .input-group-text {
+  height: 48px;
+  background-color: #e0e0e0;
+  border-radius: 24px 0px 0px 24px;
+  width: 70px;
+  justify-content: center;
+  color: #76787a;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  border-color: #e0e0e0;
+}
 
-    .job-seeker-banner {
-        padding: 60px 0;
-    }
+.check-dropdown {
+  width: 100%;
+}
 
-    .seeker-love-card {
-        padding: 45px 50px;
-    }
+.check-dropdown button {
+  text-align: left;
+  height: 48px;
+  border-radius: 24px;
+  background-color: #f7f7f7 !important;
+  color: #b4b4b4 !important;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  border-color: #f7f7f7 !important;
+  padding-left: 25px;
+  outline: none !important;
+  box-shadow: unset !important;
+}
 
-    .seeker-love-card h4 {
-        font-size: 22px;
-    }
+.check-dropdown .dropdown-toggle::after {
+  position: absolute;
+  right: 43px;
+  top: 20px;
+}
 
-    .connect-instantly,
-    .verified-recruiters {
-        margin-bottom: 60px;
-    }
+.dropdown-menu.dropdown-menu-end.show {
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+  padding-left: 15px;
+}
 
-    .download-form-field button.btn {
-        width: 130px;
-        font-size: 15px;
-    }
+.dropdown-menu.dropdown-menu-end.show button {
+  color: #76787a !important;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  background-color: transparent !important;
+  border: 0;
+  padding: 0;
+  height: auto;
+  line-height: 26px;
+}
 
-    .jobseeker-banner-img {
-        max-width: 80%;
-    }
+.form-check.check-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-check.check-box label.form-check-label {
+  color: #76787a;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+}
+
+.form-check-input {
+  border: 1px solid #2ce2a2;
+}
+
+.Submit-button button.btn.default-btn.button-sm {
+  width: 100%;
+}
+
+.recruiter-form-call h4 {
+  color: #000000;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.recruiter-form-call h4 a {
+  color: #2ce2a2;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.recruiter-form-now .row {
+  align-items: center;
+}
+
+.recruiter-form-img {
+  text-align: center;
+}
+
+.form-check-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.recruiter-banner-details {
+  width: 100%;
+  max-width: 540px;
+}
+
+.recruiter-banner-details p {
+  width: 559px;
+  height: 74px;
+  left: 131px;
+  margin-bottom: 60px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #76787a;
+}
+
+.recruiter-form-call {
+  width: 100%;
+  max-width: 386px;
+}
+
+.el-select-dropdown.el-popper {
+  width: 158px !important;
+  min-width: auto !important;
+  background: #f7f7f7 !important;
+  margin-left: 300px !important;
+  padding-bottom: 15px !important;
+}
+
+.Schedule-call {
+  background: #ffffff;
+  box-shadow: 6px 6px 30px rgba(109, 141, 173, 0.25);
+  border-radius: 24px;
+  max-width: 476px;
+  position: absolute;
+  height: 648px;
+  right: 130px;
+}
+
+.qr-code-img {
+  width: 150px;
+  height: 150px;
+}
+
+// end startups-logo
+
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .recruiter-banner {
+    padding: 80px 0;
+  }
+
+  .recruiter-form-section {
+    padding: 90px 0 110px;
+  }
+
+  .startup-section-heading {
+    padding-top: 20px;
+  }
+
+  .recruiter-form-call p {
+    margin-bottom: 25px;
+  }
+
+  .recruiter-form-now {
+    padding-bottom: 70px;
+  }
+
+  .el-select-dropdown.el-popper {
+    margin-left: 260px !important;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    h3.title-md.mb-65 {
-        margin-bottom: 50px;
-    }
+  .el-select-dropdown.el-popper {
+    margin-left: 235px !important;
+    padding-bottom: 7px !important;
+  }
 
-    .building-profile {
-        padding: 60px 0;
-    }
+  .recruiter-banner-details p {
+    font-size: 17px;
+    line-height: 29px;
+  }
 
-    .connect-instantly,
-    .verified-recruiters {
-        margin-bottom: 60px;
-    }
-
-    .seekerLove-user-img img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .seekerLove-user-info {
-        width: calc(100% - 100px);
-        padding-left: 20px;
-    }
-
-    .seeker-love-card {
-        padding: 45px 35px;
-    }
-
-    .download-form-field button.btn {
-        width: 126px;
-        font-size: 14px !important;
-    }
-
-    .download-form #phone-number.el-input__inner,
-    .download-form .el-input--suffix .el-input__inner,
-    .download-form-field button.btn {
-        height: 45px;
-    }
-
-    .jobseeker-banner-content p {
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 30px;
-    }
-
-    .job-seeker-banner-old .jobseeker-banner-content {
-        padding-top: 40px;
-    }
+  .Schedule-call {
+    padding: 20px 40px 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .building-profile {
-        padding: 30px 0 60px;
-    }
+  .recruiter-form-section {
+    padding: 80px 0 90px;
+  }
 
-    .seekerLove-user-img img {
-        width: 90px;
-        height: 90px;
-    }
+  .recruiter-form .form-control {
+    font-size: 16px;
+    padding: 5px 20px;
+  }
 
-    .seekerLove-user-info {
-        width: calc(100% - 90px);
-        padding-left: 20px;
-    }
+  button.btn.eye-button {
+    right: 6px;
+  }
 
-    .seeker-love-user {
-        margin-bottom: 30px;
-    }
+  .recruiter-form-call p {
+    margin-bottom: 30px;
+    line-height: normal;
+  }
 
-    .seeker-love-card {
-        padding: 35px 20px;
-    }
+  .recruiter-form-call p {
+    font-size: 16px;
+  }
 
-    .seekerLove-user-info h5 {
-        font-size: 16px;
-        line-height: 22px;
-    }
+  .recruiter-form-now {
+    padding-bottom: 60px;
+  }
 
-    .seekerLove-raiting ul li {
-        margin-right: 7px;
-    }
+  .recruiter-form-call .input-group .input-group-text {
+    width: 60px;
+  }
 
-    .seekerLove-raiting {
-        margin-bottom: 11px;
-    }
+  .form-check.check-box label.form-check-label {
+    font-size: 13px;
+  }
 
-    .seeker-love-card h4 {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
+  .form-check.check-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .jobseeker-banner-img {
-        max-width: 100%;
-    }
+  .recruiter-form-call .form-group input {
+    margin-bottom: 15px;
+  }
 
-    .job-seeker-banner-old .container {
-        max-width: 530px !important;
-    }
+  .recruiter-form-call .input-group {
+    margin-bottom: 15px;
+  }
+
+  .el-select-dropdown.el-popper {
+    margin-left: 200px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .Schedule-call {
+    padding: 20px 20px 30px;
+  }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
-    .jobseeker-banner-content h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+  .startups-logo-list li {
+    width: 48%;
+    margin-right: 2%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .jobseeker-banner-content h1 br {
-        display: none;
-    }
+  .startups-logo-list li:nth-child(2n) {
+    margin-right: 0;
+  }
 
-    .job-seeker-banner {
-        padding: 50px 0;
-    }
+  .startups-logo-list {
+    margin-bottom: 30px;
+  }
 
-    .building-profile {
-        padding: 40px 0 60px;
-    }
+  .recruiter-startup-section .startups-logo {
+    padding-top: 50px;
+  }
 
-    h3.title-md.mb-65 {
-        margin-bottom: 30px;
-    }
+  .recruiter-banner h1 {
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 30px;
+  }
 
-    .building-profile-content {
-        text-align: center;
-        padding-top: 35px;
-    }
+  .recruiter-banner h1 br {
+    display: none;
+  }
 
-    .building-profile .row {
-        flex-direction: column-reverse;
-    }
+  .recruiter-banner {
+    padding: 60px 0;
+  }
 
-    .building-profile-content button.btn {
-        margin: auto;
-    }
+  .startup-section-heading {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
 
-    .connect-instantly,
-    .verified-recruiters {
-        margin-bottom: 60px;
-    }
+  .recruiter-form-section {
+    padding: 60px 0 80px;
+  }
 
-    .connect-instantly-content {
-        margin-top: 35px;
-        text-align: center;
-    }
+  .recruiter-form-img {
+    margin-top: 30px;
+  }
 
-    .connect-instantly-content button.btn {
-        margin: auto;
-    }
+  .check-dropdown .dropdown-toggle::after {
+    right: 20px;
+  }
 
-    .verified-recruiters .row {
-        flex-direction: column-reverse;
-    }
+  .recruiter-form-call p {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
 
-    .verified-recruiters-content {
-        text-align: center;
-        margin-top: 35px;
-    }
+  .form-check.check-box label.form-check-label {
+    font-size: 13px;
+  }
 
-    .verified-recruiters-content .btn {
-        margin: auto;
-    }
+  .form-check.check-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
 
-    section.job-seeker {
-        padding-bottom: 20px;
-    }
+  .recruiter-form-now {
+    padding-bottom: 50px;
+  }
 
-    section.seeker-love-section h2.title-big br {
-        display: none;
-    }
+  .recruiter-banner-details {
+    padding: 0;
+    padding-bottom: 50px;
+    text-align: center;
+    margin: auto;
+    padding-top: 40px;
+  }
 
-    .seeker-love-card {
-        padding: 30px 10px;
-    }
+  .recruiter-form-call {
+    margin: auto;
+    text-align: center;
+  }
 
-    .seekerLove-user-img img {
-        width: 85px;
-        height: 85px;
-    }
+  .el-select-dropdown.el-popper {
+    margin-left: unset !important;
+  }
 
-    .seekerLove-user-info {
-        width: calc(100% - 85px);
-        padding-left: 15px;
-    }
+  .Schedule-call {
+    padding: 20px 15px 30px;
+    margin-top: 20px;
+  }
 
-    .seekerLove-user-info h5 {
-        font-size: 16px;
-        line-height: 21px;
-    }
-
-    .seekerLove-raiting {
-        margin-bottom: 10px;
-    }
-
-    .seekerLove-raiting ul li {
-        margin-right: 8px;
-    }
-
-    .seeker-love-user {
-        margin-bottom: 25px;
-    }
-
-    .seeker-love-card h4 {
-        font-size: 21px;
-        margin-bottom: 15px;
-    }
-
-    .jobseeker-banner-img img {
-        width: 130px;
-    }
-
-    .jobseeker-banner-img {
-        max-width: 360px;
-        width: 100%;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-    .jobseeker-banner-img .jobseeker-banner-scan img {
-        width: 90px;
-    }
-
-    .jobseeker-banner-content p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-
-    .jobseeker-banner-right {
-        align-items: center;
-        text-align: center;
-    }
-
-    .download-form-field button.btn {
-        width: 113px;
-        font-size: 13px;
-        margin-left: 6px;
-    }
-
-    .job-seeker-banner-old .jobseeker-banner-content {
-        padding-top: 0px;
-    }
-
-    .job-seeker-banner-old .jobseeker-banner-content h1 {
-        margin-bottom: 30px;
-    }
+  .recruiter-banner-details p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1299px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .recruiter-banner {
+    padding: 80px 0;
+  }
+
+  .recruiter-form-section {
+    padding: 90px 0 110px;
+  }
+
+  .startup-section-heading {
+    padding-top: 20px;
+  }
+
+  .recruiter-form-call p {
+    margin-bottom: 25px;
+  }
+
+  .recruiter-form-now {
+    padding-bottom: 70px;
+  }
+
+  .el-select-dropdown.el-popper {
+    margin-left: 260px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .recruiter-form-call p {
+    margin-bottom: 30px;
+    line-height: normal;
+  }
+
+  .recruiter-form-call p {
+    font-size: 16px;
+  }
+
+  .recruiter-form-now {
+    padding-bottom: 60px;
+  }
+
+  .recruiter-form-call .input-group .input-group-text {
+    width: 100%;
+  }
+
+  .form-check.check-box label.form-check-label {
+    font-size: 13px;
+  }
+
+  .form-check.check-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .recruiter-form-call .form-group input {
+    margin-bottom: 15px;
+  }
+
+  .recruiter-form-call .input-group {
+    margin-bottom: 15px;
+  }
+
+  .el-select-dropdown.el-popper {
+    margin-left: 200px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .Schedule-call {
+    padding: 20px 20px 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .recruiter-form-call p {
+    margin-bottom: 30px;
+    line-height: normal;
+  }
+
+  .recruiter-form-call p {
+    font-size: 16px;
+  }
+
+  .recruiter-form-now {
+    padding-bottom: 60px;
+  }
+
+  .recruiter-form-call .input-group .input-group-text {
+    width: 100%;
+  }
+
+  .form-check.check-box label.form-check-label {
+    font-size: 13px;
+  }
+
+  .form-check.check-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .recruiter-form-call .form-group input {
+    margin-bottom: 15px;
+  }
+
+  .recruiter-form-call .input-group {
+    margin-bottom: 15px;
+  }
+
+  .el-select-dropdown.el-popper {
+    margin-left: 200px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .Schedule-call {
+    padding: 20px 20px 30px;
+  }
+
+  .hire-chat-section {
+    padding-bottom: 100px;
+
+    .hire-chat {
+      //   padding-bottom: 80px;
+      background-color: #f4fafd;
+    }
+
+    .hire-chat .row {
+      align-items: center;
+    }
+
+    .hire-now h2 {
+      color: #0e101a;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 66.8px;
+      margin: 30px 0;
+    }
+
+    .hire-now p {
+      color: #0e101a;
+      font-size: 17px;
+      font-weight: normal;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: stretch;
+
+      .Sgdef {
+        position: absolute;
+        color: #b0b2b8;
+        z-index: 1;
+        font-size: 13px;
+        padding: 13px 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      .form-search-mob {
+        display: flex;
+        position: relative;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 45px;
+        width: 65%;
+        color: #808080;
+        font-size: 13px;
+        padding: 0px 10px 0px 60px;
+        background: rgb(255, 255, 255);
+        border: 2px solid rgb(223, 225, 230);
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        border-radius: 32px;
+      }
+
+      .hire-now-img {
+        text-align: end;
+      }
+    }
+
+    .app-scan-button {
+      display: grid;
+      grid-auto-flow: column;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      align-items: end;
+      grid-template-columns: 200px 50px 10px 50px;
+    }
+  }
+
+  // end
+}
+
+// @media only screen and (max-width: 480px) {
+//     .startups-logo-list li {
+//         width: 48%;
+//         margin-right: 2%;
+//         text-align: center;
+//         margin-bottom: 20px;
+//     }
+
+//     .startups-logo-list li:nth-child(2n) {
+//         margin-right: 0;
+//     }
+
+//     .startups-logo-list {
+//         margin-bottom: 30px;
+//     }
+
+//     .recruiter-startup-section .startups-logo {
+//         padding-top: 50px;
+//     }
+
+//     .recruiter-banner h1 {
+//         margin-bottom: 0;
+//         text-align: center;
+//         margin-top: 30px;
+//     }
+
+//     .recruiter-banner h1 br {
+//         display: none;
+//     }
+
+//     .recruiter-banner {
+//         padding: 60px 0;
+//     }
+
+//     .startup-section-heading {
+//         padding-top: 0;
+//         padding-bottom: 10px;
+//     }
+
+//     .recruiter-form-section {
+//         padding: 60px 0 80px;
+//     }
+
+//     .recruiter-form-img {
+//         margin-top: 30px;
+//     }
+
+//     .check-dropdown .dropdown-toggle::after {
+//         right: 20px;
+//     }
+
+//     .recruiter-form-call p {
+//         margin-bottom: 30px;
+//         font-size: 16px;
+//     }
+
+//     .form-check.check-box label.form-check-label {
+//         font-size: 13px;
+//     }
+
+//     .form-check.check-box {
+//         margin-top: 20px;
+//         margin-bottom: 20px;
+//         text-align: left;
+//     }
+
+//     .recruiter-form-now {
+//         padding-bottom: 50px;
+//     }
+
+//     .recruiter-banner-details {
+//         padding: 0;
+//         padding-bottom: 50px;
+//         text-align: center;
+//         margin: auto;
+//     }
+
+//     .recruiter-form-call {
+//         margin: auto;
+//         text-align: center;
+//     }
+
+//     .el-select-dropdown.el-popper {
+//         margin-left: unset !important;
+//     }
+//     .Schedule-call {
+//         padding: 20px 15px 30px;
+//         margin-top: 20px;
+//     }
+//     .recruiter-banner-details p {
+//         font-size: 16px;
+//         line-height: 24px;
+//     }
+// }
 </style>

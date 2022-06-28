@@ -393,7 +393,7 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .submitButton {
- border-radius: 50px;
+  border-radius: 50px;
   background-color: #2ce2a2;
   color: #000000;
   font-size: 16px;
@@ -404,12 +404,12 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .next-or {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #b4b4b4;
-    margin-top: 20px;
-    text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b4b4b4;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .schedule-a-call.contact-ue-form .Scheduleacallnow {

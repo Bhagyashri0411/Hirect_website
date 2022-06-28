@@ -54,30 +54,35 @@
                 Download App
               </button>
             </li>
-            <button
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#secondnavbar"
-              aria-controls="navbarScroll"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse nav-coll" id="secondnavbar">
-              <ul>
-                <li class="nav-item">
-                  <NuxtLink class="sec-nav-link" to="/aboutus">
-                    About us</NuxtLink
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.hirect.in/blog/" class="sec-nav-link">
-                    Blog</a
-                  >
-                </li>
-              </ul>
-            </div>
+
+            <li class="nav-item">
+              <button
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#secondnavbar"
+                aria-controls="navbarScroll"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                id="toggling"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse nav-coll" id="secondnavbar">
+                <ul>
+                  <li class="nav-item">
+                    <NuxtLink class="sec-nav-link" to="/aboutus">
+                      About us</NuxtLink
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.hirect.in/blog/" class="sec-nav-link">
+                      Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -139,6 +144,11 @@ export default {
 <style scoped>
 /* new css */
 
+#toggling {
+  background-color: white !important;
+  border-style: hidden;
+}
+
 .nav-coll {
   position: absolute;
   top: 78px;
@@ -149,6 +159,7 @@ export default {
   border-bottom-left-radius: 30px;
   box-shadow: -10px 10px 20px 0px rgb(227 227 227 / 50%);
 }
+
 .navbar-light .navbar-nav .nav-item .sec-nav-link {
   color: #333333;
   font-family: Helvetica;
@@ -158,6 +169,7 @@ export default {
   position: relative;
   cursor: pointer;
 }
+
 .nav-coll ul {
   list-style: none;
   padding: 0;
@@ -237,8 +249,8 @@ export default {
 
 .navbar.bg-light {
   background-color: #ffffff !important;
-  padding: 10px 50px;
-  box-shadow: 0 10px 20px 0 #e3e3e340;
+  padding: 10px 37px;
+  box-shadow: 0 20px 20px 0 #e3e3e340;
 }
 
 .navbar-nav {

@@ -48,7 +48,7 @@
                 </h2>
                 <p>
                   Hirect app is the best job portal for SMEs and Startups. This
-                  mobile-first chat-based platform houses 120K+ verified
+                  mobile-first chat-based platform houses 150K+ verified
                   startups who are pleased to be a part of the startup ecosystem
                   hiring on this job portal website. Since zero consultants are
                   involved, it eliminates any spam or scam calls, and the entire
@@ -83,9 +83,9 @@
             <MultiStepSegment :stepData="stepFeedData" />
           </div>
         </div>
-        <div class="row">Create Profile Post a Job in 5 Minutes Chat with AI Matched Candidates</div>
         <NuxtLink class="btn default-btn button-hire-now-seamless" to="/connect"
-                  >Hire Now</NuxtLink>
+          >Hire Now</NuxtLink
+        >
       </div>
       <!-- <div class="startups-logo">
         <div class="container">
@@ -267,34 +267,46 @@ export default {
       faqList: [
         {
           id: 1,
+          question: "How can I hire the best candidate for my job?",
+          answer:
+            "More than 2.8 Million job seekers on the Hirect app, spread across 70+ categories. The AI matching tool of Hirect filters only the best-fit candidates for the hiring post so that the recruiter can connect directly with candidates with experience and skills.",
           isShown: false,
-          question: "Question 1",
-          answer: "Answer 1",
         },
         {
           id: 2,
+          question: "Hiring in bulk can be expensive; how can I save money?",
+          answer:
+            "In traditional hiring, the hiring manager or the founder who posts the startup jobs will have to connect with consultancies that can provide a larger pool of candidates. However, this also incurs enormous expenses. Hirect app is the solution for this problem. It allows the recruiters to post the job vacancy for free. The Hirect App runs on a FREEMIUM model for recruiters so that they can use all its features without limitations. However, Hirect will charge a nominal fee to the recruiters for initiating chats with more Job Seekers than provided in the FREEMIUM plan. And the charges are pretty nominal as compared to consultancies.",
           isShown: false,
-          question: "Question 2",
-          answer: "Answer 2",
         },
         {
           id: 3,
+          question: "How soon can I start hiring for my job posting?",
+          answer:
+            "The job post will be made live quickly, and AI will filter the best-fit candidates and match them with your job posting. You can connect with them directly and start chatting instantly. You can begin hiring candidates within a day.",
           isShown: false,
-          question: "Question 3 ",
-          answer: "Answer 3",
         },
         {
           id: 4,
-          isShown: false,
-          question: "Question 4",
+          question: "How is Hirect different from other traditional portals?",
           answer:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec rutrum purus, ut tempor dui. Quisque euismod nec ex ac volutpat. Maecenas interdum tortor vel turpis condimentum congue. Fusce porttitor ac ipsum at tempus. Nulla placerat aliquet augue, nec porta enim pharetra ac. Phasellus imperdiet vel augue non condimentum. Cras.",
+            "The traditional hiring process can be long-winded, leading to candidates leaving mid-way in frustration. However, Hirect simplifies and streamlines the entire hiring process. It is the best among job hiring apps, it lets the hiring manager or recruiter connect directly with the job seeker and chat with them instantly. Since no consultants are involved, the entire process of hiring for the posted company jobs will be 100% secure with no spam or scam calls. They can also schedule a video interview within the app without exchanging any of their personal information.",
+          isShown: false,
         },
         {
           id: 5,
+          question: "What are the job posting limitations for the Hirer?",
+          answer:
+            "Recruiters who have signed up and been onboarded with the app are entitled to a 3-day complimentary trial for 30 chat initiations per day. After the trial, they will be upgraded to the FREEMIUM plan of 5 free chats a day. If the hiring manager/ recruiter wants to chat with more candidates in a day, they would have to pay a nominal fee or subscription as per the plan they choose. For further details, check out the product and pricing of Hirect.",
           isShown: false,
-          question: "Question 5",
-          answer: "Answer 5",
+        },
+        {
+          id: 6,
+          question:
+            "What if I have some customized requirements? Who should I reach out to?",
+          answer:
+            "If the recruiter has any custom requirements, they can write to: sales@hirect.in.",
+          isShown: false,
         },
       ],
       getUserInf: {
@@ -303,15 +315,18 @@ export default {
       stepFeedData: [
         {
           step: 1,
-          imageSrc: "/_nuxt/assets/imgs/step-image.png",
+          imageSrc: "step-image.png",
+          title: "Create Profile",
         },
         {
           step: 2,
-          imageSrc: "/_nuxt/assets/imgs/step-image.png",
+          imageSrc: "ic_work.png",
+          title: "Post Job in 5 Minutes",
         },
         {
           step: 3,
-          imageSrc: "/_nuxt/assets/imgs/step-image.png",
+          imageSrc: "recruiter-msg.png",
+          title: "Chat with AI Matched Candidates",
         },
       ],
     };
@@ -365,6 +380,7 @@ export default {
 .recruiter-section {
   padding-bottom: 102px;
 }
+
 .recruiter-banner {
   padding: 50px 0;
 }
@@ -849,6 +865,7 @@ button.btn.eye-button {
   .row {
     flex-direction: column-reverse;
   }
+
   .recruiter-banner {
     padding: 80px 0;
   }
@@ -879,6 +896,7 @@ button.btn.eye-button {
     margin-left: 235px !important;
     padding-bottom: 7px !important;
   }
+
   .recruiter-banner-details p {
     font-size: 17px;
     line-height: 29px;
@@ -941,6 +959,7 @@ button.btn.eye-button {
     margin-left: 200px !important;
     padding-bottom: 5px !important;
   }
+
   .Schedule-call {
     padding: 20px 20px 30px;
   }
@@ -1032,10 +1051,12 @@ button.btn.eye-button {
   .el-select-dropdown.el-popper {
     margin-left: unset !important;
   }
+
   .Schedule-call {
     padding: 20px 15px 30px;
     margin-top: 20px;
   }
+
   .recruiter-banner-details p {
     font-size: 16px;
     line-height: 24px;

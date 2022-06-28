@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="schedule-a-call">
-      <h2 class="schedule-title">Talk to Our Hirect Team</h2>
+    <div class="schedule-a-call contact-ue-form">
+      <p class="schedule-title">Take Your First Step to Register</p>
       <p class="schedule-text">
-        Share your details. We will get in touch with you in 30 minutes.
+        Your Next Hire is Right Here. Get Started Soon.
       </p>
       <div class="input-container">
         <el-input
@@ -28,7 +28,7 @@
             v-model="getUserInf.phoneArea"
             slot="prepend"
             placeholder="+91"
-            style="width: 100px"
+            style="width: 68px"
           >
             <el-option label="+91" value="+91"></el-option>
             <el-option label="+1" value="+1"></el-option>
@@ -45,31 +45,34 @@
           id="user-email"
           v-model="getUserInf.userEmail"
           @focus="inputFocus(3)"
-          placeholder="Your Work Email"
+          placeholder="Work Email"
           class="input-item"
         />
         <p v-show="isUserEmailError" class="alertText">
           Your work email is required
         </p>
       </div>
-      <div class="input-container">
+      <div class="input-container-bottom">
         <el-input
           id="company-name"
           v-model="getUserInf.userCompanyName"
           @focus="inputFocus(4)"
-          placeholder="Your Company Name"
-          class="input-item"
+          placeholder="Company Name"
+          class="inner-input-item"
         />
-        <p v-show="isCompanyNameError" class="alertText">
-          Your company name is required
-        </p>
-      </div>
-      <div class="input-container">
+        <el-input
+          id="candidats-number"
+          v-model="getUserInf.userCandidats"
+          @focus="inputFocus(4)"
+          placeholder="Number of candidats"
+          class="inner-input-item"
+          style="margin-top: 24px"
+        />
         <el-select
           id="user-position"
           v-model="getUserInf.userPosition"
           @focus="inputFocus(5)"
-          class="input-item"
+          class="inner-input-item"
           placeholder="Your Position"
         >
           <el-option
@@ -79,27 +82,31 @@
             :value="item.value"
           />
         </el-select>
-        <p v-show="isUserPositionError" class="alertText">
+        <p v-show="isCompanyNameError" class="alertText">
+          Your company name is required
+        </p>
+        <p v-show="isUserPositionError" class="alertText" style="left: 276px">
           Your position is required
         </p>
       </div>
+      <el-checkbox
+        v-model="getUserInf.isReceive"
+        class="schedule-checkbox"
+        style="color: #78787a; margin-left: 22px"
+        >I would like to receive updates via whatsapp.</el-checkbox
+      >
       <el-button
         type="primary"
         class="submitButton"
         :loading="isButtonLoading"
         @click="submitClick"
-        >Submit</el-button
-      >
-      <el-checkbox
-        v-model="getUserInf.isReceive"
-        class="schedule-checkbox"
-        style="color: #78787a"
-        >I'm neither a job seeker nor a hiring consultant.</el-checkbox
+        >Sign Up</el-button
       >
     </div>
     <el-dialog
       :visible.sync="dialogVisible"
       width="920px"
+      :append-to-body="true"
       class="submit-dialog"
     >
       <center>
@@ -302,7 +309,7 @@ export default {
       this.dialogVisible = true;
       this.$sendToEsData("webQrcodeViewed", {
         region_id: 0,
-        position: "in_startup_hiring_leads_popup",
+        position: "in_recruiters_leads_popup",
       });
       fbq("track", "LEAD");
       this.clearFormData();
@@ -370,9 +377,90 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.schedule-a-call.contact-ue-form p.schedule-title {
+  color: #333333;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-align: center;
+}
+
+.schedule-a-call.contact-ue-form .submitButton {
+  border-radius: 50px;
+  background-color: #2ce2a2;
+  color: #000000;
+  font-size: 16px;
+  height: 42px;
+  width: 388px;
+  left: 44px;
+  top: 492px;
+}
+
+.schedule-a-call.contact-ue-form .next-or {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b4b4b4;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.schedule-a-call.contact-ue-form .Scheduleacallnow {
+  box-sizing: border-box;
+  position: absolute;
+  width: 388px;
+  height: 42px;
+  // left: 44px;
+  top: 574px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+}
+
+.schedule-a-call.contact-ue-form p.schedule-text {
+  color: #4d5358;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+h3.allredy-link {
+  color: #000000;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  padding-top: 12px;
+  text-align: center;
+}
+
+h3.allredy-link a {
+  color: #2ce2a2;
+  text-decoration: none;
+  padding-left: 5px;
+}
+
 .schedule-a-call /deep/ .el-input__inner {
-  height: 64px;
-  font-size: 18px;
+  width: 388px;
+  height: 42px;
+  border-radius: 50px;
+  background-color: #f2f4f8;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+  border-color: #f7f7f7 !important;
 }
 
 .schedule-a-call /deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
@@ -396,7 +484,6 @@ export default {
 }
 
 .input-item {
-  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -405,14 +492,11 @@ export default {
 }
 
 .schedule-a-call {
-  //  width: 587px;
-  height: 674px;
-  padding: 40px;
   background-color: #ffffff;
-  box-shadow: 0px 23px 47px 0px rgba(0, 0, 0, 0.12);
+  // box-shadow: 0px 23px 47px 0px rgba(0, 0, 0, 0.12);
   border-radius: 16px;
   text-align: left;
-  margin-top: 73px;
+  padding: 0 20px;
 
   .schedule-title {
     font-size: 48px;
@@ -424,31 +508,23 @@ export default {
   .schedule-text {
     font-size: 20px;
     font-weight: 400;
-    color: #808080;
+    color: #0e101a;
     line-height: 24px;
-    margin: 6px 0px 34px 0px;
+    margin: 6px 0px 60px 0px;
   }
 
   .submitButton {
+    margin-top: 30px;
+    // display: block;
     height: 64px;
     width: 100%;
-    border-radius: 32px;
+    border-radius: 2px;
     font-size: 24px;
     font-weight: bold;
     color: #0e101a;
   }
 }
 
-// .input-container-bottom {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   position: relative;
-
-//   .inner-input-item {
-//     width: 47%;
-//   }
-// }
 .schedule-checkbox {
   font-size: 20px;
   font-weight: 400;
@@ -522,159 +598,389 @@ export default {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .schedule-a-call /deep/ .el-input__inner {
-    height: 64px;
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  .schedule-a-call .schedule-text {
+    margin: 6px 0px 35px 0px;
     font-size: 18px;
   }
 
-  .schedule-a-call /deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
-    color: #0e101a;
-  }
-
-  .schedule-a-call /deep/ .el-checkbox__input.is-checked .el-checkbox__inner {
-    background-color: #0e101a;
-    border-color: #0e101a;
-  }
-
-  /deep/ .el-dialog {
-    border-radius: 12px;
-  }
-
-  .alertText {
-    position: absolute;
-    font-size: 15px;
-    color: #ef444f;
-    top: 65px;
+  .schedule-a-call .schedule-title {
+    font-size: 41px;
+    line-height: normal;
   }
 
   .input-item {
+    margin-bottom: 15px;
+  }
+
+  .schedule-a-call .submitButton {
+    height: 51px;
+    font-size: 21px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .schedule-a-call .schedule-title {
+    font-size: 35px;
+  }
+
+  .schedule-a-call .schedule-text {
+    margin: 6px 0px 30px 0px;
+  }
+
+  .input-container-bottom .inner-input-item {
+    width: 49%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
+    padding: 0;
+  }
+
+  .schedule-a-call .schedule-title {
+    font-size: 26px;
+    line-height: normal;
+    word-break: break-word;
+  }
+
+  .el-dialog__wrapper.schedule-dialog .el-dialog__headerbtn {
+    top: 7px;
+    right: 10px;
+  }
+
+  .schedule-a-call .schedule-text {
+    font-size: 16px;
+    word-break: break-word;
+    margin: 6px 0px 25px 0px;
+  }
+
+  .input-item {
+    margin-bottom: 15px;
+  }
+
+  .input-container-bottom .inner-input-item {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
-  .input-container {
-    position: relative;
+  .input-container-bottom {
+    flex-direction: column;
   }
 
-  .schedule-a-call {
-    // width: 587px;
-    height: 674px;
-    padding: 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 23px 20px 0px rgba(0, 0, 0, 0.12);
-    border-radius: 8px;
-    text-align: left;
-    margin-top: 73px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    .schedule-title {
-      font-size: 48px;
-      font-weight: bolder;
-      color: #0e101a;
-      line-height: 58px;
-    }
-
-    .schedule-text {
-      font-size: 20px;
-      font-weight: 400;
-      color: #808080;
-      line-height: 24px;
-      margin: 6px 0px 34px 0px;
-    }
-
-    .submitButton {
-      height: 64px;
-      width: 100%;
-      border-radius: 32px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #0e101a;
-    }
-  }
-
-  // .input-container-bottom {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  //   position: relative;
-
-  //   .inner-input-item {
-  //     width: 47%;
-  //   }
-  // }
   .schedule-checkbox {
-    font-size: 20px;
-    font-weight: 400;
-    color: #0e101a;
-    line-height: 24px;
+    margin-top: 0px;
+    line-height: normal;
+  }
+
+  .schedule-a-call .submitButton {
+    height: 42px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+// ** pop-up window ***
+
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  .schedule-a-call .schedule-text {
+    margin: 6px 0px 35px 0px;
+    font-size: 18px;
+  }
+
+  .schedule-a-call .schedule-title {
+    font-size: 41px;
+    line-height: normal;
+  }
+
+  .input-item {
+    margin-bottom: 15px;
+  }
+
+  .schedule-a-call .submitButton {
+    height: 40px;
+    font-size: 18px;
     margin-top: 20px;
   }
 
-  .submit-dialog {
-    .ic_congratulations {
-      display: block;
-      width: 90px;
-      height: 70px;
-    }
+  // Pop window
+  /deep/ .el-dialog {
+    width: 900px;
+  }
 
-    .dialog_title {
-      font-size: 28px;
-      font-weight: bold;
-      color: #0e101a;
-      line-height: 34px;
-      margin: 24px 0px;
-    }
+  .submit-dialog .ic_congratulations {
+    width: 83px;
+    height: 66px;
+  }
+}
 
-    .dialog_text {
-      font-size: 18px;
-      font-weight: normal;
-      color: #0e101a;
-      line-height: 20px;
-    }
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .schedule-a-call .schedule-title {
+    font-size: 35px;
+  }
 
-    .qr_schedule {
-      width: 196px;
-      height: 196px;
-      margin: 32px 0px 10px 0px;
-    }
+  .schedule-a-call .schedule-text {
+    margin: 6px 0px 30px 0px;
+  }
 
-    .download-container {
-      display: flex;
-      width: 550px;
-      margin: 0 auto;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 60px;
+  .input-container-bottom .inner-input-item {
+    width: 49%;
+  }
 
-      .download_btn {
-        width: 160px;
-        height: 48px;
-        margin: 0px 6px;
-        cursor: pointer;
-      }
+  // Pop window
+  /deep/ .el-dialog {
+    width: 800px;
+  }
 
-      .downloadDialog-button-pkg-container {
-        position: relative;
-        margin: 0px 0px;
+  .submit-dialog .ic_congratulations {
+    width: 75px;
+    height: 60px;
+  }
 
-        .downloadDialog-button-pkg {
-          width: 160px;
-          height: 48px;
-          cursor: pointer;
-        }
+  .submit-dialog .dialog_title {
+    font-size: 25px;
+    margin: 24px 0px;
+  }
 
-        .popover-img {
-          width: 160px;
-          height: 44px;
-          display: block;
-          position: absolute;
-          top: -48px;
-          cursor: pointer;
-        }
-      }
-    }
+  .submit-dialog .dialog_text {
+    font-size: 17px;
+    line-height: 19px;
+  }
+
+  .submit-dialog .qr_schedule[data-v-9354007a] {
+    width: 190px;
+    height: 186px;
+    margin: 15px 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  // Pop window
+  /deep/ .el-dialog {
+    width: 750px;
+  }
+
+  .submit-dialog .ic_congratulations {
+    width: 70px;
+    height: 55px;
+  }
+
+  .submit-dialog .dialog_title {
+    font-size: 22px;
+    margin: 24px 0px;
+    line-height: 30px;
+  }
+
+  .submit-dialog .dialog_text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .submit-dialog .qr_schedule {
+    width: 185px;
+    height: 180px;
+    margin: 15px 0px;
+  }
+
+  .submit-dialog .download-container {
+    display: flex;
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 730px) and (max-width: 880px) {
+  .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
+    padding: 0;
+  }
+
+  .schedule-a-call .schedule-title {
+    font-size: 26px;
+    line-height: normal;
+    word-break: break-word;
+  }
+
+  .el-dialog_wrapper.schedule-dialog .el-dialog_headerbtn {
+    top: 7px;
+    right: 10px;
+  }
+
+  .schedule-a-call .schedule-text {
+    font-size: 16px;
+    word-break: break-word;
+    margin: 6px 0px 25px 0px;
+  }
+
+  .input-item {
+    margin-bottom: 15px;
+  }
+
+  .el-input-group__prepend .el-select {
+    width: 60px !important;
+  }
+
+  .input-container-bottom .inner-input-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-container-bottom {
+    flex-direction: column;
+  }
+
+  .schedule-checkbox {
+    margin-top: 0px;
+    line-height: normal;
+  }
+
+  .schedule-a-call .submitButton {
+    height: 42px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  // Pop window
+  /deep/ .el-dialog {
+    width: 500px;
+    max-width: 800px;
+  }
+
+  .submit-dialog .ic_congratulations {
+    width: 65px;
+    height: 50px;
+  }
+
+  .submit-dialog .dialog_title {
+    font-size: 20px;
+    margin: 20px 0px;
+    line-height: 26px;
+  }
+
+  .submit-dialog .dialog_text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .submit-dialog .qr_schedule {
+    width: 185px;
+    height: 175px;
+    margin: 15px 0px;
+  }
+
+  .submit-dialog .download-container {
+    padding-bottom: 0px;
+    width: 350px;
+  }
+
+  .submit-dialog .download-container .download_btn[data-v-9354007a],
+  .submit-dialog
+    .download-container
+    .downloadDialog-button-pkg-container
+    .downloadDialog-button-pkg[data-v-9354007a] {
+    display: block;
+    width: 110px;
+    height: 35px;
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 730px) {
+  // Pop window
+  /deep/ .el-dialog {
+    width: 700px;
+    max-width: 370px;
+  }
+
+  .submit-dialog .ic_congratulations {
+    width: 65px;
+    height: 50px;
+  }
+
+  .submit-dialog .dialog_title {
+    font-size: 20px;
+    margin: 20px 0px;
+    line-height: 26px;
+  }
+
+  .submit-dialog .dialog_text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .submit-dialog .qr_schedule {
+    width: 185px;
+    height: 175px;
+    margin: 15px 0px;
+  }
+
+  .submit-dialog .download-container {
+    padding-bottom: 30px;
+    display: block;
+    width: 160px;
+  }
+
+  .submit-dialog .download-container .download_btn,
+  .submit-dialog
+    .download-container
+    .downloadDialog-button-pkg-container
+    .downloadDialog-button-pkg {
+    width: 140px;
+    height: 40px;
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 390px) {
+  // Pop window
+  /deep/ .el-dialog {
+    width: 700px;
+    max-width: 312px;
+  }
+
+  .submit-dialog .ic_congratulations {
+    width: 65px;
+    height: 50px;
+  }
+
+  .submit-dialog .dialog_title {
+    font-size: 17px;
+    margin: 18px 0px;
+    line-height: 20px;
+  }
+
+  .submit-dialog .dialog_text {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .submit-dialog .qr_schedule {
+    width: 175px;
+    height: 165px;
+  }
+
+  .submit-dialog .download-container {
+    padding-bottom: 0;
+    display: block;
+    width: 150px;
+  }
+
+  .submit-dialog .download-container .download_btn,
+  .submit-dialog
+    .download-container
+    .downloadDialog-button-pkg-container
+    .downloadDialog-button-pkg {
+    width: 140px;
+    height: 40px;
+    margin: 5px 0;
   }
 }
 </style>
