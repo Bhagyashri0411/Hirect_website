@@ -10,31 +10,29 @@
                 Open the camera on your phone and scan the QR code<br />below to
                 download Hirect App.
               </p>
-              <ul class="app-scan-button">
-                <li>
-                  <a
-                    ><img
-                      id="download-hirect-qrcode"
-                      class="qr-code-img"
-                      src="~/assets/imgs/Qr_code_Updated 1.svg"
-                      alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    href="https://apps.apple.com/US/app/id1518442417?mt=8"
-                    target="_blank"
-                    ><img src="~/assets/imgs/bi_apple.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a
-                    href="https://hirectin.onelink.me/TwhD/b0fe8b20"
-                    target="_blank"
-                    ><img src="~/assets/imgs/ion_logo-google-playstore.svg" alt=""
-                  /></a>
-                </li>
-              </ul>
+              <div class="app-scan-button">
+                <a
+                  ><img
+                    id="download-hirect-qrcode"
+                    class="qr-code-img"
+                    src="~/assets/imgs/qr-frame.png"
+                    alt=""
+                /></a>
+                <a
+                  href="https://apps.apple.com/US/app/id1518442417?mt=8"
+                  target="_blank"
+                  ><img src="~/assets/imgs/logo_apple-store.png" alt=""
+                /></a>
+                <span
+                  class="line-seperator"
+                  style="height: 40px; border-left: 1px solid"
+                ></span>
+                <a
+                  href="https://hirectin.onelink.me/TwhD/b0fe8b20"
+                  target="_blank"
+                  ><img src="~/assets/imgs/logo-google-playstore.png" alt=""
+                /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -95,16 +93,21 @@ export default {
 }
 
 .app-scan-button {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: end;
+  display: grid;
+  grid-auto-flow: column;
   margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: end;
+  grid-template-columns: 200px 50px 10px 50px;
 }
 
 .app-scan-img {
   text-align: center;
+}
+
+.qr-code-img {
+  width: 150px;
+  height: 150px;
 }
 
 .app-scan-button li {
@@ -119,10 +122,6 @@ export default {
   .acan-code h2 {
     font-size: 32px;
     margin-bottom: 30px;
-  }
-
-  .app-scan-button li {
-    margin-right: 35px;
   }
 
   .app-scan-button {
