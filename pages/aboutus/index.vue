@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper">
     <Header />
-    <!----enteriprise-hiring-section start----------->
-    <section class="enteriprise-hiring-section">
-      <div class="enteriprise-hiring-banner">
+    <!----enterprise-hiring-section start----------->
+    <section class="enterprise-hiring-section">
+      <div class="enterprise-hiring-banner">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="px-0.5 py-0.5">
-                <div class="enteriprise-hiring-banner-details">
+                <div class="enterprise-hiring-banner-details">
                   <h3 class="title-md">
                     Strategic Partnership with
                     <span style="color: #2ce2a2"> Hirect </span> to Build the
@@ -20,7 +20,7 @@
                     hiring needs. Our problem-solving approach is helping
                     corporates to grow their team much more robust.
                   </p>
-                  <div class="enteriprise-hiring-banner-img">
+                  <div class="enterprise-hiring-banner-img">
                     <img src="~/assets/imgs/strategic-partnership.png" alt="" />
                   </div>
                 </div>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </section>
-    <!----end enteriprise-hiring-section start----------->
+    <!----end enterprise-hiring-section start----------->
 
     <!----enteriprise-AI-platform-section start----------->
     <section class="enteriprise-AI-platform-section">
@@ -316,7 +316,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.enteriprise-hiring-banner-details h3.title-md {
+.enterprise-hiring-banner-details h3.title-md {
   //  position: absolute;
   width: 522px;
   height: 120px;
@@ -327,15 +327,15 @@ export default {
   line-height: 60px;
 }
 
-.enteriprise-hiring-section {
+.enterprise-hiring-section {
   padding-bottom: 102px;
 }
 
-.enteriprise-hiring-banner {
+.enterprise-hiring-banner {
   padding: 50px 0;
 }
 
-.enteriprise-hiring-banner-img {
+.enterprise-hiring-banner-img {
   // position: absolute;
   width: 558px;
   height: 356px;
@@ -787,12 +787,12 @@ button.btn.eye-button {
   border-color: #000000;
 }
 
-.enteriprise-hiring-banner-details {
+.enterprise-hiring-banner-details {
   width: 100%;
   max-width: 540px;
 }
 
-.enteriprise-hiring-banner-details p {
+.enterprise-hiring-banner-details p {
   // position: absolute;
   width: 559px;
   height: 74px;
@@ -835,7 +835,7 @@ button.btn.eye-button {
     flex-direction: column-reverse;
   }
 
-  .enteriprise-hiring-banner {
+  .enterprise-hiring-banner {
     padding: 80px 0;
   }
 
@@ -866,7 +866,7 @@ button.btn.eye-button {
     padding-bottom: 7px !important;
   }
 
-  .enteriprise-hiring-banner-details p {
+  .enterprise-hiring-banner-details p {
     font-size: 17px;
     line-height: 29px;
   }
@@ -954,17 +954,17 @@ button.btn.eye-button {
     padding-top: 50px;
   }
 
-  .enteriprise-hiring-banner h1 {
+  .enterprise-hiring-banner h1 {
     margin-bottom: 0;
     text-align: center;
     margin-top: 30px;
   }
 
-  .enteriprise-hiring-banner h1 br {
+  .enterprise-hiring-banner h1 br {
     display: none;
   }
 
-  .enteriprise-hiring-banner {
+  .enterprise-hiring-banner {
     padding: 60px 0;
   }
 
@@ -1004,7 +1004,7 @@ button.btn.eye-button {
     padding-bottom: 50px;
   }
 
-  .enteriprise-hiring-banner-details {
+  .enterprise-hiring-banner-details {
     padding: 0;
     padding-bottom: 50px;
     text-align: center;
@@ -1026,7 +1026,7 @@ button.btn.eye-button {
     margin-top: 20px;
   }
 
-  .enteriprise-hiring-banner-details p {
+  .enterprise-hiring-banner-details p {
     font-size: 16px;
     line-height: 24px;
   }
@@ -1037,7 +1037,7 @@ button.btn.eye-button {
     flex-direction: row;
   }
 
-  .enteriprise-hiring-banner {
+  .enterprise-hiring-banner {
     padding: 80px 0;
   }
 
@@ -1180,17 +1180,17 @@ button.btn.eye-button {
 //         padding-top: 50px;
 //     }
 
-//     .enteriprise-hiring-banner h1 {
+//     .enterprise-hiring-banner h1 {
 //         margin-bottom: 0;
 //         text-align: center;
 //         margin-top: 30px;
 //     }
 
-//     .enteriprise-hiring-banner h1 br {
+//     .enterprise-hiring-banner h1 br {
 //         display: none;
 //     }
 
-//     .enteriprise-hiring-banner {
+//     .enterprise-hiring-banner {
 //         padding: 60px 0;
 //     }
 
@@ -1230,7 +1230,7 @@ button.btn.eye-button {
 //         padding-bottom: 50px;
 //     }
 
-//     .enteriprise-hiring-banner-details {
+//     .enterprise-hiring-banner-details {
 //         padding: 0;
 //         padding-bottom: 50px;
 //         text-align: center;
@@ -1249,7 +1249,7 @@ button.btn.eye-button {
 //         padding: 20px 15px 30px;
 //         margin-top: 20px;
 //     }
-//     .enteriprise-hiring-banner-details p {
+//     .enterprise-hiring-banner-details p {
 //         font-size: 16px;
 //         line-height: 24px;
 //     }

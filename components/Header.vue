@@ -32,11 +32,11 @@
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
             </li>
-            <li class="nav-item">
-              <NuxtLink class="nav-link" to="/features-in">
+            <!-- <li class="nav-item">
+              <NuxtLink class="nav-link" to="/enterprise-hiring">
                 Enteriprise Hiring</NuxtLink
               >
-            </li>
+            </li> -->
             <!-- <li class="nav-item">
               <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
             </li> -->
@@ -73,6 +73,11 @@
                   <li class="nav-item">
                     <NuxtLink class="sec-nav-link" to="/aboutus">
                       About us</NuxtLink
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <NuxtLink class="sec-nav-link" to="/enterprise-hiring">
+                      Enterprise Hiring</NuxtLink
                     >
                   </li>
                   <li class="nav-item">
@@ -235,14 +240,14 @@ export default {
 
 /* end  */
 .navbar-light .navbar-nav .nav-link {
-  color: #333333;
+  color: #000000;
   font-family: Helvetica;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
-  line-height: 18px;
-  padding: 20px 22px;
+  line-height: 24px;
+  padding: 20px 30px;
   position: relative;
   cursor: pointer;
 }
