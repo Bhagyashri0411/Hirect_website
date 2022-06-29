@@ -316,6 +316,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.enteriprise-following-companies-section h3.title-sm {
+  color: #0e101a;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 65px;
+  margin-top: 100px;
+}
 .enteriprise-hiring-banner-details h3.title-md {
   //  position: absolute;
   width: 522px;
@@ -328,7 +337,11 @@ export default {
 }
 
 .enteriprise-hiring-section {
-  padding-bottom: 102px;
+  padding-bottom: 170px;
+}
+
+.enteriprise-AI-platform-section {
+  padding-bottom: 130px;
 }
 
 .enteriprise-hiring-banner {
@@ -391,7 +404,9 @@ export default {
 // jobs-available
 .job-available-section,
 .enteriprise-following-companies-section {
-  padding-bottom: 102px;
+  width: 1512px;
+  height: 515px;
+  padding-bottom: 86px;
 }
 
 .jobs-available {
@@ -404,7 +419,6 @@ export default {
   background-color: #ffffff;
   display: flex;
   padding: 0px 14px;
-  width: 100%;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -427,7 +441,7 @@ export default {
 
 .available-list {
   padding: 0;
-  margin: 0;
+  margin: 0 -47px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -435,8 +449,7 @@ export default {
 }
 
 .available-list li {
-  width: 224%;
-  margin-bottom: 30px;
+  margin-bottom: 85px;
 }
 
 .available-list li:nth-child(6n) {

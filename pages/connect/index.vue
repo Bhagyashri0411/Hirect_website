@@ -43,12 +43,12 @@
             <div class="col-md-7">
               <div class="hire-now">
                 <h2>
-                  <span style="color: #2ce2a2"> Hirect </span> - India's First
-                  Job App
+                  <span style="color: #2ce2a2"> Hirect </span>Hiring App for
+                  Founders and Hiring Managers
                 </h2>
                 <p>
-                  Hirect app is the best job portal for SMEs and Startups. This
-                  mobile-first chat-based platform houses 150K+ verified
+                  Hirect app is the targeted job portal for SMEs and Startups.
+                  This mobile-first chat-based platform houses 150K+ verified
                   startups who are pleased to be a part of the startup ecosystem
                   hiring on this job portal website. Since zero consultants are
                   involved, it eliminates any spam or scam calls, and the entire
@@ -78,7 +78,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="startup-section-heading">
-              <h3 class="title-md">Seamless Hiring Process in 3 Steps</h3>
+              <h3 class="title-md">Start Hiring in 3 Steps</h3>
             </div>
             <MultiStepSegment :stepData="stepFeedData" />
           </div>
@@ -120,25 +120,25 @@
               <div class="hire-now">
                 <h2>Simplify Hiring Process for Startups and SMEs</h2>
                 <p>
-                  Hirect is India's 1st direct hiring platform focused on
-                  solving the unique problem of the longwinded traditional
-                  hiring process. Hirect app is designed specifically for
-                  recruiters who can instantly connect with candidates searching
-                  for jobs in Indian Startups. This chat-based, direct hiring
-                  platform is designed for high-growth startups to meet their
-                  hiring needs without consultants.
+                  Hirect is a direct hiring platform focused on solving the
+                  unique problem of the long-winded traditional hiring process.
+                  Hirect app is explicitly designed for recruiters who can
+                  instantly connect with candidates searching for jobs in Indian
+                  Startups. This chat-based, direct hiring platform is designed
+                  for high-growth startups to meet their hiring needs without
+                  consultants.
                 </p>
                 <p>
                   Hirect is a direct hiring app for hiring managers. There are
-                  about 2.8 Million job seekers on this app across 70+
-                  categories. The AI algorithm of this job app will filter only
-                  the best-fit candidate, thus helping the hiring managers to
-                  reach out to only candidates with the best skills and
-                  experience. Recruiters vouch for this new job app as it helps
-                  nurture the talent pipeline and speed up the hiring process
-                  without compromising the quality of the candidates. The app
-                  allows the hiring managers to chat directly with candidates
-                  and get instant feedback.
+                  about 3 Million job seekers on this app across 70+ categories.
+                  The AI algorithm of this job app will filter only the best-fit
+                  candidate, thus helping the hiring managers to reach out to
+                  only candidates with the best skills and experience.
+                  Recruiters vouch for this new job app as it helps nurture the
+                  talent pipeline and speed up the hiring process without
+                  compromising the quality of the candidates. The app allows the
+                  hiring managers to chat directly with candidates and get
+                  instant feedback.
                 </p>
                 <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
                                 Instant Hiring
@@ -269,7 +269,7 @@ export default {
           id: 1,
           question: "How can I hire the best candidate for my job?",
           answer:
-            "More than 2.8 Million job seekers on the Hirect app, spread across 70+ categories. The AI matching tool of Hirect filters only the best-fit candidates for the hiring post so that the recruiter can connect directly with candidates with experience and skills.",
+            "More than 3 Million job seekers on the Hirect app, spread across 70+ categories. The AI matching tool of Hirect filters only the best-fit candidates for the hiring post so that the recruiter can connect directly with candidates with experience and skills.",
           isShown: false,
         },
         {
@@ -290,14 +290,14 @@ export default {
           id: 4,
           question: "How is Hirect different from other traditional portals?",
           answer:
-            "The traditional hiring process can be long-winded, leading to candidates leaving mid-way in frustration. However, Hirect simplifies and streamlines the entire hiring process. It is the best among job hiring apps, it lets the hiring manager or recruiter connect directly with the job seeker and chat with them instantly. Since no consultants are involved, the entire process of hiring for the posted company jobs will be 100% secure with no spam or scam calls. They can also schedule a video interview within the app without exchanging any of their personal information.",
+            "The traditional hiring process can be long-winded, leading to candidates leaving mid-way in frustration. However, Hirect simplifies and streamlines the entire hiring process. It is the best among job hiring apps; it lets the hiring manager or recruiter connect directly with the job seeker and chat with them instantly. Since no consultants are involved, the hiring process for the posted company jobs will be 100% secure with no spam or scam calls. They can also schedule a video interview within the app without exchanging any of their personal information.",
           isShown: false,
         },
         {
           id: 5,
           question: "What are the job posting limitations for the Hirer?",
           answer:
-            "Recruiters who have signed up and been onboarded with the app are entitled to a 3-day complimentary trial for 30 chat initiations per day. After the trial, they will be upgraded to the FREEMIUM plan of 5 free chats a day. If the hiring manager/ recruiter wants to chat with more candidates in a day, they would have to pay a nominal fee or subscription as per the plan they choose. For further details, check out the product and pricing of Hirect.",
+            "Recruiters who have signed up and been onboarded with the app are entitled to a 3-day complimentary trial for 30 chat initiations per day. After the trial, they will be upgraded to the FREEMIUM plan of 5 free chats a day. If the hiring manager/ recruiter wants to chat with more candidates in a day, they would have to pay a nominal fee or subscription per their chosen plan. For further details, check out the product and pricing of Hirect.",
           isShown: false,
         },
         {
