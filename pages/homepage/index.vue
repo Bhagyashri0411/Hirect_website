@@ -27,7 +27,7 @@
             </p>
           </div>
           <div class="autocomplete1">
-            <NuxtLink to="/connect" class="btn btn-app start-hiring">Start Hiring</NuxtLink>
+            <NuxtLink to="/recruiters" class="btn btn-app start-hiring">Start Hiring</NuxtLink>
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@
                   with more than 3M+ qualified candidates.
                 </p>
                 <!-- <button class="btn btn-app white-btn" @click="connect">Instant Hiring</button> -->
-                <NuxtLink class="btn btn-app white-btn" to="/connect">
+                <NuxtLink class="btn btn-app white-btn" to="/recruiters">
                   Instant Hiring
                 </NuxtLink>
               </div>

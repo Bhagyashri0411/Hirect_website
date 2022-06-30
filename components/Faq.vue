@@ -54,13 +54,14 @@
 }
 
 .answer-block{
-    text-align: left;
+    /* text-align: left; */
     width: 100%;
     padding: 10px 50px;
     margin: 15px;
     margin-top: 0px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
+    text-align: justify;
 }
 
 .question{

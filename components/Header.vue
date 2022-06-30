@@ -30,7 +30,7 @@
               <NuxtLink exact class="nav-link" to="/">Home</NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
+              <NuxtLink class="nav-link" to="/recruiters">Recruiters</NuxtLink>
             </li>
             <!-- <li class="nav-item">
               <NuxtLink class="nav-link" to="/enterprise-hiring">
