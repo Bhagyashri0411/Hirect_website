@@ -5,19 +5,16 @@
         <div class="col-md-5">
           <div class="footer-box">
             <div class="footer-logo">
-              <NuxtLink to="/homepage"
-                ><img src="~/assets/img/hirect-logo-footer.png" alt="" />
+              <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" alt="" />
               </NuxtLink>
               <p>
-                Hire Instantly for Your Startup. <br />
-                Already trusted by 2M+ Indians.
+                Hire Instantly for Your Startup.<br /> Trusted by 3M+ verified Jobseekers &<br />
+                verified 150K+ Startups!
               </p>
             </div>
             <div class="footer-whatsapp">
               <img src="~/assets/img/whatsapp-icon.svg" alt="" /><a
-                href="https://api.whatsapp.com/send?phone=+918446164920"
-                >+918446164920</a
-              >
+                href="https://api.whatsapp.com/send?phone=+918446164920">+918446164920</a>
             </div>
           </div>
         </div>
@@ -34,11 +31,11 @@
                     <NuxtLink to="/aboutus">About Us</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/features-in">Features</NuxtLink>
+                    <NuxtLink to="/enterprise-hiring">Enterprise Hiring</NuxtLink>
                   </li>
-                  <!-- <li>
-                                        <NuxtLink to="/connect">Recruiters</NuxtLink>
-                                    </li> -->
+                  <li>
+                    <NuxtLink to="/connect">Recruiters</NuxtLink>
+                  </li>
                   <li><a href="https://www.hirect.in/blog/">Blog</a></li>
                   <li>
                     <NuxtLink to="/job-seeker">Job Seekers</NuxtLink>
@@ -60,10 +57,8 @@
                     <a href="mailto:support@hirect.in">Support@hirect.in</a>
                   </li>
                   <li>
-                    <a @click="ScheduleACall"
-                      >For Recruiters<br />
-                      Schedule a Call</a
-                    >
+                    <a @click="ScheduleACall">For Recruiters<br />
+                      Schedule a Call</a>
                   </li>
                 </ul>
               </div>
@@ -76,17 +71,13 @@
                     <NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/termsconditions"
-                      >Terms & Conditions</NuxtLink
-                    >
+                    <NuxtLink to="/termsconditions">Terms & Conditions</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/product-pricing">Product & Pricing</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/refund-cancellation-policy"
-                      >Refund Policy</NuxtLink
-                    >
+                    <NuxtLink to="/refund-cancellation-policy">Refund Policy</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/purchase-flow">Purchase Flow</NuxtLink>
@@ -115,10 +106,7 @@
             </a>
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ"
-              target="_blank"
-            >
+            <a href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ" target="_blank">
               <font-awesome-icon :icon="['fab', 'youtube']" />
             </a>
           </li>
@@ -180,6 +168,10 @@ export default {
   background-color: #0e101a;
   padding-top: 50px;
   padding-bottom: 40px;
+}
+
+.footer .container {
+  min-width: 80%;
 }
 
 .footer-logo p {

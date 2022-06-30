@@ -18,7 +18,7 @@
                       <h5>Entrepreneur, Public speaker, Angel investor</h5>
                       <p>
                         "Recently, I'd done a story on the perks that people get
-                        as a part of the warikroo team that we have, and we got
+                        as a part of the warikoo team that we have, and we got
                         a lot of amazing responses. But, on such a big scale,
                         hiring becomes a bit easy. What if you are actually
                         small? What if you are just starting out? What if you
@@ -34,6 +34,26 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-card-user">
+                    <div class="client-img">
+                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                    </div>
+
+                    <div class="testimonial-info">
+                      <h4>Karan Singh Grover</h4>
+                      <h5>Indian Model and Actor</h5>
+                      <p>
+                        "So, it's the time for appraisals. And appraisals are not just about salary hikes. As an
+                        experienced candidate, you need growth, opportunities, autonomy, and more. So, why wait another
+                        year to have all this? Just download the Hirect app and chat directly with Startup CEOs and
+                        Founders without any consultants. So log on to the Hirect app and career hike karke toh dekho."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
@@ -59,6 +79,27 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-card-user">
+                    <div class="client-img">
+                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                    </div>
+
+                    <div class="testimonial-info">
+                      <h4>Ranveer Allhabadia</h4>
+                      <h5>Social media entrepreneur, YouTuber, motivational speaker</h5>
+                      <p>
+                        "All right! We've spoken about this earlier. I will address it again, especially for you guys
+                        looking for a switch in your careers and want the right path to latch on to next. You've got the
+                        Hirect job app for you. Startup. Careers. Begin here. Verified. 150k+ Startups hiring. No spams,
+                        no scams. You can also talk to Startup Founders. Make sure you check out Hirect right now. If
+                        you want fast, rapid, intense growth in life, work at Startups." "
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
@@ -79,6 +120,27 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="testimonial-card">
+                  <div class="testimonial-card-user">
+                    <div class="client-img">
+                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                    </div>
+
+                    <div class="testimonial-info">
+                      <h4>Dhruv Rathee</h4>
+                      <h5>YouTuber</h5>
+                      <p>
+                        "Friends, it is important for everyone to be happy with their jobs. But, you might have seen it
+                        often while applying for the jobs that you get to see a lot of scams and identity frauds. But,
+                        on the Hirect app, all the job postings are 100% verified. Here, the Startup Founders and the
+                        CEOs are a part of the hiring process. If you do not believe it, go check out. The app is free
+                        to download. And if you are a job seeker, it will be very useful. Do check it out for sure."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
               </VueSlickCarousel>
             </div>
           </div>
@@ -86,9 +148,9 @@
       </div>
     </div>
 
-    <div class="viewall" style="text-align: center">
+    <!-- <div class="viewall" style="text-align: center">
       <button class="view-btn">View More</button>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -103,10 +165,21 @@ export default {
   data() {
     return {
       settings: {
-        centerMode: true,
-        centerPadding: "30px",
+        // centerMode: true,
+        // centerPadding: "30px",
+        // focusOnSelect: true,
+        // infinite: false,
+        // dots: true,
+        // slidesToShow: 1,
+        // slidesToScroll: 1,
+
+        autoplay: true,
+        variableWidth: true,
+        centerPadding: "20px",
         focusOnSelect: true,
-        infinite: false,
+        infinite: true,
+        slidesToShow: 6,
+        speed: 500,
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -176,7 +249,12 @@ export default {
   // height: 460px;
   // border-radius: 10px;
   background-color: #fff;
-  padding: 25px 0px;
+  // padding: 25px 0px;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+
 }
 
 .slick-list {
@@ -204,18 +282,18 @@ export default {
 .testimonial-card h5 {
   font-size: 15px;
   line-height: 15px;
-  color: #000000;
+  color: #808080;
   margin-bottom: 15px;
 }
 
 .testimonial-info {
-  padding: 0 50px;
+  padding: 0 35px;
   width: calc(100% - 200px);
 }
 
 .testimonial-card p {
   color: #808080;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 20px;
   text-align: left;
@@ -259,7 +337,7 @@ export default {
   }
 
   .testimonial-card p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 21px;
   }
 
@@ -329,7 +407,7 @@ export default {
   }
 
   .testimonial-card p {
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
     line-height: 20px;
   }

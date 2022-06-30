@@ -6,7 +6,7 @@
     <div class="container privacy-policy-page">
       <p class="head-title">Products and Pricing</p>
       <p class="policy-item-desc">
-        Hirect is trusted by 2.3M+ verified job seekers and 120K+ verified
+        Hirect is trusted by 2.3M+ verified job seekers and 150K+ verified
         startups. Hirect is free of cost for job seekers. The Hirect App runs on
         a FREEMIUM model for recruiters so that they can use all its features
         without limitations. However, Hirect will charge a nominal fee to the
@@ -105,9 +105,7 @@
       <p class="policy-item-desc">
         If the recruiter has any custom requirement or if they would like to
         initiate more than 100 Chats/day please write to:
-        <a href="mailto:sales@hirect.in" style="color: #00e194"
-          >sales@hirect.in</a
-        >
+        <a href="mailto:sales@hirect.in" style="color: #00e194">sales@hirect.in</a>
       </p>
     </div>
     <Footer />

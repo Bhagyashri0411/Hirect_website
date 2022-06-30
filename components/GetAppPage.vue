@@ -11,28 +11,26 @@
                 download Hirect App.
               </p>
               <div class="app-scan-button">
-                <a
-                  ><img
-                    id="download-hirect-qrcode"
-                    class="qr-code-img"
-                    src="~/assets/imgs/qr-frame.png"
-                    alt=""
-                /></a>
-                <a
-                  href="https://apps.apple.com/US/app/id1518442417?mt=8"
-                  target="_blank"
-                  ><img src="~/assets/imgs/logo_apple-store.png" alt=""
-                /></a>
-                <span
-                  class="line-seperator"
-                  style="height: 40px; border-left: 1px solid"
-                ></span>
-                <a
-                  href="https://hirectin.onelink.me/TwhD/b0fe8b20"
-                  target="_blank"
-                  ><img src="~/assets/imgs/logo-google-playstore.png" alt=""
-                /></a>
-              </div>
+                  <a
+                    ><img
+                      id="download-hirect-qrcode"
+                      class="qr-code-img"
+                      src="~/assets/imgs/qr-frame.png"
+                      alt=""
+                  /></a>
+                  <a
+                    href="https://apps.apple.com/US/app/id1518442417?mt=8"
+                    target="_blank"
+                    ><img src="~/assets/imgs/logo_apple-store.png" alt=""
+                  /></a>
+                  <span
+                    class="line-seperator"
+                    style="height: 40px; border-left: 1px solid"
+                  ></span>
+                  <a href="https://hirectin.onelink.me/TwhD/b0fe8b20" target="_blank"
+                    ><img src="~/assets/imgs/logo-google-playstore.png" alt=""
+                  /></a>
+                </div>
             </div>
           </div>
         </div>
@@ -93,13 +91,13 @@ export default {
 }
 
 .app-scan-button {
-  display: grid;
-  grid-auto-flow: column;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  align-items: end;
-  grid-template-columns: 200px 50px 10px 50px;
-}
+      display: grid;
+      grid-auto-flow: column;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      align-items: end;
+      grid-template-columns: 200px 50px 10px 50px;
+    }
 
 .app-scan-img {
   text-align: center;

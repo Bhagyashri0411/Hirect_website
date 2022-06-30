@@ -2,9 +2,7 @@
   <div>
     <div class="schedule-a-call contact-ue-form">
       <p class="schedule-title">Take Your First Step to Register</p>
-      <p class="schedule-text">
-        Your Next Hire is Right Here. Get Started Soon.
-      </p>
+      <p class="schedule-text">Your Next Hire is Right Here. Get Started Soon.</p>
       <div class="input-container">
         <el-input
           id="user-name"
@@ -36,9 +34,7 @@
             <el-option label="+44" value="+44"></el-option>
           </el-select>
         </el-input>
-        <p v-show="isPhoneNumberError" class="alertText">
-          Your mobile is required
-        </p>
+        <p v-show="isPhoneNumberError" class="alertText">Your mobile is required</p>
       </div>
       <div class="input-container">
         <el-input
@@ -48,9 +44,7 @@
           placeholder="Work Email"
           class="input-item"
         />
-        <p v-show="isUserEmailError" class="alertText">
-          Your work email is required
-        </p>
+        <p v-show="isUserEmailError" class="alertText">Your work email is required</p>
       </div>
       <div class="input-container-bottom">
         <el-input
@@ -82,9 +76,7 @@
             :value="item.value"
           />
         </el-select>
-        <p v-show="isCompanyNameError" class="alertText">
-          Your company name is required
-        </p>
+        <p v-show="isCompanyNameError" class="alertText">Your company name is required</p>
         <p v-show="isUserPositionError" class="alertText" style="left: 276px">
           Your position is required
         </p>
@@ -119,14 +111,10 @@
           Congrats, your details are<br />submitted successfully.
         </p>
         <p class="dialog_text">
-          We will get in touch with you in 30 minutes. Meanwhile,<br />scan the
-          QR code to<span style="font-weight: bolder"> download the app!</span>
+          We will get in touch with you in 30 minutes. Meanwhile,<br />scan the QR code
+          to<span style="font-weight: bolder"> download the app!</span>
         </p>
-        <img
-          src="~/assets/img/qr_schedule.png"
-          alt="qr_schedule"
-          class="qr_schedule"
-        />
+        <img src="~/assets/img/qr_schedule.png" alt="qr_schedule" class="qr_schedule" />
         <div class="download-container">
           <img
             src="~/assets/img/btn_appstore.png"
@@ -166,6 +154,20 @@
 </template>
 
 <script>
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBj-hDOC0n6RNugGLWU5nfZ8jjj8SeDYLg",
+  authDomain: "enterprise-hiring-crm.firebaseapp.com",
+  projectId: "enterprise-hiring-crm",
+  storageBucket: "enterprise-hiring-crm.appspot.com",
+  messagingSenderId: "921119807588",
+  appId: "1:921119807588:web:6d08aed5411070223f6771",
+  measurementId: "G-XRTSKCVPZF",
+};
+const app = firebase.initializeApp(firebaseConfig);
+
 export default {
   name: "schedule-a-call",
   components: {},
@@ -227,9 +229,7 @@ export default {
     this.$localSaveSubmitUrl();
   },
   mounted() {
-    this.submitUrlSearch = JSON.parse(
-      window.localStorage.getItem("submitUrlSearch")
-    );
+    this.submitUrlSearch = JSON.parse(window.localStorage.getItem("submitUrlSearch"));
   },
   methods: {
     openDownloadGuide() {
@@ -298,13 +298,14 @@ export default {
         account_id: this.getUserInf.userCompanyName,
         cf_contacts_positionchoice: this.getUserInf.userPosition,
         title: "",
-        emailoptin: "",
+        emailoptin: this.getUserInf.isReceive,
         cf_contacts_enterurl: this.submitUrl,
         cf_contacts_appointmenttime2: "",
         leadsource: leadSourcePara,
         cf_contacts_freetocontact: "",
       };
-      await this.$reqPost("/hirect/company-service/postWix", formData);
+      // await this.$reqPost("/hirect/company-service/postWix", formData);
+      await this.sendCrmData(formData);
       this.isButtonLoading = false;
       this.dialogVisible = true;
       this.$sendToEsData("webQrcodeViewed", {
@@ -358,8 +359,7 @@ export default {
           this.isCompanyNameError = false;
           break;
         case 5:
-          document.getElementById("user-position").style.borderColor =
-            "#DCDFE6";
+          document.getElementById("user-position").style.borderColor = "#DCDFE6";
           this.isUserPositionError = false;
           break;
       }
@@ -371,6 +371,11 @@ export default {
     googleImgClickHandle() {
       this.$ga.event("click", "android", "app", 1);
       window.open(this.androidDownloadAddressIN, "_blank");
+    },
+    async sendCrmData(user) {
+      const db = await app.firestore();
+      const leadRef = await db.collection("users").doc();
+      await leadRef.set(user, { merge: true });
     },
   },
 };
@@ -410,11 +415,9 @@ export default {
 
 .schedule-a-call.contact-ue-form .Scheduleacallnow {
   box-sizing: border-box;
-  position: absolute;
   width: 388px;
   height: 42px;
   // left: 44px;
-  top: 574px;
   border: 1px solid #000000;
   border-radius: 50px;
   background: #ffffff;
