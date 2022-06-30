@@ -102,7 +102,7 @@
         @click="submitClick"
         >Schedule a call now!</el-button
       > -->
-     
+
       <!-- <h3 class="allredy-link">
             Already registered user?<a target="blink" href="https://recruiter.hirect.in/">Login
             </a>
@@ -394,7 +394,7 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .submitButton {
- border-radius: 50px;
+  border-radius: 50px;
   background-color: #2ce2a2;
   color: #000000;
   font-size: 16px;
@@ -405,12 +405,12 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .next-or {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #b4b4b4;
-    margin-top: 20px;
-    text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #b4b4b4;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .schedule-a-call.contact-ue-form .Scheduleacallnow {
@@ -487,7 +487,7 @@ h3.allredy-link a {
 }
 
 .input-item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .input-container {
@@ -635,9 +635,6 @@ h3.allredy-link a {
   .input-container-bottom .inner-input-item {
     width: 49%;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px) {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {

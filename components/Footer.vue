@@ -5,16 +5,20 @@
         <div class="col-md-5">
           <div class="footer-box">
             <div class="footer-logo">
-              <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" alt="" />
+              <NuxtLink to="/homepage"
+                ><img src="~/assets/img/hirect-logo-footer.png" alt="" />
               </NuxtLink>
               <p>
-                Hire Instantly for Your Startup.<br /> Trusted by 3M+ verified Jobseekers &<br />
+                Hire Instantly for Your Startup.<br />
+                Trusted by 3M+ verified Jobseekers &<br />
                 verified 150K+ Startups!
               </p>
             </div>
             <div class="footer-whatsapp">
               <img src="~/assets/img/whatsapp-icon.svg" alt="" /><a
-                href="https://api.whatsapp.com/send?phone=+918446164920">+918446164920</a>
+                href="https://api.whatsapp.com/send?phone=+918446164920"
+                >+918446164920</a
+              >
             </div>
           </div>
         </div>
@@ -31,10 +35,12 @@
                     <NuxtLink to="/aboutus">About Us</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/enterprise-hiring">Enterprise Hiring</NuxtLink>
+                    <NuxtLink to="/enterprise-hiring"
+                      >Enterprise Hiring</NuxtLink
+                    >
                   </li>
                   <li>
-                    <NuxtLink to="/connect">Recruiters</NuxtLink>
+                    <NuxtLink to="/recruiters">Recruiters</NuxtLink>
                   </li>
                   <li><a href="https://www.hirect.in/blog/">Blog</a></li>
                   <li>
@@ -57,8 +63,10 @@
                     <a href="mailto:support@hirect.in">Support@hirect.in</a>
                   </li>
                   <li>
-                    <a @click="ScheduleACall">For Recruiters<br />
-                      Schedule a Call</a>
+                    <a @click="ScheduleACall"
+                      >For Recruiters<br />
+                      Schedule a Call</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -71,13 +79,17 @@
                     <NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/termsconditions">Terms & Conditions</NuxtLink>
+                    <NuxtLink to="/termsconditions"
+                      >Terms & Conditions</NuxtLink
+                    >
                   </li>
                   <li>
                     <NuxtLink to="/product-pricing">Product & Pricing</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/refund-cancellation-policy">Refund Policy</NuxtLink>
+                    <NuxtLink to="/refund-cancellation-policy"
+                      >Refund Policy</NuxtLink
+                    >
                   </li>
                   <li>
                     <NuxtLink to="/purchase-flow">Purchase Flow</NuxtLink>
@@ -106,7 +118,10 @@
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ" target="_blank">
+            <a
+              href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ"
+              target="_blank"
+            >
               <font-awesome-icon :icon="['fab', 'youtube']" />
             </a>
           </li>
@@ -125,9 +140,19 @@
               <div class="dropdown">
                 <a class="dropbtn">
                   <img src="~/assets/img/country-flag.svg" alt="" />
-                  <h6>Change Region</h6>
+                  <div class="Dropup-icon">
+                    <h6
+                      data-bs-toggle="collapse"
+                      data-bs-target="#changeregion"
+                      aria-controls="navbarScroll"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      Change Region
+                    </h6>
+                  </div>
                 </a>
-                <div class="dropdown-content">
+                <div class="dropdown-content collapse" id="changeregion">
                   <a class="dropbtn" href="https://hirect.us?changeregion=1">
                     <img src="~/assets/img/us-logo.png" alt="" />
                     <h6>United States</h6>
@@ -298,15 +323,10 @@ export default {
 }
 
 .change-flage .dropdown-content {
-  display: none;
   position: absolute;
   z-index: 1;
   top: -38px;
   right: -10px;
-}
-
-.change-flage .dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .change-flage .dropdown-content a {
@@ -329,6 +349,17 @@ export default {
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+
+.Dropup-icon :after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1299px) {
