@@ -363,55 +363,12 @@ export default {
   padding-bottom: 85px;
 }
 
-.hire-chat .row {
-  align-items: center;
-}
-
-.hire-now h2 {
-  // position: absolute;
-  width: 512px;
-  height: 40px;
-  left: 130px;
-  padding-bottom: 120px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 40px;
-}
-
-.hire-now p {
-  // position: absolute;
-  width: 550px;
-  // height: 120px;
-  margin-bottom: 32px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #76787a;
-}
-
-.hire-now-img {
-  // position: absolute;
-  width: 508px;
-  height: 325px;
-  left: 874px;
-  top: 981px;
-  // background: #c4c4c4;
-  border-radius: 15px;
-}
-
 // end Hire Chat Section
 // jobs-available
 .job-available-section,
 .enteriprise-following-companies-section {
-  width: 1512px;
   height: 515px;
   padding-bottom: 86px;
-}
-
-.jobs-available {
-  background-color: #f1f1f1;
-  padding: 35px 0;
 }
 
 .available-list li {
@@ -429,10 +386,6 @@ export default {
   height: 191px;
   box-shadow: 6px 6px 30px rgba(109, 141, 173, 0.25);
 
-  .candi-value {
-    font-size: 14px;
-    color: #808080;
-  }
 }
 
 .available-list li:hover {
@@ -498,61 +451,6 @@ export default {
   padding-top: 60px;
 }
 
-.recruiter-form-section {
-  padding: 135px 0 170px;
-}
-
-.recruiter-form {
-  width: 100%;
-  max-width: 410px;
-}
-
-.recruiter-form .form-control {
-  height: 48px;
-  border-radius: 24px;
-  background-color: #f7f7f7;
-  position: relative;
-  color: #0e101a;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 10px;
-  text-align: left;
-  padding: 5px 30px;
-}
-
-.recruiter-form .form-group {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.recruiter-form .form-control::-webkit-input-placeholder,
-.recruiter-form-call .form-group input::-webkit-input-placeholder,
-.recruiter-form-call .input-group input::-webkit-input-placeholder {
-  /* Edge */
-  color: #b4b4b4;
-}
-
-.recruiter-form .form-control:-ms-input-placeholder,
-.recruiter-form-call .form-group input:-ms-input-placeholder,
-.recruiter-form-call .input-group input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #b4b4b4;
-}
-
-.recruiter-form .form-control::placeholder,
-.recruiter-form-call .form-group input::placeholder,
-.recruiter-form-call .input-group input::placeholder {
-  color: #b4b4b4;
-}
-
-.button-hire-now {
-  height: 42px;
-  width: 156px;
-  border-radius: 100px;
-  background: #2ce2a2;
-  padding: 10px 0;
-}
-
 .button-hire-now-seamless {
   height: 42px;
   width: 156px;
@@ -569,235 +467,6 @@ button.btn.eye-button {
   padding: 5px 10px;
   right: 20px;
   color: #b4b4b4;
-}
-
-.form-pageLink .forget-password {
-  color: #b4b4b4;
-  font-family: Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 10px;
-  text-decoration: underline;
-}
-
-.form-pageLink {
-  text-align: right;
-  padding: 0 20px;
-}
-
-.recruiter-form-section .btn.default-btn {
-  color: #000;
-}
-
-.recruiter-social-login p {
-  padding: 24px 0;
-  color: #76787a;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 10px;
-}
-
-.recruiter-social-login {
-  text-align: center;
-}
-
-.recruiter-social-login h5 {
-  color: #000000;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: normal;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.recruiter-social-login ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-.recruiter-social-login ul li {
-  margin-right: 35px;
-}
-
-.recruiter-social-login ul li:last-child {
-  margin-right: 0;
-}
-
-.recruiter-form-now {
-  padding-top: 30px;
-  padding-bottom: 100px;
-}
-
-.recruiter-form-call p {
-  color: #333333;
-  font-family: Helvetica;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  margin-bottom: 30px;
-}
-
-.recruiter-form-call h3.title-md {
-  margin-bottom: 15px;
-}
-
-.recruiter-form-call .form-group input {
-  height: 48px;
-  border-radius: 24px;
-  background-color: #f7f7f7;
-  color: #0e101a;
-  font-family: Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  margin-bottom: 22px;
-  border-color: #f7f7f7;
-  padding-left: 25px;
-}
-
-.recruiter-form-call .input-group {
-  margin-bottom: 22px;
-}
-
-.recruiter-form-call .input-group input {
-  height: 48px;
-  border-radius: 24px;
-  background-color: #f7f7f7;
-  color: #0e101a;
-  font-family: Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  border-color: #f7f7f7;
-}
-
-.recruiter-form-call .input-group .input-group-text {
-  height: 48px;
-  background-color: #e0e0e0;
-  border-radius: 24px 0px 0px 24px;
-  width: 70px;
-  justify-content: center;
-  color: #76787a;
-  font-family: Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  border-color: #e0e0e0;
-}
-
-.check-dropdown {
-  width: 100%;
-}
-
-.check-dropdown button {
-  text-align: left;
-  height: 48px;
-  border-radius: 24px;
-  background-color: #f7f7f7 !important;
-  color: #b4b4b4 !important;
-  font-family: Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-  border-color: #f7f7f7 !important;
-  padding-left: 25px;
-  outline: none !important;
-  box-shadow: unset !important;
-}
-
-.check-dropdown .dropdown-toggle::after {
-  position: absolute;
-  right: 43px;
-  top: 20px;
-}
-
-.dropdown-menu.dropdown-menu-end.show {
-  background-color: #f7f7f7;
-  border-color: #f7f7f7;
-  padding-left: 15px;
-}
-
-.dropdown-menu.dropdown-menu-end.show button {
-  color: #76787a !important;
-  font-family: Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  text-align: left;
-  background-color: transparent !important;
-  border: 0;
-  padding: 0;
-  height: auto;
-  line-height: 26px;
-}
-
-.form-check.check-box {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.form-check.check-box label.form-check-label {
-  color: #76787a;
-  font-family: Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 24px;
-}
-
-.form-check-input {
-  border: 1px solid #2ce2a2;
-}
-
-.Submit-button button.btn.default-btn.button-sm {
-  width: 100%;
-}
-
-.recruiter-form-call h4 {
-  color: #000000;
-  font-family: Helvetica;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: normal;
-  margin-top: 15px;
-  text-align: center;
-}
-
-.recruiter-form-call h4 a {
-  color: #2ce2a2;
-  padding-left: 15px;
-  text-decoration: none;
-}
-
-.recruiter-form-now .row {
-  align-items: center;
-}
-
-.recruiter-form-img {
-  text-align: center;
-}
-
-.form-check-input:checked {
-  background-color: #000000;
-  border-color: #000000;
 }
 
 .enteriprise-hiring-banner-details {
@@ -818,27 +487,14 @@ button.btn.eye-button {
   color: #76787a;
 }
 
-.recruiter-form-call {
-  width: 100%;
-  max-width: 386px;
-}
-
-.el-select-dropdown.el-popper {
-  width: 158px !important;
-  min-width: auto !important;
-  background: #f7f7f7 !important;
-  margin-left: 300px !important;
-  padding-bottom: 15px !important;
-}
-
 .Schedule-call {
   background: #ffffff;
   box-shadow: 6px 6px 30px rgba(109, 141, 173, 0.25);
   border-radius: 24px;
   max-width: 476px;
-  position: absolute;
+  position: relative;
   height: 648px;
-  right: 130px;
+  left: 25%;
 }
 
 // end following-companies-startups-logo
@@ -852,32 +508,12 @@ button.btn.eye-button {
     padding: 80px 0;
   }
 
-  .recruiter-form-section {
-    padding: 90px 0 110px;
-  }
-
   .enteriprise-AI-platform-heading {
     padding-top: 20px;
-  }
-
-  .recruiter-form-call p {
-    margin-bottom: 25px;
-  }
-
-  .recruiter-form-now {
-    padding-bottom: 70px;
-  }
-
-  .el-select-dropdown.el-popper {
-    margin-left: 260px !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .el-select-dropdown.el-popper {
-    margin-left: 235px !important;
-    padding-bottom: 7px !important;
-  }
 
   .enteriprise-hiring-banner-details p {
     font-size: 17px;
@@ -890,56 +526,10 @@ button.btn.eye-button {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .recruiter-form-section {
-    padding: 80px 0 90px;
-  }
-
-  .recruiter-form .form-control {
-    font-size: 16px;
-    padding: 5px 20px;
-  }
+ 
 
   button.btn.eye-button {
     right: 6px;
-  }
-
-  .recruiter-form-call p {
-    margin-bottom: 30px;
-    line-height: normal;
-  }
-
-  .recruiter-form-call p {
-    font-size: 16px;
-  }
-
-  .recruiter-form-now {
-    padding-bottom: 60px;
-  }
-
-  .recruiter-form-call .input-group .input-group-text {
-    width: 60px;
-  }
-
-  .form-check.check-box label.form-check-label {
-    font-size: 13px;
-  }
-
-  .form-check.check-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .recruiter-form-call .form-group input {
-    margin-bottom: 15px;
-  }
-
-  .recruiter-form-call .input-group {
-    margin-bottom: 15px;
-  }
-
-  .el-select-dropdown.el-popper {
-    margin-left: 200px !important;
-    padding-bottom: 5px !important;
   }
 
   .Schedule-call {
@@ -986,52 +576,12 @@ button.btn.eye-button {
     padding-bottom: 10px;
   }
 
-  .recruiter-form-section {
-    padding: 60px 0 80px;
-  }
-
-  .recruiter-form-img {
-    margin-top: 30px;
-  }
-
-  .check-dropdown .dropdown-toggle::after {
-    right: 20px;
-  }
-
-  .recruiter-form-call p {
-    margin-bottom: 30px;
-    font-size: 16px;
-  }
-
-  .form-check.check-box label.form-check-label {
-    font-size: 13px;
-  }
-
-  .form-check.check-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  .recruiter-form-now {
-    padding-bottom: 50px;
-  }
-
   .enteriprise-hiring-banner-details {
     padding: 0;
     padding-bottom: 50px;
     text-align: center;
     margin: auto;
     padding-top: 40px;
-  }
-
-  .recruiter-form-call {
-    margin: auto;
-    text-align: center;
-  }
-
-  .el-select-dropdown.el-popper {
-    margin-left: unset !important;
   }
 
   .Schedule-call {
@@ -1054,69 +604,14 @@ button.btn.eye-button {
     padding: 80px 0;
   }
 
-  .recruiter-form-section {
-    padding: 90px 0 110px;
-  }
-
   .enteriprise-AI-platform-heading {
     padding-top: 20px;
-  }
-
-  .recruiter-form-call p {
-    margin-bottom: 25px;
-  }
-
-  .recruiter-form-now {
-    padding-bottom: 70px;
-  }
-
-  .el-select-dropdown.el-popper {
-    margin-left: 260px !important;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .row {
     flex-direction: row;
-  }
-
-  .recruiter-form-call p {
-    margin-bottom: 30px;
-    line-height: normal;
-  }
-
-  .recruiter-form-call p {
-    font-size: 16px;
-  }
-
-  .recruiter-form-now {
-    padding-bottom: 60px;
-  }
-
-  .recruiter-form-call .input-group .input-group-text {
-    width: 100%;
-  }
-
-  .form-check.check-box label.form-check-label {
-    font-size: 13px;
-  }
-
-  .form-check.check-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .recruiter-form-call .form-group input {
-    margin-bottom: 15px;
-  }
-
-  .recruiter-form-call .input-group {
-    margin-bottom: 15px;
-  }
-
-  .el-select-dropdown.el-popper {
-    margin-left: 200px !important;
-    padding-bottom: 5px !important;
   }
 
   .Schedule-call {
@@ -1129,142 +624,8 @@ button.btn.eye-button {
     flex-direction: row;
   }
 
-  .recruiter-form-call p {
-    margin-bottom: 30px;
-    line-height: normal;
-  }
-
-  .recruiter-form-call p {
-    font-size: 16px;
-  }
-
-  .recruiter-form-now {
-    padding-bottom: 60px;
-  }
-
-  .recruiter-form-call .input-group .input-group-text {
-    width: 100%;
-  }
-
-  .form-check.check-box label.form-check-label {
-    font-size: 13px;
-  }
-
-  .form-check.check-box {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .recruiter-form-call .form-group input {
-    margin-bottom: 15px;
-  }
-
-  .recruiter-form-call .input-group {
-    margin-bottom: 15px;
-  }
-
-  .el-select-dropdown.el-popper {
-    margin-left: 200px !important;
-    padding-bottom: 5px !important;
-  }
-
   .Schedule-call {
     padding: 20px 20px 30px;
   }
 }
-
-// @media only screen and (max-width: 480px) {
-//     .following-companies-startups-logo-list li {
-//         width: 48%;
-//         margin-right: 2%;
-//         text-align: center;
-//         margin-bottom: 20px;
-//     }
-
-//     .following-companies-startups-logo-list li:nth-child(2n) {
-//         margin-right: 0;
-//     }
-
-//     .following-companies-startups-logo-list {
-//         margin-bottom: 30px;
-//     }
-
-//     .enteriprise-AI-platform-section .following-companies-startups-logo {
-//         padding-top: 50px;
-//     }
-
-//     .enteriprise-hiring-banner h1 {
-//         margin-bottom: 0;
-//         text-align: center;
-//         margin-top: 30px;
-//     }
-
-//     .enteriprise-hiring-banner h1 br {
-//         display: none;
-//     }
-
-//     .enteriprise-hiring-banner {
-//         padding: 60px 0;
-//     }
-
-//     .enteriprise-AI-platform-heading {
-//         padding-top: 0;
-//         padding-bottom: 10px;
-//     }
-
-//     .recruiter-form-section {
-//         padding: 60px 0 80px;
-//     }
-
-//     .recruiter-form-img {
-//         margin-top: 30px;
-//     }
-
-//     .check-dropdown .dropdown-toggle::after {
-//         right: 20px;
-//     }
-
-//     .recruiter-form-call p {
-//         margin-bottom: 30px;
-//         font-size: 16px;
-//     }
-
-//     .form-check.check-box label.form-check-label {
-//         font-size: 13px;
-//     }
-
-//     .form-check.check-box {
-//         margin-top: 20px;
-//         margin-bottom: 20px;
-//         text-align: left;
-//     }
-
-//     .recruiter-form-now {
-//         padding-bottom: 50px;
-//     }
-
-//     .enteriprise-hiring-banner-details {
-//         padding: 0;
-//         padding-bottom: 50px;
-//         text-align: center;
-//         margin: auto;
-//     }
-
-//     .recruiter-form-call {
-//         margin: auto;
-//         text-align: center;
-//     }
-
-//     .el-select-dropdown.el-popper {
-//         margin-left: unset !important;
-//     }
-//     .Schedule-call {
-//         padding: 20px 15px 30px;
-//         margin-top: 20px;
-//     }
-//     .enteriprise-hiring-banner-details p {
-//         font-size: 16px;
-//         line-height: 24px;
-//     }
-// }
 </style>

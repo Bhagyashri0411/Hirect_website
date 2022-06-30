@@ -175,8 +175,8 @@
       </p>
 
       <p class="policy-item-desc">
-        <span class="policy-item-desc-A">9] Intellectual Property Policy: </span
-        >We respect the intellectual property of others and require that our
+        <span class="policy-item-desc-A">9] Intellectual Property Policy: </span>We respect the intellectual property of
+        others and require that our
         Members do so as well. Therefore, you hereby agree and warrant that you
         shall not host, display, upload, modify, publish, transmit, update, or
         share any Content that infringes upon a third person's copyright,
@@ -193,8 +193,8 @@
       </p>
 
       <p class="policy-item-desc">
-        <span class="policy-item-desc-A">10] The use of your information: </span
-        >We may collect your personal & non-personal information like Your name,
+        <span class="policy-item-desc-A">10] The use of your information: </span>We may collect your personal &
+        non-personal information like Your name,
         phone number, email ID, designation, location, PIN Code, company name,
         college name etc., you personalise your product experience on Hirect
         App. We may use your phone number and email ID to contact you via SMS,
@@ -280,27 +280,24 @@
       <ul class="list-style2">
         <li>
           <p class="policy-item-desc">
-            <span class="policy-item-desc-A"
-              >Referring someone from the same company </span
-            >the Referrer will be rewarded Rs. 700 and Referee will be rewarded
+            <span class="policy-item-desc-A">Referring someone from the same company </span>the Referrer will be
+            rewarded Rs. 700 and Referee will be rewarded
             Rs. 300 once the Referee's registration and verification process is
             complete.
           </p>
         </li>
         <li>
           <p class="policy-item-desc">
-            <span class="policy-item-desc-A"
-              >Referring someone from a different company </span
-            >the Referrer will be rewarded Rs. 1,000 and Referee will be
+            <span class="policy-item-desc-A">Referring someone from a different company </span>the Referrer will be
+            rewarded Rs. 1,000 and Referee will be
             rewarded Rs. 500 once the Referee's registration and verification
             process is complete.
           </p>
         </li>
         <li>
           <p class="policy-item-desc">
-            <span class="policy-item-desc-A"
-              >Job Seekers referring Recruiters </span
-            >will be rewarded Rs. 1,000 and Referee will be rewarded Rs. 500
+            <span class="policy-item-desc-A">Job Seekers referring Recruiters </span>will be rewarded Rs. 1,000 and
+            Referee will be rewarded Rs. 500
             once the Referee's registration and verification process is
             complete.
           </p>
@@ -415,7 +412,7 @@
         enabling fast & efficient hiring/job search experience.
       </p>
       <p class="policy-item-desc">
-        Hirect is trusted by 2.3M+ verified job seekers and 120K+ verified
+        Hirect is trusted by 2.3M+ verified job seekers and 150K+ verified
         startups. Hirect is free of cost for job seekers. The Hirect App runs on
         a FREEMIUM model for recruiters so that they can use all its features
         without limitations. However, Hirect will charge a nominal fee to the
@@ -496,8 +493,7 @@
       </p>
 
       <p class="policy-item-desc">
-        <span class="policy-item-desc-A"
-          >13] Payment Terms and Conditions:
+        <span class="policy-item-desc-A">13] Payment Terms and Conditions:
         </span>
         'Hirect' may offer products and services for purchase on the App
         (“In-App Purchase”). By making an in-app purchase, you agree to the
@@ -573,9 +569,8 @@
       </p>
 
       <p class="policy-item-desc">
-        <span class="policy-item-desc-A"
-          >14] User Termination Policy/Legal Action: </span
-        >We may terminate a user's access to the Service if found violating this
+        <span class="policy-item-desc-A">14] User Termination Policy/Legal Action: </span>We may terminate a user's
+        access to the Service if found violating this
         agreement. We reserve the right to decide whether Content violates these
         agreements for any reason, including copyright infringement, Spam, Scam,
         Unprofessional Behaviour, etc. We may at any time, without prior notice
@@ -586,11 +581,7 @@
       <p class="policy-item-title">Contact Us:</p>
       <p class="policy-item-desc">
         Email us at
-        <span
-          ><a href="mailto:support@hirect.in" style="color: #00e194"
-            >support@hirect.in</a
-          ></span
-        >
+        <span><a href="mailto:support@hirect.in" style="color: #00e194">support@hirect.in</a></span>
         if you have any queries.
       </p>
     </div>
@@ -666,9 +657,11 @@ export default {
     margin: 0 auto;
   }
 }
+
 .height-container {
   height: 50px;
 }
+
 .head-title {
   font-size: 32px;
   font-weight: 800;
@@ -710,6 +703,7 @@ export default {
 p {
   line-height: 140%;
 }
+
 .terms-table {
   margin: 30px auto 0;
   overflow-x: auto;
@@ -747,6 +741,7 @@ p {
   border-color: #000;
   margin-bottom: 8px;
 }
+
 p.table-notes {
   line-height: normal;
   font-size: 18px;
@@ -760,6 +755,7 @@ p.table-notes {
     padding: 50px 30px;
     margin: 0 auto;
   }
+
   .height-container {
     height: 10px;
   }
@@ -771,6 +767,7 @@ p.table-notes {
   .terms-table .table tr td h3 {
     font-size: 15px;
   }
+
   .terms-table {
     border-left: 1px solid;
     border-right: 1px solid;

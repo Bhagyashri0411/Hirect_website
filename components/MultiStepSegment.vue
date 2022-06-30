@@ -6,12 +6,7 @@
         <div class="step-title">Step {{ step.step }}</div>
         <div class="circle-bg">
           <img class="step-image" :src="imgUrl(step)" alt="" srcset="" />
-          <img
-            class="check"
-            src="~/assets/imgs/check-circle.png"
-            alt=""
-            srcset=""
-          />
+          <img class="check" src="~/assets/imgs/check-circle.png" alt="" srcset="" />
         </div>
         <div class="step-title">{{ step.title }}</div>
         <div v-if="condition(step)" class="arrow"></div>
@@ -58,7 +53,7 @@
 .arrow {
   border-top: 1px dashed black;
   width: 150%;
-  height: 100%;
+  height: 0px;
   position: relative;
   bottom: 50%;
   right: 25%;

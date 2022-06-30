@@ -11,12 +11,10 @@
       <div class="modal">
         <div class="row">
           <div class="column image-section">
-            <img :src="currentMember.fullImageSrc" alt="" srcset="" />
+            <img :src="currentMember.fullImageSrc" alt="" srcset="">
           </div>
-          <div class="column description" style="text-align: start">
-            <h3>
-              <strong>{{ currentMember.name }}</strong>
-            </h3>
+          <div class="column description" style="text-align: start;">
+            <h3><strong>{{ currentMember.name }}</strong></h3>
             <span>{{ currentMember.description }}</span>
           </div>
         </div>
@@ -30,23 +28,23 @@ export default {
   props: {
     membersList: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
       showModal: false,
-      currentMember: null,
-    };
+      currentMember: null
+    }
   },
   methods: {
     toggleModal(member) {
       console.log(this.$config);
       this.showModal = !this.showModal;
-      this.currentMember = member;
-    },
-  },
-};
+      this.currentMember = member
+    }
+  }
+}
 </script>
 <style scoped>
 .photo-card:not(:first-child) {
@@ -91,7 +89,7 @@ export default {
   margin-left: 20px;
   max-width: 150px;
   display: block;
-  color: #76787a;
+  color: #76787A;
   font-size: 13px;
 }
 
@@ -136,6 +134,7 @@ export default {
   top: 5px;
   font-size: 40px;
   cursor: pointer;
+
 }
 
 section {

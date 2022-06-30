@@ -92,16 +92,17 @@
         class="submitButton"
         :loading="isButtonLoading"
         @click="submitClick"
-        >Sign Up</el-button
+        >Schedule a call now!</el-button
       >
-      <div class="next-or"><span>-OR-</span></div>
-      <el-button
+      <!-- <div class="next-or"><span>-OR-</span></div> -->
+      <!-- <el-button
         type="primary outline-dark"
         class="Scheduleacallnow"
         :loading="isButtonLoading"
         @click="submitClick"
         >Schedule a call now!</el-button
-      >
+      > -->
+     
       <!-- <h3 class="allredy-link">
             Already registered user?<a target="blink" href="https://recruiter.hirect.in/">Login
             </a>
@@ -393,7 +394,7 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .submitButton {
-  border-radius: 50px;
+ border-radius: 50px;
   background-color: #2ce2a2;
   color: #000000;
   font-size: 16px;
@@ -404,21 +405,19 @@ export default {
 }
 
 .schedule-a-call.contact-ue-form .next-or {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #b4b4b4;
-  margin-top: 20px;
-  text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b4b4b4;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .schedule-a-call.contact-ue-form .Scheduleacallnow {
   box-sizing: border-box;
-  position: absolute;
   width: 388px;
   height: 42px;
   // left: 44px;
-  top: 574px;
   border: 1px solid #000000;
   border-radius: 50px;
   background: #ffffff;
