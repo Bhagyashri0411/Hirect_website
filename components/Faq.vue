@@ -46,7 +46,7 @@
 .question-block{
     width: 100%;
     background-color: #f2f4f8;
-    margin: 15px;
+    margin: 15px 0;
     padding: 20px;
     margin-bottom: 0px;
     display: inline-flex;
@@ -74,6 +74,11 @@
 .leave-active {
   overflow: hidden;
   transition: height .2s linear;
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .question-block[data-v-67d141ea] {
+    padding: 18px;
+}
 }
 </style>
 <script lang="js">

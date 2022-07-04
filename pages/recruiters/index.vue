@@ -5,7 +5,7 @@
     <!----startup start----------->
     <section class="recruiter-section">
       <div class="recruiter-banner">
-        <div class="container">
+        <div class="container con-rec">
           <div class="row">
             <div class="col-md-6">
               <div class="px-0.5 py-0.5">
@@ -35,9 +35,7 @@
                   <RecruitersForm />
                 </div>
                 <div class="enterprise-hiring text-center">
-                  <NuxtLink to="/enterprise-hiring"
-                    >Looking for bulk hiring?</NuxtLink
-                  >
+                  <NuxtLink to="/enterprise-hiring">Looking for bulk hiring?</NuxtLink>
                 </div>
               </div>
             </div>
@@ -50,13 +48,13 @@
     <!----startup start----------->
     <section class="job-available-section">
       <div class="hire-chat">
-        <div class="container">
+        <div class="container con-rec">
           <div class="row">
             <div class="col-md-7">
               <div class="hire-now">
                 <h2>
                   <span style="color: #2ce2a2"> HIRECT </span> Hiring App for
-                  Founders and Hiring Managers
+                  Founders <br /> and Hiring Managers
                 </h2>
                 <p>
                   Hirect app is the targeted job portal for SMEs and Startups.
@@ -69,11 +67,7 @@
                 <!-- <a class="btn default-btn button-sm" href="https://recruiter.hirect.in/">
                                 Instant Hiring
                             </a> -->
-                <a
-                  class="btn default-btn button-sm"
-                  @click="window.scrollTo(0, 0)"
-                  >Hire Now</a
-                >
+                <a class="btn default-btn button-sm" @click="window.scrollTo(0, 0)">Hire Now</a>
               </div>
             </div>
             <div class="col-md-5">
@@ -88,21 +82,19 @@
     <!----startup end----------->
 
     <!----startup start----------->
-    <section class="recruiter-startup-section startup-section">
-      <div class="container">
+    <section class="recruiter-startup-section startup-section" id="stephiring">
+      <div class="container con-rec">
         <div class="row">
-          <div class="col-md-12">
-            <div class="startup-section-heading">
-              <h3 class="title-md">Start Hiring in 3 Steps</h3>
-            </div>
-            <MultiStepSegment :stepData="stepFeedData" />
+          <!-- <div class="col-md-12"> -->
+          <div class="startup-section-heading">
+            <h3 class="title-md">Start Hiring in 3 Steps</h3>
+          </div>
+          <MultiStepSegment :stepData="stepFeedData" />
+          <!-- </div> -->
+          <div class="autocomplete1">
+            <a class="btn default-btn button-hire-now-seamless" @click="window.scrollTo(0, 0)">Hire Now</a>
           </div>
         </div>
-        <a
-          class="btn default-btn button-hire-now-seamless"
-          @click="window.scrollTo(0, 0)"
-          >Hire Now</a
-        >
       </div>
     </section>
     <!----startup end----------->
@@ -110,14 +102,14 @@
     <!----startup start----------->
     <section class="job-available-section">
       <div class="hire-chat">
-        <div class="container">
+        <div class="container con-rec">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6">
               <div class="hire-now-img">
                 <img src="~/assets/imgs/simplify-hiring-rocess.png" alt="" />
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
               <div class="hire-now">
                 <h2>Simplify Hiring Process for Startups and SMEs</h2>
                 <p>
@@ -141,9 +133,7 @@
                   hiring managers to chat directly with candidates and get
                   instant feedback.
                 </p>
-                <a class="btn default-btn button-hire-now" @click="scrollToTop"
-                  >Hire Now</a
-                >
+                <a class="btn default-btn button-hire-now" @click="scrollToTop">Hire Now</a>
               </div>
             </div>
           </div>
@@ -153,8 +143,8 @@
     <!----startup end----------->
 
     <!----startup start----------->
-    <section class="recruiter-startup-section startup-section">
-      <div class="container">
+    <section class="recruiter-startup-section startup-section" id="keyhiring">
+      <div class="container con-rec">
         <div class="row">
           <div class="col-md-12">
             <div class="startup-section-heading">
@@ -164,34 +154,22 @@
         </div>
       </div>
       <div class="startups-logo">
-        <div class="container">
+        <div class="container con-rec">
           <div class="row">
             <div class="col-md-12">
               <div class="jobs-list">
                 <ul class="startups-logo-list">
                   <li>
-                    <img
-                      src="~/assets/imgs/Chat-Directly-and-Get-Instant-Response.svg"
-                      alt=""
-                    />
+                    <img src="~/assets/imgs/Chat-Directly-and-Get-Instant-Response.svg" alt="" />
                   </li>
                   <li>
-                    <img
-                      src="~/assets/imgs/AI-Algorithm-Matched-Candidates.svg"
-                      alt=""
-                    />
+                    <img src="~/assets/imgs/AI-Algorithm-Matched-Candidates.svg" alt="" />
                   </li>
                   <li>
-                    <img
-                      src="~/assets/imgs/100_-Secure-Video-Interviews.svg"
-                      alt=""
-                    />
+                    <img src="~/assets/imgs/100_-Secure-Video-Interviews.svg" alt="" />
                   </li>
                   <li>
-                    <img
-                      src="~/assets/imgs/Direct-and-Instant-Notifications.svg"
-                      alt=""
-                    />
+                    <img src="~/assets/imgs/Direct-and-Instant-Notifications.svg" alt="" />
                   </li>
                 </ul>
               </div>
@@ -221,13 +199,13 @@
                   </li>
                 </ul>
               </div>
+
+            </div>
+            <div class="autocomplete1">
+              <a class="btn default-btn button-hire-now-seamless" @click="window.scrollTo(0, 0)">Hire Now</a>
             </div>
           </div>
-          <a
-            class="btn default-btn button-hire-now-seamless"
-            @click="window.scrollTo(0, 0)"
-            >Hire Now</a
-          >
+
         </div>
       </div>
     </section>
@@ -235,7 +213,7 @@
 
     <!----startup start----------->
     <section class="recruiter-startup-section startup-section">
-      <div class="container">
+      <div class="container con-rec">
         <div class="row">
           <div class="col-md-12">
             <div class="startup-section-heading">
@@ -247,7 +225,7 @@
       </div>
     </section>
     <!----startup end----------->
-    
+
     <GetAppPage :eventName="'in_recruiters_bottom'" />
     <Footer />
   </div>
@@ -405,6 +383,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.autocomplete1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .recruiter-banner-details h3.title-md {
   //  position: absolute;
   width: 522px;
@@ -436,7 +419,7 @@ export default {
 
 .hire-now h2 {
   // position: absolute;
-  width: 512px;
+  // width: 512px;
   height: 40px;
   left: 130px;
   padding-bottom: 120px;
@@ -487,8 +470,8 @@ export default {
   max-width: 75%;
   margin: auto;
   text-align: center;
-  padding-bottom: 20px;
-  padding-top: 35px;
+  // padding-bottom: 20px;
+  // padding-top: 35px;
 }
 
 .recruiter-startup-section .startups-logo {
@@ -509,7 +492,7 @@ export default {
   border-radius: 100px;
   background: #2ce2a2;
   padding: 10px 0;
-  margin: 50px 45%;
+  // margin: 50px 45%;
 }
 
 button.btn.eye-button {
@@ -546,8 +529,9 @@ button.btn.eye-button {
   max-width: 476px;
   position: relative;
   height: 648px;
-  left: 25%;
-  // padding: 70px 25px 30px;
+  // left: 25%;
+  margin-left: auto;
+  padding: 20px 15px 30px;
 }
 
 .enterprise-hiring {
@@ -565,128 +549,255 @@ button.btn.eye-button {
 
 // end startups-logo
 
-@media only screen and (max-width: 768px) {
-  .row {
-    flex-direction: column-reverse;
+// @media only screen and (max-width: 768px) {
+//   .row {
+//     flex-direction: column-reverse;
+//   }
+
+//   .recruiter-banner {
+//     padding: 80px 0;
+//   }
+
+//   .startup-section-heading {
+//     padding-top: 20px;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1199px) {
+//   .recruiter-banner-details p {
+//     font-size: 17px;
+//     line-height: 29px;
+//   }
+
+//   .Schedule-call {
+//     padding: 20px 40px 30px;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+//   button.btn.eye-button {
+//     right: 6px;
+//   }
+//   .Schedule-call {
+//     padding: 20px 20px 30px;
+//   }
+// }
+
+// @media only screen and (min-width: 300px) and (max-width: 767px) {
+//   .startups-logo-list li {
+//     width: 48%;
+//     margin-right: 2%;
+//     text-align: center;
+//     margin-bottom: 20px;
+//   }
+
+//   .startups-logo-list li:nth-child(2n) {
+//     margin-right: 0;
+//   }
+
+//   .startups-logo-list {
+//     margin-bottom: 30px;
+//   }
+
+//   .recruiter-startup-section .startups-logo {
+//     padding-top: 50px;
+//   }
+
+//   .recruiter-banner h1 {
+//     margin-bottom: 0;
+//     text-align: center;
+//     margin-top: 30px;
+//   }
+
+//   .recruiter-banner h1 br {
+//     display: none;
+//   }
+
+//   .recruiter-banner {
+//     padding: 60px 0;
+//   }
+
+//   .startup-section-heading {
+//     padding-top: 0;
+//     padding-bottom: 10px;
+//   }
+
+//   .recruiter-banner-details {
+//     padding: 0;
+//     padding-bottom: 50px;
+//     text-align: center;
+//     margin: auto;
+//     padding-top: 40px;
+//   }
+
+//   .Schedule-call {
+//     padding: 20px 15px 30px;
+//     margin-top: 20px;
+//   }
+
+//   .recruiter-banner-details p {
+//     font-size: 16px;
+//     line-height: 24px;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1299px) {
+//   .row {
+//     flex-direction: row;
+//   }
+
+//   .recruiter-banner {
+//     padding: 80px 0;
+//   }
+
+//   .startup-section-heading {
+//     padding-top: 20px;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1199px) {
+//   .row {
+//     flex-direction: row;
+//   }
+//   .Schedule-call {
+//     padding: 20px 20px 30px;
+//   }
+// }
+
+// @media only screen and (min-width: 1200px) {
+//   .row {
+//     flex-direction: row;
+//   }
+
+//   .Schedule-call {
+//     padding: 70px 25px 30px;
+//   }
+// }
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+  .recruiter-banner-details h3.title-md {
+    font-size: 62px;
+    width: auto;
   }
 
-  .recruiter-banner {
-    padding: 80px 0;
-  }
-
-  .startup-section-heading {
-    padding-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
   .recruiter-banner-details p {
-    font-size: 17px;
-    line-height: 29px;
-  }
-
-  .Schedule-call {
-    padding: 20px 40px 30px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  button.btn.eye-button {
-    right: 6px;
-  }
-  .Schedule-call {
-    padding: 20px 20px 30px;
-  }
-}
-
-@media only screen and (min-width: 300px) and (max-width: 767px) {
-  .startups-logo-list li {
-    width: 48%;
-    margin-right: 2%;
-    text-align: center;
+    width: auto;
+    height: auto;
     margin-bottom: 20px;
+    font-size: 14px;
   }
 
-  .startups-logo-list li:nth-child(2n) {
-    margin-right: 0;
+  .recruiter-banner-img {
+    width: auto;
+    background: none;
+  }
+
+  .enterprise-hiring {
+    left: 0%;
+    max-width: initial;
+  }
+
+  .Schedule-call {
+    height: 586px;
+  }
+
+  .hire-now h2 {
+    height: auto;
+    left: 0;
+    padding-bottom: 10px;
+    font-size: 32px;
+  }
+
+  .hire-now p {
+    width: auto;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .button-sm {
+    width: 10vw;
+  }
+
+  .job-available-section,
+  .startup-section {
+    padding-bottom: 80px;
+  }
+
+  .startup-section-heading[data-v-53973f38] {
+    max-width: initial;
+  }
+
+  .recruiter-banner[data-v-53973f38] {
+    padding: 100px 0;
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .recruiter-banner-details h3.title-md[data-v-53973f38] {
+    font-size: 60px;
+  }
+
+  .Schedule-call[data-v-53973f38] {
+    max-width: 415px;
+  }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) { 
+
+  .recruiter-banner-details h3.title-md[data-v-53973f38][data-v-53973f38] {
+    font-size: 58px;
+    line-height: 58px;
+  }
+
+  .recruiter-banner-details p[data-v-53973f38] {
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .Schedule-call[data-v-53973f38] {
+    max-width: 380px;
   }
 
   .startups-logo-list {
-    margin-bottom: 30px;
+    li img{
+     height: 230px;
+    }
   }
-
-  .recruiter-startup-section .startups-logo {
-    padding-top: 50px;
-  }
-
-  .recruiter-banner h1 {
-    margin-bottom: 0;
-    text-align: center;
-    margin-top: 30px;
-  }
-
-  .recruiter-banner h1 br {
-    display: none;
-  }
-
-  .recruiter-banner {
-    padding: 60px 0;
-  }
-
-  .startup-section-heading {
-    padding-top: 0;
-    padding-bottom: 10px;
-  }
-
-  .recruiter-banner-details {
-    padding: 0;
-    padding-bottom: 50px;
-    text-align: center;
-    margin: auto;
-    padding-top: 40px;
-  }
-
-  .Schedule-call {
-    padding: 20px 15px 30px;
-    margin-top: 20px;
-  }
-
-  .recruiter-banner-details p {
-    font-size: 16px;
-    line-height: 24px;
-  }
+  .features-title[data-v-53973f38] {
+    font-size: 15px;
+}
+.question-block[data-v-67d141ea][data-v-67d141ea] {
+    padding: 15px;
+    font-size: 15px;
+}
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1299px) {
-  .row {
-    flex-direction: row;
-  }
-
-  .recruiter-banner {
-    padding: 80px 0;
-  }
-
-  .startup-section-heading {
-    padding-top: 20px;
+@media only screen and (min-width: 940px) and (max-width: 991px) {
+ .con-rec {
+    max-width: 880px;
   }
 }
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .row {
-    flex-direction: row;
+@media only screen and (min-width: 875px) and (max-width: 940px) {
+ .con-rec {
+    max-width: 780px;
   }
-  .Schedule-call {
-    padding: 20px 20px 30px;
+   .Schedule-call[data-v-53973f38] {
+    max-width: 350px;
   }
+  .startups-logo-list li img[data-v-53973f38] {
+    height: 200px;
+}
 }
 
-@media only screen and (min-width: 1200px) {
-  .row {
-    flex-direction: row;
-  }
-
-  .Schedule-call {
-    padding: 70px 25px 30px;
-  }
+// Mobile view
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+#stephiring, #keyhiring{
+  display: none;
+}
+.Schedule-call{
+  margin: auto;
+  margin-top: 30px;
+}
 }
 </style>
