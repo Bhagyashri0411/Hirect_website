@@ -6,30 +6,14 @@
         Your Next Hire is Right Here. Get Started Soon.
       </p>
       <div class="input-container">
-        <el-input
-          id="user-name"
-          v-model="getUserInf.userName"
-          @focus="inputFocus(1)"
-          placeholder="Your Name"
-          class="input-item"
-        />
+        <el-input id="user-name" v-model="getUserInf.userName" @focus="inputFocus(1)" placeholder="Your Name"
+          class="input-item" />
         <p v-show="isUserNameError" class="alertText">Your name is required</p>
       </div>
       <div class="input-container">
-        <el-input
-          id="phone-number"
-          v-model="getUserInf.phoneNumber"
-          @focus="inputFocus(2)"
-          maxlength="10"
-          placeholder="Enter 10 digit mobile number"
-          class="input-item"
-        >
-          <el-select
-            v-model="getUserInf.phoneArea"
-            slot="prepend"
-            placeholder="+91"
-            style="width: 68px"
-          >
+        <el-input id="phone-number" v-model="getUserInf.phoneNumber" @focus="inputFocus(2)" maxlength="10"
+          placeholder="Enter 10 digit mobile number" class="input-item">
+          <el-select v-model="getUserInf.phoneArea" slot="prepend" placeholder="+91" style="width: 68px">
             <el-option label="+91" value="+91"></el-option>
             <el-option label="+1" value="+1"></el-option>
             <el-option label="+65" value="+65"></el-option>
@@ -41,38 +25,18 @@
         </p>
       </div>
       <div class="input-container">
-        <el-input
-          id="user-email"
-          v-model="getUserInf.userEmail"
-          @focus="inputFocus(3)"
-          placeholder="Your Work Email"
-          class="input-item"
-        />
+        <el-input id="user-email" v-model="getUserInf.userEmail" @focus="inputFocus(3)" placeholder="Your Work Email"
+          class="input-item" />
         <p v-show="isUserEmailError" class="alertText">
           Your work email is required
         </p>
       </div>
       <div class="input-container-bottom">
-        <el-input
-          id="company-name"
-          v-model="getUserInf.userCompanyName"
-          @focus="inputFocus(4)"
-          placeholder="Your Company Name"
-          class="inner-input-item"
-        />
-        <el-select
-          id="user-position"
-          v-model="getUserInf.userPosition"
-          @focus="inputFocus(5)"
-          class="inner-input-item"
-          placeholder="Your Position"
-        >
-          <el-option
-            v-for="item in positionOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value"
-          />
+        <el-input id="company-name" v-model="getUserInf.userCompanyName" @focus="inputFocus(4)"
+          placeholder="Your Company Name" class="inner-input-item" />
+        <el-select id="user-position" v-model="getUserInf.userPosition" @focus="inputFocus(5)" class="inner-input-item"
+          placeholder="Your Position">
+          <el-option v-for="item in positionOptions" :key="item.value" :label="item.label" :value="item.value" />
         </el-select>
         <p v-show="isCompanyNameError" class="alertText">
           Your company name is required
@@ -81,19 +45,10 @@
           Your position is required
         </p>
       </div>
-      <el-checkbox
-        v-model="getUserInf.isReceive"
-        class="schedule-checkbox"
-        style="color: #78787a; margin-left: 22px"
-        >I would like to receive updates via whatsapp.</el-checkbox
-      >
-      <el-button
-        type="primary"
-        class="submitButton"
-        :loading="isButtonLoading"
-        @click="submitClick"
-        >Schedule a call now!</el-button
-      >
+      <el-checkbox v-model="getUserInf.isReceive" class="schedule-checkbox" style="color: #78787a; margin-left: 22px">I
+        would like to receive updates via whatsapp.</el-checkbox>
+      <el-button type="primary" class="submitButton" :loading="isButtonLoading" @click="submitClick">Schedule a call
+        now!</el-button>
       <!-- <div class="next-or"><span>-OR-</span></div> -->
       <!-- <el-button
         type="primary outline-dark"
@@ -108,18 +63,9 @@
             </a>
         </h3> -->
     </div>
-    <el-dialog
-      :visible.sync="dialogVisible"
-      width="920px"
-      :append-to-body="true"
-      class="submit-dialog"
-    >
+    <el-dialog :visible.sync="dialogVisible" width="920px" :append-to-body="true" class="submit-dialog">
       <center>
-        <img
-          src="~/assets/img/ic_congratulations.png"
-          alt="ic_congratulations"
-          class="ic_congratulations"
-        />
+        <img src="~/assets/img/ic_congratulations.png" alt="ic_congratulations" class="ic_congratulations" />
         <p class="dialog_title">
           Congrats, your details are<br />submitted successfully.
         </p>
@@ -127,42 +73,16 @@
           We will get in touch with you in 30 minutes. Meanwhile,<br />scan the
           QR code to<span style="font-weight: bolder"> download the app!</span>
         </p>
-        <img
-          src="~/assets/img/qr_schedule.png"
-          alt="qr_schedule"
-          class="qr_schedule"
-        />
+        <img src="~/assets/img/qr_schedule.png" alt="qr_schedule" class="qr_schedule" />
         <div class="download-container">
-          <img
-            src="~/assets/img/btn_appstore.png"
-            alt="btn_appstore"
-            @click="appImgClickHandle"
-            class="download_btn"
-          />
-          <img
-            src="~/assets/img/btn_googleplay.png"
-            alt="btn_googleplay"
-            @click="googleImgClickHandle"
-            class="download_btn"
-          />
-          <div
-            class="downloadDialog-button-pkg-container"
-            @mouseover="downloadPkgMouseIn"
-            @mouseout="downloadPkgMouseOut"
-          >
-            <img
-              src="~/assets/img/pkg_android.png"
-              class="downloadDialog-button-pkg"
-              @click="googlePkgClickHandle"
-            />
-            <img
-              v-if="popoverImgShow"
-              @mouseover="downloadPkgMouseIn"
-              @click="openDownloadGuide"
-              class="popover-img"
-              src="~/assets/img/ic_download_guide.png"
-              alt="download_guide"
-            />
+          <img src="~/assets/img/btn_appstore.png" alt="btn_appstore" @click="appImgClickHandle" class="download_btn" />
+          <img src="~/assets/img/btn_googleplay.png" alt="btn_googleplay" @click="googleImgClickHandle"
+            class="download_btn" />
+          <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn"
+            @mouseout="downloadPkgMouseOut">
+            <img src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" />
+            <img v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img"
+              src="~/assets/img/ic_download_guide.png" alt="download_guide" />
           </div>
         </div>
       </center>
@@ -227,7 +147,7 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
+  created() { },
   beforeMount() {
     this.$localSaveSubmitUrl();
   },
@@ -589,134 +509,105 @@ h3.allredy-link a {
   }
 }
 
-// @media only screen and (min-width: 768px) and (max-width: 1400px) {
-//   .schedule-a-call .schedule-text {
-//     margin: 6px 0px 35px 0px;
-//     font-size: 18px;
-//   }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-//   .schedule-a-call .schedule-title {
-//     font-size: 41px;
-//     line-height: normal;
-//   }
-
-//   .input-item {
-//     margin-bottom: 15px;
-//   }
-
-//   .schedule-a-call .submitButton {
-//     height: 51px;
-//     font-size: 21px;
-//     margin-top: 20px;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 1200px) {
-//   .schedule-a-call .schedule-title {
-//     font-size: 35px;
-//   }
-
-//   .schedule-a-call .schedule-text {
-//     margin: 6px 0px 30px 0px;
-//   }
-
-//   .input-container-bottom .inner-input-item {
-//     width: 49%;
-//   }
-// }
-
-// @media only screen and (min-width: 300px) and (max-width: 767px) {
-//   .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
-//     padding: 0;
-//   }
-
-//   .schedule-a-call .schedule-title {
-//     font-size: 26px;
-//     line-height: normal;
-//     word-break: break-word;
-//   }
-
-//   .el-dialog__wrapper.schedule-dialog .el-dialog__headerbtn {
-//     top: 7px;
-//     right: 10px;
-//   }
-
-//   .schedule-a-call .schedule-text {
-//     font-size: 16px;
-//     word-break: break-word;
-//     margin: 6px 0px 25px 0px;
-//   }
-
-//   .input-item {
-//     margin-bottom: 15px;
-//   }
-
-//   .input-container-bottom .inner-input-item {
-//     width: 100%;
-//     margin-bottom: 15px;
-//   }
-
-//   .input-container-bottom {
-//     flex-direction: column;
-//   }
-
-//   .schedule-checkbox {
-//     margin-top: 0px;
-//     line-height: normal;
-//   }
-
-//   .schedule-a-call .submitButton {
-//     height: 42px;
-//     font-size: 18px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     margin-top: 15px;
-//   }
-// }
-
-@media only screen and (min-width: 769px) and (max-width: 1024px){
-
-.schedule-a-call[data-v-776e0267] {
+  .schedule-a-call {
     padding: 0 10px;
-}
-.schedule-a-call.contact-ue-form p.schedule-title[data-v-776e0267] {
+  }
+
+  .schedule-a-call.contact-ue-form p.schedule-title {
     font-size: 24px !important;
-}
-.schedule-a-call .schedule-text[data-v-776e0267] {
+  }
+
+  .schedule-a-call .schedule-text {
     margin: 3px 0px 50px 0px;
-}
+  }
 
 }
+
 @media only screen and (min-width: 769px) and (max-width: 991px) {
-  .schedule-a-call.contact-ue-form p.schedule-title[data-v-776e0267] {
+  .schedule-a-call.contact-ue-form p.schedule-title {
     font-size: 21px !important;
-}
-.schedule-a-call.contact-ue-form p.schedule-text {
+  }
+
+  .schedule-a-call.contact-ue-form p.schedule-text {
     font-size: 14px !important;
-}
-.input-item[data-v-776e0267] {
+  }
+
+  .input-item {
     margin-bottom: 20px;
-}
-.schedule-a-call .el-input__inner {
+  }
+
+  .schedule-a-call .el-input__inner {
     font-size: 14px;
+  }
 }
-}
-@media only screen and (min-width: 769px) and (max-width: 940px) { 
-   .schedule-a-call.contact-ue-form p.schedule-title[data-v-776e0267] {
+
+@media only screen and (min-width: 769px) and (max-width: 940px) {
+  .schedule-a-call.contact-ue-form p.schedule-title {
     font-size: 19px !important;
-}
-.schedule-a-call.contact-ue-form p.schedule-text {
+  }
+
+  .schedule-a-call.contact-ue-form p.schedule-text {
     font-size: 12px !important;
     margin: 0;
-}
-.schedule-a-call /deep/ .el-input__inner {
-  border-radius: 20px;
-  font-size: 12px;
-}
-.schedule-a-call.contact-ue-form .submitButton[data-v-776e0267] {
+  }
+
+  .schedule-a-call /deep/ .el-input__inner {
     border-radius: 20px;
     font-size: 12px;
+  }
+
+  .schedule-a-call.contact-ue-form .submitButton {
+    border-radius: 20px;
+    font-size: 12px;
+  }
 }
+
+// MOBILE VIEW
+@media only screen and (min-width: 300px) and (max-width: 481px) {
+  .schedule-a-call {
+    padding: 0 10px;
+
+    .schedule-title {
+      font-size: 21px !important;
+    }
+
+    .schedule-text {
+      font-size: 14px !important;
+    }
+  }
+
+  .schedule-a-call /deep/ .el-input__inner {
+    height: 45px;
+    border-radius: 30px;
+    font-size: 12px;
+  }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 440px) {
+  .schedule-a-call.contact-ue-form .el-checkbox__input.is-checked+.el-checkbox__label {
+        font-size: 11px !important;
+    }
+ .schedule-a-call {
+  padding: 0 ;
+    .schedule-title {
+      font-size: 15px !important;
+    }
+
+    .schedule-text {
+      font-size: 10px !important;
+          line-height: 5px !important;
+
+    }
+  }
+  .input-item {
+    margin-bottom: 20px;
+}
+ .schedule-a-call /deep/ .el-input__inner {
+    height: 42px;
+    border-radius: 20px;
+  }
 }
 </style>

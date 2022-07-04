@@ -546,134 +546,7 @@ button.btn.eye-button {
   text-align: center;
   margin-top: 25px;
 }
-
-// end startups-logo
-
-// @media only screen and (max-width: 768px) {
-//   .row {
-//     flex-direction: column-reverse;
-//   }
-
-//   .recruiter-banner {
-//     padding: 80px 0;
-//   }
-
-//   .startup-section-heading {
-//     padding-top: 20px;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 1199px) {
-//   .recruiter-banner-details p {
-//     font-size: 17px;
-//     line-height: 29px;
-//   }
-
-//   .Schedule-call {
-//     padding: 20px 40px 30px;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 991px) {
-//   button.btn.eye-button {
-//     right: 6px;
-//   }
-//   .Schedule-call {
-//     padding: 20px 20px 30px;
-//   }
-// }
-
-// @media only screen and (min-width: 300px) and (max-width: 767px) {
-//   .startups-logo-list li {
-//     width: 48%;
-//     margin-right: 2%;
-//     text-align: center;
-//     margin-bottom: 20px;
-//   }
-
-//   .startups-logo-list li:nth-child(2n) {
-//     margin-right: 0;
-//   }
-
-//   .startups-logo-list {
-//     margin-bottom: 30px;
-//   }
-
-//   .recruiter-startup-section .startups-logo {
-//     padding-top: 50px;
-//   }
-
-//   .recruiter-banner h1 {
-//     margin-bottom: 0;
-//     text-align: center;
-//     margin-top: 30px;
-//   }
-
-//   .recruiter-banner h1 br {
-//     display: none;
-//   }
-
-//   .recruiter-banner {
-//     padding: 60px 0;
-//   }
-
-//   .startup-section-heading {
-//     padding-top: 0;
-//     padding-bottom: 10px;
-//   }
-
-//   .recruiter-banner-details {
-//     padding: 0;
-//     padding-bottom: 50px;
-//     text-align: center;
-//     margin: auto;
-//     padding-top: 40px;
-//   }
-
-//   .Schedule-call {
-//     padding: 20px 15px 30px;
-//     margin-top: 20px;
-//   }
-
-//   .recruiter-banner-details p {
-//     font-size: 16px;
-//     line-height: 24px;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 1299px) {
-//   .row {
-//     flex-direction: row;
-//   }
-
-//   .recruiter-banner {
-//     padding: 80px 0;
-//   }
-
-//   .startup-section-heading {
-//     padding-top: 20px;
-//   }
-// }
-
-// @media only screen and (min-width: 768px) and (max-width: 1199px) {
-//   .row {
-//     flex-direction: row;
-//   }
-//   .Schedule-call {
-//     padding: 20px 20px 30px;
-//   }
-// }
-
-// @media only screen and (min-width: 1200px) {
-//   .row {
-//     flex-direction: row;
-//   }
-
-//   .Schedule-call {
-//     padding: 70px 25px 30px;
-//   }
-// }
-@media only screen and (min-width: 481px) and (max-width: 1200px) {
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
   .recruiter-banner-details h3.title-md {
     font-size: 62px;
     width: auto;
@@ -722,82 +595,181 @@ button.btn.eye-button {
     padding-bottom: 80px;
   }
 
-  .startup-section-heading[data-v-53973f38] {
+  .startup-section-heading{
     max-width: initial;
   }
 
-  .recruiter-banner[data-v-53973f38] {
+  .recruiter-banner{
     padding: 100px 0;
     padding-bottom: 30px;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .recruiter-banner-details h3.title-md[data-v-53973f38] {
+  .recruiter-banner-details h3.title-md{
     font-size: 60px;
   }
 
-  .Schedule-call[data-v-53973f38] {
+  .Schedule-call{
     max-width: 415px;
   }
 
 }
 
-@media only screen and (min-width: 769px) and (max-width: 991px) { 
+@media only screen and (min-width: 769px) and (max-width: 991px) {
 
-  .recruiter-banner-details h3.title-md[data-v-53973f38][data-v-53973f38] {
+  .recruiter-banner-details h3.title-md[data-v-53973f38]{
     font-size: 58px;
     line-height: 58px;
   }
 
-  .recruiter-banner-details p[data-v-53973f38] {
+  .recruiter-banner-details p{
     font-size: 13px;
     line-height: 21px;
   }
 
-  .Schedule-call[data-v-53973f38] {
+  .Schedule-call{
     max-width: 380px;
   }
 
   .startups-logo-list {
-    li img{
-     height: 230px;
+    li img {
+      height: 230px;
     }
   }
-  .features-title[data-v-53973f38] {
+
+  .features-title{
     font-size: 15px;
-}
-.question-block[data-v-67d141ea][data-v-67d141ea] {
+  }
+
+  .question-block[data-v-67d141ea][data-v-67d141ea] {
     padding: 15px;
     font-size: 15px;
-}
+  }
 }
 
 @media only screen and (min-width: 940px) and (max-width: 991px) {
- .con-rec {
+  .con-rec {
     max-width: 880px;
   }
 }
+
 @media only screen and (min-width: 875px) and (max-width: 940px) {
- .con-rec {
+  .con-rec {
     max-width: 780px;
   }
-   .Schedule-call[data-v-53973f38] {
+
+  .Schedule-call{
     max-width: 350px;
   }
-  .startups-logo-list li img[data-v-53973f38] {
+
+  .startups-logo-list li img{
     height: 200px;
-}
+  }
 }
 
 // Mobile view
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-#stephiring, #keyhiring{
-  display: none;
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+
+  #stephiring,
+  #keyhiring {
+    display: none;
+  }
+
+  .Schedule-call {
+    margin: auto;
+    margin-top: 30px;
+    max-width: 470px;
+  }
+
+  .button-sm{
+    width: 25vw;
+    margin: 10px 37%;
+  }
+
+ .hire-now h2{
+    font-size: 30px;
+  }
+.recruiter-section{
+    padding-bottom: 40px;
 }
-.Schedule-call{
-  margin: auto;
-  margin-top: 30px;
+  .recruiter-banner-details,
+  .hire-now,
+  .hire-now-img,
+  .startup-section-heading:last-child {
+    width: 100%;
+    max-width: 470px;
+    margin: auto;
+  }
+
+  .hire-now-img:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  .recruiter-banner-details,
+  .hire-now,
+  .hire-now-img,
+  .startup-section-heading:last-child, .Schedule-call {
+    max-width: 440px;
+  }
+  .recruiter-banner-details h3.title-md{
+    font-size: 56px;
+   line-height: 58px;
+}
+.hire-now h2{
+    font-size: 28px;
+}
+}
+@media only screen and (min-width: 300px) and (max-width: 481px) {
+  .hire-now h2{
+    font-size: 24px;
+}
+.hire-now p{
+    width: auto;
+    font-size: 13px;
+    line-height: 20px;
+}
+.recruiter-banner-details,
+  .hire-now,
+  .hire-now-img,
+  .startup-section-heading:last-child, .Schedule-call {
+    max-width: 380px;
+  }
+  .recruiter-banner-details h3.title-md{
+    font-size: 50px;
+    line-height: 50px;
+    height: auto;
+}
+.recruiter-banner-details p{
+line-height: 20px;
+    font-size: 13px;
+      text-align: start;
+}
+.recruiter-banner-img
+{
+  height: auto;
+}}
+@media only screen and (min-width: 300px) and (max-width: 440px) {
+  .recruiter-banner-details p{
+      text-align: start;
+}
+  .recruiter-banner-details,
+  .hire-now,
+  .hire-now-img,
+  .startup-section-heading:last-child, .Schedule-call {
+    max-width: 350px;
+     text-align: center;
+  }
+  .recruiter-banner[data-v-53973f38]{
+    padding: 80px 0;
+    padding-bottom: 30px;
+}
+.recruiter-banner-details h3.title-md[data-v-53973f38]{
+    font-size: 47px;
+    line-height: 47px;
+   
 }
 }
 </style>
