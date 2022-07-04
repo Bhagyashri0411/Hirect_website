@@ -57,7 +57,6 @@
     /* text-align: left; */
     width: 100%;
     padding: 10px 50px;
-    margin: 15px;
     margin-top: 0px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -75,9 +74,18 @@
   overflow: hidden;
   transition: height .2s linear;
 }
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-  .question-block[data-v-67d141ea] {
+@media only screen and (min-width: 481px) and (max-width: 1200px) {
+  .question-block {
     padding: 18px;
+}
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .question-block{
+   font-size: 14px;
+   padding: 12px;
+}
+.answer-block{
+   font-size: 14px;
 }
 }
 </style>
