@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="columns">
       <div class="column" v-for="step in stepData" :key="step.step">
         <!-- :style="{width:(100/stepData.length)+'%'}" -->
@@ -12,7 +12,7 @@
         <div v-if="condition(step)" class="arrow"></div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 <style lang="scss" scoped>
 .columns {
@@ -73,6 +73,51 @@
   font-size: 18px;
   font-weight: bold;
   padding: 10px 0 10px 0;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .circle-bg .step-image {
+  margin-top: 55px;
+  width: 60px;
+  height: 60px;
+}
+.circle-bg {
+  width: 170px;
+  height: 170px;
+}
+.column:not(:last-child) {
+  .circle-bg::after {
+    top: 29px;
+    left: 117px;
+  }
+}
+.step-title[data-v-273e13ae] {
+    font-size: 16px;
+}
+}
+@media only screen and (min-width: 769px) and (max-width: 940px) {
+  .column:not(:last-child) {
+  .circle-bg::after {
+    top: 26px;
+    left: 100px;
+  }
+}
+   .circle-bg .step-image {
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+}
+.circle-bg {
+  width: 150px;
+  height: 150px;
+}
+}
+@media only screen and (min-width: 769px) and (max-width: 875px) {
+  .column:not(:last-child) {
+  .circle-bg::after {
+    top: 15px;
+  }
+}
+
 }
 </style>
 <script>

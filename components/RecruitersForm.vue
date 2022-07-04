@@ -399,7 +399,7 @@ export default {
   color: #000000;
   font-size: 16px;
   height: 42px;
-  width: 388px;
+  // width: 388px;
   left: 44px;
   top: 492px;
 }
@@ -456,7 +456,7 @@ h3.allredy-link a {
 }
 
 .schedule-a-call /deep/ .el-input__inner {
-  width: 388px;
+  // width: 388px;
   height: 42px;
   border-radius: 50px;
   background-color: #f2f4f8;
@@ -466,18 +466,6 @@ h3.allredy-link a {
   border-color: #f7f7f7 !important;
 }
 
-.schedule-a-call /deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
-  color: #0e101a;
-}
-
-.schedule-a-call /deep/ .el-checkbox__input.is-checked .el-checkbox__inner {
-  background-color: #0e101a;
-  border-color: #0e101a;
-}
-
-/deep/ .el-dialog {
-  border-radius: 12px;
-}
 
 .alertText {
   position: absolute;
@@ -601,386 +589,134 @@ h3.allredy-link a {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1400px) {
-  .schedule-a-call .schedule-text {
-    margin: 6px 0px 35px 0px;
-    font-size: 18px;
-  }
+// @media only screen and (min-width: 768px) and (max-width: 1400px) {
+//   .schedule-a-call .schedule-text {
+//     margin: 6px 0px 35px 0px;
+//     font-size: 18px;
+//   }
 
-  .schedule-a-call .schedule-title {
-    font-size: 41px;
-    line-height: normal;
-  }
+//   .schedule-a-call .schedule-title {
+//     font-size: 41px;
+//     line-height: normal;
+//   }
 
-  .input-item {
-    margin-bottom: 15px;
-  }
+//   .input-item {
+//     margin-bottom: 15px;
+//   }
 
-  .schedule-a-call .submitButton {
-    height: 51px;
-    font-size: 21px;
-    margin-top: 20px;
-  }
+//   .schedule-a-call .submitButton {
+//     height: 51px;
+//     font-size: 21px;
+//     margin-top: 20px;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1200px) {
+//   .schedule-a-call .schedule-title {
+//     font-size: 35px;
+//   }
+
+//   .schedule-a-call .schedule-text {
+//     margin: 6px 0px 30px 0px;
+//   }
+
+//   .input-container-bottom .inner-input-item {
+//     width: 49%;
+//   }
+// }
+
+// @media only screen and (min-width: 300px) and (max-width: 767px) {
+//   .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
+//     padding: 0;
+//   }
+
+//   .schedule-a-call .schedule-title {
+//     font-size: 26px;
+//     line-height: normal;
+//     word-break: break-word;
+//   }
+
+//   .el-dialog__wrapper.schedule-dialog .el-dialog__headerbtn {
+//     top: 7px;
+//     right: 10px;
+//   }
+
+//   .schedule-a-call .schedule-text {
+//     font-size: 16px;
+//     word-break: break-word;
+//     margin: 6px 0px 25px 0px;
+//   }
+
+//   .input-item {
+//     margin-bottom: 15px;
+//   }
+
+//   .input-container-bottom .inner-input-item {
+//     width: 100%;
+//     margin-bottom: 15px;
+//   }
+
+//   .input-container-bottom {
+//     flex-direction: column;
+//   }
+
+//   .schedule-checkbox {
+//     margin-top: 0px;
+//     line-height: normal;
+//   }
+
+//   .schedule-a-call .submitButton {
+//     height: 42px;
+//     font-size: 18px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 15px;
+//   }
+// }
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+.schedule-a-call[data-v-776e0267] {
+    padding: 0 10px;
+}
+.schedule-a-call.contact-ue-form p.schedule-title[data-v-776e0267] {
+    font-size: 24px !important;
+}
+.schedule-a-call .schedule-text[data-v-776e0267] {
+    margin: 3px 0px 50px 0px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .schedule-a-call .schedule-title {
-    font-size: 35px;
-  }
-
-  .schedule-a-call .schedule-text {
-    margin: 6px 0px 30px 0px;
-  }
-
-  .input-container-bottom .inner-input-item {
-    width: 49%;
-  }
 }
-
-@media only screen and (min-width: 300px) and (max-width: 767px) {
-  .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
-    padding: 0;
-  }
-
-  .schedule-a-call .schedule-title {
-    font-size: 26px;
-    line-height: normal;
-    word-break: break-word;
-  }
-
-  .el-dialog__wrapper.schedule-dialog .el-dialog__headerbtn {
-    top: 7px;
-    right: 10px;
-  }
-
-  .schedule-a-call .schedule-text {
-    font-size: 16px;
-    word-break: break-word;
-    margin: 6px 0px 25px 0px;
-  }
-
-  .input-item {
-    margin-bottom: 15px;
-  }
-
-  .input-container-bottom .inner-input-item {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .input-container-bottom {
-    flex-direction: column;
-  }
-
-  .schedule-checkbox {
-    margin-top: 0px;
-    line-height: normal;
-  }
-
-  .schedule-a-call .submitButton {
-    height: 42px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-  }
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .schedule-a-call.contact-ue-form p.schedule-title[data-v-776e0267] {
+    font-size: 21px !important;
 }
-
-// ** pop-up window ***
-
-@media only screen and (min-width: 768px) and (max-width: 1400px) {
-  .schedule-a-call .schedule-text {
-    margin: 6px 0px 35px 0px;
-    font-size: 18px;
-  }
-
-  .schedule-a-call .schedule-title {
-    font-size: 41px;
-    line-height: normal;
-  }
-
-  .input-item {
-    margin-bottom: 15px;
-  }
-
-  .schedule-a-call .submitButton {
-    height: 40px;
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  // Pop window
-  /deep/ .el-dialog {
-    width: 900px;
-  }
-
-  .submit-dialog .ic_congratulations {
-    width: 83px;
-    height: 66px;
-  }
+.schedule-a-call.contact-ue-form p.schedule-text {
+    font-size: 14px !important;
 }
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .schedule-a-call .schedule-title {
-    font-size: 35px;
-  }
-
-  .schedule-a-call .schedule-text {
-    margin: 6px 0px 30px 0px;
-  }
-
-  .input-container-bottom .inner-input-item {
-    width: 49%;
-  }
-
-  // Pop window
-  /deep/ .el-dialog {
-    width: 800px;
-  }
-
-  .submit-dialog .ic_congratulations {
-    width: 75px;
-    height: 60px;
-  }
-
-  .submit-dialog .dialog_title {
-    font-size: 25px;
-    margin: 24px 0px;
-  }
-
-  .submit-dialog .dialog_text {
-    font-size: 17px;
-    line-height: 19px;
-  }
-
-  .submit-dialog .qr_schedule[data-v-9354007a] {
-    width: 190px;
-    height: 186px;
-    margin: 15px 0px;
-  }
+.input-item[data-v-776e0267] {
+    margin-bottom: 20px;
 }
-
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  // Pop window
-  /deep/ .el-dialog {
-    width: 750px;
-  }
-
-  .submit-dialog .ic_congratulations {
-    width: 70px;
-    height: 55px;
-  }
-
-  .submit-dialog .dialog_title {
-    font-size: 22px;
-    margin: 24px 0px;
-    line-height: 30px;
-  }
-
-  .submit-dialog .dialog_text {
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  .submit-dialog .qr_schedule {
-    width: 185px;
-    height: 180px;
-    margin: 15px 0px;
-  }
-
-  .submit-dialog .download-container {
-    display: flex;
-    padding-bottom: 40px;
-  }
-}
-
-@media only screen and (min-width: 730px) and (max-width: 880px) {
-  .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
-    padding: 0;
-  }
-
-  .schedule-a-call .schedule-title {
-    font-size: 26px;
-    line-height: normal;
-    word-break: break-word;
-  }
-
-  .el-dialog_wrapper.schedule-dialog .el-dialog_headerbtn {
-    top: 7px;
-    right: 10px;
-  }
-
-  .schedule-a-call .schedule-text {
-    font-size: 16px;
-    word-break: break-word;
-    margin: 6px 0px 25px 0px;
-  }
-
-  .input-item {
-    margin-bottom: 15px;
-  }
-
-  .el-input-group__prepend .el-select {
-    width: 60px !important;
-  }
-
-  .input-container-bottom .inner-input-item {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  .input-container-bottom {
-    flex-direction: column;
-  }
-
-  .schedule-checkbox {
-    margin-top: 0px;
-    line-height: normal;
-  }
-
-  .schedule-a-call .submitButton {
-    height: 42px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-  }
-
-  // Pop window
-  /deep/ .el-dialog {
-    width: 500px;
-    max-width: 800px;
-  }
-
-  .submit-dialog .ic_congratulations {
-    width: 65px;
-    height: 50px;
-  }
-
-  .submit-dialog .dialog_title {
-    font-size: 20px;
-    margin: 20px 0px;
-    line-height: 26px;
-  }
-
-  .submit-dialog .dialog_text {
+.schedule-a-call .el-input__inner {
     font-size: 14px;
-    line-height: 20px;
-  }
-
-  .submit-dialog .qr_schedule {
-    width: 185px;
-    height: 175px;
-    margin: 15px 0px;
-  }
-
-  .submit-dialog .download-container {
-    padding-bottom: 0px;
-    width: 350px;
-  }
-
-  .submit-dialog .download-container .download_btn[data-v-9354007a],
-  .submit-dialog
-    .download-container
-    .downloadDialog-button-pkg-container
-    .downloadDialog-button-pkg[data-v-9354007a] {
-    display: block;
-    width: 110px;
-    height: 35px;
-    margin: 5px 0;
-  }
 }
-
-@media only screen and (min-width: 390px) and (max-width: 730px) {
-  // Pop window
-  /deep/ .el-dialog {
-    width: 700px;
-    max-width: 370px;
-  }
-
-  .submit-dialog .ic_congratulations {
-    width: 65px;
-    height: 50px;
-  }
-
-  .submit-dialog .dialog_title {
-    font-size: 20px;
-    margin: 20px 0px;
-    line-height: 26px;
-  }
-
-  .submit-dialog .dialog_text {
+}
+@media only screen and (min-width: 769px) and (max-width: 940px) { 
+   .schedule-a-call.contact-ue-form p.schedule-title[data-v-776e0267] {
+    font-size: 19px !important;
+}
+.schedule-a-call.contact-ue-form p.schedule-text {
+    font-size: 12px !important;
+    margin: 0;
+}
+.schedule-a-call /deep/ .el-input__inner {
+  border-radius: 20px;
+  font-size: 12px;
+}
+.schedule-a-call.contact-ue-form .submitButton[data-v-776e0267] {
+    border-radius: 20px;
     font-size: 12px;
-    line-height: 20px;
-  }
-
-  .submit-dialog .qr_schedule {
-    width: 185px;
-    height: 175px;
-    margin: 15px 0px;
-  }
-
-  .submit-dialog .download-container {
-    padding-bottom: 30px;
-    display: block;
-    width: 160px;
-  }
-
-  .submit-dialog .download-container .download_btn,
-  .submit-dialog
-    .download-container
-    .downloadDialog-button-pkg-container
-    .downloadDialog-button-pkg {
-    width: 140px;
-    height: 40px;
-    margin: 5px 0;
-  }
 }
-
-@media only screen and (min-width: 200px) and (max-width: 390px) {
-  // Pop window
-  /deep/ .el-dialog {
-    width: 700px;
-    max-width: 312px;
-  }
-
-  .submit-dialog .ic_congratulations {
-    width: 65px;
-    height: 50px;
-  }
-
-  .submit-dialog .dialog_title {
-    font-size: 17px;
-    margin: 18px 0px;
-    line-height: 20px;
-  }
-
-  .submit-dialog .dialog_text {
-    font-size: 11px;
-    line-height: 15px;
-  }
-
-  .submit-dialog .qr_schedule {
-    width: 175px;
-    height: 165px;
-  }
-
-  .submit-dialog .download-container {
-    padding-bottom: 0;
-    display: block;
-    width: 150px;
-  }
-
-  .submit-dialog .download-container .download_btn,
-  .submit-dialog
-    .download-container
-    .downloadDialog-button-pkg-container
-    .downloadDialog-button-pkg {
-    width: 140px;
-    height: 40px;
-    margin: 5px 0;
-  }
 }
 </style>
