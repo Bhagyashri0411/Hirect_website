@@ -516,7 +516,7 @@ h3.allredy-link a {
   }
 
   .schedule-a-call.contact-ue-form p.schedule-title {
-    font-size: 24px !important;
+    font-size: 24px;
   }
 
   .schedule-a-call .schedule-text {
@@ -545,11 +545,11 @@ h3.allredy-link a {
 
 @media only screen and (min-width: 769px) and (max-width: 940px) {
   .schedule-a-call.contact-ue-form p.schedule-title {
-    font-size: 19px !important;
+    font-size: 19px;
   }
 
   .schedule-a-call.contact-ue-form p.schedule-text {
-    font-size: 12px !important;
+    font-size: 12px;
     margin: 0;
   }
 
@@ -566,16 +566,17 @@ h3.allredy-link a {
 
 // MOBILE VIEW
 @media only screen and (min-width: 300px) and (max-width: 481px) {
+  .schedule-a-call.contact-ue-form p.schedule-title {
+    font-size: 21px;
+  }
+
+  .schedule-a-call.contact-ue-form p.schedule-text {
+    font-size: 14px;
+    line-height: 5px;
+  }
+
   .schedule-a-call {
     padding: 0 10px;
-
-    .schedule-title {
-      font-size: 21px !important;
-    }
-
-    .schedule-text {
-      font-size: 14px !important;
-    }
   }
 
   .schedule-a-call /deep/ .el-input__inner {
@@ -588,24 +589,27 @@ h3.allredy-link a {
 
 @media only screen and (min-width: 300px) and (max-width: 440px) {
   .schedule-a-call.contact-ue-form .el-checkbox__input.is-checked+.el-checkbox__label {
-        font-size: 11px !important;
-    }
- .schedule-a-call {
-  padding: 0 ;
-    .schedule-title {
-      font-size: 15px !important;
-    }
-
-    .schedule-text {
-      font-size: 10px !important;
-          line-height: 5px !important;
-
-    }
+    font-size: 11px;
   }
+
+  .schedule-a-call.contact-ue-form p.schedule-title {
+    font-size: 15px;
+  }
+
+  .schedule-a-call.contact-ue-form p.schedule-text {
+    font-size: 10px;
+    line-height: 5px;
+  }
+
+  .schedule-a-call {
+    padding: 0;
+  }
+
   .input-item {
     margin-bottom: 20px;
-}
- .schedule-a-call /deep/ .el-input__inner {
+  }
+
+  .schedule-a-call /deep/ .el-input__inner {
     height: 42px;
     border-radius: 20px;
   }
