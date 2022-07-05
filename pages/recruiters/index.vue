@@ -6,7 +6,7 @@
     <section class="recruiter-section">
       <div class="recruiter-banner">
         <div class="container con-rec">
-          <div class="row">
+          <div class="row direct-row">
             <div class="col-md-6">
               <div class="px-0.5 py-0.5">
                 <div class="recruiter-banner-details">
@@ -670,7 +670,13 @@ button.btn.eye-button {
 
 // Mobile view
 @media only screen and (min-width: 300px) and (max-width: 768px) {
-
+  .recruiter-banner[data-v-53973f38] {
+    padding: 40px 0;
+    padding-bottom: 30px;
+}
+.direct-row{
+  flex-direction: column-reverse;
+}
   #stephiring,
   #keyhiring {
     display: none;
@@ -723,6 +729,10 @@ button.btn.eye-button {
 }
 }
 @media only screen and (min-width: 300px) and (max-width: 481px) {
+    .recruiter-banner[data-v-53973f38] {
+    padding: 40px 0;
+    padding-bottom: 30px;
+}
   .hire-now h2{
     font-size: 24px;
 }
