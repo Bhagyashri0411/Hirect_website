@@ -1,112 +1,51 @@
 <template>
   <div>
     <div class="schedule-a-call contact-ue-form">
-      <p class="schedule-title">Take Your First Step to Register</p>
-      <p class="schedule-text">Your Next Hire is Right Here. Get Started Soon.</p>
+      <p class="schedule-title">Get in touch with the Account Manager</p>
+      <p class="schedule-text">Build your Team Instantly. Get Started Soon.</p>
       <div class="input-container">
-        <el-input
-          id="user-name"
-          v-model="getUserInf.userName"
-          @focus="inputFocus(1)"
-          placeholder="Your Name"
-          class="input-item"
-        />
-        <p v-show="isUserNameError" class="alertText">Your name is required</p>
+        <el-input id="user-name" v-model="getUserInf.userName" @focus="inputFocus(1)" placeholder="Name"
+          class="input-item" />
+        <p v-show="isUserNameError" class="alertText">Name is required</p>
       </div>
       <div class="input-container">
-        <el-input
-          id="phone-number"
-          v-model="getUserInf.phoneNumber"
-          @focus="inputFocus(2)"
-          maxlength="10"
-          placeholder="Enter 10 digit mobile number"
-          class="input-item"
-        >
-          <el-select
-            v-model="getUserInf.phoneArea"
-            slot="prepend"
-            placeholder="+91"
-            style="width: 68px"
-          >
+        <el-input id="phone-number" v-model="getUserInf.phoneNumber" @focus="inputFocus(2)" maxlength="10"
+          placeholder="10-digit mobile number" class="input-item">
+          <el-select v-model="getUserInf.phoneArea" slot="prepend" placeholder="+91" style="width: 68px">
             <el-option label="+91" value="+91"></el-option>
             <el-option label="+1" value="+1"></el-option>
             <el-option label="+65" value="+65"></el-option>
             <el-option label="+44" value="+44"></el-option>
           </el-select>
         </el-input>
-        <p v-show="isPhoneNumberError" class="alertText">Your mobile is required</p>
+        <p v-show="isPhoneNumberError" class="alertText">Mobile number is required</p>
       </div>
       <div class="input-container">
-        <el-input
-          id="user-email"
-          v-model="getUserInf.userEmail"
-          @focus="inputFocus(3)"
-          placeholder="Work Email"
-          class="input-item"
-        />
-        <p v-show="isUserEmailError" class="alertText">Your work email is required</p>
+        <el-input id="user-email" v-model="getUserInf.userEmail" @focus="inputFocus(3)" placeholder="Official Email"
+          class="input-item" />
+        <p v-show="isUserEmailError" class="alertText">Work email is required</p>
       </div>
       <div class="input-container-bottom">
-        <el-input
-          id="company-name"
-          v-model="getUserInf.userCompanyName"
-          @focus="inputFocus(4)"
-          placeholder="Company Name"
-          class="inner-input-item"
-        />
-        <el-input
-          id="candidats-number"
-          v-model="getUserInf.userCandidats"
-          @focus="inputFocus(4)"
-          placeholder="Number of candidats"
-          class="inner-input-item"
-          style="margin-top: 24px"
-        />
-        <el-select
-          id="user-position"
-          v-model="getUserInf.userPosition"
-          @focus="inputFocus(5)"
-          class="inner-input-item"
-          placeholder="Your Position"
-        >
-          <el-option
-            v-for="item in positionOptions"
-            :key="item.value"
-            :label="item.label"
-            :value="item.value"
-          />
+        <el-input id="company-name" v-model="getUserInf.userCompanyName" @focus="inputFocus(4)"
+          placeholder="Company Name" class="inner-input-item" />
+        <el-select id="user-position" v-model="getUserInf.userPosition" @focus="inputFocus(5)" class="inner-input-item"
+          placeholder="Designation">
+          <el-option v-for="item in positionOptions" :key="item.value" :label="item.label" :value="item.value" />
         </el-select>
-        <p v-show="isCompanyNameError" class="alertText">Your company name is required</p>
+        <p v-show="isCompanyNameError" class="alertText">Company name is required</p>
         <p v-show="isUserPositionError" class="alertText" style="left: 276px">
-          Your position is required
+          Designation is required
         </p>
+        <el-input id="candidats-number" v-model="getUserInf.userCandidats" @focus="inputFocus(6)"
+          placeholder="Number of candidates" class="inner-input-item" style="margin-top: 24px" />
       </div>
-      <el-checkbox
-        v-model="getUserInf.isReceive"
-        class="schedule-checkbox"
-        style="color: #78787a; margin-left: 22px"
-        >I would like to receive updates via whatsapp.</el-checkbox
-      >
-      <el-button
-        type="primary"
-        class="submitButton"
-        :loading="isButtonLoading"
-        @click="submitClick"
-        >Sign Up</el-button
-      >
+      <el-checkbox v-model="getUserInf.isReceive" class="schedule-checkbox" style="color: #78787a; margin-left: 10px">I
+        would like to receive updates via whatsapp.</el-checkbox>
+      <el-button type="primary" class="submitButton" :loading="isButtonLoading" @click="submitClick">Sign Up</el-button>
     </div>
-    <el-dialog
-      :visible.sync="dialogVisible"
-      width="920px"
-      :append-to-body="true"
-      class="submit-dialog"
-    >
+    <el-dialog :visible.sync="dialogVisible" width="920px" :append-to-body="true" class="submit-dialog">
       <center>
-        <img
-          src="~/assets/img/ic_congratulations.png"
-          alt="ic_congratulations"
-          class="ic_congratulations"
-        />
+        <img src="~/assets/img/ic_congratulations.png" alt="ic_congratulations" class="ic_congratulations" />
         <p class="dialog_title">
           Congrats, your details are<br />submitted successfully.
         </p>
@@ -116,36 +55,14 @@
         </p>
         <img src="~/assets/img/qr_schedule.png" alt="qr_schedule" class="qr_schedule" />
         <div class="download-container">
-          <img
-            src="~/assets/img/btn_appstore.png"
-            alt="btn_appstore"
-            @click="appImgClickHandle"
-            class="download_btn"
-          />
-          <img
-            src="~/assets/img/btn_googleplay.png"
-            alt="btn_googleplay"
-            @click="googleImgClickHandle"
-            class="download_btn"
-          />
-          <div
-            class="downloadDialog-button-pkg-container"
-            @mouseover="downloadPkgMouseIn"
-            @mouseout="downloadPkgMouseOut"
-          >
-            <img
-              src="~/assets/img/pkg_android.png"
-              class="downloadDialog-button-pkg"
-              @click="googlePkgClickHandle"
-            />
-            <img
-              v-if="popoverImgShow"
-              @mouseover="downloadPkgMouseIn"
-              @click="openDownloadGuide"
-              class="popover-img"
-              src="~/assets/img/ic_download_guide.png"
-              alt="download_guide"
-            />
+          <img src="~/assets/img/btn_appstore.png" alt="btn_appstore" @click="appImgClickHandle" class="download_btn" />
+          <img src="~/assets/img/btn_googleplay.png" alt="btn_googleplay" @click="googleImgClickHandle"
+            class="download_btn" />
+          <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn"
+            @mouseout="downloadPkgMouseOut">
+            <img src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" />
+            <img v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img"
+              src="~/assets/img/ic_download_guide.png" alt="download_guide" />
           </div>
         </div>
       </center>
@@ -154,30 +71,30 @@
 </template>
 
 <script>
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBj-hDOC0n6RNugGLWU5nfZ8jjj8SeDYLg",
-  authDomain: "enterprise-hiring-crm.firebaseapp.com",
-  projectId: "enterprise-hiring-crm",
-  storageBucket: "enterprise-hiring-crm.appspot.com",
-  messagingSenderId: "921119807588",
-  appId: "1:921119807588:web:6d08aed5411070223f6771",
-  measurementId: "G-XRTSKCVPZF",
+  apiKey: 'AIzaSyBj-hDOC0n6RNugGLWU5nfZ8jjj8SeDYLg',
+  authDomain: 'enterprise-hiring-crm.firebaseapp.com',
+  projectId: 'enterprise-hiring-crm',
+  storageBucket: 'enterprise-hiring-crm.appspot.com',
+  messagingSenderId: '921119807588',
+  appId: '1:921119807588:web:6d08aed5411070223f6771',
+  measurementId: 'G-XRTSKCVPZF',
 };
 const app = firebase.initializeApp(firebaseConfig);
 
 export default {
-  name: "schedule-a-call",
+  name: 'schedule-a-call',
   components: {},
   data() {
     return {
       popoverImgShow: false,
       popoverTimeOut: null,
       dialogVisible: false,
-      submitUrlSearch: "",
-      submitUrl: "",
+      submitUrlSearch: '',
+      submitUrl: '',
       isReceive: true,
       isButtonLoading: false,
       isUserNameError: false,
@@ -187,53 +104,53 @@ export default {
       isUserPositionError: false,
       positionOptions: [
         {
-          value: "HR",
-          label: "HR",
+          value: 'HR',
+          label: 'HR',
         },
         {
-          value: "Founder/CEO",
-          label: "Founder/CEO",
+          value: 'Founder/CEO',
+          label: 'Founder/CEO',
         },
         {
-          value: "CTO",
-          label: "CTO",
+          value: 'CTO',
+          label: 'CTO',
         },
         {
-          value: "CMO",
-          label: "CMO",
+          value: 'CMO',
+          label: 'CMO',
         },
         {
-          value: "COO",
-          label: "COO",
+          value: 'COO',
+          label: 'COO',
         },
         {
-          value: "Others",
-          label: "Others",
+          value: 'Others',
+          label: 'Others',
         },
       ],
       getUserInf: {
-        userName: "",
-        phoneNumber: "",
-        phoneArea: "+91",
-        userEmail: "",
-        userCompanyName: "",
-        userPosition: "",
+        userName: '',
+        phoneNumber: '',
+        phoneArea: '+91',
+        userEmail: '',
+        userCompanyName: '',
+        userPosition: '',
         isReceive: true,
       },
     };
   },
   computed: {},
   watch: {},
-  created() {},
+  created() { },
   beforeMount() {
     this.$localSaveSubmitUrl();
   },
   mounted() {
-    this.submitUrlSearch = JSON.parse(window.localStorage.getItem("submitUrlSearch"));
+    this.submitUrlSearch = JSON.parse(window.localStorage.getItem('submitUrlSearch'));
   },
   methods: {
     openDownloadGuide() {
-      window.open("https://hirect.in/download-guide", "_blank");
+      window.open('https://hirect.in/download-guide', '_blank');
     },
     downloadPkgMouseIn() {
       clearTimeout(this.popoverTimeOut);
@@ -245,96 +162,101 @@ export default {
       }, 200);
     },
     googlePkgClickHandle() {
-      window.open(this.androidPkgAddressIN, "_blank");
+      window.open(this.androidPkgAddressIN, '_blank');
     },
     // clear form
     clearFormData() {
-      this.getUserInf.userName = "";
-      this.getUserInf.phoneNumber = "";
-      this.getUserInf.userEmail = "";
-      this.getUserInf.userCompanyName = "";
-      this.getUserInf.userPosition = "";
+      this.getUserInf.userName = '';
+      this.getUserInf.phoneNumber = '';
+      this.getUserInf.userEmail = '';
+      this.getUserInf.userCompanyName = '';
+      this.getUserInf.userPosition = '';
     },
     // send data
     async submitSend() {
       this.isButtonLoading = true;
       // processing submitUrl parameter
-      if (window.localStorage.getItem("hasSubmitUrl") === "1") {
-        this.submitUrl = window.localStorage.getItem("submitUrl");
+      if (window.localStorage.getItem('hasSubmitUrl') === '1') {
+        this.submitUrl = window.localStorage.getItem('submitUrl');
       } else {
         this.submitUrl = window.location.href;
       }
 
       // processing utm_source ---> leadsource parameter
-      var leadSourcePara = "";
+      let leadSourcePara = '';
       if (this.submitUrlSearch && this.submitUrlSearch.utm_source) {
-        if (this.submitUrlSearch.utm_source === "google") {
-          leadSourcePara = "Google Ad";
-        } else if (this.submitUrlSearch.utm_source === "Facebook") {
-          leadSourcePara = "Facebook Ads (India)";
-        } else if (this.submitUrlSearch.utm_source === "snapchat") {
-          leadSourcePara = "Snapchat Ad (India)";
-        } else if (this.submitUrlSearch.utm_source === "tiktok") {
-          leadSourcePara = "Tiktok Ad (India)";
-        } else if (this.submitUrlSearch.utm_source === "bing") {
-          leadSourcePara = "bing (India)";
+        if (this.submitUrlSearch.utm_source === 'google') {
+          leadSourcePara = 'Google Ad';
+        } else if (this.submitUrlSearch.utm_source === 'Facebook') {
+          leadSourcePara = 'Facebook Ads (India)';
+        } else if (this.submitUrlSearch.utm_source === 'snapchat') {
+          leadSourcePara = 'Snapchat Ad (India)';
+        } else if (this.submitUrlSearch.utm_source === 'tiktok') {
+          leadSourcePara = 'Tiktok Ad (India)';
+        } else if (this.submitUrlSearch.utm_source === 'bing') {
+          leadSourcePara = 'bing (India)';
         } else {
-          leadSourcePara = "";
+          leadSourcePara = '';
         }
       } else {
-        leadSourcePara = "";
+        leadSourcePara = '';
       }
-      this.$ga.event("Leads", "Submitted", "form");
+      this.$ga.event('Leads', 'Submitted', 'form');
       const formData = {
-        __vtrftk: "sid:3d4d1077ddbde35a14455b3381cf01cce7dcbe02,1626673660",
-        publicid: "db46e626a9177c57165bb18e99e676e3",
-        urlencodeenable: "1",
-        name: "Hirect.in  are you hiring form - new",
-        __vtCurrency: "1",
+        __vtrftk: 'sid:3d4d1077ddbde35a14455b3381cf01cce7dcbe02,1626673660',
+        publicid: 'db46e626a9177c57165bb18e99e676e3',
+        urlencodeenable: '1',
+        name: 'Hirect.in  are you hiring form - new',
+        __vtCurrency: '1',
         firstname: this.getUserInf.userName,
         lastname: this.getUserInf.userName,
         mobile: this.getUserInf.phoneArea + this.getUserInf.phoneNumber,
         email: this.getUserInf.userEmail,
         account_id: this.getUserInf.userCompanyName,
         cf_contacts_positionchoice: this.getUserInf.userPosition,
-        title: "",
+        title: '',
         emailoptin: this.getUserInf.isReceive,
         cf_contacts_enterurl: this.submitUrl,
-        cf_contacts_appointmenttime2: "",
+        cf_contacts_appointmenttime2: '',
         leadsource: leadSourcePara,
-        cf_contacts_freetocontact: "",
+        cf_contacts_freetocontact: '',
       };
       // await this.$reqPost("/hirect/company-service/postWix", formData);
       await this.sendCrmData(formData);
       this.isButtonLoading = false;
       this.dialogVisible = true;
-      this.$sendToEsData("webQrcodeViewed", {
+      this.$sendToEsData('webQrcodeViewed', {
         region_id: 0,
-        position: "in_recruiters_leads_popup",
+        position: 'in_recruiters_leads_popup',
       });
-      fbq("track", "LEAD");
+      // eslint-disable-next-line no-undef
+      fbq('track', 'LEAD');
       this.clearFormData();
     },
     // click, check
     submitClick() {
-      if (this.getUserInf.userName === "") {
-        document.getElementById("user-name").style.borderColor = "#EF444F";
+      if (this.getUserInf.userName === '') {
+        document.getElementById('user-name').style.borderColor = '#EF444F';
         this.isUserNameError = true;
         return;
-      } else if (this.getUserInf.phoneNumber.length < 10) {
-        document.getElementById("phone-number").style.borderColor = "#EF444F";
+      }
+      if (this.getUserInf.phoneNumber.length < 10) {
+        document.getElementById('phone-number').style.borderColor = '#EF444F';
         this.isPhoneNumberError = true;
         return;
-      } else if (this.getUserInf.userEmail === "") {
-        document.getElementById("user-email").style.borderColor = "#EF444F";
+      }
+      if (this.getUserInf.userEmail === '') {
+        document.getElementById('user-email').style.borderColor = '#EF444F';
         this.isUserEmailError = true;
         return;
-      } else if (this.getUserInf.userCompanyName === "") {
-        document.getElementById("company-name").style.borderColor = "#EF444F";
+      }
+      if (this.getUserInf.userCompanyName === '') {
+        document.getElementById('company-name').style.borderColor = '#EF444F';
         this.isCompanyNameError = true;
         return;
-      } else if (this.getUserInf.userPosition === "") {
-        document.getElementById("user-position").style.borderColor = "#EF444F";
+      }
+      if (this.getUserInf.userPosition === '') {
+        document.getElementById('user-position').style.borderColor = '#EF444F';
         this.isUserPositionError = true;
         return;
       }
@@ -343,38 +265,40 @@ export default {
     inputFocus(val) {
       switch (val) {
         case 1:
-          document.getElementById("user-name").style.borderColor = "#DCDFE6";
+          document.getElementById('user-name').style.borderColor = '#DCDFE6';
           this.isUserNameError = false;
           break;
         case 2:
-          document.getElementById("phone-number").style.borderColor = "#DCDFE6";
+          document.getElementById('phone-number').style.borderColor = '#DCDFE6';
           this.isPhoneNumberError = false;
           break;
         case 3:
-          document.getElementById("user-email").style.borderColor = "#DCDFE6";
+          document.getElementById('user-email').style.borderColor = '#DCDFE6';
           this.isUserEmailError = false;
           break;
         case 4:
-          document.getElementById("company-name").style.borderColor = "#DCDFE6";
+          document.getElementById('company-name').style.borderColor = '#DCDFE6';
           this.isCompanyNameError = false;
           break;
         case 5:
-          document.getElementById("user-position").style.borderColor = "#DCDFE6";
+          document.getElementById('user-position').style.borderColor = '#DCDFE6';
           this.isUserPositionError = false;
+          break;
+        default:
           break;
       }
     },
     appImgClickHandle() {
-      this.$ga.event("click", "ios", "app", 2);
-      window.open(this.iosDownloadAddressIN, "_blank");
+      this.$ga.event('click', 'ios', 'app', 2);
+      window.open(this.iosDownloadAddressIN, '_blank');
     },
     googleImgClickHandle() {
-      this.$ga.event("click", "android", "app", 1);
-      window.open(this.androidDownloadAddressIN, "_blank");
+      this.$ga.event('click', 'android', 'app', 1);
+      window.open(this.androidDownloadAddressIN, '_blank');
     },
     async sendCrmData(user) {
       const db = await app.firestore();
-      const leadRef = await db.collection("users").doc();
+      const leadRef = await db.collection('users').doc();
       await leadRef.set(user, { merge: true });
     },
   },
@@ -399,7 +323,7 @@ export default {
   color: #000000;
   font-size: 16px;
   height: 42px;
-  width: 388px;
+  // width: 388px;
   left: 44px;
   top: 492px;
 }
@@ -415,7 +339,7 @@ export default {
 
 .schedule-a-call.contact-ue-form .Scheduleacallnow {
   box-sizing: border-box;
-  width: 388px;
+  // width: 388px;
   height: 42px;
   // left: 44px;
   border: 1px solid #000000;
@@ -456,7 +380,7 @@ h3.allredy-link a {
 }
 
 .schedule-a-call /deep/ .el-input__inner {
-  width: 388px;
+  // width: 388px;
   height: 42px;
   border-radius: 50px;
   background-color: #f2f4f8;
@@ -466,13 +390,13 @@ h3.allredy-link a {
   border-color: #f7f7f7 !important;
 }
 
-.schedule-a-call /deep/ .el-checkbox__input.is-checked + .el-checkbox__label {
+.schedule-a-call /deep/ .el-checkbox__input.is-checked+.el-checkbox__label {
   color: #0e101a;
 }
 
 .schedule-a-call /deep/ .el-checkbox__input.is-checked .el-checkbox__inner {
-  background-color: #0e101a;
-  border-color: #0e101a;
+  background-color: #29E19E;
+  border-color: #29E19E;
 }
 
 /deep/ .el-dialog {
@@ -637,10 +561,10 @@ h3.allredy-link a {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-}
+@media only screen and (min-width: 768px) and (max-width: 992px) {}
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+
   .el-dialog__wrapper.schedule-dialog .el-dialog .schedule-a-call {
     padding: 0;
   }
@@ -687,6 +611,9 @@ h3.allredy-link a {
     align-items: center;
     justify-content: center;
     margin-top: 15px;
+  }
+  .schedule-a-call.contact-ue-form .el-checkbox__input.is-checked + .el-checkbox__label{
+    font-size: 10px !important;
   }
 }
 
@@ -765,6 +692,7 @@ h3.allredy-link a {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+
   // Pop window
   /deep/ .el-dialog {
     width: 750px;
@@ -885,10 +813,7 @@ h3.allredy-link a {
   }
 
   .submit-dialog .download-container .download_btn[data-v-9354007a],
-  .submit-dialog
-    .download-container
-    .downloadDialog-button-pkg-container
-    .downloadDialog-button-pkg[data-v-9354007a] {
+  .submit-dialog .download-container .downloadDialog-button-pkg-container .downloadDialog-button-pkg[data-v-9354007a] {
     display: block;
     width: 110px;
     height: 35px;
@@ -897,6 +822,7 @@ h3.allredy-link a {
 }
 
 @media only screen and (min-width: 390px) and (max-width: 730px) {
+
   // Pop window
   /deep/ .el-dialog {
     width: 700px;
@@ -932,10 +858,7 @@ h3.allredy-link a {
   }
 
   .submit-dialog .download-container .download_btn,
-  .submit-dialog
-    .download-container
-    .downloadDialog-button-pkg-container
-    .downloadDialog-button-pkg {
+  .submit-dialog .download-container .downloadDialog-button-pkg-container .downloadDialog-button-pkg {
     width: 140px;
     height: 40px;
     margin: 5px 0;
@@ -943,6 +866,7 @@ h3.allredy-link a {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 390px) {
+
   // Pop window
   /deep/ .el-dialog {
     width: 700px;
@@ -977,10 +901,7 @@ h3.allredy-link a {
   }
 
   .submit-dialog .download-container .download_btn,
-  .submit-dialog
-    .download-container
-    .downloadDialog-button-pkg-container
-    .downloadDialog-button-pkg {
+  .submit-dialog .download-container .downloadDialog-button-pkg-container .downloadDialog-button-pkg {
     width: 140px;
     height: 40px;
     margin: 5px 0;

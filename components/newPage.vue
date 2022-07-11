@@ -155,15 +155,15 @@
 
 <script>
 export default {
-  name: "schedule-a-call",
+  name: 'schedule-a-call',
   components: {},
   data() {
     return {
       popoverImgShow: false,
       popoverTimeOut: null,
       dialogVisible: false,
-      submitUrlSearch: "",
-      submitUrl: "",
+      submitUrlSearch: '',
+      submitUrl: '',
       isReceive: true,
       isButtonLoading: false,
       isUserNameError: false,
@@ -173,37 +173,37 @@ export default {
       isUserPositionError: false,
       positionOptions: [
         {
-          value: "HR",
-          label: "HR",
+          value: 'HR',
+          label: 'HR',
         },
         {
-          value: "Founder/CEO",
-          label: "Founder/CEO",
+          value: 'Founder/CEO',
+          label: 'Founder/CEO',
         },
         {
-          value: "CTO",
-          label: "CTO",
+          value: 'CTO',
+          label: 'CTO',
         },
         {
-          value: "CMO",
-          label: "CMO",
+          value: 'CMO',
+          label: 'CMO',
         },
         {
-          value: "COO",
-          label: "COO",
+          value: 'COO',
+          label: 'COO',
         },
         {
-          value: "Others",
-          label: "Others",
+          value: 'Others',
+          label: 'Others',
         },
       ],
       getUserInf: {
-        userName: "",
-        phoneNumber: "",
-        phoneArea: "+65",
-        userEmail: "",
-        userCompanyName: "",
-        userPosition: "",
+        userName: '',
+        phoneNumber: '',
+        phoneArea: '+65',
+        userEmail: '',
+        userCompanyName: '',
+        userPosition: '',
         isReceive: true,
       },
     };
@@ -216,12 +216,12 @@ export default {
   },
   mounted() {
     this.submitUrlSearch = JSON.parse(
-      window.localStorage.getItem("submitUrlSearch")
+      window.localStorage.getItem('submitUrlSearch'),
     );
   },
   methods: {
     openDownloadGuide() {
-      window.open("https://hirect.in/download-guide", "_blank");
+      window.open('https://hirect.in/download-guide', '_blank');
     },
     downloadPkgMouseIn() {
       clearTimeout(this.popoverTimeOut);
@@ -233,99 +233,100 @@ export default {
       }, 200);
     },
     googlePkgClickHandle() {
-      window.open(this.androidPkgAddressIN, "_blank");
+      window.open(this.androidPkgAddressIN, '_blank');
     },
     // clear form
     clearFormData() {
-      this.getUserInf.userName = "";
-      this.getUserInf.phoneNumber = "";
-      this.getUserInf.userEmail = "";
-      this.getUserInf.userCompanyName = "";
-      this.getUserInf.userPosition = "";
+      this.getUserInf.userName = '';
+      this.getUserInf.phoneNumber = '';
+      this.getUserInf.userEmail = '';
+      this.getUserInf.userCompanyName = '';
+      this.getUserInf.userPosition = '';
     },
     // send data
     async submitSend() {
       this.isButtonLoading = true;
       // processing submitUrl parameter
-      if (window.localStorage.getItem("hasSubmitUrl") === "1") {
-        this.submitUrl = window.localStorage.getItem("submitUrl");
+      if (window.localStorage.getItem('hasSubmitUrl') === '1') {
+        this.submitUrl = window.localStorage.getItem('submitUrl');
       } else {
         this.submitUrl = window.location.href;
       }
 
       // processing utm_source ---> leadsource parameter
-      var leadSourcePara = "";
+      let leadSourcePara = '';
       if (this.submitUrlSearch && this.submitUrlSearch.utm_source) {
-        if (this.submitUrlSearch.utm_source === "google") {
-          leadSourcePara = "Google Ad";
-        } else if (this.submitUrlSearch.utm_source === "Facebook") {
-          leadSourcePara = "Facebook Ads (India)";
-        } else if (this.submitUrlSearch.utm_source === "snapchat") {
-          leadSourcePara = "Snapchat Ad (India)";
-        } else if (this.submitUrlSearch.utm_source === "tiktok") {
-          leadSourcePara = "Tiktok Ad (India)";
-        } else if (this.submitUrlSearch.utm_source === "bing") {
-          leadSourcePara = "bing (India)";
+        if (this.submitUrlSearch.utm_source === 'google') {
+          leadSourcePara = 'Google Ad';
+        } else if (this.submitUrlSearch.utm_source === 'Facebook') {
+          leadSourcePara = 'Facebook Ads (India)';
+        } else if (this.submitUrlSearch.utm_source === 'snapchat') {
+          leadSourcePara = 'Snapchat Ad (India)';
+        } else if (this.submitUrlSearch.utm_source === 'tiktok') {
+          leadSourcePara = 'Tiktok Ad (India)';
+        } else if (this.submitUrlSearch.utm_source === 'bing') {
+          leadSourcePara = 'bing (India)';
         } else {
-          leadSourcePara = "";
+          leadSourcePara = '';
         }
       } else {
-        leadSourcePara = "";
+        leadSourcePara = '';
       }
-      this.$ga.event("Leads", "Submitted", "form");
+      this.$ga.event('Leads', 'Submitted', 'form');
       const formData = {
-        __vtrftk: "sid:3d4d1077ddbde35a14455b3381cf01cce7dcbe02,1626673660",
-        publicid: "db46e626a9177c57165bb18e99e676e3",
-        urlencodeenable: "1",
-        name: "Hirect.in  are you hiring form - new",
-        __vtCurrency: "1",
+        __vtrftk: 'sid:3d4d1077ddbde35a14455b3381cf01cce7dcbe02,1626673660',
+        publicid: 'db46e626a9177c57165bb18e99e676e3',
+        urlencodeenable: '1',
+        name: 'Hirect.in  are you hiring form - new',
+        __vtCurrency: '1',
         firstname: this.getUserInf.userName,
         lastname: this.getUserInf.userName,
         mobile: this.getUserInf.phoneArea + this.getUserInf.phoneNumber,
         email: this.getUserInf.userEmail,
         account_id: this.getUserInf.userCompanyName,
         cf_contacts_positionchoice: this.getUserInf.userPosition,
-        title: "",
-        emailoptin: "",
+        title: '',
+        emailoptin: '',
         cf_contacts_enterurl: this.submitUrl,
-        cf_contacts_appointmenttime2: "",
+        cf_contacts_appointmenttime2: '',
         leadsource: leadSourcePara,
-        cf_contacts_freetocontact: "",
+        cf_contacts_freetocontact: '',
       };
-      await this.$reqPost("/hirect/company-service/postWix", formData);
+      await this.$reqPost('/hirect/company-service/postWix', formData);
       this.isButtonLoading = false;
       this.dialogVisible = true;
-      this.$sendToEsData("webQrcodeViewed", {
+      this.$sendToEsData('webQrcodeViewed', {
         region_id: 0,
-        position: "in_recruiters_leads_popup",
+        position: 'in_recruiters_leads_popup',
       });
-      fbq("track", "LEAD");
+      // eslint-disable-next-line no-undef
+      fbq('track', 'LEAD');
       this.clearFormData();
     },
     // click, check
     submitClick() {
-      if (this.getUserInf.userName === "") {
-        document.getElementById("user-name").style.borderColor = "#EF444F";
+      if (this.getUserInf.userName === '') {
+        document.getElementById('user-name').style.borderColor = '#EF444F';
         this.isUserNameError = true;
         return;
-      } else if (this.getUserInf.phoneNumber.length < 8) {
-        document.getElementById("phone-number").style.borderColor = "#EF444F";
+      } if (this.getUserInf.phoneNumber.length < 8) {
+        document.getElementById('phone-number').style.borderColor = '#EF444F';
         this.isPhoneNumberError = true;
         return;
-      } else if (!/^([0-9])*$/.test(this.getUserInf.phoneNumber)) {
-        document.getElementById("phone-number").style.borderColor = "#EF444F";
+      } if (!/^([0-9])*$/.test(this.getUserInf.phoneNumber)) {
+        document.getElementById('phone-number').style.borderColor = '#EF444F';
         this.isPhoneNumberError = true;
         return;
-      } else if (this.getUserInf.userEmail === "") {
-        document.getElementById("user-email").style.borderColor = "#EF444F";
+      } if (this.getUserInf.userEmail === '') {
+        document.getElementById('user-email').style.borderColor = '#EF444F';
         this.isUserEmailError = true;
         return;
-      } else if (this.getUserInf.userCompanyName === "") {
-        document.getElementById("company-name").style.borderColor = "#EF444F";
+      } if (this.getUserInf.userCompanyName === '') {
+        document.getElementById('company-name').style.borderColor = '#EF444F';
         this.isCompanyNameError = true;
         return;
-      } else if (this.getUserInf.userPosition === "") {
-        document.getElementById("user-position").style.borderColor = "#EF444F";
+      } if (this.getUserInf.userPosition === '') {
+        document.getElementById('user-position').style.borderColor = '#EF444F';
         this.isUserPositionError = true;
         return;
       }
@@ -334,35 +335,36 @@ export default {
     inputFocus(val) {
       switch (val) {
         case 1:
-          document.getElementById("user-name").style.borderColor = "#DCDFE6";
+          document.getElementById('user-name').style.borderColor = '#DCDFE6';
           this.isUserNameError = false;
           break;
         case 2:
-          document.getElementById("phone-number").style.borderColor = "#DCDFE6";
+          document.getElementById('phone-number').style.borderColor = '#DCDFE6';
           this.isPhoneNumberError = false;
           break;
         case 3:
-          document.getElementById("user-email").style.borderColor = "#DCDFE6";
+          document.getElementById('user-email').style.borderColor = '#DCDFE6';
           this.isUserEmailError = false;
           break;
         case 4:
-          document.getElementById("company-name").style.borderColor = "#DCDFE6";
+          document.getElementById('company-name').style.borderColor = '#DCDFE6';
           this.isCompanyNameError = false;
           break;
         case 5:
-          document.getElementById("user-position").style.borderColor =
-            "#DCDFE6";
+          document.getElementById('user-position').style.borderColor = '#DCDFE6';
           this.isUserPositionError = false;
+          break;
+        default:
           break;
       }
     },
     appImgClickHandle() {
-      this.$ga.event("click", "ios", "app", 2);
-      window.open(this.iosDownloadAddressIN, "_blank");
+      this.$ga.event('click', 'ios', 'app', 2);
+      window.open(this.iosDownloadAddressIN, '_blank');
     },
     googleImgClickHandle() {
-      this.$ga.event("click", "android", "app", 1);
-      window.open(this.androidDownloadAddressIN, "_blank");
+      this.$ga.event('click', 'android', 'app', 1);
+      window.open(this.androidDownloadAddressIN, '_blank');
     },
   },
 };

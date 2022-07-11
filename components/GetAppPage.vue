@@ -5,32 +5,19 @@
         <div class="row">
           <div class="col-md-12">
             <div class="acan-code">
-              <h2>Scan & Download Hirect App!</h2>
+              <h2>Scan to Download the App</h2>
               <p>
-                Open the camera on your phone and scan the QR code<br />below to
-                download Hirect App.
+                Simply open your phone's camera and scan the <br/>QR code below to download the Hirect app.
               </p>
+              <GetAppInput />
               <div class="app-scan-button">
-                  <a
-                    ><img
-                      id="download-hirect-qrcode"
-                      class="qr-code-img"
-                      src="~/assets/imgs/qr-frame.png"
-                      alt=""
-                  /></a>
-                  <a
-                    href="https://apps.apple.com/US/app/id1518442417?mt=8"
-                    target="_blank"
-                    ><img src="~/assets/imgs/logo_apple-store.png" alt=""
-                  /></a>
-                  <span
-                    class="line-seperator"
-                    style="height: 40px; border-left: 1px solid"
-                  ></span>
-                  <a href="https://hirectin.onelink.me/TwhD/b0fe8b20" target="_blank"
-                    ><img src="~/assets/imgs/logo-google-playstore.png" alt=""
-                  /></a>
-                </div>
+                <a><img id="download-hirect-qrcode" class="qr-code-img" src="~/assets/imgs/qr-frame.png" alt="" /></a>
+                <a href="https://apps.apple.com/US/app/id1518442417?mt=8" target="_blank"><img
+                    src="~/assets/imgs/logo_apple-store.png" alt="" /></a>
+                <span class="line-seperator" style="height: 40px; border-left: 1px solid"></span>
+                <a href="https://hirectin.onelink.me/TwhD/b0fe8b20" target="_blank"><img
+                    src="~/assets/imgs/logo-google-playstore.png" alt="" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -40,22 +27,22 @@
 </template>
 
 <script>
+import GetAppInput from './GetAppInput.vue';
+
 export default {
   props: {
     eventName: {
       type: String,
-      default: "",
+      default: '',
     },
   },
   mounted() {
     window.onscroll = () => {
-      if (
-        document.body.clientWidth >
-        document
-          .getElementById("download-hirect-qrcode")
-          .getBoundingClientRect().bottom
-      ) {
-        this.$sendToEsData("webQrcodeViewed", {
+      if (document.body.clientWidth
+        > document
+          .getElementById('download-hirect-qrcode')
+          .getBoundingClientRect().bottom) {
+        this.$sendToEsData('webQrcodeViewed', {
           region_id: 0,
           position: this.eventName,
         });
@@ -63,15 +50,25 @@ export default {
       }
     };
   },
+  components: { GetAppInput },
 };
 </script>
 
 <style lang="scss" scoped>
+.scan-app-section {
+  background-color: #dde1e6;
+}
+
 .scan-app-img {
-  background: url("~/assets/imgs/download-hirect-img.png") center no-repeat;
-  background-size: cover;
+  background: url("~/assets/imgs/download-hirect-img.png") no-repeat;
+  background-size: contain;
   position: relative;
-  padding: 100px 0px;
+  padding-top: 36px;
+  // padding: 100px 0px;
+}
+
+.acan-code {
+  float: right;
 }
 
 .acan-code h2 {
@@ -91,13 +88,13 @@ export default {
 }
 
 .app-scan-button {
-      display: grid;
-      grid-auto-flow: column;
-      margin-top: 50px;
-      margin-bottom: 50px;
-      align-items: end;
-      grid-template-columns: 200px 50px 10px 50px;
-    }
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: end;
+  grid-template-columns: 200px 50px 10px 50px;
+}
 
 .app-scan-img {
   text-align: center;
@@ -127,7 +124,10 @@ export default {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .scan-app-img{
+    background: none;
+  }
   .acan-code h2 {
     font-size: 26px;
     margin-bottom: 25px;
@@ -166,6 +166,10 @@ export default {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+  .scan-app-img {
+    background: none;
+  }
+
   .acan-code p br {
     display: none;
   }

@@ -5,20 +5,17 @@
         <div class="col-md-5">
           <div class="footer-box">
             <div class="footer-logo">
-              <NuxtLink to="/homepage"
-                ><img src="~/assets/img/hirect-logo-footer.png" alt="" />
+              <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" alt="" />
               </NuxtLink>
               <p>
-                Hire Instantly for Your Startup.<br />
-                Trusted by 3M+ verified Jobseekers &<br />
-                verified 150K+ Startups!
+                Chat Directly. Hire Instantly<br />
+                Trusted by 3M+ verified job seekers and<br />
+                150K+ verified recruiters.
               </p>
             </div>
             <div class="footer-whatsapp">
               <img src="~/assets/img/whatsapp-icon.svg" alt="" /><a
-                href="https://api.whatsapp.com/send?phone=+918446164920"
-                >+918446164920</a
-              >
+                href="https://api.whatsapp.com/send?phone=+918446164920">+918446164920</a>
             </div>
           </div>
         </div>
@@ -35,16 +32,14 @@
                     <NuxtLink to="/aboutus">About Us</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/enterprise-hiring"
-                      >Enterprise Hiring</NuxtLink
-                    >
+                    <NuxtLink to="/recruiters">Recruiters</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/recruiters">Recruiters</NuxtLink>
+                    <NuxtLink to="/job-seeker">Job Seekers</NuxtLink>
                   </li>
                   <li><a href="https://www.hirect.in/blog/">Blog</a></li>
                   <li>
-                    <NuxtLink to="/job-seeker">Job Seekers</NuxtLink>
+                    <NuxtLink to="/enterprise-hiring">Enterprise Hiring</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/startup-hiring">For Startup Hiring</NuxtLink>
@@ -63,10 +58,8 @@
                     <a href="mailto:support@hirect.in">Support@hirect.in</a>
                   </li>
                   <li>
-                    <a @click="ScheduleACall"
-                      >For Recruiters<br />
-                      Schedule a Call</a
-                    >
+                    <a @click="ScheduleACall">For Recruiters<br />
+                      Schedule a Call</a>
                   </li>
                 </ul>
               </div>
@@ -79,17 +72,13 @@
                     <NuxtLink to="/privacypolicy">Privacy Policy</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/termsconditions"
-                      >Terms & Conditions</NuxtLink
-                    >
+                    <NuxtLink to="/termsconditions">Terms & Conditions</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/product-pricing">Product & Pricing</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/refund-cancellation-policy"
-                      >Refund Policy</NuxtLink
-                    >
+                    <NuxtLink to="/refund-cancellation-policy">Refund Policy</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/purchase-flow">Purchase Flow</NuxtLink>
@@ -104,30 +93,32 @@
         <ul class="footer-social-link">
           <li>
             <a href="https://twitter.com/HirectIndia" target="_blank">
-              <font-awesome-icon :icon="['fab', 'twitter']" />
+              <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
+              <img src="~/assets/imgs/twitter-group.png" alt="" />
             </a>
           </li>
           <li>
             <a href="https://in.linkedin.com/company/hirectapp" target="_blank">
-              <font-awesome-icon :icon="['fab', 'linkedin']" />
+              <!-- <font-awesome-icon :icon="['fab', 'linkedin']" /> -->
+              <img src="~/assets/imgs/linkedin-group.png" alt="" />
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/hirectindia/" target="_blank">
-              <font-awesome-icon :icon="['fab', 'facebook-f']" />
+              <!-- <font-awesome-icon :icon="['fab', 'facebook-f']" /> -->
+              <img src="~/assets/imgs/facebook-group.png" alt="" />
             </a>
           </li>
           <li>
-            <a
-              href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ"
-              target="_blank"
-            >
-              <font-awesome-icon :icon="['fab', 'youtube']" />
+            <a href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ" target="_blank">
+              <!-- <font-awesome-icon :icon="['fab', 'youtube']" /> -->
+              <img src="~/assets/imgs/youtube-group.png" alt="" />
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/hirect_india/" target="_blank">
-              <font-awesome-icon :icon="['fab', 'instagram']" />
+              <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
+              <img src="~/assets/imgs/instagram-group.png" alt="" />
             </a>
           </li>
         </ul>
@@ -141,13 +132,8 @@
                 <a class="dropbtn">
                   <img src="~/assets/img/country-flag.svg" alt="" />
                   <div class="Dropup-icon">
-                    <h6
-                      data-bs-toggle="collapse"
-                      data-bs-target="#changeregion"
-                      aria-controls="navbarScroll"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation"
-                    >
+                    <h6 data-bs-toggle="collapse" data-bs-target="#changeregion" aria-controls="navbarScroll"
+                      aria-expanded="false" aria-label="Toggle navigation">
                       Change Region
                     </h6>
                   </div>
@@ -242,7 +228,7 @@ export default {
 .footer-social-link li a {
   font-size: 22px;
   padding: 2px 5px;
-  margin-right: 25px;
+  // margin-right: 25px;
   color: #fff;
   transition: all 0.3s;
 }
@@ -323,6 +309,7 @@ export default {
 }
 
 .change-flage .dropdown-content {
+  // display: none;
   position: absolute;
   z-index: 1;
   top: -38px;
@@ -362,6 +349,7 @@ export default {
   border-left: 0.3em solid transparent;
 }
 
+// Media Query for Mobile Responsiveness
 @media only screen and (min-width: 768px) and (max-width: 1299px) {
   .footer {
     padding-top: 30px;
@@ -401,7 +389,7 @@ export default {
   .footer-social-link li a {
     font-size: 20px;
     padding: 2px 5px;
-    margin-right: 15px;
+    margin-right: 0px;
     line-height: normal;
   }
 
@@ -445,7 +433,7 @@ export default {
   .footer-social-link li a {
     font-size: 19px;
     padding: 1px 5px;
-    margin-right: 10px;
+    margin-right: 0px;
   }
 
   .copy-right-footer h3 {
@@ -506,7 +494,7 @@ export default {
   .footer-social-link li a {
     font-size: 21px;
     padding: 1px 5px;
-    margin-right: 13px;
+    margin-right: 0px;
     line-height: normal;
   }
 

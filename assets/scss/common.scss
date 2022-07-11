@@ -1,18 +1,23 @@
 /**** Default Css *****/
 
-.slick-slide{
-    width:632px !important;
+.mw-70{
+    max-width: 70% !important;
 }
 
-button.slick-prev:before, button.slick-next:before {
+.mw-90{
+    max-width: 90% !important;
+}
+
+button.slick-prev:before,
+button.slick-next:before {
     // background-color: red !important;
     font-family: bold;
     color: black;
-    opacity:1;
+    opacity: 1;
 }
 
-.slick-prev{
-    left:-81px;
+.slick-prev {
+    left: -81px;
     font-size: 0;
     line-height: 0;
     position: absolute;
@@ -93,10 +98,6 @@ h6 {
     font-family: 'Helvetica';
 }
 
-// .slick-list {
-//     padding-left: 0px !important;
-//     padding-right: 50px !important;
-// }
 .schedule-a-call.contact-ue-form .el-input-group__append,
 .schedule-a-call.contact-ue-form .el-input-group__prepend {
     width: 70px;
@@ -129,10 +130,6 @@ h6 {
 .schedule-a-call.contact-ue-form .el-checkbox__label {
     color: #808080;
 }
-
-// .schedule-a-call.contact-ue-form .el-input.el-input--suffix input.el-input__inner {
-//     border: 0;
-// }
 
 .schedule-a-call.contact-ue-form .el-select.inner-input-item {
     width: 100%;
@@ -325,7 +322,6 @@ textarea:focus {
     border-color: #000000;
 }
 
-
 /**** End Default Css *****/
 
 
@@ -384,7 +380,6 @@ textarea:focus {
     height: 47px;
 }
 
-
 /******* end Download App Page ************/
 
 
@@ -425,7 +420,7 @@ section.recruiter-login-popup h3.title-md {
 }
 
 section.recruiter-login-popup .recruiter-form-img {
-    margin-top: 55px;
+    margin-top: 58px;
 }
 
 .recruiter-login-popup.btn.login-btn {
@@ -441,7 +436,6 @@ section.recruiter-login-popup .recruiter-form-img {
 .el-dialog__wrapper.recruiter-dialog .el-dialog__header {
     padding: 0;
 }
-
 
 /******* end Login Popup ************/
 
@@ -462,7 +456,6 @@ section.recruiter-login-popup .recruiter-form-img {
     margin: auto !important;
     height: auto;
 }
-
 
 /******* end Watch Demo Popup ************/
 
@@ -493,7 +486,6 @@ section.recruiter-login-popup .recruiter-form-img {
     height: auto;
     padding: 20px 20px;
 }
-
 
 /******* end Schedule A Call Popup ************/
 
@@ -654,13 +646,13 @@ section.recruiter-login-popup .recruiter-form-img {
         width: 58px;
     }
 
-    // .schedule-a-call.contact-ue-form p.schedule-title {
-    //     font-size: 26px !important;
-    // }
+    .schedule-a-call.contact-ue-form p.schedule-title {
+        font-size: 26px !important;
+    }
 
-    // .schedule-a-call.contact-ue-form p.schedule-text {
-    //     margin-bottom: 30px !important;
-    // }
+    .schedule-a-call.contact-ue-form p.schedule-text {
+        margin-bottom: 30px !important;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -676,19 +668,19 @@ section.recruiter-login-popup .recruiter-form-img {
         margin-bottom: 20px;
     }
 
-    // .schedule-a-call.contact-ue-form p.schedule-title {
-    //     font-size: 23px !important;
-    // }
+    .schedule-a-call.contact-ue-form p.schedule-title {
+        font-size: 23px !important;
+    }
 
-    // .schedule-a-call.contact-ue-form p.schedule-text {
-    //     font-size: 16px !important;
-    //     margin-bottom: 20px !important;
-    // }
+    .schedule-a-call.contact-ue-form p.schedule-text {
+        font-size: 16px !important;
+        margin-bottom: 20px !important;
+    }
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
     .slick-dots {
-        bottom: -40px;
+        display: none !important;
     }
 
     h1,
@@ -772,10 +764,6 @@ section.recruiter-login-popup .recruiter-form-img {
         margin-top: 30px;
     }
 
-    // .schedule-a-call .el-input__inner {
-    //     height: 45px !important;
-    //     font-size: 15px !important;
-    // }
     .el-dialog__wrapper.schedule-dialog .el-dialog__body {
         padding: 35px 14px 30px;
     }
@@ -831,13 +819,17 @@ section.recruiter-login-popup .recruiter-form-img {
         font-size: 12px !important;
     }
 
-    // .schedule-a-call.contact-ue-form p.schedule-text {
-    //     font-size: 16px !important;
-    //     line-height: 22px !important;
-    //     margin-bottom: 25px !important;
-    // }
+    .schedule-a-call.contact-ue-form p.schedule-text {
+        font-size: 16px !important;
+        line-height: 22px !important;
+        margin-bottom: 25px !important;
+    }
 
-    // .schedule-a-call.contact-ue-form p.schedule-title {
-    //     font-size: 23px !important;
-    // }
+    .schedule-a-call.contact-ue-form p.schedule-title {
+        font-size: 23px !important;
+    }
+
+    button.slick-prev, button.slick-next{
+        display: none !important;
+    }
 }

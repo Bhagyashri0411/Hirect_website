@@ -114,24 +114,24 @@
 
 <script>
 export default {
-  name: "product",
+  name: 'product',
   components: {},
   head() {
     return {
-      title: "Product & Pricing for Recruiters - Hirect",
+      title: 'Product & Pricing for Recruiters - Hirect',
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
-            "Learn from here the product and pricing plans about the hirect app and website for its users, i.e. the recruiters and jobseekers. ",
+            'Learn from here the product and pricing plans about the hirect app and website for its users, i.e. the recruiters and jobseekers. ',
         },
       ],
     };
   },
   data() {
     return {
-      currentPageName: "",
+      currentPageName: '',
     };
   },
   computed: {},
@@ -142,22 +142,22 @@ export default {
   },
   methods: {
     smoothToTop() {
-      document.getElementById("back-top-target").scrollIntoView({
-        block: "start",
-        behavior: "smooth",
+      document.getElementById('back-top-target').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
       });
     },
   },
   jsonld() {
     return {
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org/',
+      '@type': 'BreadcrumbList',
       itemListElement: [
         {
-          "@type": "ListItem",
+          '@type': 'ListItem',
           position: 1,
-          name: "Products and Pricing",
-          item: "https://www.hirect.in/product-pricing/",
+          name: 'Products and Pricing',
+          item: 'https://www.hirect.in/product-pricing/',
         },
       ],
     };

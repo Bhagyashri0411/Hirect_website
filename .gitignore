@@ -43,9 +43,12 @@ typings/
 
 # Optional npm cache directory
 .npm
+package-lock.json
 
 # Optional eslint cache
 .eslintcache
+.eslintignore
+.eslintrc.json
 
 # Optional REPL history
 .node_repl_history

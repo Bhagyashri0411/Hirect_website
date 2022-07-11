@@ -3,24 +3,30 @@
     <div v-if="jobseekerData !== null" class="webB">
         <div class="job-main">
             <div class="job-name">
-                <div class="job-title" style="color:#0E101A;max-width:260px;">{{jobseekerData.title}}</div>
-                <div class="job-title" style="color:#15C39C;font-size:18px;">{{jobseekerData.salary}}</div>
+                <div class="job-title"
+                style="color:#0E101A;max-width:260px;">{{jobseekerData.title}}</div>
+                <div class="job-title"
+                style="color:#15C39C;font-size:18px;">{{jobseekerData.salary}}</div>
             </div>
             <div class="base-inf">
                 <div class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_positioning@2x.png" alt="posi">
+                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_positioning@2x.png" alt="posi">
                     <p class="base-inf-text">{{jobseekerData.location.city}}</p>
                 </div>
                 <div class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_job@2x.png" alt="job">
+                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_job@2x.png" alt="job">
                     <p class="base-inf-text">{{jobseekerData.experience}}</p>
                 </div>
                 <div class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_education@2x.png" alt="edu">
+                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_education@2x.png" alt="edu">
                     <p class="base-inf-text">{{jobseekerData.degree}}</p>
                 </div>
                 <div v-if="jobseekerData.workFromHome" class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_home@2x.png" alt="home">
+                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_home@2x.png" alt="home">
                     <p class="base-inf-text" style="color: #15C39C;">Can Work From Home</p>
                 </div>
             </div>
@@ -28,9 +34,11 @@
         <el-divider style="margin: 0px;" />
         <div class="recruiter-inf">
             <div class="recruiter-avatar-container">
-                <img class="recruiter-avatar" v-if="jobseekerData.recruiter.avatar !== ''" :src="jobseekerData.recruiter.avatar" alt="ava">
-                <img class="recruiter-avatar" v-else="" src="~/assets/img/male_us_default.png" alt="ava">
-                <img class="recruiter-avatar-passed" src="~/assets/img/ic_verified@2x.png" alt="veri">
+                <img class="recruiter-avatar"
+                :src="jobseekerData.recruiter.avatar ? jobseekerData.recruiter.avatar : '~/assets/img/male_us_default.png'"
+                alt="ava">
+                <img class="recruiter-avatar-passed"
+                src="~/assets/img/ic_verified@2x.png" alt="veri">
             </div>
             <div>
                 <div class="recruiter-text1">{{jobseekerData.recruiter.name}}</div>
@@ -86,60 +94,60 @@
 
 <script>
 export default {
-    name: 'WebB',
-    components: {},
-    data() {
-        return {
-            contentStyle: {
-                height: '0px'
-            },
-            loading: true,
-            jobseekerData: null,
-            mapData: {
-                longitude: 0,
-                latitude: 0,
-                address: ''
-            },
-            jobStatus: 4,
-            distinct_id: '',
-            recruiterId: ''
-        }
+  name: 'WebB',
+  components: {},
+  data() {
+    return {
+      contentStyle: {
+        height: '0px',
+      },
+      loading: true,
+      jobseekerData: null,
+      mapData: {
+        longitude: 0,
+        latitude: 0,
+        address: '',
+      },
+      jobStatus: 4,
+      distinct_id: '',
+      recruiterId: '',
+    };
+  },
+  watch: {},
+  created() {},
+  mounted() {
+    this.contentStyle.height = `${window.innerHeight - 170}px`;
+    this.getCompanyData();
+  },
+  methods: {
+    async getCompanyData() {
+      const response = await this.$reqGet(`/hirect/job-service/web/jobs/${window.atob(this.$route.query.p)}`);
+      // console.log(response)
+      if (response.data.code === 2000) {
+        this.distinct_id = this.$route.query.t + (new Date()).valueOf() + Math.floor(Math.random() * 100);
+        this.jobseekerData = response.data.data;
+        this.mapData.longitude = this.jobseekerData.location.longitude;
+        this.mapData.latitude = this.jobseekerData.location.latitude;
+        this.mapData.address = this.jobseekerData.location.address;
+        this.jobStatus = this.jobseekerData.status;
+        // console.log('jobseekerData.status ===> ', this.jobseekerData.status)
+        this.recruiterId = this.jobseekerData.recruiter.id;
+        this.$emit('getRecruiterId', this.jobseekerData.recruiter.id, this.distinct_id);
+        this.userInComing();
+      } else {
+        this.$message.error(response.message);
+      }
     },
-    watch: {},
-    created() {},
-    mounted() {
-        this.contentStyle.height = window.innerHeight - 170 + 'px'
-        this.getCompanyData()
+    userInComing() {
+      this.$sendToEsData('jobDetailsCheckedWeb', {
+        share_id: this.$route.query.t,
+        distinct_id: this.distinct_id,
+        jobId: window.atob(this.$route.query.p),
+        recruiterId: this.recruiterId,
+      });
     },
-    methods: {
-        async getCompanyData() {
-            const response = await this.$reqGet('/hirect/job-service/web/jobs/' + window.atob(this.$route.query.p))
-            // console.log(response)
-            if (response.data.code === 2000) {
-                this.distinct_id = this.$route.query.t + (new Date()).valueOf() + Math.floor(Math.random() * 100)
-                this.jobseekerData = response.data.data
-                this.mapData.longitude = this.jobseekerData.location.longitude
-                this.mapData.latitude = this.jobseekerData.location.latitude
-                this.mapData.address = this.jobseekerData.location.address
-                this.jobStatus = this.jobseekerData.status
-                // console.log('jobseekerData.status ===> ', this.jobseekerData.status)
-                this.recruiterId = this.jobseekerData.recruiter.id
-                this.$emit('getRecruiterId', this.jobseekerData.recruiter.id, this.distinct_id)
-                this.userInComing()
-            } else {
-                this.$message.error(response.message)
-            }
-        },
-        userInComing() {
-            this.$sendToEsData('jobDetailsCheckedWeb', {
-                'share_id': this.$route.query.t,
-                'distinct_id': this.distinct_id,
-                'jobId': window.atob(this.$route.query.p),
-                'recruiterId': this.recruiterId
-            })
-        }
-    }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

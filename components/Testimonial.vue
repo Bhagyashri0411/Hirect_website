@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3>The Influencers' Take on Hirect</h3>
+            <h3>Influencer's Take on Hirect</h3>
             <div class="testimonial-carousel">
               <VueSlickCarousel v-bind="settings">
                 <div class="testimonial-card">
@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                      <h4>Ankur Warikoo</h4>
+                      <h3>Ankur Warikoo</h3>
                       <h5>Entrepreneur, Public speaker, Angel investor</h5>
                       <p>
                         "Recently, I'd done a story on the perks that people get
@@ -31,6 +31,16 @@
                         the talent without any consultants involved. Check them
                         out!"
                       </p>
+
+                      <!-- <div class="logos-new">
+                        <span>
+                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                        </span>
+                        <span>
+                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                        </span>
+                      </div> -->
+
                     </div>
                   </div>
                 </div>
@@ -38,18 +48,29 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                      <img src="~/assets/imgs/flyingBeast.jpg" alt="" />
                     </div>
 
                     <div class="testimonial-info">
-                      <h4>Karan Singh Grover</h4>
-                      <h5>Indian Model and Actor</h5>
+                      <h3>Gaurav Taneja</h3>
+                      <h5>Commercial Pilot and YouTuber</h5>
                       <p>
-                        "So, it's the time for appraisals. And appraisals are not just about salary hikes. As an
-                        experienced candidate, you need growth, opportunities, autonomy, and more. So, why wait another
-                        year to have all this? Just download the Hirect app and chat directly with Startup CEOs and
-                        Founders without any consultants. So log on to the Hirect app and career hike karke toh dekho."
+                        "Hey, Guys, some time ago, we had uploaded a blog where we were expanding our team through
+                        Hirect. Almost 20,000 people had applied for it. Thank you so much for the amazing response. To
+                        those who could not apply, there are many more Startups hiring on Hirect. You can click on the
+                        link, download the app and start applying for jobs on Hirect. Now, more than 150K+ startups are
+                        there. You can connect directly with the Founder. All the Best!"
                       </p>
+
+                      <!-- <div class="logos-new">
+                        <span>
+                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                        </span>
+                        <span>
+                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                        </span>
+                      </div> -->
+
                     </div>
                   </div>
                 </div>
@@ -61,7 +82,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                      <h4>Kenny Sebastian</h4>
+                      <h3>Kenny Sebastian</h3>
                       <h5>Comedian</h5>
                       <p>
                         "Hey, Are you in the market, looking for a job? If not,
@@ -76,6 +97,16 @@
                         So go find that job you want, man and stop dealing with
                         your colleagues"
                       </p>
+
+                      <!-- <div class="logos-new">
+                        <span>
+                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                        </span>
+                        <span>
+                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                        </span>
+                      </div> -->
+
                     </div>
                   </div>
                 </div>
@@ -83,11 +114,11 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                      <img src="~/assets/imgs/ranveer.jpg" alt="" />
                     </div>
 
                     <div class="testimonial-info">
-                      <h4>Ranveer Allhabadia</h4>
+                      <h3>Ranveer Allhabadia</h3>
                       <h5>Social media entrepreneur, YouTuber, motivational speaker</h5>
                       <p>
                         "All right! We've spoken about this earlier. I will address it again, especially for you guys
@@ -96,6 +127,15 @@
                         no scams. You can also talk to Startup Founders. Make sure you check out Hirect right now. If
                         you want fast, rapid, intense growth in life, work at Startups." "
                       </p>
+
+                      <!-- <div class="logos-new">
+                        <span>
+                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                        </span>
+                        <span>
+                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                        </span>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -107,7 +147,7 @@
                     </div>
 
                     <div class="testimonial-info">
-                      <h4>Mithila Palkar</h4>
+                      <h3>Mithila Palkar</h3>
                       <h5>Indian TV Actress</h5>
                       <p>
                         "Everyone needs money. That's why you do a good job,
@@ -117,6 +157,15 @@
                         interference from any consultant. Click on the link and
                         go go go."
                       </p>
+
+                      <!-- <div class="logos-new">
+                        <span>
+                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                        </span>
+                        <span>
+                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                        </span>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -124,11 +173,11 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                      <img src="~/assets/imgs/dhruvRathee.webp" alt="" />
                     </div>
 
                     <div class="testimonial-info">
-                      <h4>Dhruv Rathee</h4>
+                      <h3>Dhruv Rathee</h3>
                       <h5>YouTuber</h5>
                       <p>
                         "Friends, it is important for everyone to be happy with their jobs. But, you might have seen it
@@ -137,6 +186,15 @@
                         CEOs are a part of the hiring process. If you do not believe it, go check out. The app is free
                         to download. And if you are a job seeker, it will be very useful. Do check it out for sure."
                       </p>
+
+                      <!-- <div class="logos-new">
+                        <span>
+                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                        </span>
+                        <span>
+                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                        </span>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -155,9 +213,10 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
+import VueSlickCarousel from 'vue-slick-carousel';
+
 export default {
-  name: "Testimonial",
+  name: 'Testimonial',
   components: {
     VueSlickCarousel,
   },
@@ -165,20 +224,11 @@ export default {
   data() {
     return {
       settings: {
-        // centerMode: true,
-        // centerPadding: "30px",
-        // focusOnSelect: true,
-        // infinite: false,
-        // dots: true,
-        // slidesToShow: 1,
-        // slidesToScroll: 1,
-
-        autoplay: true,
-        variableWidth: true,
-        centerPadding: "20px",
+        autoplay: false,
+        variableWidth: false,
+        centerPadding: '20px',
         focusOnSelect: true,
         infinite: true,
-        slidesToShow: 6,
         speed: 500,
         dots: true,
         slidesToShow: 1,
@@ -190,6 +240,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.testimonial-info h3 {
+  text-align: left !important;
+  margin-bottom: 10px !important;
+}
+
+.logos-new {
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 10px;
+  grid-template-columns: 40px 40px;
+}
+
+.Jobs-in-city {
+  .jobs-list {
+    startups-logo-list {
+      padding: 0;
+      margin: 50px 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .startups-logo-list li {
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #ffffff;
+      display: flex;
+      padding: 0px 14px;
+      color: #000000;
+      align-items: center;
+      justify-content: center;
+      widows: 100px;
+      height: 50px;
+      box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    }
+  }
+}
+
+.jobs-list {
+  .city-logo {
+    padding: 0;
+    margin: 50px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .city-logo li {
+    cursor: pointer;
+  }
+}
+
 .view-btn {
   border-radius: 20px;
   background-color: #fff;
@@ -210,7 +316,8 @@ export default {
   background-size: cover;
   background: center no-repeat;
   overflow: hidden;
-  filter: grayscale(0);
+  border-radius: 10px;
+  // filter: grayscale(0);
 }
 
 .testimonial-card .client-img {
@@ -222,7 +329,8 @@ export default {
   background-size: cover;
   background: center no-repeat;
   overflow: hidden;
-  filter: grayscale(1);
+  // filter: grayscale(1);
+  border-radius: 10px;
 }
 
 .client-testimonial {
@@ -250,10 +358,10 @@ export default {
   // border-radius: 10px;
   background-color: #fff;
   // padding: 25px 0px;
-  padding-left: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-
+  // padding-left: 45px;
+  // padding-top: 45px;
+  padding: 50px;
+  // padding-bottom: 25px;
 
 }
 
@@ -293,7 +401,8 @@ export default {
 
 .testimonial-card p {
   color: #808080;
-  font-size: 13px;
+  padding-top: 20px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 20px;
   text-align: left;
@@ -322,8 +431,8 @@ export default {
   }
 
   .testimonial-card .client-img img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
   }
 
   .testimonial-info {
@@ -348,6 +457,7 @@ export default {
 
   .testimonial-carousel {
     padding-bottom: 30px;
+    height: 80%;
   }
 
   .testimonial-card h5 {
@@ -391,7 +501,7 @@ export default {
   .testimonial-card {
     margin: 0;
     height: auto;
-    padding: 30px 20px;
+    padding: 32px 24px;
   }
 
   .testimonial-card .client-img {

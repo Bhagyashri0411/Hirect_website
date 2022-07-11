@@ -9,24 +9,19 @@
             <h1>
               Direct <span style="color: #2ce2a2"> Hiring</span> App for
               Founders, <br />
-              Team Leaders and HRs
+              Team Leaders and Hiring Managers
             </h1>
             <p>
-              Shifting through various resumes and shortlisting candidates can be
-              time-consuming Scheduling numerous interviews
-              <br />
-              only to hit a dead-end can also be frustrating Outsourcing the
-              process ends up being expensive
+              The traditional hiring process has lost its viability due to the rapid rise in demand for a skilled
+              workforce. Shortlisting candidates is a time-consuming process. Conducting interviews with irrelevant
+              candidates yields unfruitful results. Outsourcing the process is often unreliable and expensive.
             </p>
-            <p>
-              Hirect solves this problem Hiring Direct is the way to go. Hirect,
-              the mobile-first chat based hiring app, enables the
-              <br />
-              Recruiters to chat directly with the candidates, who are 100%
-              verified With Hirect hiring is instant and direct.
+
+            <p>Hirect simplifies the hiring process. Directly chatting with verified candidates matched by the AI
+              algorithm ensures a simple, quick and effective hiring experience.
             </p>
           </div>
-          <div class="autocomplete1">
+          <div class="start-hiring-button">
             <NuxtLink to="/recruiters" class="btn btn-app start-hiring">Start Hiring</NuxtLink>
           </div>
         </div>
@@ -43,21 +38,14 @@
               <div class="hire-now">
                 <h2>Get the <span style="color: #19e29e">Hirect</span> App</h2>
                 <p>
-                  We will send you a link to your phone open <br />
-                  it to download the app.
+                  We will send you a link via SMS. To download the app, simply open it.
                 </p>
-                <div class="input-container">
-                  <div class="Sgdef">+91 |</div>
-                  <input type="text" class="form-search-mob" placeholder="Enter Mobile Number" />
-                  <button class="btn btn-app" style="margin-left: 20px; border-radius:50px">
-                    Get App
-                  </button>
-                </div>
+                <GetAppInput />
               </div>
             </div>
             <div class="col-md-6">
-              <div class="hire-now-img">
-                <img src="~/assets/imgs/chat-directly-new.png" alt="" />
+              <div class="get-app-img">
+                <img src="~/assets/imgs/chat-directly-new.png" alt="" class="hire-now-image" />
               </div>
             </div>
           </div>
@@ -71,47 +59,46 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="title-sm">Jobs available in 70+ categories</h3>
+            <h3 class="title-sm">Trending Job Categories</h3>
             <div class="jobs-list">
               <ul class="available-list">
                 <li>
-                  <span>IT Sector <br /><span class="candi-value">68 Candidate available</span></span>
+                  <span><span>IT Sector</span> <br /><br /><span class="candi-value">750K+ Candidates</span></span>
                 </li>
                 <li>
                   <span>Design &<br />
-                    Development <br /><span class="candi-value">124 Candidate available</span></span>
+                    Development <br /><br /><span class="candi-value">110K+ Candidates </span></span>
                 </li>
                 <li>
-                  <span>Business & <br />Consulting <br /><span class="candi-value">26 Candidate available</span></span>
+                  <span>Business & <br />Consulting <br /><br /><span class="candi-value">700K+ Candidates
+                    </span></span>
                 </li>
                 <li>
-                  <span>Project<br />
-                    Management <br />
-                    <span class="candi-value">68 Candidate available</span></span>
+                  <span>Finance <br /><br />
+                    <span class="candi-value">500K+ Candidates </span></span>
                 </li>
-              </ul>
-            </div>
-            <div class="jobs-list">
-              <ul class="available-list">
                 <li>
                   <span>Marketing &<br />
-                    Communication <br /><span class="candi-value">68 Candidate available</span></span>
+                    Communication <br /><br /><span class="candi-value">400K+ Candidates</span></span>
                 </li>
                 <li>
-                  <span>Human <br />
-                    Resources <br /><span class="candi-value">124 Candidate available</span></span>
+                  <span>Sales <br /><br /><span class="candi-value">350K+ Candidates</span></span>
                 </li>
                 <li>
-                  <span>Customer & <br />Support Care <br /><span class="candi-value">26 Candidate
-                      available</span></span>
+                  <span>Operations <br /><br /><span class="candi-value">100K+ Candidates
+                    </span></span>
                 </li>
                 <li>
-                  <span>Technical <br />Support <br /><span class="candi-value">26 Candidate
-                      available</span></span>
+                  <span>Technical <br />Support <br /><br /><span class="candi-value">100K+ Candidates</span></span>
                 </li>
-                <!-- <li><span>View All</span></li> -->
               </ul>
             </div>
+            <!-- <div class="jobs-list">
+              <ul class="available-list">
+
+              <li><span>View All</span></li>
+              </ul>
+            </div> -->
           </div>
         </div>
       </div>
@@ -121,27 +108,26 @@
     <section class="job-available-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-6">
             <div class="hire-now">
               <h2>
-                Direct Chat with Hiring <br />
-                Managers / HRs
+                Chat directly with<br />
+                Decision - Makers
               </h2>
               <p style="color:#4D5358">
-                Now there is no need to wait for feedback. Candidates can
-                connect with the Recruiters directly on this job search app. AI
-                algorithm matches the candidates with the most relevant job
-                posts on the job app.
+                Hirect encourages direct and quick responses between job-seekers and recruiters. Through the
+                bi-directional direct chat feature, candidates can chat directly with relevant and verified recruiters
+                on this job search app.
               </p>
               <!-- <button class="btn btn-app" @click="job - seeker">Get Connected</button> -->
-              <NuxtLink class="btn btn-app" to="/job-seeker">
+              <NuxtLink class="btn btn-app start-hiring" to="/job-seeker">
                 Get Hired
               </NuxtLink>
             </div>
           </div>
-          <div class="col-md-7">
-            <div class="hire-now-img" style="text-align: center; margin-left:25%">
-              <img src="~/assets/imgs/hire-direct-hirect-new.png" alt="" />
+          <div class="col-md-6">
+            <div class="hire-now-img img1" style="text-align: center;">
+              <img src="~/assets/imgs/hire-direct-hirect-new.png" alt="" class="hire-img" />
             </div>
           </div>
         </div>
@@ -149,21 +135,19 @@
 
       <div class="hire-chat">
         <div class="container">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="hire-now-img" style="padding-left:152px;">
-                <img src="~/assets/imgs/hirect-chart.png" alt="" />
+          <div class="row instant-hiring-row">
+            <div class="col-md-6">
+              <div class="hire-now-img img2">
+                <img src="~/assets/imgs/hirect-chart.png" alt="" class="next-img" />
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="hire-now" style="margin-left: -36px;">
-                <h2>Hire Direct with Hirect</h2>
+            <div class="col-md-6">
+              <div class="hire-now">
+                <h2>Hire Directly with Hirect</h2>
                 <p>
-                  AI algorithm of Hirect, the hiring app, connects businesses
-                  with more than 3M+ qualified candidates.
+                  3M+ candidates chat directly with 150K+ recruiters on Hirect.
                 </p>
-                <!-- <button class="btn btn-app white-btn" @click="connect">Instant Hiring</button> -->
-                <NuxtLink class="btn btn-app white-btn" to="/recruiters">
+                <NuxtLink class="btn white-btn" to="/recruiters">
                   Instant Hiring
                 </NuxtLink>
               </div>
@@ -178,7 +162,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h3 class="title-sm">Check jobs in your city</h3>
+              <h3 class="title-sm">Find Candidates in your City</h3>
               <div class="jobs-list">
                 <ul class="city-logo">
                   <li>
@@ -191,7 +175,7 @@
                     <img src="~/assets/imgs/City-logos/Mumbai.png" alt="" />
                   </li>
                   <li>
-                    <img src="~/assets/imgs/City-logos/Chennai.png" alt="" />
+                    <img src="~/assets/imgs/City-logos/pune.png" alt="" />
                   </li>
                   <li>
                     <img src="~/assets/imgs/City-logos/Hyderabad.png" alt="" />
@@ -205,7 +189,8 @@
           </div>
         </div>
       </div>
-      <div style="color: black; font-size: 32px; text-align: center; margin-top: -38px;">and many more...</div>
+      <div style="color: black; font-size: 24px; text-align: center; margin-top: -38px; font-weight:bold;">and many
+        more...</div>
     </section>
     <!----jobs-available end----------->
     <!----startup start----------->
@@ -215,7 +200,7 @@
           <div class="row">
             <div class="col-md-12">
               <h3 class="title-sm">
-                More than <span style="color: #2ce2a2">150K+</span> startups
+                More than <span style="color: #2ce2a2">150K+</span> Recruiters
                 trust <span style="color: #2ce2a2">Hirect</span>
               </h3>
               <div class="jobs-list">
@@ -250,10 +235,10 @@
                     <img src="~/assets/imgs/websites-logo/FreeCharge.png" alt="" />
                   </li>
                   <li>
-                    <img src="~/assets/imgs/websites-logo/upgrad.png" alt="" />
+                    <img src="~/assets/imgs/websites-logo/aditya_birla.svg" alt="" />
                   </li>
                   <li>
-                    <img src="~/assets/imgs/websites-logo/maxresdefault.png" alt="" />
+                    <img src="~/assets/imgs/websites-logo/walmart.svg" alt="" />
                   </li>
                   <li>
                     <img src="~/assets/imgs/websites-logo/NOBroker.png" alt="" />
@@ -268,7 +253,13 @@
     <!----startup end----------->
 
     <!----Testimonial start----------->
-    <Testimonial />
+    <div class="testimonials">
+      <Testimonial />
+      <div class="row" style="justify-content:center;">
+        <img class="slick-icon" src="~/assets/imgs/swipe.png" alt="swipe_icon" />
+      </div>
+    </div>
+
     <!----Testimonial End----------->
 
     <!----scan-app start----------->
@@ -281,20 +272,24 @@
 </template>
 
 <script>
-import DownloadModal from "~/components/DownloadModal.vue";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import DownloadModal from '~/components/DownloadModal.vue';
+import GetAppInput from '../../components/GetAppInput.vue';
+
 export default {
   components: {
     DownloadModal,
+    GetAppInput,
   },
   head() {
     return {
-      title: "Best Job App for Recruiters and Job Seekers - Hirect",
+      title: 'Best Job App for Recruiters and Job Seekers - Hirect',
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
-            "Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ",
+            'Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ',
         },
       ],
     };
@@ -307,65 +302,65 @@ export default {
 
   jsonld() {
     return {
-      "@context": "https://schema.org",
-      "@graph": [
+      '@context': 'https://schema.org',
+      '@graph': [
         {
-          "@type": "Organization",
-          "@id": "https://www.hirect.in/#/schema/organization/hirect",
-          name: "Hirect",
-          url: "https://www.hirect.in",
+          '@type': 'Organization',
+          '@id': 'https://www.hirect.in/#/schema/organization/hirect',
+          name: 'Hirect',
+          url: 'https://www.hirect.in',
           sameAs: [
-            "https://www.facebook.com/hirectindia",
-            "https://www.linkedin.com/company/hirectapp",
-            "https://twitter.com/hirect_india",
-            "https://www.instagram.com/hirect_india",
-            "https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ",
+            'https://www.facebook.com/hirectindia',
+            'https://www.linkedin.com/company/hirectapp',
+            'https://twitter.com/hirect_india',
+            'https://www.instagram.com/hirect_india',
+            'https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ',
           ],
           logo: {
-            "@type": "ImageObject",
-            "@id": "https://www.hirect.in/#/schema/image/hirect",
-            url: "https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png",
+            '@type': 'ImageObject',
+            '@id': 'https://www.hirect.in/#/schema/image/hirect',
+            url: 'https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png',
             width: 172,
             height: 48,
-            caption: "hirect",
+            caption: 'hirect',
           },
           image: {
-            "@id": "https://www.hirect.in/#/schema/image/hirect",
-            inLanguage: "en-US",
-            url: "https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png",
+            '@id': 'https://www.hirect.in/#/schema/image/hirect',
+            inLanguage: 'en-US',
+            url: 'https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png',
             width: 172,
             height: 48,
-            caption: "hirect",
+            caption: 'hirect',
           },
         },
         {
-          "@type": "WebSite",
-          "@id": "https://www.hirect.in/#/schema/website/hirect",
-          url: "https://www.hirect.in",
-          name: "Hirect",
+          '@type': 'WebSite',
+          '@id': 'https://www.hirect.in/#/schema/website/hirect',
+          url: 'https://www.hirect.in',
+          name: 'Hirect',
           potentialAction: {
-            "@type": "SearchAction",
-            target: "https://www.hirect.in/?s={search_term_string}",
-            "query-input": "required name=search_term_string",
+            '@type': 'SearchAction',
+            target: 'https://www.hirect.in/?s={search_term_string}',
+            'query-input': 'required name=search_term_string',
           },
           publisher: {
-            "@id": "https://www.hirect.in/#/schema/organization/hirect",
+            '@id': 'https://www.hirect.in/#/schema/organization/hirect',
           },
         },
         {
-          "@type": "WebPage",
-          "@id": "https://www.hirect.in",
-          url: "https://www.hirect.in",
-          inLanguage: "en-US",
-          name: "Hirect",
-          dateModified: "2022-02-22T15:06:08+00:00",
+          '@type': 'WebPage',
+          '@id': 'https://www.hirect.in',
+          url: 'https://www.hirect.in',
+          inLanguage: 'en-US',
+          name: 'Hirect',
+          dateModified: '2022-02-22T15:06:08+00:00',
           description:
-            "Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ",
+            'Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ',
           isPartOf: {
-            "@id": "https://www.hirect.in/#/schema/website/hirect",
+            '@id': 'https://www.hirect.in/#/schema/website/hirect',
           },
           about: {
-            "@id": "https://www.hirect.in/#/schema/organization/hirect",
+            '@id': 'https://www.hirect.in/#/schema/organization/hirect',
           },
         },
       ],
@@ -375,13 +370,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.slick-icon{
+    display: none;
+    width: 20%;
+    padding-bottom: 32px;
+  }
 // direct - banner
+.btn-app {
+  margin-bottom: 12px;
+  height: 43px;
+  padding: 11px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #2ce2a2;
+  border-radius: 25px;
+}
+
+.hire-now-image {
+  margin-top: 18%;
+}
+
+.hire-now {
+  // margin-left: -36px;
+}
+
+.get-app-img {
+  margin-left: 30%;
+}
+
 .direct-banner {
   padding: 110px 0;
 
   h1 {
-    color: #0e101a;
-    font-size: 50px;
+    color: #0E101A;
+    font-size: 64px;
     font-weight: bold;
     font-style: normal;
     letter-spacing: normal;
@@ -392,9 +414,9 @@ export default {
 
   p {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 15px;
-    color: #76787A;
+    color: rgba(14, 16, 26, 0.7);
   }
 
   .row {
@@ -408,7 +430,7 @@ export default {
     width: 150px;
   }
 
-  .autocomplete1 {
+  .start-hiring-button {
     text-align: center;
     margin-top: 30px;
   }
@@ -432,7 +454,7 @@ export default {
 
   .hire-now h2 {
     color: #0e101a;
-    font-size: 40px;
+    font-size: 64px;
     font-weight: bold;
     line-height: 66.8px;
     margin: 30px 0;
@@ -444,54 +466,14 @@ export default {
 
   .hire-now p {
     color: #000000;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: normal;
     line-height: 27px;
     margin-bottom: 30px;
   }
 
-  .input-container {
-    display: flex;
-    align-items: stretch;
-
-    .Sgdef {
-      position: absolute;
-      color: #B4B4B4;
-      z-index: 1;
-      font-size: 13px;
-      padding: 13px 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-
-    .form-search-mob {
-      display: flex;
-      position: relative;
-      -webkit-box-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      align-items: center;
-      height: 45px;
-      width: 60%;
-      color: #808080;
-      font-size: 13px;
-      padding: 0px 10px 0px 60px;
-      background: rgb(255, 255, 255);
-      border: 2px solid rgb(223, 225, 230);
-      box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-      border-radius: 50px;
-
-      ::placeholder {
-        color: #B4B4B4;
-        font-size: 16px;
-      }
-    }
-
-    .hire-now-img {
-      text-align: end;
-      margin-top: -67px;
-    }
+  .next-img {
+    margin-left: -168px;
   }
 }
 
@@ -501,12 +483,21 @@ export default {
 .hire-chat-section {
   h3.title-sm {
     color: #0e101a;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     line-height: normal;
     text-align: center;
     margin-bottom: 45px;
   }
+}
+
+.title-sm {
+  color: #0e101a;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 //end
@@ -522,7 +513,7 @@ export default {
 
   .hire-now p {
     color: #0e101a;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     margin-bottom: 30px;
   }
@@ -590,18 +581,6 @@ export default {
 }
 
 /******** Home Page **********/
-
-.btn-app {
-  border-radius: 50px;
-  background-color: #2ce2a2;
-  border-color: #2ce2a2;
-  color: #0e101a;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 10px 30px;
-  line-height: normal;
-}
-
 .candi-value {
   font-size: 14px;
 }
@@ -609,6 +588,14 @@ export default {
 // 1 st div
 
 .white-btn {
+  border-radius: 50px;
+  border-color: #2ce2a2;
+  color: #0e101a;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 30px;
+  margin-left: 10px;
+  line-height: normal;
   background-color: #fff;
 }
 
@@ -632,7 +619,7 @@ export default {
 }
 
 .available-list li {
-  border-radius: 24px;
+  border-radius: 33px;
   cursor: pointer;
   background-color: #ffffff;
   display: flex;
@@ -649,7 +636,7 @@ export default {
   .candi-value {
     font-size: 14px;
     color: #76787A;
-    line-height: 40px;
+    // line-height: 40px;
   }
 }
 
@@ -663,7 +650,7 @@ export default {
 }
 
 .available-list li {
-  width: 224px;
+  width: 244px;
   height: 160px;
   margin-bottom: 30px;
 }
@@ -703,147 +690,274 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
+.img2 {
+  // padding-left: 152px;
+  margin-left: -20%;
+}
+
+.next-img {
+  margin-left: -4%;
+}
+
+.city-logo li {
+  padding: 10px 0px;
+}
+
 // end startups-logo
-@media only screen and (min-width: 768px) and (max-width: 1299px) {
-  .direct-banner {
-    padding: 80px 0;
+// @media only screen and (min-width: 768px) and (max-width: 1299px) {
+//   .direct-banner {
+//     padding: 80px 0;
+//   }
+
+//   .hire-chat {
+//     padding-bottom: 60px;
+//   }
+
+//   .job-available-section,
+//   .startup-section {
+//     padding-bottom: 80px;
+//   }
+
+//   .hire-now h2,
+//   .direct-banner h1,
+//   .direct-text h2 {
+//     font-size: 32px;
+//   }
+
+//   .direct-text .startup-btn {
+//     width: 240px;
+//     height: 40px;
+//   }
+
+//   .available-list li span {
+//     font-size: 15px;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+//   .hire-now h2,
+//   .direct-banner h1,
+//   .direct-text h2 {
+//     font-size: 26px;
+//   }
+
+//   .direct-banner {
+//     padding: 70px 0;
+//   }
+
+//   .direct-text .startup-btn {
+//     width: 195px;
+//     height: 40px;
+//   }
+
+//   .hire-now p {
+//     font-size: 16px;
+//     line-height: 22px;
+//     margin-bottom: 35px;
+//   }
+
+//   .available-list li {
+//     width: 18.4%;
+//     margin-bottom: 20px;
+//     margin-right: 2%;
+//   }
+
+//   .available-list li:nth-child(6n) {
+//     margin-right: 2%;
+//   }
+
+//   .available-list li:nth-child(5n) {
+//     margin-right: 0%;
+//   }
+
+//   .job-available-section,
+//   .startup-section {
+//     padding-bottom: 65px;
+//   }
+
+//   .startups-logo-list li {
+//     margin-bottom: 35px;
+//   }
+
+//   .direct-Candidates.first {
+//     padding-right: 84px;
+//   }
+
+//   .direct-Candidates.two {
+//     padding-left: 0;
+//   }
+// }
+
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+//   .direct-Candidates.two {
+//     padding-left: 0px;
+//   }
+
+//   .direct-Candidates.first {
+//     padding-right: 15px;
+//   }
+
+//   .direct-text .startup-btn {
+//     width: 150px;
+//     height: 45px;
+//     font-size: 13px;
+//     line-height: 16px;
+//   }
+
+//   .direct-text button.btn.default-btn.button-sm {
+//     height: 45px;
+//     font-size: 13px;
+//     line-height: 16px;
+//     width: 150px;
+//   }
+
+//   .direct-text h2 {
+//     margin-bottom: 15px;
+//   }
+
+//   .direct-text button {
+//     margin-top: 30px;
+//   }
+
+//   .direct-text {
+//     height: 160px;
+//   }
+
+//   .available-list li {
+//     width: 23.5%;
+//   }
+
+//   .available-list li:nth-child(5n) {
+//     margin-right: 2%;
+//   }
+
+//   .available-list li:nth-child(4n) {
+//     margin-right: 0;
+//   }
+
+//   .startups-logo-list li {
+//     width: 16.66%;
+//     text-align: center;
+//     padding: 0 10px;
+//   }
+// }
+
+@media only screen and (min-width:850px) and (max-width:1199px) {
+  .hire-chat-section {
+    .hire-chat {
+      height: 477px;
+    }
   }
 
-  .hire-chat {
-    padding-bottom: 60px;
-  }
-
-  .job-available-section,
-  .startup-section {
-    padding-bottom: 80px;
-  }
-
-  .hire-now h2,
-  .direct-banner h1,
-  .direct-text h2 {
-    font-size: 32px;
-  }
-
-  .direct-text .startup-btn {
-    width: 240px;
-    height: 40px;
-  }
-
-  .available-list li span {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-
-  .hire-now h2,
-  .direct-banner h1,
-  .direct-text h2 {
-    font-size: 26px;
-  }
-
-  .direct-banner {
-    padding: 70px 0;
-  }
-
-  .direct-text .startup-btn {
-    width: 195px;
-    height: 40px;
-  }
-
-  .hire-now p {
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 35px;
-  }
-
-  .available-list li {
-    width: 18.4%;
-    margin-bottom: 20px;
-    margin-right: 2%;
-  }
-
-  .available-list li:nth-child(6n) {
-    margin-right: 2%;
-  }
-
-  .available-list li:nth-child(5n) {
-    margin-right: 0%;
-  }
-
-  .job-available-section,
-  .startup-section {
-    padding-bottom: 65px;
-  }
-
-  .startups-logo-list li {
-    margin-bottom: 35px;
-  }
-
-  .direct-Candidates.first {
-    padding-right: 84px;
-  }
-
-  .direct-Candidates.two {
-    padding-left: 0;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .direct-Candidates.two {
-    padding-left: 0px;
-  }
-
-  .direct-Candidates.first {
-    padding-right: 15px;
-  }
-
-  .direct-text .startup-btn {
-    width: 150px;
-    height: 45px;
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  .direct-text button.btn.default-btn.button-sm {
-    height: 45px;
-    font-size: 13px;
-    line-height: 16px;
-    width: 150px;
-  }
-
-  .direct-text h2 {
-    margin-bottom: 15px;
-  }
-
-  .direct-text button {
-    margin-top: 30px;
-  }
-
-  .direct-text {
-    height: 160px;
-  }
-
-  .available-list li {
-    width: 23.5%;
-  }
-
-  .available-list li:nth-child(5n) {
-    margin-right: 2%;
-  }
-
-  .available-list li:nth-child(4n) {
-    margin-right: 0;
-  }
-
-  .startups-logo-list li {
-    width: 16.66%;
+  .img1 {
     text-align: center;
-    padding: 0 10px;
+    // width: 80% !important;
+    // margin-top: 9% !important;
+    // margin-left: 25%;
+  }
+
+  .get-app-img {
+    margin-left: 7%;
+    width: 75%;
+  }
+
+  .img2 {
+    width: 100%;
+
+  }
+
+  .hire-now-img {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hire-img {
+    height: 100%;
+    // object-fit: contain;
+    // margin-top: 11%;
+  }
+
+  .btn-app {
+    margin-bottom: 12px;
+    height: 43px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .white-btn {
+    margin-bottom: 20px;
+  }
+
+  .img2 {
+    // padding-left: 70px;
+  }
+
+  .next-img {
+    // margin-left: -111px;
+    height: 100%;
+    // object-fit: contain;
+    // margin-top: 16.35%;
+  }
+
+  .hire-now {
+    margin-left: 0px;
   }
 }
 
-@media only screen and (min-width: 300px) and (max-width: 767px) {
+@media only screen and (min-width: 336px) and (max-width: 767px) {
+
+  .hire-chat-section .hire-chat {
+    height: 353px;
+  }
+
+  .slick-icon{
+    display: block;
+  }
+
+  .city-logo {
+    padding: 0;
+    margin: 50px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .btn-app {
+    height: 44px;
+    width: 149px;
+    border-radius: 50px;
+    background-color: #2ce2a2;
+    border-color: #2ce2a2;
+    color: #0e101a;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 30px;
+    margin-left: 10px;
+    line-height: normal;
+  }
+
+  .hire-img {
+    // margin-left: 20%;
+  }
+
+  .next-img {
+    margin-left: -17%;
+  }
+
+  .hire-now {
+    margin-left: 0px;
+  }
+
+  .instant-hiring-row {
+    flex-direction: column-reverse;
+  }
+
   .available-list li {
     width: 49%;
     margin-right: 2%;
@@ -859,8 +973,191 @@ export default {
 
   .available-list li span {
     font-size: 15px;
-    line-height: 20px;
-    padding: 5px 6px;
+    // line-height: 20px;
+    // padding: 5px 6px;
+  }
+
+  .direct-banner {
+    padding: 50px 0 70px;
+  }
+
+  .direct-banner h1 {
+    font-size: 45px;
+  }
+
+  .direct-text h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .direct-banner h1 br {
+    display: none;
+  }
+
+  .direct-Candidates.first {
+    padding-right: 0;
+    // flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .direct-text {
+    margin-top: 30px;
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+
+  .direct-text button {
+    margin-top: 25px;
+  }
+
+  .direct-Candidates.two {
+    // flex-direction: column-reverse;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hire-now h2 {
+    font-size: 23px;
+    margin-bottom: 25px;
+  }
+
+  .hire-chat {
+    // padding-bottom: 60px;
+
+  }
+
+  .hire-now {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .hire-now h2 br {
+    display: none;
+  }
+
+  .hire-now button.btn {
+    margin: auto;
+  }
+
+  .hire-chat-section {
+    padding-bottom: 40px;
+  }
+
+  .job-available-section,
+  .startup-section {
+    padding-bottom: 70px;
+  }
+
+  .hire-now p {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+
+  .hire-chat-section .hire-chat:first-child .row {
+    // flex-direction: column-reverse;
+  }
+
+  .startups-logo-list li {
+    width: 48%;
+    margin-right: 2%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .startups-logo-list li:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .startups-logo-list {
+    // margin-bottom: 30px;
+    margin: 0px;
+  }
+
+  .direct-text p {
+    margin-bottom: 20px;
+  }
+
+  // .hire-now-img {
+  //   display: none;
+  // }
+
+  .hire-chat-section .hire-chat {
+    height: 385px;
+  }
+
+  .hire-now {
+    padding-bottom: 15px;
+  }
+
+  // .testimonials {
+  //   display: none;
+  // }
+
+  .btn-app {
+    margin-left: 0px;
+  }
+
+  .hire-now p {
+    margin-left: 10px;
+  }
+
+  .hire-now h2 {
+    font-size: 45px !important;
+  }
+
+  .get-app-img {
+    display: none;
+  }
+
+  .img2 {
+    padding-left: 25px;
+    text-align: center;
+  }
+
+  // .hire-now-img {
+
+  //   // margin-right: -28%;
+  //   height: 380px;
+  // }
+
+  // hire-now-img img {
+  //   height: 100%;
+  //   width: auto;
+  //   object-fit: cover;
+  // }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 335px) {
+
+  .hire-now {
+    margin-left: 0px;
+  }
+
+  .instant-hiring-row {
+    flex-direction: column-reverse;
+  }
+
+  .available-list li {
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  .direct-Candidates.two {
+    padding-left: 0;
+  }
+
+  .available-list li:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .available-list li span {
+    font-size: 15px;
+    // line-height: 20px;
+    // padding: 5px 6px;
   }
 
   .direct-banner {
@@ -882,7 +1179,7 @@ export default {
 
   .direct-Candidates.first {
     padding-right: 0;
-    flex-direction: column-reverse;
+    // flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
@@ -899,7 +1196,7 @@ export default {
   }
 
   .direct-Candidates.two {
-    flex-direction: column-reverse;
+    // flex-direction: column-reverse;
     margin-top: 40px;
     align-items: center;
     justify-content: center;
@@ -911,7 +1208,7 @@ export default {
   }
 
   .hire-chat {
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
   }
 
   .hire-now {
@@ -928,7 +1225,7 @@ export default {
   }
 
   .hire-chat-section {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 
   .job-available-section,
@@ -943,7 +1240,7 @@ export default {
   }
 
   .hire-chat-section .hire-chat:first-child .row {
-    flex-direction: column-reverse;
+    // flex-direction: column-reverse;
   }
 
   .startups-logo-list li {
@@ -964,6 +1261,53 @@ export default {
   .direct-text p {
     margin-bottom: 20px;
   }
+
+  // .hire-now-img {
+  //   display: none;
+  // }
+
+  .hire-chat-section .hire-chat {
+    height: 353px;
+  }
+
+  .hire-now {
+    padding-bottom: 15px;
+    margin-left: -11px;
+  }
+
+  // .testimonials {
+  //   display: none;
+  // }
+
+  .btn-app {
+    margin-left: 0px;
+    padding: 10px 20px;
+  }
+
+  .hire-chat-section .hire-chat {
+    height: 400px;
+  }
+
+  .get-app-img {
+    display: none;
+  }
+
+  .img2 {
+    padding-left: 25px;
+    text-align: center;
+  }
+
+  // .hire-now-img {
+
+  //   // margin-right: -28%;
+  //   height: 380px;
+  // }
+
+  // hire-now-img img {
+  //   height: 100%;
+  //   width: auto;
+  //   object-fit: cover;
+  // }
 }
 
 /******* end Home Page ************/

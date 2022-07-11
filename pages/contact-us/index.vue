@@ -112,31 +112,31 @@
 
 <script>
 export default {
-    head() {
-        return {
-            title: "Contact Us - Hirect",
-            meta: [{
-                hid: "description",
-                name: "description",
-                content: "Users can contact us at Hirect through email, phone, and mail. Hirect, the best job app, will revert to its users within 24 hours. Contact Hirect. "
-            }]
-        };
-    },
+  head() {
+    return {
+      title: 'Contact Us - Hirect',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'Users can contact us at Hirect through email, phone, and mail. Hirect, the best job app, will revert to its users within 24 hours. Contact Hirect. ',
+      }],
+    };
+  },
 
-    jsonld() {
-        return {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Contact Us - Hirect",
-            url: "https://www.hirect.in/contact-us/",
-            logo: "https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png",
-            contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91 8446164920",
-                contactType: "customer service"
-            }
-        };
-    }
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Contact Us - Hirect',
+      url: 'https://www.hirect.in/contact-us/',
+      logo: 'https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+91 8446164920',
+        contactType: 'customer service',
+      },
+    };
+  },
 };
 </script>
 

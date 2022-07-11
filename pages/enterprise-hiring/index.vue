@@ -10,15 +10,18 @@
               <div class="px-0.5 py-0.5">
                 <div class="enteriprise-hiring-banner-details">
                   <h3 class="title-md">
-                    Strategic Partnership with
-                    <span style="color: #2ce2a2"> Hirect </span> to Build the
-                    Team
+                    Enterprise <span style="color: #2ce2a2">Hiring </span>- To
+                    meet<br />
+                    large-scale hiring requirements
                   </h3>
                   <p>
-                    Enterprises struggling to hire Prominent candidates for
-                    their team can reach out to Hirect for their quality mass
-                    hiring needs. Our problem-solving approach is helping
-                    corporates to grow their team much more robust.
+                    Hirect's enterprise hiring services are ideal for recruiters
+                    who need to fill multiple roles or for recruiters looking to
+                    quickly expand their teams. The enterprise hiring services
+                    account for the provision of a designated professional in
+                    charge of meeting all the hiring requirements. The AI
+                    algorithm, combined with personalized recommendations,
+                    enables recruiters to efficiently build a skilled workforce.
                   </p>
                   <div class="enteriprise-hiring-banner-img">
                     <img src="~/assets/imgs/strategic-partnership.png" alt="" />
@@ -27,10 +30,8 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="px-0.5 py-0.5">
-                <div class="Schedule-call">
-                  <ConnectForm1 />
-                </div>
+              <div class="Schedule-call">
+                <ConnectForm1 />
               </div>
             </div>
           </div>
@@ -45,14 +46,18 @@
         <div class="row">
           <div class="col-md-12">
             <div class="enteriprise-AI-platform-heading">
-              <h3 class="title-md">Our AI Platform leads us to be!</h3>
+              <h3 class="title-md">
+                What are the benifits of Enterprise Hiring Services?
+              </h3>
             </div>
             <MultiStepSegment :stepData="stepFeedData" />
           </div>
         </div>
-        <div class="row"></div>
-        <NuxtLink class="btn default-btn button-hire-now-seamless" to="/connect"
-          >Hire Now</NuxtLink
+        <div class="row border-bottom-40"></div>
+        <a
+          class="btn default-btn button-lg button-hire-now-seamless"
+          @click="scrollToTop"
+          >Hire Now</a
         >
       </div>
     </section>
@@ -63,26 +68,20 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="title-sm">Offerings</h3>
+            <h3 class="title-sm">Enterprise Hiring Service Offerings</h3>
             <div class="following-companies-jobs-list">
               <ul class="available-list">
                 <li>
-                  <span>Tailored services based on the requirement.</span>
+                  <span>Dedicated Account Managers</span>
                 </li>
                 <li>
-                  <span>Active Data Pool with Dynamic Pricing.</span>
+                  <span>Customized Candidate Recommendations</span>
                 </li>
                 <li>
-                  <span
-                    >Intensive 2 step filtration process to provide best-fitting
-                    candidates.</span
-                  >
+                  <span>Extensive Filtration Process</span>
                 </li>
                 <li>
-                  <span>End to end enterprise hiring solutions.</span>
-                </li>
-                <li>
-                  <span>Dedicated Account Manager.</span>
+                  <span>Tailor-Made Pricing Model</span>
                 </li>
               </ul>
             </div>
@@ -99,67 +98,38 @@
           <div class="row">
             <div class="col-md-12">
               <h3 class="title-sm">
-                Following companies <span style="color: #2ce2a2"> hired</span>
-                bulk candidates
+                Recruiters that have employed Enterprise
+                <span style="color: #2ce2a2">Hiring </span>services
               </h3>
               <div class="following-companies-jobs-list">
                 <ul class="following-companies-startups-logo-list">
                   <li>
-                    <img
-                      src="~/assets/imgs/websites-logo/lenskart.png"
-                      alt=""
-                    />
-                  </li>
-                  <li>
                     <img src="~/assets/imgs/websites-logo/Byju_s.png" alt="" />
                   </li>
                   <li>
-                    <img src="~/assets/imgs/websites-logo/Ajio.png" alt="" />
+                    <img src="~/assets/imgs/websites-logo/hp_logo.png" alt="" />
                   </li>
                   <li>
                     <img
-                      src="~/assets/imgs/websites-logo/squareyards.png"
+                      src="~/assets/imgs/websites-logo/emudra_logo.png"
                       alt=""
                     />
                   </li>
                   <li>
                     <img
-                      src="~/assets/imgs/websites-logo/Flipkart.png"
+                      src="~/assets/imgs/websites-logo/bajajfinserve.png"
                       alt=""
                     />
                   </li>
                   <li>
+                    <img
+                      src="~/assets/imgs/websites-logo/technook.png"
+                      alt=""
+                    />
+                  </li>
+                  <!-- <li>
                     <img src="~/assets/imgs/websites-logo/Udaan.png" alt="" />
-                  </li>
-                </ul>
-                <ul class="following-companies-startups-logo-list">
-                  <li>
-                    <img src="~/assets/imgs/websites-logo/Amazom.png" alt="" />
-                  </li>
-                  <li>
-                    <img src="~/assets/imgs/websites-logo/upgrad.png" alt="" />
-                  </li>
-                  <li>
-                    <img
-                      src="~/assets/imgs/websites-logo/FreeCharge.png"
-                      alt=""
-                    />
-                  </li>
-                  <li>
-                    <img src="~/assets/imgs/websites-logo/upgrad.png" alt="" />
-                  </li>
-                  <li>
-                    <img
-                      src="~/assets/imgs/websites-logo/maxresdefault.png"
-                      alt=""
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="~/assets/imgs/websites-logo/NOBroker.png"
-                      alt=""
-                    />
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -175,139 +145,150 @@
 </template>
 
 <script>
+/* eslint-disable no-dupe-keys */
 export default {
   components: {},
   head() {
     return {
-      title: "Free Job Posting for Employers | Best Recruitment App - Hirect",
+      title: 'Free Job Posting for Employers | Best Recruitment App - Hirect',
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
-            "Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online. ",
+            'Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online. ',
         },
       ],
     };
   },
+  mounted() {
+    this.window = window;
+  },
   data() {
     return {
-      //RecruiterLoginDialogVisible: false,
+      window: null,
+      // RecruiterLoginDialogVisible: false,
       isUserPositionError: false,
       positionOptions: [
         {
-          value: "HR",
-          label: "HR",
+          value: 'HR',
+          label: 'HR',
         },
         {
-          value: "Founder/CEO",
-          label: "Founder/CEO",
+          value: 'Founder/CEO',
+          label: 'Founder/CEO',
         },
         {
-          value: "CTO",
-          label: "CTO",
+          value: 'CTO',
+          label: 'CTO',
         },
         {
-          value: "CMO",
-          label: "CMO",
+          value: 'CMO',
+          label: 'CMO',
         },
         {
-          value: "COO",
-          label: "COO",
+          value: 'COO',
+          label: 'COO',
         },
         {
-          value: "Others",
-          label: "Others",
+          value: 'Others',
+          label: 'Others',
         },
       ],
       faqList: [
         {
           id: 1,
-          question: "How can I hire the best candidate for my job?",
+          question: 'How can I hire the best candidate for my job?',
           answer:
-            "More than 2.8 Million job seekers on the Hirect app, spread across 70+ categories. The AI matching tool of Hirect filters only the best-fit candidates for the hiring post so that the recruiter can connect directly with candidates with experience and skills.",
+            'More than 2.8 Million job seekers on the Hirect app, spread across 70+ categories. The AI matching tool of Hirect filters only the best-fit candidates for the hiring post so that the recruiter can connect directly with candidates with experience and skills.',
           isShown: false,
         },
         {
           id: 2,
-          question: "Hiring in bulk can be expensive; how can I save money?",
+          question: 'Hiring in bulk can be expensive; how can I save money?',
           answer:
-            "In traditional hiring, the hiring manager or the founder who posts the startup jobs will have to connect with consultancies that can provide a larger pool of candidates. However, this also incurs enormous expenses. Hirect app is the solution for this problem. It allows the recruiters to post the job vacancy for free. The Hirect App runs on a FREEMIUM model for recruiters so that they can use all its features without limitations. However, Hirect will charge a nominal fee to the recruiters for initiating chats with more Job Seekers than provided in the FREEMIUM plan. And the charges are pretty nominal as compared to consultancies.",
+            'In traditional hiring, the hiring manager or the founder who posts the startup jobs will have to connect with consultancies that can provide a larger pool of candidates. However, this also incurs enormous expenses. Hirect app is the solution for this problem. It allows the recruiters to post the job vacancy for free. The Hirect App runs on a FREEMIUM model for recruiters so that they can use all its features without limitations. However, Hirect will charge a nominal fee to the recruiters for initiating chats with more Job Seekers than provided in the FREEMIUM plan. And the charges are pretty nominal as compared to consultancies.',
           isShown: false,
         },
         {
           id: 3,
-          question: "How soon can I start hiring for my job posting?",
+          question: 'How soon can I start hiring for my job posting?',
           answer:
-            "The job post will be made live quickly, and AI will filter the best-fit candidates and match them with your job posting. You can connect with them directly and start chatting instantly. You can begin hiring candidates within a day.",
+            'The job post will be made live quickly, and AI will filter the best-fit candidates and match them with your job posting. You can connect with them directly and start chatting instantly. You can begin hiring candidates within a day.',
           isShown: false,
         },
         {
           id: 4,
-          question: "How is Hirect different from other traditional portals?",
+          question: 'How is Hirect different from other traditional portals?',
           answer:
-            "The traditional hiring process can be long-winded, leading to candidates leaving mid-way in frustration. However, Hirect simplifies and streamlines the entire hiring process. It is the best among job hiring apps, it lets the hiring manager or recruiter connect directly with the job seeker and chat with them instantly. Since no consultants are involved, the entire process of hiring for the posted company jobs will be 100% secure with no spam or scam calls. They can also schedule a video interview within the app without exchanging any of their personal information.",
+            'The traditional hiring process can be long-winded, leading to candidates leaving mid-way in frustration. However, Hirect simplifies and streamlines the entire hiring process. It is the best among job hiring apps, it lets the hiring manager or recruiter connect directly with the job seeker and chat with them instantly. Since no consultants are involved, the entire process of hiring for the posted company jobs will be 100% secure with no spam or scam calls. They can also schedule a video interview within the app without exchanging any of their personal information.',
           isShown: false,
         },
         {
           id: 5,
-          question: "What are the job posting limitations for the Hirer?",
+          question: 'What are the job posting limitations for the Hirer?',
           answer:
-            "Recruiters who have signed up and been onboarded with the app are entitled to a 3-day complimentary trial for 30 chat initiations per day. After the trial, they will be upgraded to the FREEMIUM plan of 5 free chats a day. If the hiring manager/ recruiter wants to chat with more candidates in a day, they would have to pay a nominal fee or subscription as per the plan they choose. For further details, check out the product and pricing of Hirect.",
+            'Recruiters who have signed up and been onboarded with the app are entitled to a 3-day complimentary trial for 30 chat initiations per day. After the trial, they will be upgraded to the FREEMIUM plan of 5 free chats a day. If the hiring manager/ recruiter wants to chat with more candidates in a day, they would have to pay a nominal fee or subscription as per the plan they choose. For further details, check out the product and pricing of Hirect.',
           isShown: false,
         },
         {
           id: 6,
           question:
-            "What if I have some customized requirements? Who should I reach out to?",
+            'What if I have some customized requirements? Who should I reach out to?',
           answer:
-            "If the recruiter has any custom requirements, they can write to: sales@hirect.in.",
+            'If the recruiter has any custom requirements, they can write to: sales@hirect.in.',
           isShown: false,
         },
       ],
       getUserInf: {
-        userPosition: "",
+        userPosition: '',
       },
       stepFeedData: [
         {
           step: 1,
-          imageSrc: "Cost-effective.png",
-          title: "Cost-effective",
+          imageSrc: 'Cost-effective.png',
+          title: 'Cost-effective',
         },
         {
           step: 2,
-          imageSrc: "Time-efficient.png",
-          title: "Time-efficient",
+          imageSrc: 'Time-efficient.png',
+          title: 'Time-efficient',
         },
         {
           step: 3,
-          imageSrc: "Increase productivity.png",
-          title: "Increase productivity",
+          imageSrc: 'Increase productivity.png',
+          title: 'Personalized Recommendations',
         },
       ],
     };
   },
+
+  methods: {
+    scrollToTop() {
+      this.window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+  },
   jsonld() {
     return {
-      "@context": "https://schema.org/",
-      "@type": "JobPosting",
-      title: "Job Posting for Employers",
+      '@context': 'https://schema.org/',
+      '@type': 'JobPosting',
+      title: 'Job Posting for Employers',
       description:
-        "Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online.",
+        'Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online.',
       hiringOrganization: {
-        "@type": "Organization",
-        name: "Hirect",
-        sameAs: "https://www.hirect.in/",
-        logo: "https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png",
+        '@type': 'Organization',
+        name: 'Hirect',
+        sameAs: 'https://www.hirect.in/',
+        logo: 'https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png',
       },
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
       itemListElement: [
         {
-          "@type": "ListItem",
-          position: "1",
-          name: "Features",
-          item: "https://www.hirect.in/connect",
+          '@type': 'ListItem',
+          position: '1',
+          name: 'Features',
+          item: 'https://www.hirect.in/recruiters',
         },
       ],
     };
@@ -316,6 +297,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.border-bottom-40 {
+  min-height: 40px;
+}
 .enteriprise-following-companies-section h3.title-sm {
   color: #0e101a;
   font-size: 30px;
@@ -326,14 +310,10 @@ export default {
   margin-top: 100px;
 }
 .enteriprise-hiring-banner-details h3.title-md {
-  //  position: absolute;
-  width: 522px;
-  height: 120px;
-  left: 131px;
-  top: 154px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
+  min-width: 110%;
 }
 
 .enteriprise-hiring-section {
@@ -341,6 +321,7 @@ export default {
 }
 
 .enteriprise-AI-platform-section {
+  text-align: center;
   padding-bottom: 130px;
 }
 
@@ -348,33 +329,36 @@ export default {
   padding: 50px 0;
 }
 
-.enteriprise-hiring-banner-img {
-  // position: absolute;
-  width: 558px;
-  height: 356px;
-  left: 131px;
-  top: 450px;
-  //   background: #c4c4c4;
-  border-radius: 15px;
-}
+// .enteriprise-hiring-banner-img {
+//   // position: absolute;
+//   width: 558px;
+//   height: 356px;
+//   left: 131px;
+//   top: 450px;
+//   //   background: #c4c4c4;
+//   border-radius: 15px;
+// }
 
 // Hire Chat Section
 .enteriprise-Offerings-section {
-  padding-bottom: 85px;
+  background-color: #f2f4f8;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 // end Hire Chat Section
 // jobs-available
 .job-available-section,
 .enteriprise-following-companies-section {
-  height: 515px;
-  padding-bottom: 86px;
+  height: 100%;
+  padding-bottom: 4%;
 }
 
 .available-list li {
   border-radius: 24px;
   background-color: #ffffff;
   display: flex;
+  justify-content: space-evenly;
   padding: 0px 14px;
   font-size: 18px;
   font-weight: 400;
@@ -384,12 +368,12 @@ export default {
   justify-content: center;
   max-width: 213px;
   height: 191px;
-  box-shadow: 6px 6px 30px rgba(109, 141, 173, 0.25);
-
+  // box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
 .available-list li:hover {
-  background-color: #2ce2a2;
+  transform: scale(1.1);
+  box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
 }
 
 .available-list {
@@ -398,11 +382,12 @@ export default {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .available-list li {
   margin-bottom: 85px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .available-list li:nth-child(6n) {
@@ -457,7 +442,7 @@ export default {
   border-radius: 100px;
   background: #2ce2a2;
   padding: 10px 0;
-  margin: 50px 500px;
+  // margin: 50px 500px;
 }
 
 button.btn.eye-button {
@@ -471,15 +456,10 @@ button.btn.eye-button {
 
 .enteriprise-hiring-banner-details {
   width: 100%;
-  max-width: 540px;
 }
 
 .enteriprise-hiring-banner-details p {
-  // position: absolute;
-  width: 559px;
-  height: 74px;
-  left: 131px;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -493,15 +473,16 @@ button.btn.eye-button {
   border-radius: 24px;
   max-width: 476px;
   position: relative;
-  height: 648px;
+  height: 96%;
   left: 25%;
+  margin-top: 5%;
 }
 
 // end following-companies-startups-logo
 
 @media only screen and (max-width: 768px) {
   .row {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .enteriprise-hiring-banner {
@@ -511,10 +492,13 @@ button.btn.eye-button {
   .enteriprise-AI-platform-heading {
     padding-top: 20px;
   }
+
+  .Schedule-call {
+    left: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
-
   .enteriprise-hiring-banner-details p {
     font-size: 17px;
     line-height: 29px;
@@ -526,8 +510,6 @@ button.btn.eye-button {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
- 
-
   button.btn.eye-button {
     right: 6px;
   }
@@ -538,6 +520,15 @@ button.btn.eye-button {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+   h3.title-md {
+    font-size: 23px !important;
+    margin-bottom: 25px;
+  }
+
+  .available-list {
+    flex-direction: column;
+    align-items: center;
+  }
   .following-companies-startups-logo-list li {
     width: 48%;
     margin-right: 2%;
@@ -625,7 +616,7 @@ button.btn.eye-button {
   }
 
   .Schedule-call {
-    padding: 20px 20px 30px;
+    padding: 40px 20px 30px;
   }
 }
 </style>

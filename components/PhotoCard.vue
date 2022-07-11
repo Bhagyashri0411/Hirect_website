@@ -1,20 +1,22 @@
 <template>
   <div class="container">
-    <div class="photo-card" v-for="member in membersList">
+    <div class="photo-card" v-for="member in membersList" :key="member.id">
       <div class="photo-card-inner" @click="toggleModal(member)">
-        <img class="photo" :src="member.imageSrc" />
+        <img class="photo" :src="imgUrl(member.imgUrl)" />
         <p class="name">{{ member.name }}</p>
         <span class="designation">{{ member.designation }}</span>
       </div>
     </div>
     <div class="modal-parent" v-if="currentMember" v-show="showModal">
       <div class="modal">
-        <div class="row">
+        <div class="row model-image">
           <div class="column image-section">
-            <img :src="currentMember.fullImageSrc" alt="" srcset="">
+            <img :src="imgUrl(currentMember.imgUrl)" alt="" srcset="" />
           </div>
-          <div class="column description" style="text-align: start;">
-            <h3><strong>{{ currentMember.name }}</strong></h3>
+          <div class="column description" style="text-align: justify">
+            <h3>
+              <strong>{{ currentMember.name }}</strong>
+            </h3>
             <span>{{ currentMember.description }}</span>
           </div>
         </div>
@@ -28,23 +30,34 @@ export default {
   props: {
     membersList: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       showModal: false,
-      currentMember: null
-    }
+      currentMember: null,
+    };
   },
   methods: {
     toggleModal(member) {
-      console.log(this.$config);
+      if (this.$device.mobile) {
+        return;
+      }
       this.showModal = !this.showModal;
-      this.currentMember = member
-    }
-  }
-}
+      this.currentMember = member;
+    },
+    imgUrl(src) {
+      /* eslint-disable */
+      try {
+        return require(`@/assets/imgs/${src}`);
+      } catch (error) {
+        return require(`@/assets/imgs/step-image.png`);
+      }
+      /* eslint-disable */
+    },
+  },
+};
 </script>
 <style scoped>
 .photo-card:not(:first-child) {
@@ -89,7 +102,7 @@ export default {
   margin-left: 20px;
   max-width: 150px;
   display: block;
-  color: #76787A;
+  color: #76787a;
   font-size: 13px;
 }
 
@@ -108,7 +121,7 @@ export default {
   position: relative;
   background: white;
   width: 50%;
-  height: 60%;
+  height: fit-content;
   padding: 30px;
   border-radius: 6px;
   top: 50%;
@@ -116,6 +129,10 @@ export default {
   transform: translate(-50%, -50%);
   font-size: 22px;
   animation: 0.5s drop;
+}
+
+.model-image {
+  align-items: center;
 }
 
 @keyframes drop {
@@ -134,7 +151,6 @@ export default {
   top: 5px;
   font-size: 40px;
   cursor: pointer;
-
 }
 
 section {

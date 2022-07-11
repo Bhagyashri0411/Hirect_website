@@ -33,7 +33,7 @@
                 Get candidates in 50+ categories
             </h2>
             <div class="startup-hiring-categories-container">
-                <div class="startup-hiring-categories-item" v-for="(item, index) in categories">
+                <div class="startup-hiring-categories-item" v-for="(item, index) in categories" :key="index">
                     {{ item }}
                 </div>
             </div>
@@ -54,87 +54,86 @@
 
 <script>
 export default {
-    name: "startup-hiring",
-    components: {},
-    head() {
-        return {
-            title: "Startup Hiring App | Post a job and Chat Directly with Candidates",
-            meta: [{
-                hid: "description",
-                name: "description",
-                content: "Hirect, the hiring app designed for start-ups hiring, enables Employers to post jobs for free online. Connect with the candidates and chat directly."
-            }]
-        };
+  name: 'startup-hiring',
+  components: {},
+  head() {
+    return {
+      title: 'Startup Hiring App | Post a job and Chat Directly with Candidates',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'Hirect, the hiring app designed for start-ups hiring, enables Employers to post jobs for free online. Connect with the candidates and chat directly.',
+      }],
+    };
+  },
+  data() {
+    return {
+      currentPageName: 'startup-hiring',
+      downloadDialogVisible: false,
+      categories: [
+        'Back-end Developers',
+        'Mobile App Developers',
+        'Web Developers',
+        'DevOps Engineer',
+        'Data Engineer',
+        'Full Stack Engineer',
+        'Marketing',
+        'Business Development',
+        'Human Resource',
+        'Design',
+        'Product Management',
+        'Sales',
+      ],
+    };
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {
+    this.$localSaveSubmitUrl();
+  },
+  methods: {
+    smoothToTop() {
+      document
+        .getElementById('back-top-target')
+        .scrollIntoView({
+          block: 'start',
+          behavior: 'smooth',
+        });
     },
-    data() {
-        return {
-            currentPageName: "startup-hiring",
-            downloadDialogVisible: false,
-            categories: [
-                "Back-end Developers",
-                "Mobile App Developers",
-                "Web Developers",
-                "DevOps Engineer",
-                "Data Engineer",
-                "Full Stack Engineer",
-                "Marketing",
-                "Business Development",
-                "Human Resource",
-                "Design",
-                "Product Management",
-                "Sales"
-            ]
-        };
+    // logo click
+    logoClickHandle() {
+      this.$router.push({
+        path: '/',
+        query: JSON.parse(window.localStorage.getItem('submitUrlSearch')),
+      });
+      this.smoothToTopHandle();
     },
-    computed: {},
-    watch: {},
-    created() {},
-    mounted() {
-        this.$localSaveSubmitUrl();
+    // show download dialog
+    downloadClick() {
+      this.downloadDialogVisible = true;
+      this.$sendToEsData('webQrcodeViewed', {
+        region_id: 0,
+        position: 'in_startup_hiring_downloadapp_popup',
+      });
     },
-    methods: {
-        smoothToTop() {
-            document
-                .getElementById("back-top-target")
-                .scrollIntoView({
-                    block: "start",
-                    behavior: "smooth"
-                });
-        },
-        // logo click
-        logoClickHandle() {
-            this.$router.push({
-                path: "/",
-                query: JSON.parse(window.localStorage.getItem("submitUrlSearch"))
-            });
-            this.smoothToTopHandle();
-        },
-        // show download dialog
-        downloadClick() {
-            this.downloadDialogVisible = true;
-            this.$sendToEsData('webQrcodeViewed', {
-                'region_id': 0,
-                'position': 'in_startup_hiring_downloadapp_popup'
-            })
-        }
-    },
-    jsonld() {
-        return {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [{
-                "@type": "ListItem",
-                position: "1",
-                name: "Startup Hiring",
-                item: "https://www.hirect.in/startup-hiring"
-            }]
-        };
-    }
+  },
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [{
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Startup Hiring',
+        item: 'https://www.hirect.in/startup-hiring',
+      }],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-
 
 body {
     overflow-x: hidden;
@@ -256,7 +255,6 @@ body {
     }
 }
 
-
 @media only screen and (max-width : 768px){
     /deep/ .el-dialog {
     border-radius: 30px;
@@ -268,7 +266,6 @@ body {
     background-image: url(~/assets/img/banner_bg.png);
     background-repeat: no-repeat;
 }
-
 
 .startup-hiring-top {
     margin: 0 auto;

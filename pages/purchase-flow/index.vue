@@ -53,52 +53,52 @@
 
 <script>
 export default {
-    name: "purchase",
-    components: {},
-    head() {
-        return {
-            title: "Purchase Flow on Hirect App and Website",
-            meta: [{
-                hid: "description",
-                name: "description",
-                content: "Learn the Purchase Flow on Hirect app and website. We have explained here all the steps in detail about making a purchase on Hirect app. "
-            }]
-        };
+  name: 'purchase',
+  components: {},
+  head() {
+    return {
+      title: 'Purchase Flow on Hirect App and Website',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'Learn the Purchase Flow on Hirect app and website. We have explained here all the steps in detail about making a purchase on Hirect app. ',
+      }],
+    };
+  },
+  data() {
+    return {
+      currentPageName: '',
+    };
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {
+    this.$localSaveSubmitUrl();
+  },
+  methods: {
+    smoothToTop() {
+      document
+        .getElementById('back-top-target')
+        .scrollIntoView({
+          block: 'start',
+          behavior: 'smooth',
+        });
     },
-    data() {
-        return {
-            currentPageName: ""
-        };
-    },
-    computed: {},
-    watch: {},
-    created() {},
-    mounted() {
-        this.$localSaveSubmitUrl();
-    },
-    methods: {
-        smoothToTop() {
-            document
-                .getElementById("back-top-target")
-                .scrollIntoView({
-                    block: "start",
-                    behavior: "smooth"
-                });
-        }
-    },
+  },
 
-    jsonld() {
-        return {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [{
-                "@type": "ListItem",
-                position: "1",
-                name: "Purchase Flow",
-                item: "https://www.hirect.in/purchase-flow"
-            }]
-        };
-    }
+  jsonld() {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [{
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Purchase Flow',
+        item: 'https://www.hirect.in/purchase-flow',
+      }],
+    };
+  },
 };
 </script>
 
