@@ -13,78 +13,81 @@
         <p class="download-guide-button-text">Check out the following guide</p>
     </div>
     <img class="download-guide-arrow" src="~/assets/img/download-guide-arrow.png" alt="download-guide-arrow">
-    <div class="download-guide-img-item" data-aos="fade-up" v-for="(item, index) of guideImgs" :style="item.imgStyle">
+    <div class="download-guide-img-item" data-aos="fade-up" v-for="(item, index) of guideImgs" :style="item.imgStyle" :key="index">
         <img class="download-guide-img" :src="item.imgSrc" :style="item.imgStyle" alt="download-guide-img">
     </div>
 </div>
 </template>
 
 <script>
-import aosMixin from '~/mixins/aos'
+/* eslint-disable global-require */
+/* eslint-disable-next-line import/extensions */
+import aosMixin from '~/mixins/aos';
+
 export default {
-    name: 'download-guide',
-    mixins: [aosMixin],
-    components: {},
-    head() {
-        return {
+  name: 'download-guide',
+  mixins: [aosMixin],
+  components: {},
+  head() {
+    return {
 
-        }
-    },
-    data() {
-        return {
-            guideImgs: [{
-                imgSrc: require('~/assets/img/download-guide-1.png'),
-                imgStyle: {
-                    height: '717px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-2.png'),
-                imgStyle: {
-                    height: '716.5px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-3.png'),
-                imgStyle: {
-                    height: '500px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-4.png'),
-                imgStyle: {
-                    height: '716.5px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-5.png'),
-                imgStyle: {
-                    height: '716.5px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-6.png'),
-                imgStyle: {
-                    height: '716.5px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-7.png'),
-                imgStyle: {
-                    height: '716.5px'
-                }
-            }, {
-                imgSrc: require('~/assets/img/download-guide-8.png'),
-                imgStyle: {
-                    height: '717px'
-                }
-            }, ]
-        }
-    },
-    computed: {},
-    watch: {},
-    created() {},
-    mounted() {
-        this.$localSaveSubmitUrl()
-    },
-    methods: {
+    };
+  },
+  data() {
+    return {
+      guideImgs: [{
+        imgSrc: require('~/assets/img/download-guide-1.png'),
+        imgStyle: {
+          height: '717px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-2.png'),
+        imgStyle: {
+          height: '716.5px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-3.png'),
+        imgStyle: {
+          height: '500px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-4.png'),
+        imgStyle: {
+          height: '716.5px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-5.png'),
+        imgStyle: {
+          height: '716.5px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-6.png'),
+        imgStyle: {
+          height: '716.5px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-7.png'),
+        imgStyle: {
+          height: '716.5px',
+        },
+      }, {
+        imgSrc: require('~/assets/img/download-guide-8.png'),
+        imgStyle: {
+          height: '717px',
+        },
+      }],
+    };
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {
+    this.$localSaveSubmitUrl();
+  },
+  methods: {
 
-    }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -61,77 +61,77 @@
 
 <script>
 export default {
-    name: 'download',
-    components: {},
-    head() {
-        return {
-            title: 'Hirect - The First Chat-Based Hiring App',
-            meta: [{
-                hid: 'description',
-                name: 'description',
-                content: 'Download Hirect App: 80% of employers who post a job get a quality candidate on Hirect within the first day!'
-            }, ],
-        }
+  name: 'download',
+  components: {},
+  head() {
+    return {
+      title: 'Hirect - The First Chat-Based Hiring App',
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'Download Hirect App: 80% of employers who post a job get a quality candidate on Hirect within the first day!',
+      }],
+    };
+  },
+  data() {
+    return {
+      currentPageName: 'invitation',
+      categoriesList: [
+        'Full Stack Engineer',
+        'Software Developer',
+        'C++ Programmer ',
+        'iOS/Android Developer',
+        'Java Engineer',
+        'IT Engineer',
+        'UI/UX Designer',
+        'Web Developer',
+        'PHP Developer',
+        'Business Developer',
+        'Digital Marketing',
+        'Operations',
+        'Data Analyst',
+        'Human Resource',
+        'Accountant',
+        'Sales Executive',
+        'Data Entry',
+        'Customer Service',
+        'Tele Sales',
+      ],
+      hireList: [
+        'Bangalore',
+        'Delhi',
+        'Noida',
+        'Gurgaon',
+        'Hyderabad',
+        'Mumbai',
+        'Pune',
+        'Chennai',
+        'Ahmedabad',
+        'Kolkata',
+      ],
+    };
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {
+    this.$localSaveSubmitUrl();
+  },
+  methods: {
+    smoothToTop() {
+      document.getElementById('back-top-target').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
     },
-    data() {
-        return {
-            currentPageName: 'invitation',
-            categoriesList: [
-                'Full Stack Engineer',
-                'Software Developer',
-                'C++ Programmer ',
-                'iOS/Android Developer',
-                'Java Engineer',
-                'IT Engineer',
-                'UI/UX Designer',
-                'Web Developer',
-                'PHP Developer',
-                'Business Developer',
-                'Digital Marketing',
-                'Operations',
-                'Data Analyst',
-                'Human Resource',
-                'Accountant',
-                'Sales Executive',
-                'Data Entry',
-                'Customer Service',
-                'Tele Sales'
-            ],
-            hireList: [
-                'Bangalore',
-                'Delhi',
-                'Noida',
-                'Gurgaon',
-                'Hyderabad',
-                'Mumbai',
-                'Pune',
-                'Chennai',
-                'Ahmedabad',
-                'Kolkata'
-            ]
-        }
+    getStartClick() {
+      document.getElementById('my-form').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      });
     },
-    computed: {},
-    watch: {},
-    created() {},
-    mounted() {
-        this.$localSaveSubmitUrl()
-    },
-    methods: {
-        smoothToTop() {
-            document.getElementById('back-top-target').scrollIntoView({
-                block: 'start',
-                behavior: 'smooth'
-            })
-        },
-        getStartClick() {
-            document.getElementById('my-form').scrollIntoView({
-                block: 'start',
-                behavior: 'smooth'
-            })
-        }
-    }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

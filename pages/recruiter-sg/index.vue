@@ -64,53 +64,54 @@
 </template>
 
 <script>
+/* eslint-disable no-dupe-keys */
 export default {
   components: {},
   head() {
     return {
-      title: "Hire Top Tech Talent from India",
+      title: 'Hire Top Tech Talent from India',
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
-            "Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online. ",
+            'Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online. ',
         },
       ],
     };
   },
   data() {
     return {
-      //RecruiterLoginDialogVisible: false,
+      // RecruiterLoginDialogVisible: false,
       isUserPositionError: false,
       positionOptions: [
         {
-          value: "HR",
-          label: "HR",
+          value: 'HR',
+          label: 'HR',
         },
         {
-          value: "Founder/CEO",
-          label: "Founder/CEO",
+          value: 'Founder/CEO',
+          label: 'Founder/CEO',
         },
         {
-          value: "CTO",
-          label: "CTO",
+          value: 'CTO',
+          label: 'CTO',
         },
         {
-          value: "CMO",
-          label: "CMO",
+          value: 'CMO',
+          label: 'CMO',
         },
         {
-          value: "COO",
-          label: "COO",
+          value: 'COO',
+          label: 'COO',
         },
         {
-          value: "Others",
-          label: "Others",
+          value: 'Others',
+          label: 'Others',
         },
       ],
       getUserInf: {
-        userPosition: "",
+        userPosition: '',
       },
     };
   },
@@ -122,25 +123,25 @@ export default {
   // }
   jsonld() {
     return {
-      "@context": "https://schema.org/",
-      "@type": "JobPosting",
-      title: "Job Posting for Employers",
+      '@context': 'https://schema.org/',
+      '@type': 'JobPosting',
+      title: 'Job Posting for Employers',
       description:
-        "Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online.",
+        'Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online.',
       hiringOrganization: {
-        "@type": "Organization",
-        name: "Hirect",
-        sameAs: "https://www.hirect.in/",
-        logo: "https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png",
+        '@type': 'Organization',
+        name: 'Hirect',
+        sameAs: 'https://www.hirect.in/',
+        logo: 'https://www.hirect.in/_nuxt/img/hirect-logo.130906c.png',
       },
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
       itemListElement: [
         {
-          "@type": "ListItem",
-          position: "1",
-          name: "Features",
-          item: "https://www.hirect.in/connect",
+          '@type': 'ListItem',
+          position: '1',
+          name: 'Features',
+          item: 'https://www.hirect.in/recruiter-sg',
         },
       ],
     };
@@ -300,7 +301,6 @@ export default {
     }
   }
 }
-
 
 @media only screen and (min-width: 1200px) and (max-width: 1341px) {
   .containernewpage {

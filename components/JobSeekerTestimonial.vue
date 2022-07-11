@@ -67,50 +67,51 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-export default {
-    name: "Testimonial",
-    components: {
-        VueSlickCarousel
-    },
+import VueSlickCarousel from 'vue-slick-carousel';
 
-    data() {
-        return {
-            settings: {
-                arrows: false,
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 3,
-                initialSlide: 0,
-                responsive: [{
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2,
-                            centerMode: false,
-                            centerPadding: "0px"
-                        }
-                    },
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 1,
-                            centerMode: false,
-                            centerPadding: "0px"
-                        }
-                    },
-                    {
-                        breakpoint: 599,
-                        settings: {
-                            slidesToShow: 1,
-                            centerMode: false,
-                            centerPadding: "0px"
-                        }
-                    }
-                ]
-            }
-        };
-    }
+export default {
+  name: 'Testimonial',
+  components: {
+    VueSlickCarousel,
+  },
+
+  data() {
+    return {
+      settings: {
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        initialSlide: 0,
+        responsive: [{
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            centerMode: false,
+            centerPadding: '0px',
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            centerMode: false,
+            centerPadding: '0px',
+          },
+        },
+        {
+          breakpoint: 599,
+          settings: {
+            slidesToShow: 1,
+            centerMode: false,
+            centerPadding: '0px',
+          },
+        },
+        ],
+      },
+    };
+  },
 };
 </script>
 

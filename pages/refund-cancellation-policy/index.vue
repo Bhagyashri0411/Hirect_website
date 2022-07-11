@@ -172,24 +172,24 @@
 
 <script>
 export default {
-  name: "refund",
+  name: 'refund',
   components: {},
   head() {
     return {
-      title: "Refund & Cancellation Policy - Hirect",
+      title: 'Refund & Cancellation Policy - Hirect',
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
-            "Hirect, the hiring app, has been serving lakhs of active and satisfied users. Know from here the Refund and Cancellation Policy of Hirect App.",
+            'Hirect, the hiring app, has been serving lakhs of active and satisfied users. Know from here the Refund and Cancellation Policy of Hirect App.',
         },
       ],
     };
   },
   data() {
     return {
-      currentPageName: "",
+      currentPageName: '',
     };
   },
   computed: {},
@@ -200,23 +200,23 @@ export default {
   },
   methods: {
     smoothToTop() {
-      document.getElementById("back-top-target").scrollIntoView({
-        block: "start",
-        behavior: "smooth",
+      document.getElementById('back-top-target').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
       });
     },
   },
 
   jsonld() {
     return {
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org/',
+      '@type': 'BreadcrumbList',
       itemListElement: [
         {
-          "@type": "ListItem",
+          '@type': 'ListItem',
           position: 1,
-          name: "Refund & Cancellation Policy",
-          item: "https://www.hirect.in/refund-cancellation-policy/",
+          name: 'Refund & Cancellation Policy',
+          item: 'https://www.hirect.in/refund-cancellation-policy/',
         },
       ],
     };

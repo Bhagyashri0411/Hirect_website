@@ -2,69 +2,45 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <NuxtLink class="navbar-brand" to="/"
-          ><img src="~/assets/img/hirect-logo.png" alt=""
-        /></NuxtLink>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <NuxtLink class="navbar-brand" to="/"><img src="~/assets/img/hirect-logo.png" alt="" /></NuxtLink>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="
+          <ul class="
               navbar-nav
               ms-auto
               my-2 my-lg-0
               navbar-nav-scroll
               nav-dropdown-link
-            "
-          >
+            ">
             <li class="nav-item">
               <NuxtLink exact class="nav-link" to="/">Home</NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/recruiters">Recruiters</NuxtLink>
             </li>
-            <!-- <li class="nav-item">
-              <NuxtLink class="nav-link" to="/enterprise-hiring">
-                Enteriprise Hiring</NuxtLink
-              >
-            </li> -->
-            <!-- <li class="nav-item">
-              <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
-            </li> -->
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/job-seeker">
-                Job Seekers</NuxtLink
-              >
+                Job Seekers</NuxtLink>
+            </li>
+            <li class="nav-item in-mobile" v-if="$device.isMobileOrTablet || isMobileOrTablet">
+              <NuxtLink class="nav-link" to="/aboutus">
+                About Us</NuxtLink>
+            </li>
+            <li class="nav-item in-mobile" v-if="$device.isMobileOrTablet || isMobileOrTablet">
+              <a href="https://hirect.in/blog" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
-              <button
-                type="button"
-                class="btn default-btn button-sm download-btn"
-                @click="downloadDialogShow"
-              >
+              <button type="button" class="btn default-btn button-sm download-btn" @click="downloadDialogShow">
                 Download App
               </button>
             </li>
 
-            <li class="nav-item">
-              <button
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#secondnavbar"
-                aria-controls="navbarScroll"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                id="toggling"
-              >
+            <li class="nav-item not-in-mobile" v-if="!$device.isMobileOrTablet || !isMobileOrTablet">
+              <button type="button" data-bs-toggle="collapse" data-bs-target="#secondnavbar"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" id="toggling">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
@@ -72,18 +48,15 @@
                 <ul>
                   <li class="nav-item">
                     <NuxtLink class="sec-nav-link" to="/aboutus">
-                      About us</NuxtLink
-                    >
+                      About us</NuxtLink>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <NuxtLink class="sec-nav-link" to="/enterprise-hiring">
-                      Enterprise Hiring</NuxtLink
-                    >
-                  </li>
+                      Enterprise Hiring</NuxtLink>
+                  </li> -->
                   <li class="nav-item">
                     <a href="https://www.hirect.in/blog/" class="sec-nav-link">
-                      Blog</a
-                    >
+                      Blog</a>
                   </li>
                 </ul>
               </div>
@@ -93,13 +66,7 @@
       </div>
     </nav>
     <el-dialog :visible.sync="videoDialogVisible" class="watch-demo-popup">
-      <video
-        width="100%"
-        controls
-        preload="none"
-        autoplay="autoplay"
-        id="videoPlay"
-      >
+      <video width="100%" controls preload="none" autoplay="autoplay" id="videoPlay">
         <source src="~/assets/video/hirect-demo-video.mp4" type="video/mp4" />
       </video>
     </el-dialog>
@@ -109,10 +76,15 @@
 </template>
 
 <script>
-import DownloadModal from "~/components/DownloadModal.vue";
+import DownloadModal from '~/components/DownloadModal.vue';
+
 export default {
   components: {
     DownloadModal,
+  },
+  mounted() {
+    // eslint-disable-next-line no-console
+    this.isMobileOrTablet = this.$device.isMobileOrTablet;
   },
   data() {
     return {
@@ -124,7 +96,7 @@ export default {
   watch: {
     videoDialogVisible(val) {
       if (!val) {
-        let video = document.getElementById("videoPlay");
+        const video = document.getElementById('videoPlay');
         video.pause();
       }
     },
@@ -136,10 +108,10 @@ export default {
     },
     downloadDialogShow() {
       this.showModal = true;
-      this.$ga.event("click", "download", "app", 5);
-      this.$sendToEsData("webQrcodeViewed", {
+      this.$ga.event('click', 'download', 'app', 5);
+      this.$sendToEsData('webQrcodeViewed', {
         region_id: 0,
-        position: "in_downloadapp_popup",
+        position: 'in_downloadapp_popup',
       });
     },
   },
@@ -184,13 +156,13 @@ export default {
   opacity: 0;
 }
 
-#menu__toggle:checked ~ .menu__box {
+#menu__toggle:checked~.menu__box {
   right: 0 !important;
 }
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -199,12 +171,12 @@ export default {
   transition-duration: 0.25s;
 }
 
-.menu__btn > span::before {
+.menu__btn>span::before {
   content: "";
   top: -8px;
 }
 
-.menu__btn > span::after {
+.menu__btn>span::after {
   content: "";
   top: 8px;
 }
@@ -291,7 +263,7 @@ ul.dropdown-menu li:hover .dropdown-item:focus,
   content: "";
   background-color: #2ce2a2;
   position: absolute;
-  bottom: 5px;
+  top: 71px;
   width: 100%;
   height: 3px;
   left: 0px;
@@ -501,6 +473,7 @@ button.btn.watch-demobtn:hover span.icon {
   .navbar-light .navbar-nav .nav-link:hover:before,
   .navbar-light .navbar-nav .nav-link.nuxt-link-active:before {
     bottom: -3px;
+    top: 33px;
   }
 
   .navbar .button-sm {
@@ -567,6 +540,7 @@ button.btn.watch-demobtn:hover span.icon {
   .navbar-light .navbar-nav .nav-link:hover:before,
   .navbar-light .navbar-nav .nav-link.nuxt-link-active:before {
     bottom: -3px;
+    top: 32px;
   }
 }
 </style>

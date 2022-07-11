@@ -183,26 +183,28 @@
 </template>
 
 <script>
-import Header from "../../components/Header.vue";
+import Header from '../../components/Header.vue';
+
 export default {
-  name: "privacypolicy",
+  name: 'privacypolicy',
+  // eslint-disable-next-line vue/no-reserved-component-names
   components: { Header },
   head() {
     return {
-      title: "Privacy Policy - Hirect",
+      title: 'Privacy Policy - Hirect',
       meta: [
         {
-          hid: "description",
-          name: "description",
+          hid: 'description',
+          name: 'description',
           content:
-            "The page offers information on the Hirect app privacy policy. Topics covered are third-party services, data sharing, security and many more.",
+            'The page offers information on the Hirect app privacy policy. Topics covered are third-party services, data sharing, security and many more.',
         },
       ],
     };
   },
   data() {
     return {
-      currentPageName: "",
+      currentPageName: '',
     };
   },
   computed: {},
@@ -213,22 +215,22 @@ export default {
   },
   methods: {
     smoothToTop() {
-      document.getElementById("back-top-target").scrollIntoView({
-        block: "start",
-        behavior: "smooth",
+      document.getElementById('back-top-target').scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
       });
     },
   },
   jsonld() {
     return {
-      "@context": "https://schema.org/",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org/',
+      '@type': 'BreadcrumbList',
       itemListElement: [
         {
-          "@type": "ListItem",
+          '@type': 'ListItem',
           position: 1,
-          name: "Privacy Policy",
-          item: "https://www.hirect.in/privacypolicy/",
+          name: 'Privacy Policy',
+          item: 'https://www.hirect.in/privacypolicy/',
         },
       ],
     };

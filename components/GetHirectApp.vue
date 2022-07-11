@@ -18,44 +18,44 @@
 
 <script>
 export default {
-    name: 'gethirectapp',
-    components: {},
-    data() {
-        return {
-            popoverImgShow: false,
-            popoverTimeOut: null
-        }
+  name: 'gethirectapp',
+  components: {},
+  data() {
+    return {
+      popoverImgShow: false,
+      popoverTimeOut: null,
+    };
+  },
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {},
+  methods: {
+    openDownloadGuide() {
+      window.open('https://hirect.in/download-guide', '_blank');
     },
-    computed: {},
-    watch: {},
-    created() {},
-    mounted() {},
-    methods: {
-        openDownloadGuide() {
-            window.open('https://hirect.in/download-guide', '_blank')
-        },
-        downloadPkgMouseIn() {
-            clearTimeout(this.popoverTimeOut)
-            this.popoverImgShow = true
-        },
-        downloadPkgMouseOut() {
-            this.popoverTimeOut = setTimeout(() => {
-                this.popoverImgShow = false
-            }, 200);
-        },
-        appImgClickHandle() {
-            this.$ga.event('click', 'ios', 'app', 2)
-            window.open(this.iosDownloadAddressIN, '_blank')
-        },
-        googleImgClickHandle() {
-            this.$ga.event('click', 'android', 'app', 1)
-            window.open(this.androidDownloadAddressIN, '_blank')
-        },
-        googlePkgClickHandle() {
-            window.open(this.androidPkgAddressIN, '_blank')
-        }
-    }
-}
+    downloadPkgMouseIn() {
+      clearTimeout(this.popoverTimeOut);
+      this.popoverImgShow = true;
+    },
+    downloadPkgMouseOut() {
+      this.popoverTimeOut = setTimeout(() => {
+        this.popoverImgShow = false;
+      }, 200);
+    },
+    appImgClickHandle() {
+      this.$ga.event('click', 'ios', 'app', 2);
+      window.open(this.iosDownloadAddressIN, '_blank');
+    },
+    googleImgClickHandle() {
+      this.$ga.event('click', 'android', 'app', 1);
+      window.open(this.androidDownloadAddressIN, '_blank');
+    },
+    googlePkgClickHandle() {
+      window.open(this.androidPkgAddressIN, '_blank');
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

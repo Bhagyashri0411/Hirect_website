@@ -95,48 +95,48 @@
 
 <script>
 export default {
-    name: 'WebC',
-    components: {},
-    data() {
-        return {
-            contentStyle: {
-                height: '0px'
-            },
-            loading: true,
-            jobseekerData: null,
-            seekerStatus: 2
-        }
+  name: 'WebC',
+  components: {},
+  data() {
+    return {
+      contentStyle: {
+        height: '0px',
+      },
+      loading: true,
+      jobseekerData: null,
+      seekerStatus: 2,
+    };
+  },
+  watch: {},
+  created() {},
+  mounted() {
+    this.contentStyle.height = `${window.innerHeight - 170}px`;
+    this.getJobseekerData();
+  },
+  methods: {
+    async getJobseekerData() {
+      const response = await this.$reqGet(`/hirect/candidate-service/web/candidates/${window.atob(this.$route.query.p)}/profile?preferenceId=${window.atob(this.$route.query.r)}`);
+      // console.log(response)
+      if (response.data.code === 2000) {
+        this.distinct_id = this.$route.query.t + (new Date()).valueOf() + Math.floor(Math.random() * 100);
+        this.jobseekerData = response.data.data;
+        this.seekerStatus = this.jobseekerData.preferenceStatus;
+        this.$emit('getRecruiterId', '', this.distinct_id);
+        this.userInComing();
+      } else {
+        this.$message.error(response.message);
+      }
     },
-    watch: {},
-    created() {},
-    mounted() {
-        this.contentStyle.height = window.innerHeight - 170 + 'px'
-        this.getJobseekerData()
+    userInComing() {
+      this.$sendToEsData('profileDetailsCheckedWeb', {
+        share_id: this.$route.query.t,
+        distinct_id: this.distinct_id,
+        preferenceId: window.atob(this.$route.query.r),
+        candidateId: window.atob(this.$route.query.p),
+      });
     },
-    methods: {
-        async getJobseekerData() {
-            const response = await this.$reqGet('/hirect/candidate-service/web/candidates/' + window.atob(this.$route.query.p) + '/profile?preferenceId=' + window.atob(this.$route.query.r))
-            // console.log(response)
-            if (response.data.code === 2000) {
-                this.distinct_id = this.$route.query.t + (new Date()).valueOf() + Math.floor(Math.random() * 100)
-                this.jobseekerData = response.data.data
-                this.seekerStatus = this.jobseekerData.preferenceStatus
-                this.$emit('getRecruiterId', '', this.distinct_id)
-                this.userInComing()
-            } else {
-                this.$message.error(response.message)
-            }
-        },
-        userInComing() {
-            this.$sendToEsData('profileDetailsCheckedWeb', {
-                'share_id': this.$route.query.t,
-                'distinct_id': this.distinct_id,
-                'preferenceId': window.atob(this.$route.query.r),
-                'candidateId': window.atob(this.$route.query.p)
-            })
-        }
-    }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>

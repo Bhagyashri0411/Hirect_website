@@ -4,7 +4,7 @@
     <ul class="content-style">
         <li class="li-style"><span class="star">*</span> <span>All prices include GST. Invoice will be sent for the
             purpose of reimbusement if requested.</span></li>
-        <li class="li-style"><span class="star">*</span> <span>A relationship manager will be assigned to 
+        <li class="li-style"><span class="star">*</span> <span>A relationship manager will be assigned to
             premium members to help hire fast. reimbursement as requested.</span></li>
         <li class="li-style"><span class="star">*</span> <span>Need any help? <span @click="showEmail" style="color: #00CCB4;text-decoration: underline;cursor: pointer">Contact us</span> </span></li>
         <li class="li-style"><span class="star">*</span> <span>Refund and Cancellation Policy</span></li>
@@ -42,7 +42,7 @@
         </li>
       </ul>
     </div>
-    
+
   </div>
 </template>
 
@@ -52,8 +52,8 @@ export default {
   name: 'ToB',
   data() {
     return {
-      isShowEmail: false
-    }
+      isShowEmail: false,
+    };
   },
   methods: {
     showEmail() {
@@ -61,9 +61,9 @@ export default {
     },
     closeEmail() {
       this.isShowEmail = false;
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -96,7 +96,7 @@ export default {
     color: #76787A;
     line-height: 20px;
   }
-  
+
   .content-p1 {
     color: #0E101A;
     font-size: 14px;

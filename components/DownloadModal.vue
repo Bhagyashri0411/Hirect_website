@@ -28,7 +28,9 @@
             <button type="submit" class="btn default-btn button-sm">
               Text Me The Link
             </button>
-          </div> 
+          </div>
+          <span v-if="isMobileError" class="alertText">{{errorMsg}}</span>
+
         </form>
       </div>
         <p>
@@ -53,19 +55,34 @@
 
 <script>
 export default {
-    data() {
-        return {
-            isPhoneNumberError: false,
-            getUserInf: {
-                phoneNumber: "",
-                phoneArea: "+91"
-            }
-        };
-    }
+  data() {
+    return {
+      isPhoneNumberError: false,
+      getUserInf: {
+        phoneNumber: '',
+        phoneArea: '+91',
+      },
+      isMobileError: false,
+      errorMsg: '',
+    };
+  },
+  methods: {
+    async sendSms() {
+      this.errorMsg = this.$sendAppLink(this.getUserInf.phoneNumber, 'download_modal');
+      this.isMobileError = this.error !== 'Success! We have shared the link via SMS';
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.alertText {
+    position: relative;
+    font-size: 15px;
+    color: #ef444f;
+    right: 20%;
+    top: 10px;
+}
 .download-modal.modal-overlay {
     position: fixed;
     top: 0;
@@ -90,6 +107,7 @@ export default {
 
 .qr-code-img{
     padding: 10px;
+    border-radius: 25px;
     box-shadow:  0px 23px 47px 0px rgba(0, 0, 0, 0.12);
 }
 

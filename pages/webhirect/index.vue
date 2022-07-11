@@ -19,113 +19,113 @@
 </template>
 
 <script>
-import webB from '../../components/webB.vue'
-import webC from '../../components/webC.vue'
+import webB from '../../components/webB.vue';
+import webC from '../../components/webC.vue';
 
 export default {
-    name: 'WebBC',
-    components: {
-        webB,
-        webC
-    },
-    head() {
-        return {
-            title: this.$route.query.name && this.$route.query.category ? this.$route.query.name + ' - ' + this.$route.query.category : 'Hirect',
-            // title: this.metaTitle,
-            meta: [{
-                    hid: 'description',
-                    name: 'description',
-                    content: '50K+ Startups already hiring on Hirect'
-                },
-                {
-                    property: 'og:title',
-                    hid: 'og:title',
-                    name: 'og:title',
-                    content: this.$route.query.name && this.$route.query.category ? this.$route.query.name + ' - ' + this.$route.query.category : 'Hirect'
-                },
-                // { property: 'og:title', hid: 'og:title', name: 'og:title', content: this.metaTitle },
-                {
-                    property: 'og:url',
-                    hid: 'og:url',
-                    name: 'og:url',
-                    content: this.URL
-                },
-                {
-                    property: 'og:description',
-                    hid: 'og:description',
-                    name: 'og:description',
-                    content: '50K+ Startups already hiring on Hirect.'
-                },
-                {
-                    property: 'og:locale',
-                    hid: 'og:locale',
-                    name: 'og:locale',
-                    content: 'en_US'
-                },
-                {
-                    property: 'og:type',
-                    hid: 'og:type',
-                    name: 'og:type',
-                    content: 'website'
-                },
-                {
-                    property: 'og:image',
-                    hid: 'og:image',
-                    name: 'og:image',
-                    content: 'https://prod-apk-package.s3.ap-south-1.amazonaws.com/web-picture/hirect_logo.jpg'
-                },
-            ],
-        }
-    },
-    data() {
-        return {
-            webPage: '', // webB webC
-            preferenceId: '',
-            URL: '',
-            distinct_id: ''
-        }
-    },
-    watch: {},
-    created() {},
-    mounted() {
-        if (this.$route.query.type === '0') { // c
-            this.webPage = 'webC'
-        } else if (this.$route.query.type === '1') { // b
-            this.webPage = 'webB'
-        }
-        this.URL = window.location.href
-        // this.metaTitle = this.$route.query.name + ' - ' + this.$route.query.category
-        // if (this.$route.query.name && this.$route.query.category) {
-        //   const title = this.$route.query.name + ' - ' + this.$route.query.category
-        //   window.document.title = title
-        // } else {
-        //   window.document.title = 'Hirect'
-        // }
-    },
-    methods: {
-        gRI(getPreferenceId, getDistinctId) {
-            this.preferenceId = getPreferenceId
-            this.distinct_id = getDistinctId
-        },
-        openOrDownload() {
-            this.userJump()
-            window.location = 'https://hirect.in'
-        },
-        userJump() {
-            if (this.$route.query.type === '0') { // c
-                this.$sendToEsData('profileLinkJumpedWeb', {
-                    'share_id': this.$route.query.t,
-                    'distinct_id': this.distinct_id
-                })
-            } else if (this.$route.query.type === '1') { // b
-                this.$sendToEsData('jobLinkJumpedWeb', {
-                    'share_id': this.$route.query.t,
-                    'distinct_id': this.distinct_id
-                })
-            }
-        }
+  name: 'WebBC',
+  components: {
+    webB,
+    webC,
+  },
+  head() {
+    return {
+      title: this.$route.query.name && this.$route.query.category ? `${this.$route.query.name} - ${this.$route.query.category}` : 'Hirect',
+      // title: this.metaTitle,
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: '50K+ Startups already hiring on Hirect',
+      },
+      {
+        property: 'og:title',
+        hid: 'og:title',
+        name: 'og:title',
+        content: this.$route.query.name && this.$route.query.category ? `${this.$route.query.name} - ${this.$route.query.category}` : 'Hirect',
+      },
+      // { property: 'og:title', hid: 'og:title', name: 'og:title', content: this.metaTitle },
+      {
+        property: 'og:url',
+        hid: 'og:url',
+        name: 'og:url',
+        content: this.URL,
+      },
+      {
+        property: 'og:description',
+        hid: 'og:description',
+        name: 'og:description',
+        content: '50K+ Startups already hiring on Hirect.',
+      },
+      {
+        property: 'og:locale',
+        hid: 'og:locale',
+        name: 'og:locale',
+        content: 'en_US',
+      },
+      {
+        property: 'og:type',
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website',
+      },
+      {
+        property: 'og:image',
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://prod-apk-package.s3.ap-south-1.amazonaws.com/web-picture/hirect_logo.jpg',
+      },
+      ],
+    };
+  },
+  data() {
+    return {
+      webPage: '', // webB webC
+      preferenceId: '',
+      URL: '',
+      distinct_id: '',
+    };
+  },
+  watch: {},
+  created() {},
+  mounted() {
+    if (this.$route.query.type === '0') { // c
+      this.webPage = 'webC';
+    } else if (this.$route.query.type === '1') { // b
+      this.webPage = 'webB';
     }
-}
+    this.URL = window.location.href;
+    // this.metaTitle = this.$route.query.name + ' - ' + this.$route.query.category
+    // if (this.$route.query.name && this.$route.query.category) {
+    //   const title = this.$route.query.name + ' - ' + this.$route.query.category
+    //   window.document.title = title
+    // } else {
+    //   window.document.title = 'Hirect'
+    // }
+  },
+  methods: {
+    gRI(getPreferenceId, getDistinctId) {
+      this.preferenceId = getPreferenceId;
+      this.distinct_id = getDistinctId;
+    },
+    openOrDownload() {
+      this.userJump();
+      window.location = 'https://hirect.in';
+    },
+    userJump() {
+      if (this.$route.query.type === '0') { // c
+        this.$sendToEsData('profileLinkJumpedWeb', {
+          share_id: this.$route.query.t,
+          distinct_id: this.distinct_id,
+        });
+      } else if (this.$route.query.type === '1') { // b
+        this.$sendToEsData('jobLinkJumpedWeb', {
+          share_id: this.$route.query.t,
+          distinct_id: this.distinct_id,
+        });
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

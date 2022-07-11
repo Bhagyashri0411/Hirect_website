@@ -8,29 +8,30 @@
 </template>
 
 <script>
+/* eslint-disable camelcase */
 
 export default {
   name: 'ToB',
   mounted() {
-    const linkFrom = { 1: 'Hirect assistant', 2: 'sms' }
+    const linkFrom = { 1: 'Hirect assistant', 2: 'sms' };
     let uid = '';
     let candidate_id = '';
-    let link_from = 'sms'
+    let link_from = 'sms';
     if (this.$route.query.c) {
-      candidate_id = window.atob(this.$route.query.c)
+      candidate_id = window.atob(this.$route.query.c);
     } else {
       uid = this.$route.query.uid || '';
       candidate_id = this.$route.query.cid;
       link_from = linkFrom[this.$route.query.link] || 'sms';
     }
-    this.$sendToEsData("candidateProductInstructionPageViewed", {
+    this.$sendToEsData('candidateProductInstructionPageViewed', {
       uid,
       candidate_id,
       link_from,
-      region_id: 0
+      region_id: 0,
     }, uid);
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
