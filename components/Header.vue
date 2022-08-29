@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <NuxtLink class="navbar-brand" to="/"><img src="~/assets/img/hirect-logo.png" alt="" /></NuxtLink>
+        <NuxtLink class="navbar-brand" to="/"><img  src="~/assets/img/hirect-logo.png" alt="hirect-logo" /></NuxtLink>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
           aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -19,26 +19,36 @@
               <NuxtLink exact class="nav-link" to="/">Home</NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink class="nav-link" to="/recruiters">Recruiters</NuxtLink>
+              <NuxtLink class="nav-link" to="/connect">Recruiters</NuxtLink>
             </li>
             <li class="nav-item">
               <NuxtLink class="nav-link" to="/job-seeker">
                 Job Seekers</NuxtLink>
             </li>
-            <li class="nav-item in-mobile" v-if="$device.isMobileOrTablet || isMobileOrTablet">
+            <li class="nav-item in-mobile-1">
               <NuxtLink class="nav-link" to="/aboutus">
                 About Us</NuxtLink>
             </li>
-            <li class="nav-item in-mobile" v-if="$device.isMobileOrTablet || isMobileOrTablet">
+            <li class="nav-item in-mobile-1">
               <a href="https://hirect.in/blog" class="nav-link">Blog</a>
             </li>
+            <!-- <li class="nav-item">
+                <button type="button" class="btn bordered-btn button-sm watch-demobtn" @click="videoPlayClick">
+                  <span class="text">Watch demo</span>
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#2ce2a2" class="bi bi-play" viewBox="0 0 15 15">
+                      <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                    </svg>
+                  </span>
+                </button>
+                    </li> -->
             <li class="nav-item">
               <button type="button" class="btn default-btn button-sm download-btn" @click="downloadDialogShow">
                 Download App
               </button>
             </li>
 
-            <li class="nav-item not-in-mobile" v-if="!$device.isMobileOrTablet || !isMobileOrTablet">
+            <li class="nav-item in-mobile-2">
               <button type="button" data-bs-toggle="collapse" data-bs-target="#secondnavbar"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" id="toggling">
                 <span class="navbar-toggler-icon"></span>
@@ -50,10 +60,6 @@
                     <NuxtLink class="sec-nav-link" to="/aboutus">
                       About us</NuxtLink>
                   </li>
-                  <!-- <li class="nav-item">
-                    <NuxtLink class="sec-nav-link" to="/enterprise-hiring">
-                      Enterprise Hiring</NuxtLink>
-                  </li> -->
                   <li class="nav-item">
                     <a href="https://www.hirect.in/blog/" class="sec-nav-link">
                       Blog</a>
@@ -65,11 +71,9 @@
         </div>
       </div>
     </nav>
-    <el-dialog :visible.sync="videoDialogVisible" class="watch-demo-popup">
-      <video width="100%" controls preload="none" autoplay="autoplay" id="videoPlay">
-        <source src="~/assets/video/hirect-demo-video.mp4" type="video/mp4" />
-      </video>
-    </el-dialog>
+    <!-- <el-dialog :visible.sync="videoDialogVisible" class="watch-demo-popup">
+      <iframe style="width: webkit-fill-available" src="https://www.youtube-nocookie.com/embed/jeLa11gIOzs?controls=0&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </el-dialog> -->
 
     <DownloadModal v-show="showModal" @close-modal="showModal = false" />
   </div>
@@ -91,13 +95,14 @@ export default {
       showModal: false,
       videoDialogVisible: false,
       downloadDialogVisible: false,
+      isMobileOrTablet: false,
     };
   },
   watch: {
     videoDialogVisible(val) {
       if (!val) {
-        const video = document.getElementById('videoPlay');
-        video.pause();
+        document.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+
       }
     },
   },
@@ -108,7 +113,7 @@ export default {
     },
     downloadDialogShow() {
       this.showModal = true;
-      this.$ga.event('click', 'download', 'app', 5);
+      //this.$ga.event('click', 'download', 'app', 5);
       this.$sendToEsData('webQrcodeViewed', {
         region_id: 0,
         position: 'in_downloadapp_popup',
@@ -120,6 +125,14 @@ export default {
 
 <style scoped>
 /* new css */
+
+.in-mobile-1 {
+  display: none;
+}
+
+.in-mobile-2 {
+  display: block;
+}
 
 #toggling {
   background-color: white !important;
@@ -419,6 +432,15 @@ button.btn.watch-demobtn:hover span.icon {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  .in-mobile-1 {
+    display: block;
+  }
+
+  .in-mobile-2 {
+    display: none;
+  }
+
   .navbar-collapse {
     position: absolute;
     top: 87px;
@@ -479,9 +501,19 @@ button.btn.watch-demobtn:hover span.icon {
   .navbar .button-sm {
     width: 160px;
   }
+
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+
+  .in-mobile-1 {
+    display: block;
+  }
+
+  .in-mobile-2 {
+    display: none;
+  }
+
   .navbar.bg-light {
     padding: 10px 0;
   }

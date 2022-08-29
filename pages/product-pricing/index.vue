@@ -4,9 +4,9 @@
     <Header @smoothToTop="smoothToTop" :current-page-name="currentPageName" />
     <div class="height-container" />
     <div class="container privacy-policy-page">
-      <p class="head-title">Products and Pricing</p>
+      <h1 class="head-title">Products and Pricing</h1>
       <p class="policy-item-desc">
-        Hirect is trusted by 2.3M+ verified job seekers and 150K+ verified
+        Hirect is trusted by 3.8M+ verified job seekers and 190K+ verified
         startups. Hirect is free of cost for job seekers. The Hirect App runs on
         a FREEMIUM model for recruiters so that they can use all its features
         without limitations. However, Hirect will charge a nominal fee to the
@@ -119,6 +119,12 @@ export default {
   head() {
     return {
       title: 'Product & Pricing for Recruiters - Hirect',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/product-pricing',
+        },
+      ],
       meta: [
         {
           hid: 'description',

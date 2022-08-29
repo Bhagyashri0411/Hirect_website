@@ -1,13 +1,11 @@
 <template>
   <div class="wrapper">
-    <!-- <div id="back-top-target" />
-    <Header @smoothToTop="smoothToTop" :current-page-name="currentPageName" /> -->
     <Header />
     <div class="height-container" />
     <div class="container privacy-policy-page">
-      <p class="head-title">
+      <h1 class="head-title">
         Please read this Privacy Policy of Hirect Carefully
-      </p>
+      </h1>
       <p class="head-title-desc">
         This Privacy Policy describes the practices by the “Hirect” application.
         It explains the storage, disclosure, use, other processing of your data
@@ -15,6 +13,7 @@
         before start using this application or giving information about you,
         kindly review this Privacy Policy.
       </p>
+
       <p class="policy-item-title">
         Information we collect through In-App Disclosure (aka Android
         Permission)
@@ -44,6 +43,7 @@
         <span class="policy-item-desc-A">F. Telephone:</span> If allowed, we
         read the Phone Status and identity.
       </p>
+
       <p class="policy-item-title">
         Other Information we collect during your usage of Hirect App:
       </p>
@@ -51,7 +51,7 @@
         <span class="policy-item-desc-A">A. </span>When you connect to our
         application, we take some non-personal data about yourself like the
         Android model, version, browser, resolution of your mobile phone, IMEI,
-        Language, network/wifi connectivity, Mobile carriers to provide you the
+        Language, network/Wi-Fi connectivity, Mobile carriers to provide you the
         best services.
       </p>
       <p class="policy-item-desc">
@@ -59,13 +59,14 @@
         we ask your personal data like phone number, email ID, date of birth,
         etc in order to make your profile uniquely identifiable.
       </p>
+
       <p class="policy-item-title">Third Party Tools, SDKs, Services used</p>
       <p class="policy-item-desc">
         <span class="policy-item-desc-A">A. Firebase SDK:</span> Help us to
         develop and distribute App. Track Performance and Analytics.
       </p>
       <p class="policy-item-desc">
-        <span class="policy-item-desc-A">B. Sendbird:</span> It helps you to
+        <span class="policy-item-desc-A">B. Send Bird:</span> It helps you to
         with each other efficiently within the App.
       </p>
       <p class="policy-item-desc">
@@ -73,15 +74,16 @@
         you a video interview platform.
       </p>
       <p class="policy-item-desc">
-        <span class="policy-item-desc-A">D. Payment gateway:</span> It enables
+        <span class="policy-item-desc-A">D. Payment Gateway:</span> It enables
         you make payments through various payment modes like UPI, Credit Card,
         Debit Card, Internet Banking, etc.
       </p>
+
       <p class="policy-item-title">Policy for DND / NDNC</p>
       <p class="policy-item-desc">
         By using the Website and/or registering yourself at Hirect.in you
-        authorize us to contact you via email or phone call or sms and offer you
-        our services, imparting product knowledge, offer promotional offers
+        authorize us to contact you via E-mail or phone call or SMS and offer
+        you our services, imparting product knowledge, offer promotional offers
         running on website & offers offered by the associated third parties, for
         which reasons, personally identifiable information may be collected. And
         irrespective of the fact if also you have registered yourself under DND
@@ -98,13 +100,14 @@
         partners. When you registered with Hirect, we ask for your first name,
         last name, contact no, email, company name & job title. Once you
         register with Hirect and sign in to our services, you are not anonymous
-        to us. Also during registration, you may be requested to register your
+        to us. Also, during registration, you may be requested to register your
         mobile phone and email id, pager, or other device to receive text
         messages, and other services to your wireless device. By registration
-        you authorize us to send sms/email alerts to you for your login details
+        you authorize us to send SMS/E-mail alerts to you for your login details
         and any other service requirements or some advertising messages/emails
         from us.
       </p>
+
       <p class="policy-item-title">The Use of the Information Collected</p>
       <p class="policy-item-desc">
         <span class="policy-item-desc-A">A. </span>To provide the
@@ -126,6 +129,7 @@
         <span class="policy-item-desc-A">E. </span>To help us detect abuse,
         fraud, and illegal activity on the Platform and communicate to you.
       </p>
+
       <p class="policy-item-title">How your information may be disclosed</p>
       <p class="policy-item-desc">
         <span class="policy-item-desc-A">A.Personal Information: </span> In
@@ -141,17 +145,19 @@
         combining your name with your unique User Device number). We strictly
         follow GDPR.
       </p>
+
       <p class="policy-item-title">International Users:</p>
       <p class="policy-item-desc">
         Your personal and non-personal information may be stored and processed
         in any country where we provide our services as described in the Privacy
-        Policy. By agreeing to our Privacy Policy and using our Application you
+        Policy. By agreeing to our Privacy Policy and using our application you
         consent to transfer your personal and non-personal information to us
         despite the fact that different countries have different data protection
         rules. If you object to your Personal/non-personal Information being
         processed as described in this Policy, please do not use this
         Application.
       </p>
+
       <p class="policy-item-title">Notification of Changes:</p>
       <p class="policy-item-desc">
         We reserve the right to change, alter this Privacy Policy at any time.
@@ -160,6 +166,7 @@
         posting of any changes/modifications to the Privacy Policy constitutes
         your acceptance of the revised Privacy Policy.
       </p>
+
       <p class="policy-item-title">M. Jurisdiction:</p>
       <p class="policy-item-desc">
         If you choose to visit the Apps/Services, your visit and any dispute
@@ -167,6 +174,7 @@
         terms of use. Any disputes arising under this Privacy Policy shall be
         strictly governed by the laws of India.
       </p>
+
       <p class="policy-item-title">Contact Us:</p>
       <p class="policy-item-desc">
         If you have any concerns regarding this privacy policy, please email us
@@ -192,6 +200,12 @@ export default {
   head() {
     return {
       title: 'Privacy Policy - Hirect',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/privacypolicy',
+        },
+      ],
       meta: [
         {
           hid: 'description',
@@ -258,26 +272,26 @@ export default {
 }
 
 .head-title {
-  font-size: 32px;
-  font-weight: 800;
-  color: #0e101a;
-  margin-bottom: 12px;
-  line-height: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: left;
+  color: #121127;
+  text-align: center;
 }
 
 .head-title-desc {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  color: #333333;
+  color: #43494e;
   text-align: justify;
-  margin: 12px 0;
+  line-height: 28px;
 }
 
 .policy-item-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: #0e101a;
-  margin: 20px 0 5px;
+  margin: 20px 0;
 }
 
 .policy-item-desc-A {
@@ -288,11 +302,10 @@ export default {
 }
 
 .policy-item-desc {
-  font-size: 20px;
-  font-weight: 400;
-  color: #333333;
-  line-height: 30px;
-  margin: 5px 0;
+  font-size: 18px;
+  color: #43494e;
+  line-height: 28px;
+  margin: 10px 0;
   text-align: justify;
 }
 
@@ -302,6 +315,34 @@ p {
 
 // Responsive css
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+  .head-title {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 16px;
+  }
+  .head-title-desc {
+    font-size: 18px;
+    color: #43494e;
+    text-align: justify;
+    line-height: 28px;
+  }
+  .policy-item-desc {
+    font-size: 18px;
+    color: #43494e;
+    line-height: 28px;
+    margin: 5px 0;
+  }
+  .policy-item-desc-A {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0e101a;
+    line-height: 32px;
+  }
+  .policy-item-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
   .privacy-policy-page {
     padding: 50px 30px;
     margin: 0 auto;

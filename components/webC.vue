@@ -7,10 +7,10 @@
                 <p class="jobseeker-name-inf">{{ jobseekerData.designation }}<span v-if="jobseekerData.company"> | {{ jobseekerData.company }}</span></p>
             </div>
             <div class="jobseeker-avatar-content">
-                <img class="jobseeker-avatar" v-if="jobseekerData.avatar !== ''" :src="jobseekerData.avatar" alt="ava">
-                <img class="jobseeker-avatar" v-else src="~/assets/img/male_us_default.png" alt="ava">
-                <img class="jobseeker-avatar-gender" v-if="jobseekerData.gender === 'Male'" src="~/assets/img/ic_male@2x.png" alt="male">
-                <img class="jobseeker-avatar-gender" v-if="jobseekerData.gender === 'Female'" src="~/assets/img/ic_female@2x.png" alt="female">
+                <img  class="jobseeker-avatar" v-if="jobseekerData.avatar !== ''" :src="jobseekerData.avatar" loading="lazy" alt="ava">
+                <img  class="jobseeker-avatar" v-else src="~/assets/img/male_us_default.png" loading="lazy" alt="ava">
+                <img  class="jobseeker-avatar-gender" v-if="jobseekerData.gender === 'Male'" src="~/assets/img/ic_male@2x.png" loading="lazy" alt="male">
+                <img  class="jobseeker-avatar-gender" v-if="jobseekerData.gender === 'Female'" src="~/assets/img/ic_female@2x.png" loading="lazy" alt="female">
             </div>
         </div>
         <el-divider style="margin: 0px;" />
@@ -18,15 +18,15 @@
             <div class="simple-inf-area">
                 <div class="base-inf">
                     <div class="base-inf-item">
-                        <img style="width: 16px; height:16px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_resume_job@2x.png" alt="job">
+                        <img  style="width: 16px; height:16px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_resume_job@2x.png" loading="lazy" alt="job">
                         <p class="base-inf-text">{{ jobseekerData.identityShow }}</p>
                     </div>
                     <div class="base-inf-item">
-                        <img style="width: 16px; height:16px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_resume_education@2x.png" alt="edu">
+                        <img  style="width: 16px; height:16px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_resume_education@2x.png" loading="lazy" alt="edu">
                         <p class="base-inf-text">{{ jobseekerData.degree }}</p>
                     </div>
                     <div class="base-inf-item">
-                        <img style="width: 16px; height:16px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_resume_birthday@2x.png" alt="birth">
+                        <img  style="width: 16px; height:16px; margin: 0px 6px -3px 0px;" src="~/assets/img/ic_resume_birthday@2x.png" loading="lazy" alt="birth">
                         <p class="base-inf-text">{{ jobseekerData.birthDate }}</p>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Vue from 'vue';
 
-// import VueAnalytics from 'vue-analytics'
+import VueAnalytics from 'vue-analytics'
 
 const commonVariable = {
   // eslint-disable-next-line no-shadow
@@ -17,10 +17,10 @@ const commonVariable = {
     Vue.prototype.followUsInstagramIN = 'https://www.instagram.com/hirect_india/';
   },
 };
-// Vue.use(VueAnalytics, {
-//   id: 'UA-145309456-3',
-//   debug: {
-//     enabled: true
-//   }
-// })
+Vue.use(VueAnalytics, {
+  id: 'UA-145309456-3',
+  debug: {
+    enabled: true
+  }
+})
 Vue.use(commonVariable);

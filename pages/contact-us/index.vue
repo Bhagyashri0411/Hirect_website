@@ -63,7 +63,7 @@
           </div>
           <div class="col-md-6">
             <div class="recruiter-form-img">
-              <img src="~/assets/img/get-hired-img.svg" alt="" />
+              <img  src="~/assets/img/get-hired-img.svg" loading="lazy" alt="" />
             </div>
           </div>
         </div>  -->
@@ -74,18 +74,18 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="Bengaluru-img">
-                        <img src="~/assets/img/office.svg" alt="" />
+                        <img  src="~/assets/img/office.svg" loading="lazy" alt="office" />
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="Bengaluru-list">
-                        <h2>Bengaluru Office</h2>
+                        <h1>Bengaluru Office</h1>
                         <ul>
                             <li>
-                                <span> <img src="~/assets/img/locktion.png" alt="" /></span>Salarpuria Tower-II, 2nd Floor, "B" Wing, Hosur Main Road, Koramangala, Bengaluru - 560034.
+                                <span> <img  src="~/assets/img/locktion.png" loading="lazy" alt="location" /></span>Salarpuria Tower-II, 2nd Floor, "B" Wing, Hosur Main Road, Koramangala, Bengaluru - 560034.
                             </li>
                             <li>
-                                <span><img src="~/assets/img/tel-icon.png" alt="" /></span>+91
+                                <span><img  src="~/assets/img/tel-icon.png" loading="lazy" alt="phone" /></span>+91
                                 8446164920
                             </li>
                         </ul>
@@ -99,7 +99,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5986944578135!2d77.61029541534303!3d12.933494619211324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14520e0ff87b%3A0x8da9efd2436331ed!2sSalarpuria%20Tower%202!5e0!3m2!1sen!2sin!4v1643634578937!5m2!1sen!2sin" width="100" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5981260167277!2d77.61025131514926!3d12.933531090880855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1599ebb05b63%3A0x751f37343a044d1b!2sHirect%20India%20-%20Startup%20Jobs%20%26%20Hiring!5e0!3m2!1sen!2sin!4v1657886405440!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -120,6 +120,12 @@ export default {
         name: 'description',
         content: 'Users can contact us at Hirect through email, phone, and mail. Hirect, the best job app, will revert to its users within 24 hours. Contact Hirect. ',
       }],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/contact-us',
+        },
+      ],
     };
   },
 
@@ -231,7 +237,7 @@ p.support-in {
     padding: 120px 0px;
 }
 
-.Bengaluru-list h2 {
+.Bengaluru-list h1 {
     color: #0e101a;
     font-family: Helvetica;
     font-size: 36px;
@@ -315,7 +321,7 @@ p.support-in {
         padding: 60px 50px;
     }
 
-    .Bengaluru-list h2 {
+    .Bengaluru-list h1 {
         font-size: 32px;
     }
 
@@ -341,7 +347,7 @@ p.support-in {
         margin-left: 35px;
     }
 
-    .Bengaluru-list h2 {
+    .Bengaluru-list h1 {
         font-size: 30px;
     }
 
@@ -360,7 +366,7 @@ p.support-in {
         margin-top: 30px;
     }
 
-    .Bengaluru-list h2 {
+    .Bengaluru-list h1 {
         font-size: 25px;
     }
 

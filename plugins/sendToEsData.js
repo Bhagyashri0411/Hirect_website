@@ -13,6 +13,7 @@ function getOsInfo() {
   let browser = 'Unknown';
   let browserVersion = 'Unknown';
   let distinct_id = 'Unknown';
+  let side = 'Unknown'
 
   // get / set distinct_id
   if (!window.localStorage.getItem('distinct_id')) {
@@ -22,6 +23,7 @@ function getOsInfo() {
 
   if (userAgent.indexOf('win') > -1) {
     name = 'Windows';
+    side = 'pc'
     if (userAgent.indexOf('windows nt 5.0') > -1) {
       version = 'Windows 2000';
     } else if (userAgent.indexOf('windows nt 5.1') > -1 || userAgent.indexOf('windows nt 5.2') > -1) {
@@ -41,17 +43,22 @@ function getOsInfo() {
     }
   } else if (userAgent.indexOf('iphone') > -1) {
     name = 'Iphone';
+    side = 'mobile'
     version = 'Iphone';
   } else if (userAgent.indexOf('mac') > -1) {
     name = 'Mac';
+    side = 'pc'
     version = userAgent.substring(userAgent.indexOf('mac os') + 6, userAgent.indexOf('mac os') + 16);
   } else if (userAgent.indexOf('x11') > -1 || userAgent.indexOf('unix') > -1 || userAgent.indexOf('sunname') > -1 || userAgent.indexOf('bsd') > -1) {
     name = 'Unix';
+    side = 'pc'
   } else if (userAgent.indexOf('linux') > -1) {
     if (userAgent.indexOf('android') > -1) {
       name = 'Android';
+      side = 'mobile'
     } else {
       name = 'Linux';
+      side = 'pc'
     }
   } else {
     name = 'Unknown';
@@ -86,13 +93,13 @@ function getOsInfo() {
   }
 
   return {
-    name, version, browser, browserVersion, distinct_id,
+    name, version, browser, browserVersion, distinct_id, side
   };
 }
 
 export async function sendToEsData(eventName, data, uid = '') {
   const {
-    name, version, browser, browserVersion, distinct_id,
+    name, version, browser, browserVersion, distinct_id, side
   } = getOsInfo();
   const eventData = {
     distinctId: window.localStorage.getItem('distinctId'),
@@ -104,6 +111,7 @@ export async function sendToEsData(eventName, data, uid = '') {
       manufacturer: name,
       os: name,
       model: version,
+      side: side,
       browser,
       browser_version: browserVersion,
       build_type: 'debug',

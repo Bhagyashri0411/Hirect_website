@@ -1,0 +1,73 @@
+{
+    "IT": {
+        "Backend Development": {
+            "PHP Developer": 1,
+            "Full Stack Engineer": 2,
+            ".NET Developer": 3,
+            "Java Engineer": 4,
+            "Python Engineer": 5,
+            "Backend Engineer": 6,
+            "C++ Programmer": 7
+        },
+        "Front-End Development": {
+            "React JS": 1,
+            "Wordpress": 2,
+            "Angular JS": 3,
+            "UI/UX Developer": 4
+        },
+        "Data": {
+            "Data Analyst": 1,
+            "Data Engineer": 2
+        },
+        "DevOps Engineering": {
+            "Chef": 1,
+            "General DevOps": 2
+        },
+        "Educational Product": {
+            "Trainer": 1
+        },
+        "Electronics&Semiconductor": {
+            "Electrical Engineer": 1
+        },
+        "FullstackDevelopment": {
+            "Java Stack": 1,
+            "MERN Stack": 2
+        },
+        "HardwareEngineering": {
+            "Embedded Engineer": 1,
+            "Hardware Engineer": 2
+        },
+        "ITSystem&Operation": {
+            "Network Engineer": 1
+        },
+        "MobileDevelopment": {
+            "React Native": 1,
+            "Flutter": 2,
+            "iOS Developer": 3,
+            "Android Engineer": 4,
+            "Mobile App Engineer": 5
+        },
+        "OperationandMaintenance/TechnicalSupport": {
+            "IT Technical Support": 1,
+            "System Administrator": 2
+        },
+        "OtherIT": {
+            "Any Software Engineer": 1
+        },
+        "ProjectManagement": {
+            "Project Manager": 1
+        },
+        "QAEngineering": {
+            " Software Test Engineer": 1,
+            "Automation Test Engineer": 2
+        },
+        "WebTechnology": {
+            "Web Front End Engineer": 1,
+            "Web Full Stack Engineer": 2,
+            "Node JS Engineer": 3,
+            "Laravel Engineer": 4,
+            "Node.js Engineer": 5
+        },
+        "id": 1
+    }
+}

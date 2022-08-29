@@ -5,19 +5,16 @@
         <div class="row">
           <div class="col-md-12">
             <div class="acan-code">
-              <h2>Scan to Download the App</h2>
+              <h2>Get the Hirect App</h2>
               <p>
-                Simply open your phone's camera and scan the <br/>QR code below to download the Hirect app.
+                <br/>Click the button below to download the Hirect app.
               </p>
               <GetAppInput />
-              <div class="app-scan-button">
-                <a><img id="download-hirect-qrcode" class="qr-code-img" src="~/assets/imgs/qr-frame.png" alt="" /></a>
-                <a href="https://apps.apple.com/US/app/id1518442417?mt=8" target="_blank"><img
-                    src="~/assets/imgs/logo_apple-store.png" alt="" /></a>
-                <span class="line-seperator" style="height: 40px; border-left: 1px solid"></span>
-                <a href="https://hirectin.onelink.me/TwhD/b0fe8b20" target="_blank"><img
-                    src="~/assets/imgs/logo-google-playstore.png" alt="" /></a>
-              </div>
+              <!-- <div v-if="$device.isMobileOrTablet" class="app-scan-button-mobile">
+                <button class="btn btn-app">
+                  Get App
+                </button>
+              </div> -->
             </div>
           </div>
         </div>
@@ -55,16 +52,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.app-scan-button-mobile{
+  display: none;
+}
+.acan-code {
+  padding: 10%;
+}
+.btn-app {
+  border-radius: 50px;
+  background-color: #2ce2a2;
+  border-color: #2ce2a2;
+  color: #0e101a;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin-left: 10px;
+  line-height: normal;
+  margin-bottom: 40px;
+}
 .scan-app-section {
   background-color: #dde1e6;
 }
 
 .scan-app-img {
-  background: url("~/assets/imgs/download-hirect-img.png") no-repeat;
-  background-size: contain;
+  background: url("~/assets/imgs/banner_image.png") no-repeat center;
+  background-size: cover;
   position: relative;
-  padding-top: 36px;
-  // padding: 100px 0px;
+  // padding-top: 36px;
+  // min-height: 600px;
+  padding: 2%;
 }
 
 .acan-code {
@@ -72,7 +88,7 @@ export default {
 }
 
 .acan-code h2 {
-  color: #0e101a;
+  color: #fff;
   font-size: 36px;
   font-weight: bold;
   line-height: normal;
@@ -80,7 +96,7 @@ export default {
 }
 
 .acan-code p {
-  color: #0e101a;
+  color: #fff;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -125,8 +141,12 @@ export default {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
-  .scan-app-img{
-    background: none;
+  .scan-app-img {
+    padding: 0;
+  .container{
+    background: #00000060;
+    max-width: 100%;
+  }
   }
   .acan-code h2 {
     font-size: 26px;
@@ -166,8 +186,19 @@ export default {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
+  .app-scan-button-mobile{
+    display: block;
+  }
+  .app-scan-button{
+    display: block;
+  }
+
   .scan-app-img {
-    background: none;
+    padding: 0px;
+  }
+
+  .scan-app-img .container{
+    background: #00000090
   }
 
   .acan-code p br {

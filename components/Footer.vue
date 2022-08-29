@@ -5,17 +5,18 @@
         <div class="col-md-5">
           <div class="footer-box">
             <div class="footer-logo">
-              <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" alt="" />
+              <NuxtLink to="/homepage"><img src="~/assets/img/hirect-logo-footer.png" loading="lazy"
+                  alt="hirect-logo" />
               </NuxtLink>
               <p>
-                Chat Directly. Hire Instantly<br />
-                Trusted by 3M+ verified job seekers and<br />
-                150K+ verified recruiters.
+                Chat Directly. Hire Instantly.<br />
+                Trusted by 3.8M+ verified job seekers and<br />
+                190K+ verified recruiters.
               </p>
             </div>
             <div class="footer-whatsapp">
-              <img src="~/assets/img/whatsapp-icon.svg" alt="" /><a
-                href="https://api.whatsapp.com/send?phone=+918446164920">+918446164920</a>
+              <img src="~/assets/img/whatsapp-icon.svg" loading="lazy" alt="whatsapp-icon" /><a
+                href="https://api.whatsapp.com/send?phone=918446164920">+918446164920</a>
             </div>
           </div>
         </div>
@@ -32,7 +33,7 @@
                     <NuxtLink to="/aboutus">About Us</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/recruiters">Recruiters</NuxtLink>
+                    <NuxtLink to="/connect">Recruiters</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/job-seeker">Job Seekers</NuxtLink>
@@ -54,7 +55,7 @@
               <div class="footer-link">
                 <h4>Support</h4>
                 <ul>
-                  <li>
+                  <li style="list-style">
                     <a href="mailto:support@hirect.in">Support@hirect.in</a>
                   </li>
                   <li>
@@ -80,9 +81,9 @@
                   <li>
                     <NuxtLink to="/refund-cancellation-policy">Refund Policy</NuxtLink>
                   </li>
-                  <li>
+                  <!-- <li>
                     <NuxtLink to="/purchase-flow">Purchase Flow</NuxtLink>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -93,32 +94,27 @@
         <ul class="footer-social-link">
           <li>
             <a href="https://twitter.com/HirectIndia" target="_blank">
-              <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-              <img src="~/assets/imgs/twitter-group.png" alt="" />
+              <img src="~/assets/imgs/twitter-group.png" loading="lazy" alt="twitter-icon" />
             </a>
           </li>
           <li>
             <a href="https://in.linkedin.com/company/hirectapp" target="_blank">
-              <!-- <font-awesome-icon :icon="['fab', 'linkedin']" /> -->
-              <img src="~/assets/imgs/linkedin-group.png" alt="" />
+              <img src="~/assets/imgs/linkedin-group.png" loading="lazy" alt="linkedin-logo" />
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/hirectindia/" target="_blank">
-              <!-- <font-awesome-icon :icon="['fab', 'facebook-f']" /> -->
-              <img src="~/assets/imgs/facebook-group.png" alt="" />
+              <img src="~/assets/imgs/facebook-group.png" loading="lazy" alt="facebook-logo" />
             </a>
           </li>
           <li>
             <a href="https://www.youtube.com/channel/UC98TU-jrNVOJCWC-FhnaPWQ" target="_blank">
-              <!-- <font-awesome-icon :icon="['fab', 'youtube']" /> -->
-              <img src="~/assets/imgs/youtube-group.png" alt="" />
+              <img src="~/assets/imgs/youtube-group.png" loading="lazy" alt="youtube-logo" />
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/hirect_india/" target="_blank">
-              <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
-              <img src="~/assets/imgs/instagram-group.png" alt="" />
+              <img src="~/assets/imgs/instagram-group.png" loading="lazy" alt="instagram-logo" />
             </a>
           </li>
         </ul>
@@ -130,7 +126,7 @@
             <div class="change-flage">
               <div class="dropdown">
                 <a class="dropbtn">
-                  <img src="~/assets/img/country-flag.svg" alt="" />
+                  <img src="~/assets/img/country-flag.svg" loading="lazy" alt="country-flag" />
                   <div class="Dropup-icon">
                     <h6 data-bs-toggle="collapse" data-bs-target="#changeregion" aria-controls="navbarScroll"
                       aria-expanded="false" aria-label="Toggle navigation">
@@ -140,7 +136,7 @@
                 </a>
                 <div class="dropdown-content collapse" id="changeregion">
                   <a class="dropbtn" href="https://hirect.us?changeregion=1">
-                    <img src="~/assets/img/us-logo.png" alt="" />
+                    <img src="~/assets/img/us-logo.png" loading="lazy" alt="us-flag" />
                     <h6>United States</h6>
                   </a>
                 </div>
@@ -151,7 +147,7 @@
       </div>
     </div>
     <el-dialog :visible.sync="ScheduleCallVisible" class="schedule-dialog">
-      <ScheduleACall />
+      <RecruitersForm />
     </el-dialog>
   </div>
 </template>
@@ -175,6 +171,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.el-dialog {
+  border-radius: 30px;
+}
 .footer {
   background-color: #0e101a;
   padding-top: 50px;

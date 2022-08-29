@@ -49,7 +49,7 @@
     </div>
     <el-dialog :visible.sync="dialogVisible" width="920px" :append-to-body="true" class="submit-dialog">
       <center>
-        <img src="~/assets/img/ic_congratulations.png" alt="ic_congratulations" class="ic_congratulations" />
+        <img  src="~/assets/img/ic_congratulations.png" loading="lazy" alt="ic_congratulations" class="ic_congratulations" />
         <p class="dialog_title">
           Congrats, your details are<br />submitted successfully.
         </p>
@@ -57,17 +57,17 @@
           We will get in touch with you in 30 minutes. Meanwhile,<br />scan the
           QR code to<span style="font-weight: bolder"> download the app!</span>
         </p>
-        <img src="~/assets/img/qr_schedule.png" alt="qr_schedule" class="qr_schedule" />
+        <img  src="~/assets/img/qr_schedule.png" loading="lazy" alt="qr_schedule" class="qr_schedule" />
         <div class="download-container">
-          <img src="~/assets/img/btn_appstore.png" alt="btn_appstore" @click="appImgClickHandle" class="download_btn" />
-          <img src="~/assets/img/btn_googleplay.png" alt="btn_googleplay" @click="googleImgClickHandle"
+          <img  src="~/assets/img/btn_appstore.png" loading="lazy" alt="btn_appstore" @click="appImgClickHandle" class="download_btn" />
+          <img  src="~/assets/img/btn_googleplay.png" loading="lazy" alt="btn_googleplay" @click="googleImgClickHandle"
             class="download_btn" />
-          <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn"
+          <!-- <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn"
             @mouseout="downloadPkgMouseOut">
-            <img src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" />
-            <img v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img"
-              src="~/assets/img/ic_download_guide.png" alt="download_guide" />
-          </div>
+            <img  src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" loading="lazy" alt="google-play-badge" />
+            <img  v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img"
+              src="~/assets/img/ic_download_guide.png" loading="lazy" alt="download_guide" />
+          </div> -->
         </div>
       </center>
     </el-dialog>
@@ -193,7 +193,7 @@ export default {
       } else {
         leadSourcePara = '';
       }
-      this.$ga.event('Leads', 'Submitted', 'form');
+      //this.$ga.event('Leads', 'Submitted', 'form');
       const formData = {
         __vtrftk: 'sid:3d4d1077ddbde35a14455b3381cf01cce7dcbe02,1626673660',
         publicid: 'db46e626a9177c57165bb18e99e676e3',
@@ -270,11 +270,11 @@ export default {
       }
     },
     appImgClickHandle() {
-      this.$ga.event('click', 'ios', 'app', 2);
+      //this.$ga.event('click', 'ios', 'app', 2);
       window.open(this.iosDownloadAddressIN, '_blank');
     },
     googleImgClickHandle() {
-      this.$ga.event('click', 'android', 'app', 1);
+      //this.$ga.event('click', 'android', 'app', 1);
       window.open(this.androidDownloadAddressIN, '_blank');
     },
   },
@@ -400,7 +400,7 @@ export default {
     width: 550px;
     margin: 0 auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 60px;
 
     .download_btn {

@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="download-guide-head">
-        <img class="download-guide-head-logo" src="~/assets/img/hirect-logo-full.png" alt="hirect-logo">
+        <img  class="download-guide-head-logo" src="~/assets/img/hirect-logo-full.png" loading="lazy" alt="hirect-logo">
     </div>
     <center>
         <div class="download-guide-title">
@@ -9,12 +9,12 @@
         </div>
     </center>
     <div class="download-guide-button-container">
-        <img class="download-guide-button" src="~/assets/img/download-guide-button.png" alt="download-guide-button">
+        <img  class="download-guide-button" src="~/assets/img/download-guide-button.png" loading="lazy" alt="download-guide-button">
         <p class="download-guide-button-text">Check out the following guide</p>
     </div>
-    <img class="download-guide-arrow" src="~/assets/img/download-guide-arrow.png" alt="download-guide-arrow">
+    <img  class="download-guide-arrow" src="~/assets/img/download-guide-arrow.png" loading="lazy" alt="download-guide-arrow">
     <div class="download-guide-img-item" data-aos="fade-up" v-for="(item, index) of guideImgs" :style="item.imgStyle" :key="index">
-        <img class="download-guide-img" :src="item.imgSrc" :style="item.imgStyle" alt="download-guide-img">
+        <img  class="download-guide-img" :src="item.imgSrc" :style="item.imgStyle" loading="lazy" alt="download-guide-img">
     </div>
 </div>
 </template>
@@ -30,7 +30,12 @@ export default {
   components: {},
   head() {
     return {
-
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/download-guide',
+        },
+      ],
     };
   },
   data() {

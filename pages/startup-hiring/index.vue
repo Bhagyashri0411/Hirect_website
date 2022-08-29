@@ -3,7 +3,7 @@
     <div id="back-top-target" />
     <div class="startup-hiring">
         <div class="startup-hiring-top">
-            <img src="~/assets/img/logo_hirect_white.png" alt="hirect-logo" class="logo" @click="logoClickHandle" />
+            <img  src="~/assets/img/logo_hirect_white.png" loading="lazy" alt="hirect-logo" class="logo" @click="logoClickHandle" />
             <el-button type="primary" class="startup-hiring-top-button" @click="downloadClick">Download App</el-button>
         </div>
         <div class="startup-hiring-inner">
@@ -24,9 +24,9 @@
                 <p class="startup-hiring-inner-left-text">
                     No Spam, No Waiting, No Cost, No Middle Man.
                 </p>
-                <img class="startup-hiring-inner-left-img" src="~/assets/img/start-hiring.png" alt="start-hiring" />
+                <img  class="startup-hiring-inner-left-img" src="~/assets/img/start-hiring.png" loading="lazy" alt="start-hiring" />
             </div>
-            <ScheduleACallStartupHiring />
+            <RecruitersForm />
         </div>
         <center>
             <h2 class="startup-hiring-categories-title">
@@ -46,19 +46,22 @@
             </p>
         </div>
     </div>
-    <el-dialog :visible.sync="downloadDialogVisible" width="920px">
-        <GetHirectApp />
-    </el-dialog>
+        <DownloadModal v-show="downloadDialogVisible" @close-modal="downloadDialogVisible = false"/>
 </div>
 </template>
 
 <script>
 export default {
   name: 'startup-hiring',
-  components: {},
   head() {
     return {
       title: 'Startup Hiring App | Post a job and Chat Directly with Candidates',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/startup-hiring',
+        },
+      ],
       meta: [{
         hid: 'description',
         name: 'description',

@@ -3,9 +3,9 @@
     <div id="back-top-target" />
     <Header @smoothToTop="smoothToTop" :current-page-name="currentPageName" />
     <div class="height-container" />
-    <div class="container privacy-policy-page">
-      <p class="head-title">Products and Pricing</p>
-      <p class="policy-item-desc">
+    <div class="container refund-cancellation-page">
+      <h1 class="head-title-main">Products and Pricing</h1>
+      <p class="refund-cancellation-item-desc">
         We allow recruiters to initiate a limited number of unsolicited chats
         with candidates on Hirect for free. We will charge the recruiter when
         the number of unsolicited chats with candidates exceeds the daily free
@@ -33,7 +33,7 @@
         </li>
       </ul>
       <p class="head-title">Refund and Cancellation Policy</p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         This subscription model is a digital offering, and Hirect will not
         provide a refund post completion of the payment. The user may not
         request a refund from Hirect unless the subscription service cannot be
@@ -44,14 +44,14 @@
       </p>
 
       <p class="head-title">Payment Terms and Conditions:</p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         'Hirect' may offer products and services for purchase on the App
         (“In-App Purchase”). By making an in-app purchase, the subscriber agrees
         to the payment terms that may apply, which are disclosed at the point of
         purchase, and as such, the payment terms are incorporated herein by
         reference.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         In-App Purchases can be made by the following methods ("Payment
         Method"): (a) making a purchase through a third-party platform such as
         the Apple App Store or Google Play Store ("Third Party Store"). As soon
@@ -60,7 +60,7 @@
         the selected Payment Method, the customer agrees to pay all sums due
         upon demand by Hirect.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         The subscription is not canceled when an account is deleted, or an
         application is deleted from a device. The subscriber will be notified of
         any changes to the pricing of the Premium Services to which they have
@@ -70,7 +70,7 @@
       </p>
 
       <p class="head-title">Canceling Subscriptions</p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         If someone has purchased a subscription through a Third Party Store,
         such as the Apple App Store or the Google Play Store, they will need to
         access their account with that Third Party Store and follow instructions
@@ -83,14 +83,14 @@
         subscription.
       </p>
 
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         <b
           >Generally, all charges for purchases are non-refundable, and there
           are no refunds or credits for partially used periods.</b
         >
       </p>
 
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         The subscriber may cancel their subscription without penalty or
         obligation. Their estate shall be entitled to a refund of the amount for
         any payment subscribe had made allocated to the period post-death if
@@ -101,7 +101,7 @@
         after their disability by providing the company notice; in the same
         manner, they request a refund.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         Suppose a subscriber exercises their right of cancellation (except for
         purchases made through Apple ID, which Apple controls). In that case,
         Hirect will refund (or ask Google to refund) all payments received from
@@ -112,19 +112,19 @@
         In any case, no fees will be charged to the subscriber due to the
         refund.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         The subscriber who purchased through a payment platform other than those
         listed above should request a refund directly from the third-party
         merchant through which they made the purchase.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         A subscriber cannot cancel an order for digital content not delivered on
         a physical medium if they have given their explicit prior consent and
         have acknowledged that they will lose their cancellation rights.
       </p>
 
       <p class="head-title">To request a refund</p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         If the subscriber wishes to receive a refund, they must cancel the
         subscription and request a refund. If they subscribed using their Apple
         ID, refunds are handled by Apple, not Hirect. Go to iTunes, click on
@@ -138,7 +138,7 @@
           >https://getsupport.apple.com</a
         >.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         For all other purchases, Hirect will refund (or ask Google to refund)
         all payments received from the subscriber within 21 days of the date
         Hirect received notice of the subscriber's decision to cancel the
@@ -146,12 +146,12 @@
         method as the original transaction. The subscriber will not be charged
         any fees for the refund.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         If the subscriber made a purchase using a payment platform not listed
         above, they should request a refund directly from the third-party
         merchant through which they made the purchase.
       </p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         A subscriber may not cancel an order for delivery of digital content
         that is not delivered on a physical medium so long as order processing
         has begun with their prior consent and acknowledgement that they may
@@ -159,7 +159,7 @@
       </p>
 
       <p class="head-title">Taxes</p>
-      <p class="policy-item-desc">
+      <p class="refund-cancellation-item-desc">
         All prices include taxes for payments collected via In-App payments for
         the product or service. If Hirect determines that it is legally obliged
         to collect a Sales Tax or GST from the subscriber, the Sales Tax or GST
@@ -177,6 +177,12 @@ export default {
   head() {
     return {
       title: 'Refund & Cancellation Policy - Hirect',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/refund-cancellation-policy',
+        },
+      ],
       meta: [
         {
           hid: 'description',
@@ -225,7 +231,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.privacy-policy-page {
+.refund-cancellation-page {
   padding: 50px 100px;
   margin: 0 auto;
 
@@ -243,12 +249,18 @@ export default {
   height: 50px;
 }
 
+.head-title-main {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #121127;
+  text-align: center;
+}
 .head-title {
-  font-size: 32px;
-  font-weight: 800;
-  color: #0e101a;
-  margin-bottom: 12px;
-  line-height: 40px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 48px;
+  color: #121127;
 }
 
 .head-title-desc {
@@ -256,7 +268,6 @@ export default {
   font-weight: 400;
   color: #333333;
   text-align: justify;
-  margin: 5px 0;
 }
 
 .policy-item-title {
@@ -266,17 +277,17 @@ export default {
   margin: 20px 0 5px;
 }
 
-.policy-item-desc-A {
+.refund-cancellation-item-desc-A {
   font-size: 20px;
   font-weight: bold;
   color: #0e101a;
 }
 
-.policy-item-desc {
-  font-size: 20px;
-  font-weight: 400;
-  color: #333333;
-  margin: 15px 0;
+.refund-cancellation-item-desc {
+  font-size: 18px;
+  color: #43494e;
+  line-height: 28px;
+  margin: 20px 0;
   text-align: justify;
 }
 
@@ -286,8 +297,8 @@ p {
 
 // Responsive css
 @media only screen and (min-width: 300px) and (max-width: 767px) {
-  .privacy-policy-page {
-    padding: 50px 30px;
+  .refund-cancellation-page {
+    padding: 50px 20px;
     margin: 0 auto;
   }
 
