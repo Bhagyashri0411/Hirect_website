@@ -3,13 +3,13 @@
     <center>
         <p class="download-title">Scan & Download Hirect App!</p>
         <p class="download-text">Open the camera on your phone and scan the QR code below to download Hirect App</p>
-        <img src="~/assets/img/bg_qr_in.png" alt="download-qr" class="download-qr">
+        <img  src="~/assets/img/bg_qr_in.webp" loading="lazy" alt="download-qr" class="download-qr">
         <div class="download-container">
-            <img src="~/assets/img/btn_appstore.png" alt="btn_appstore" @click="appImgClickHandle" class="download_btn">
-            <img src="~/assets/img/btn_googleplay.png" alt="btn_googleplay" @click="googleImgClickHandle" class="download_btn">
-            <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn" @mouseout="downloadPkgMouseOut">
-                <img src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" />
-                <img v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img" src="~/assets/img/ic_download_guide.png" alt="download_guide">
+            <img  src="~/assets/img/btn_appstore.webp" loading="lazy" alt="btn_appstore" @click="appImgClickHandle" class="download_btn">
+            <img  src="~/assets/img/btn_googleplay.webp" loading="lazy" alt="btn_googleplay" @click="googleImgClickHandle" class="download_btn">
+            <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn" @mouseout="downloadPkgMouseOut" loading="lazy" alt="android-badge">
+                <img  src="~/assets/img/pkg_android.webp" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" loading="lazy" alt="google-play-badge"/>
+                <img  v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img" src="~/assets/img/ic_download_guide.webp" loading="lazy" alt="download_guide">
             </div>
         </div>
     </center>

@@ -1,8 +1,5 @@
 export default {
   version: '2.0.0',
-  serverMiddleware: [
-    { path: '/server-middleware', handler: '~/server-middleware/sendsms.js' },
-  ],
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   server: {
@@ -22,21 +19,29 @@ export default {
       // { hid: 'description', name: 'description', content: 'Hirect' },
       { name: 'format-detection', content: 'hirect, Hirect' },
       { name: 'keywords', content: 'telephone=no' },
-      { name: 'google-site-verification', content: '4uvjLpSM5lIoPDwUukN1jPDhA7XOUImMuAPUiMAGKLM' },
+      {
+        name: 'google-site-verification',
+        content: '4uvjLpSM5lIoPDwUukN1jPDhA7XOUImMuAPUiMAGKLM',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/css/bootstrap.min.css' },
+      { rel: 'stylesheet', href: '/css/bootstrap.min.css', as: 'style' },
     ],
     script: [
-      { src: '/script/bootstrap.bundle.min.js', type: 'text/javascript' },
-      { src: '/script/event-point.js' },
-      // { src: 'https://www.googletagmanager.com/gtag/js?id=AW-364643331' },
-      // { src: 'https://www.googletagmanager.com/gtag/js?id=UA-145309456-1' },
-    ],
+      {
+        src: '/script/bootstrap.bundle.min.js',
+        type: 'text/javascript',
+        defer: true,
+      },
+      { src: '/script/event-point.js', defer: true },
+      { src: 'https://www.googletagmanager.com/gtag/js?id=AW-364643331', defer: true, async: true},
+      { src: 'https://www.googletagmanager.com/gtag/js?id=UA-145309456-1', defer: true, async: true },
+    ]
   },
 
   router: {
+    prefetchLinks: false,
     extendRoutes(routes, resolve) {
       routes.push({
         path: '/',
@@ -49,7 +54,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-
     './node_modules/vue-slick-carousel/dist/vue-slick-carousel.css',
     './node_modules/vue-slick-carousel/dist/vue-slick-carousel-theme.css',
     'element-ui/lib/theme-chalk/index.css',
@@ -65,6 +69,7 @@ export default {
     '@/plugins/sendAppLink',
     '@/plugins/localSaveSubmitUrl',
     '@/plugins/jsonld.js',
+    '@/plugins/webRequest',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -72,19 +77,28 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/google-analytics',
-    '@nuxtjs/fontawesome',
     '@nuxtjs/device',
     '@nuxtjs/pwa',
+    '@nuxtjs/gtm',
+    'nuxt-purgecss',
+    'nuxt-vue-select',
   ],
+  gtm: {
+    id: 'GTM-TCZJ8KB',
+  },
+  googleAnalytics: {
+    id: 'UA-145309456-1',
+  },
 
   pwa: {
     icon: {
-      fileName: 'favicon.ico',
+      fileName: 'logo.png',
     },
     metadata: {
+      charset: 'utf8',
       mobileApp: true,
       mobileAppIos: true,
+      appleMobileWebAppCapable: true,
       appleStatusBarStyle: 'black-translucent',
       favicon: 'favicon.ico',
       name: 'Hirect',
@@ -93,13 +107,16 @@ export default {
       ogType: 'website',
       ogSiteName: 'Hirect',
       ogTitle: 'Hirect - Best Job App for Recruiters and Job Seekers',
-      ogDescription: 'Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ',
+      ogDescription:
+        'Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ',
     },
     manifest: {
       name: 'Hirect - Best Job App for Recruiters and Job Seekers',
       short_name: 'Hirect',
+      theme_color: '#2ce2a2',
       lang: 'en',
-      description: 'Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ',
+      description:
+        'Hirect, the best app for start-up hiring, connects the matching candidates with the recruiters. Chat directly and hire anywhere, anytime. ',
       start_url: '/',
       useWebmanifestExtension: true,
       display: 'standalone',
@@ -112,21 +129,8 @@ export default {
     },
   },
 
-  // Google Analytics
-  // googleAnalytics: {
-  //   id: 'UA-145309456-1',
-  //   debug: {
-  //     sendHitTask: true,
-  //     enabled: false,
-  //   },
-  // },
-
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/gtm',
-    'nuxt-ssr-cache',
-  ],
+  modules: ['@nuxtjs/axios'],
 
   cache: {
     // if you're serving multiple host names (with differing
@@ -164,11 +168,6 @@ export default {
       ttl: 60,
     },
   },
-
-  // gtm: {
-  //   id: 'GTM-TCZJ8KB',
-  // },
-
   fontawesome: {
     icons: {
       solid: true,
@@ -179,5 +178,57 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+    // postcss: null,
+    html: {
+      minify: {
+        minifyCSS: true,
+        minifyJS: true,
+        useShortDoctype: true,
+        removeComments: true,
+        removeEmptyElements: true,
+      },
+      optimization: {
+        minimize: true,
+        minimizer: ['terser-webpack-plugin'],
+        splitChunks: {
+          chunks: 'all',
+          automaticNameDelimiter: '.',
+          name: undefined,
+          cacheGroups: {},
+          maxSize: 1000,
+        },
+      },
+    },
+    optimizeCss: true,
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.optimization.splitChunks.maxSize = 10000;
+      }
+    },
   },
+  purgeCss: {
+    plugins: {
+      '@fullhuman/postcss-purgecss': {
+        content: [
+          './pages/**/*.vue',
+          './layouts/**/*.vue',
+          './components/**/*.vue',
+        ],
+        safelist: ['html', 'body'],
+        extractors: [
+          {
+            extractor: (content) => content
+              .replace(/<style[\s\S]*>[\s\S]*<\/style>/gi, '')
+              .match(/[\w-/:]+/g) || [],
+
+            extensions: ['vue'],
+          },
+        ],
+      },
+    },
+  },
+  publicRuntimeConfig: {
+    ENV: process.env.ENV,
+  },
+  generate: { fallback: '404.html' },
 };

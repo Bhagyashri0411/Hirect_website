@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper-india">
-    <img src="~/assets/img/india-b-h5-1.png" alt="img_1">
-    <img src="~/assets/img/india-b-h5-2.png" alt="img_2">
-    <img src="~/assets/img/india-b-h5-3.png" alt="img_3">
-    <img src="~/assets/img/india-b-h5-4.png" alt="img_4">
+    <img  src="~/assets/img/india-b-h5-1.png" loading="lazy" alt="img_1">
+    <img  src="~/assets/img/india-b-h5-2.png" loading="lazy" alt="img_2">
+    <img  src="~/assets/img/india-b-h5-3.png" loading="lazy" alt="img_3">
+    <img  src="~/assets/img/india-b-h5-4.png" loading="lazy" alt="img_4">
   </div>
 </template>
 

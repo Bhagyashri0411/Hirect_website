@@ -6,11 +6,11 @@
       <!-- :style="{width:(100/stepData.length)+'%'}" -->
       <div class="step-title">Step {{ step.step }}</div>
       <div class="circle-bg">
-        <img class="step-image" :src="imgUrl(step)" alt="" srcset="" />
+        <img  class="step-image" :src="imgUrl(step)" loading="lazy" :alt="stepData.title" srcset="" />
         <img
           class="check"
           src="~/assets/imgs/check-circle.png"
-          alt=""
+          loading="lazy" alt="check"
           srcset=""
         />
       </div>

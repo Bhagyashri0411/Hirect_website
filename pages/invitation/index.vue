@@ -11,15 +11,20 @@
                 <p class="common-text"><span style="font-weight:900;">If your organization is hiring, </span>kindly fill up this form and <br> our team will get in touch with you.</p>
             </div>
         </div>
-        <img src="~/assets/img/banner-image@2x-min.png" alt="title-img" class="title-area-img">
+        <img  src="~/assets/img/banner-image@2x-min.png" loading="lazy" alt="title-img" class="title-area-img">
         <div style="visibility: hidden;" id="my-form" />
     </div>
     <div class="form-area">
-        <GetALinkToDownload />
+        <div class="get-a-link-to-download">
+            <p class="get-a-link-title">Get a link to download</p>
+            <p class="get-a-link-title-min">The future of hiring is here.</p>
+            <GetAppInput />
+            <p class="get-a-link-text">You’ll receive a link to the Apple App Store or Goolge Play Store. No spam.</p>
+        </div>
         <div class="form-area-right">
             <center>
                 <p class="area-2-text">Join over 30,000 companies<br>Make hiring more efficient</p>
-                <img src="~/assets/img/ic_brands.png" alt="logos" class="form-area-img">
+                <img  src="~/assets/img/ic_brands.png" loading="lazy" alt="logos" class="form-area-img">
             </center>
         </div>
     </div>
@@ -31,11 +36,11 @@
                 <p class="common-text">Post your jobs &<br>requirements for FREE</p>
                 <p class="common-text">Instantly chat with<br>the best candidates</p>
             </div>
-            <img src="~/assets/img/download-step.png" alt="download-step" class="download-step-img">
+            <img  src="~/assets/img/download-step.png" loading="lazy" alt="download-step" class="download-step-img">
         </center>
     </div>
     <div class="seeking-candidate">
-        <img src="~/assets/img/hire-staff-image.png" alt="" class="seeking-candidate-img">
+        <img  src="~/assets/img/hire-staff-image.png" loading="lazy" alt="" class="seeking-candidate-img">
         <div class="seeking-candidate-right">
             <p class="common-title" style="margin:20px 0px;">I am looking to hire staff</p>
             <p class="common-text">Get a hire for your company within 24 hours</p>
@@ -66,6 +71,12 @@ export default {
   head() {
     return {
       title: 'Hirect - The First Chat-Based Hiring App',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/invitation',
+        },
+      ],
       meta: [{
         hid: 'description',
         name: 'description',
@@ -304,4 +315,53 @@ export default {
         width: 1164px;
     }
 }
+.get-a-link-to-download {
+  position: relative;
+  width: 518px;
+  height: 335px;
+  padding: 60px 36px;
+  background: #FFFFFF;
+  box-shadow: 0px 23px 47px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+}
+
+.get-a-link-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0E101A;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+.get-a-link-title-min {
+  font-size: 20px;
+  font-weight: 400;
+  color: #0E101A;
+  line-height: 24px;
+  margin: 24px 0px 40px 0px;
+}
+
+.get-a-link-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0E101A;
+  line-height: 16px;
+  margin: 14px 0px 54px 0px;
+}
+
+.get-a-link-button {
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0E101A;
+}
+
+.alertText {
+  position: absolute;
+  font-size: 15px;
+  color: #EF444F;
+  top: 252px;
+}
+
 </style>

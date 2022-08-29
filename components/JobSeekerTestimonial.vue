@@ -8,7 +8,7 @@
                     <VueSlickCarousel v-bind="settings" class="carousel">
                         <div class="testimonial-card">
                             <div class="seeker-img">
-                                <img src="~/assets/img/palak-sharma.png" alt="" />
+                                <img  src="~/assets/img/palak-sharma.webp" loading="lazy" alt="Palak Sharma" />
                             </div>
                             <h4>Palak Sharma</h4>
                             <p>
@@ -19,7 +19,7 @@
                         </div>
                         <div class="testimonial-card">
                             <div class="seeker-img">
-                                <img src="~/assets/img/pratyush.png" alt="" />
+                                <img  src="~/assets/img/pratyush.webp" loading="lazy" alt="Pratyush" />
                             </div>
                             <h4>Pratyush R.</h4>
                             <p>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="testimonial-card">
                             <div class="seeker-img">
-                                <img src="~/assets/img/rudra.png" alt="" />
+                                <img  src="~/assets/img/rudra.webp" loading="lazy" alt="Rudraksh" />
                             </div>
                             <h4>Rudraksh Parihar</h4>
                             <p>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="testimonial-card">
                             <div class="seeker-img">
-                                <img src="~/assets/img/ayush.png" alt="" />
+                                <img  src="~/assets/img/ayush.webp" loading="lazy" alt="Ayush" />
                             </div>
                             <h4>Ayush Parmar</h4>
                             <p>
