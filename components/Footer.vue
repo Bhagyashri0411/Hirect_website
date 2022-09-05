@@ -174,7 +174,10 @@ export default {
 .el-dialog {
   border-radius: 30px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 .footer {
   background-color: #0e101a;
   padding-top: 50px;

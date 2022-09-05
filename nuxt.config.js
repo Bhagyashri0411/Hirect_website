@@ -178,7 +178,11 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+<<<<<<< HEAD
     postcss: null,
+=======
+    // postcss: null,
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
     html: {
       minify: {
         minifyCSS: true,
