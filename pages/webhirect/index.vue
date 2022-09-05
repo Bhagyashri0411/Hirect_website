@@ -2,7 +2,7 @@
 <div class="webhirect-all">
     <div class="wenBC-header" @click="openOrDownload">
         <div class="wenBC-header-content">
-            <img src="~/assets/img/hirect_logo@2x.png" style="height: 44%" alt="logo">
+            <img  src="~/assets/img/hirect_logo@2x.png" style="height: 44%" loading="lazy" alt="logo">
             <div class="wenBC-header-content-text">
                 <div class="wenBC-header-content-text-1">Hirect</div>
                 <div class="wenBC-header-content-text-2">Chat with recruiters directly</div>
@@ -35,7 +35,7 @@ export default {
       meta: [{
         hid: 'description',
         name: 'description',
-        content: '50K+ Startups already hiring on Hirect',
+        content: '190K+ Startups already hiring on Hirect',
       },
       {
         property: 'og:title',
@@ -54,7 +54,7 @@ export default {
         property: 'og:description',
         hid: 'og:description',
         name: 'og:description',
-        content: '50K+ Startups already hiring on Hirect.',
+        content: '190K+ Startups already hiring on Hirect.',
       },
       {
         property: 'og:locale',
@@ -72,8 +72,14 @@ export default {
         property: 'og:image',
         hid: 'og:image',
         name: 'og:image',
-        content: 'https://prod-apk-package.s3.ap-south-1.amazonaws.com/web-picture/hirect_logo.jpg',
+        content: 'https://prod-apk-package.s3.ap-south-1.amazonaws.com/web-picture/hirect_logo.png',
       },
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/webconnect',
+        },
       ],
     };
   },
@@ -89,9 +95,9 @@ export default {
   created() {},
   mounted() {
     if (this.$route.query.type === '0') { // c
-      this.webPage = 'webC';
+      this.pngage = 'webC';
     } else if (this.$route.query.type === '1') { // b
-      this.webPage = 'webB';
+      this.pngage = 'webB';
     }
     this.URL = window.location.href;
     // this.metaTitle = this.$route.query.name + ' - ' + this.$route.query.category

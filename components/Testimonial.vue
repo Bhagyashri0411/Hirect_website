@@ -10,7 +10,7 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/Ankur.png" alt="" />
+                      <img src="~/assets/imgs/Ankur.png" loading="lazy" alt="Ankur Warikoo" />
                     </div>
 
                     <div class="testimonial-info">
@@ -18,29 +18,28 @@
                       <h5>Entrepreneur, Public speaker, Angel investor</h5>
                       <p>
                         "Recently, I'd done a story on the perks that people get
-                        as a part of the warikoo team that we have, and we got
-                        a lot of amazing responses. But, on such a big scale,
+                        as a part of the Warikoo team that we have, and we got a
+                        lot of amazing responses. But, on such a big scale,
                         hiring becomes a bit easy. What if you are actually
                         small? What if you are just starting out? What if you
                         are an HR Recruiter looking for some finite specific
                         skills? It becomes hard, and that's why Hirect. Hirect
-                        allows you to chat directly with 23 Million candidates.
+                        allows you to chat directly with 3 Million candidates.
                         There is 100% privacy. It's like WhatsApp chatting with
-                        people that your would want to recruit. And that's why
+                        people that you would want to recruit. And that's why
                         it's become such a meaningful way to get straight into
-                        the talent without any consultants involved. Check them
-                        out!"
+                        the talent market without any consultants involved.
+                        Check them out!"
                       </p>
 
                       <!-- <div class="logos-new">
                         <span>
-                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                          <img  src="~/assets/imgs/Instagram- Icon.png" loading="lazy" alt="" />
                         </span>
                         <span>
-                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                          <img  src="~/assets/imgs/LinkedIn-Icon.png" loading="lazy" alt="" />
                         </span>
                       </div> -->
-
                     </div>
                   </div>
                 </div>
@@ -48,29 +47,32 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/flyingBeast.jpg" alt="" />
+                      <img src="~/assets/imgs/flyingBeast.jpg" loading="lazy" alt="Gaurav Taneja" />
                     </div>
 
                     <div class="testimonial-info">
                       <h3>Gaurav Taneja</h3>
                       <h5>Commercial Pilot and YouTuber</h5>
                       <p>
-                        "Hey, Guys, some time ago, we had uploaded a blog where we were expanding our team through
-                        Hirect. Almost 20,000 people had applied for it. Thank you so much for the amazing response. To
-                        those who could not apply, there are many more Startups hiring on Hirect. You can click on the
-                        link, download the app and start applying for jobs on Hirect. Now, more than 150K+ startups are
-                        there. You can connect directly with the Founder. All the Best!"
+                        "Hey, Guys, some time ago, we had uploaded a blog where
+                        we were expanding our team through Hirect. Almost 20,000
+                        people had applied for it. Thank you so much for the
+                        amazing response. To those who could not apply, there
+                        are many more Startups hiring on Hirect. You can click
+                        on the link, download the app and start applying for
+                        jobs on Hirect. Now, more than 190K+ startups are there.
+                        You can connect directly with the Founder. All the
+                        Best!"
                       </p>
 
                       <!-- <div class="logos-new">
                         <span>
-                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                          <img  src="~/assets/imgs/Instagram- Icon.png" loading="lazy" alt="" />
                         </span>
                         <span>
-                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                          <img  src="~/assets/imgs/LinkedIn-Icon.png" loading="lazy" alt="" />
                         </span>
                       </div> -->
-
                     </div>
                   </div>
                 </div>
@@ -78,35 +80,32 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/Kenny.png" alt="" />
+                      <img src="~/assets/imgs/Kenny.png" loading="lazy" alt="Kenny Sebastian" />
                     </div>
 
                     <div class="testimonial-info">
                       <h3>Kenny Sebastian</h3>
                       <h5>Comedian</h5>
                       <p>
-                        "Hey, Are you in the market, looking for a job? If not,
-                        you can ignore this. If you hate everyone in your
-                        office, you can check out the Hirect app. Hirect lets
-                        you cut through the consultants and directly talk to the
-                        Founders and the recruiters or even the CEO in all majo
-                        cities like Delhi, Hyderabad, Chennai, and Bangalore
-                        they've covered everywhere. Every sector like IT,
-                        EduTech, FinTech, and eCommerce they're there. Clients
-                        like Lenskart.com UpGrad everyone, Hireet has your back.
-                        So go find that job you want, man and stop dealing with
-                        your colleagues"
+                        "Are you in the market, looking for a job? If not, you
+                        can ignore this. If you hate everyone in your office,
+                        you can check out the Hirect app. Hirect lets you cut
+                        through the consultants and directly talk to the
+                        Founders and the recruiters or even the CEO in all major
+                        cities like Delhi, Hyderabad, Chennai, and Bangalore.
+                        They've covered every sector like IT, EduTech, FinTech,
+                        and e-Commerce. So go find that job you want, man and
+                        stop dealing with your colleagues."
                       </p>
 
                       <!-- <div class="logos-new">
                         <span>
-                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                          <img  src="~/assets/imgs/Instagram- Icon.png" loading="lazy" alt="" />
                         </span>
                         <span>
-                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                          <img  src="~/assets/imgs/LinkedIn-Icon.png" loading="lazy" alt="" />
                         </span>
                       </div> -->
-
                     </div>
                   </div>
                 </div>
@@ -114,26 +113,33 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/ranveer.jpg" alt="" />
+                      <img src="~/assets/imgs/ranveer.jpg" loading="lazy" alt="Ranveer Allhabadia" />
                     </div>
 
                     <div class="testimonial-info">
                       <h3>Ranveer Allhabadia</h3>
-                      <h5>Social media entrepreneur, YouTuber, motivational speaker</h5>
+                      <h5>
+                        Social media entrepreneur, YouTuber, motivational
+                        speaker
+                      </h5>
                       <p>
-                        "All right! We've spoken about this earlier. I will address it again, especially for you guys
-                        looking for a switch in your careers and want the right path to latch on to next. You've got the
-                        Hirect job app for you. Startup. Careers. Begin here. Verified. 150k+ Startups hiring. No spams,
-                        no scams. You can also talk to Startup Founders. Make sure you check out Hirect right now. If
-                        you want fast, rapid, intense growth in life, work at Startups." "
+                        "All right! We've spoken about this earlier. I will
+                        address it again, especially for you guys looking for a
+                        switch in your careers and want the right path to latch
+                        on to next. You've got the Hirect job app for you.
+                        Startup. Careers. Begin here. Verified. 190K+ Startups
+                        hiring. No spams, no scams. You can also talk to Startup
+                        Founders. Make sure you check out Hirect right now. If
+                        you want fast, rapid, intense growth in life, work at
+                        Startups."
                       </p>
 
                       <!-- <div class="logos-new">
                         <span>
-                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                          <img  src="~/assets/imgs/Instagram- Icon.png" loading="lazy" alt="" />
                         </span>
                         <span>
-                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                          <img  src="~/assets/imgs/LinkedIn-Icon.png" loading="lazy" alt="" />
                         </span>
                       </div> -->
                     </div>
@@ -143,7 +149,7 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/Mithila.png" alt="" />
+                      <img src="~/assets/imgs/Mithila.png" loading="lazy" alt="Mithila Palkar" />
                     </div>
 
                     <div class="testimonial-info">
@@ -151,7 +157,7 @@
                       <h5>Indian TV Actress</h5>
                       <p>
                         "Everyone needs money. That's why you do a good job,
-                        right? But, where will you get a good joo? College
+                        right? But, where will you get a good job? College
                         placements are just for namesake. You download Hirect
                         and chat directly with the Startup Founders without any
                         interference from any consultant. Click on the link and
@@ -160,10 +166,10 @@
 
                       <!-- <div class="logos-new">
                         <span>
-                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                          <img  src="~/assets/imgs/Instagram- Icon.png" loading="lazy" alt="" />
                         </span>
                         <span>
-                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                          <img  src="~/assets/imgs/LinkedIn-Icon.png" loading="lazy" alt="" />
                         </span>
                       </div> -->
                     </div>
@@ -173,32 +179,35 @@
                 <div class="testimonial-card">
                   <div class="testimonial-card-user">
                     <div class="client-img">
-                      <img src="~/assets/imgs/dhruvRathee.webp" alt="" />
+                      <img src="~/assets/imgs/dhruvRathee.jpg" loading="lazy" alt="Dhruv Rathee" />
                     </div>
 
                     <div class="testimonial-info">
                       <h3>Dhruv Rathee</h3>
                       <h5>YouTuber</h5>
                       <p>
-                        "Friends, it is important for everyone to be happy with their jobs. But, you might have seen it
-                        often while applying for the jobs that you get to see a lot of scams and identity frauds. But,
-                        on the Hirect app, all the job postings are 100% verified. Here, the Startup Founders and the
-                        CEOs are a part of the hiring process. If you do not believe it, go check out. The app is free
-                        to download. And if you are a job seeker, it will be very useful. Do check it out for sure."
+                        "Friends, it is important for everyone to be happy with
+                        their jobs. But, you might have seen it often while
+                        applying for the jobs that you get to see a lot of scams
+                        and identity frauds. But, on the Hirect app, all the job
+                        postings are 100% verified. Here, the Startup Founders
+                        and the CEOs are a part of the hiring process. If you do
+                        not believe it, go check out. The app is free to
+                        download. And if you are a job seeker, it will be very
+                        useful. Do check it out for sure."
                       </p>
 
                       <!-- <div class="logos-new">
                         <span>
-                          <img src="~/assets/imgs/Instagram- Icon.png" alt="" />
+                          <img  src="~/assets/imgs/Instagram- Icon.png" loading="lazy" alt="" />
                         </span>
                         <span>
-                          <img src="~/assets/imgs/LinkedIn-Icon.png" alt="" />
+                          <img  src="~/assets/imgs/LinkedIn-Icon.png" loading="lazy" alt="" />
                         </span>
                       </div> -->
                     </div>
                   </div>
                 </div>
-
               </VueSlickCarousel>
             </div>
           </div>
@@ -224,7 +233,7 @@ export default {
   data() {
     return {
       settings: {
-        autoplay: false,
+        autoplay: true,
         variableWidth: false,
         centerPadding: '20px',
         focusOnSelect: true,
@@ -241,7 +250,7 @@ export default {
 
 <style lang="scss" scoped>
 .testimonial-info h3 {
-  text-align: left !important;
+  text-align: left;
   margin-bottom: 10px !important;
 }
 
@@ -334,7 +343,7 @@ export default {
 }
 
 .client-testimonial {
-  padding: 40px 0 70px;
+  padding: 40px 0 90px;
   padding-top: 0;
 }
 
@@ -343,7 +352,7 @@ export default {
   font-size: 35px;
   font-weight: bold;
   line-height: normal;
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 
@@ -362,7 +371,6 @@ export default {
   // padding-top: 45px;
   padding: 50px;
   // padding-bottom: 25px;
-
 }
 
 .slick-list {
@@ -409,6 +417,11 @@ export default {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1299px) {
+  .testimonial-info h3 {
+    text-align: left;
+    margin-bottom: 10px !important;
+  }
+
   .client-testimonial h3 {
     font-size: 40px;
   }
@@ -425,6 +438,8 @@ export default {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+
   .testimonial-card {
     padding: 25px 25px;
     height: 440px;
@@ -468,6 +483,11 @@ export default {
   .testimonial-card-user {
     margin-bottom: 20px;
   }
+
+  .testimonial-info h3 {
+    text-align: left;
+    margin-bottom: 10px !important;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -495,6 +515,12 @@ export default {
     margin-bottom: 10px;
     line-height: normal;
   }
+
+  .testimonial-info h3 {
+    text-align: left;
+    margin-bottom: 10px !important;
+  }
+
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
@@ -544,6 +570,10 @@ export default {
   .testimonial-info {
     width: 100%;
     padding: 0;
+    text-align: center;
+  }
+
+  .testimonial-info h3 {
     text-align: center;
   }
 

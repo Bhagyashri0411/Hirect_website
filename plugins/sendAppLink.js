@@ -4,72 +4,56 @@ export default ({ app }, inject) => {
   inject('sendAppLink', sendAppLink);
 };
 
-export async function sendAppLink(mobile, page) {
-  const sendsms = async(req)=>{
-    const headers = { 'Content-Type': 'application/json', 'api-key': 'Aad82a4decb55a167e7dbc667d4ea4109' };
-    const data = {
-        to: `+91${req.mobile}`,
-        sender: 'HRCTIN',
-        type: 'TXN',
-        source: 'API',
-        template_id: '1007164613191119126',
-        body: '[Hirect] Download Hirect app now: https://hirectapp.onelink.me/DNX5/8ed93b94',
-      };
-      const response = await axios.post(`https://api.in.kaleyra.io/v1/HXIN1736310618IN/messages`, data, { headers });
-      return response;
+
+export function sendAppLink(mobile, page) {
+  if (this.$device.isMobile && page !== 'download_modal') {
+    return;
+  }
+  this.$ga.event('click', {
+    'event_category': 'Get App Link',
+    'event_label': page
+  });
+  const sendsms = async (smsData) => {
+    const response = await axios.post('https://prod.hirect.ai/hirect/login/insms', smsData);
+    return response;
   }
   mobile = mobile.trim();
-  let errorMsg='';
+  let errorMsg = '';
   if (mobile.length < 10) {
-    errorMsg = 'Mobile number should have 10 characters';
-  } else if (/[a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{1}/g.test(mobile) === true) {
-    errorMsg = 'Mobile number should not contain alphabets or special characters';
-  } else {
-    let smsData = {
-      mobile: mobile,
-      placement: page,
-    };
-    if(localStorage.getItem('lastSmsDetails')){
-      const lastTimeStamp = new Date(JSON.parse(localStorage.getItem('lastSmsDetails')).createdDateTime);
-      const currentTimeStamp = new Date();
-      const hourDiff = lastTimeStamp.getHours() - currentTimeStamp.getHours();
-      const minuteDiff = lastTimeStamp.getMinutes() - currentTimeStamp.getMinutes();
-      if (hourDiff <= 0 && minuteDiff >= 5) {
-        // axios.post('/server-middleware/sendsms', smsData).then((res) => {
-        //   if (res.data.error) {
-        //     errorMsg = 'Something went wrong. Please try again later';
-        //   } else {
-        //     errorMsg = 'Success! We have shared the link via SMS';
-        //     localStorage.setItem('lastSmsDetails', JSON.stringify(res.data));
-        //   }
-        // });
-        let res = await sendsms(smsData);
-        if(Object.entries(res.error).length){
-          errorMsg = 'Something went wrong. Please try again later';
-        } else{
-          errorMsg = 'Success! We have shared the link via SMS';
-          localStorage.setItem('lastSmsDetails', JSON.stringify(res.data));
-        }
-      } else {
-        errorMsg = 'You can send sms only once in 5 minutes';
-      }
-    } else {
-      // axios.post('/server-middleware/sendsms', smsData).then((res) => {
-      //   if (!Object.entries(res.data.error).length) {
-      //     localStorage.setItem('lastSmsDetails', JSON.stringify(res.data));
-      //     errorMsg = 'Success! We have shared the link via SMS';
-      //   } else {
-      //     errorMsg = 'Something went wrong. Please try again later';
-      //   }
-      // });
-      let res = await sendsms(smsData);
-        if(Object.entries(res.error).length){
-          errorMsg = 'Something went wrong. Please try again later';
-        } else{
-          errorMsg = 'Success! We have shared the link via SMS';
-          localStorage.setItem('lastSmsDetails', JSON.stringify(res.data));
-        }
+    return 'Mobile number should have 10 characters';
+  } if (/[a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{1}/g.test(mobile) === true) {
+    return 'Mobile number should not contain alphabets or special characters';
+  } if (!(/(6|7|8|9)\d{9}/g.test(mobile))) {
+    return 'Mobile number should start with 6,7,8 or 9';
+  }
+  let smsData = {
+    mobile: mobile,
+    placement: page,
+  };
+  let lastTimeStamp = localStorage.getItem('lastSmsTimestamp');
+
+  if (lastTimeStamp) {
+    lastTimeStamp = new Date(lastTimeStamp);
+    const currentTimeStamp = new Date();
+    const hourDiff = lastTimeStamp.getHours() - currentTimeStamp.getHours();
+    const minuteDiff = currentTimeStamp.getMinutes() - lastTimeStamp.getMinutes();
+    if (hourDiff <= 0 && minuteDiff <= 5) {
+      return 'You can send sms only once in 5 minutes';
     }
   }
+  errorMsg = sendsms(smsData).then((res) => {
+    if (res.status === 429)
+      return 'Please wait atleast 1 minute before sending another sms';
+    if (res.status === 200) {
+      // if (Object.entries(res.data.error).length) {
+      //   return 'Something went wrong. Please try again later';
+      // }
+      localStorage.setItem('lastSmsTimestamp', new Date());
+      return 'Success! We have shared the link via SMS';
+    } else {
+      return 'Something went wrong. Please try again later';
+    }
+  });
+
   return errorMsg;
 }

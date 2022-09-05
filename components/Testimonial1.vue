@@ -9,7 +9,7 @@
                             <div class="testimonial-card">
                                 <div class="testimonial-card-user">
                                     <div class="client-img">
-                                        <img src="~/assets/img/hemant-shah.png" alt="" />
+                                        <img  src="~/assets/img/hemant-shah.webp" loading="lazy" alt="Hemant Shah" />
                                     </div>
                                     <div class="testimonial-info">
                                         <h4>Hemant Shah</h4>
@@ -29,7 +29,7 @@
                             <div class="testimonial-card">
                                 <div class="testimonial-card-user">
                                     <div class="client-img">
-                                        <img src="~/assets/img/rhea-nair.png" alt="" />
+                                        <img  src="~/assets/img/rhea-nair.webp" loading="lazy" alt="Rhea Nair" />
                                     </div>
                                     <div class="testimonial-info">
                                         <h4>Rhea Nair</h4>
@@ -49,7 +49,7 @@
                             <div class="testimonial-card">
                                 <div class="testimonial-card-user">
                                     <div class="client-img">
-                                        <img src="~/assets/img/pravin.png" alt="" />
+                                        <img  src="~/assets/img/pravin.webp" loading="lazy" alt="Pravin Vidhyadharan" />
                                     </div>
                                     <div class="testimonial-info">
                                         <h4>Pravin Vidhyadharan</h4>
@@ -67,7 +67,7 @@
                             <div class="testimonial-card">
                                 <div class="testimonial-card-user">
                                     <div class="client-img">
-                                        <img src="~/assets/img/younus.png" alt="" />
+                                        <img  src="~/assets/img/younus.webp" loading="lazy" alt="Younus" />
                                     </div>
                                     <div class="testimonial-info">
                                         <h4>Younus Shaik</h4>
@@ -87,7 +87,7 @@
                             <div class="testimonial-card">
                                 <div class="testimonial-card-user">
                                     <div class="client-img">
-                                        <img src="~/assets/img/ved-anand.png" alt="" />
+                                        <img  src="~/assets/img/ved-anand.webp" loading="lazy" alt="Ved Anand" />
                                     </div>
                                     <div class="testimonial-info">
                                         <h4>Ved Anand</h4>
@@ -108,7 +108,7 @@
                             <div class="testimonial-card">
                                 <div class="testimonial-card-user">
                                     <div class="client-img">
-                                        <img src="~/assets/img/akshay-chavan.png" alt="" />
+                                        <img  src="~/assets/img/akshay-chavan.webp" loading="lazy" alt="Akshay Chavan" />
                                     </div>
                                     <div class="testimonial-info">
                                         <h4>Akshay Chavan</h4>

@@ -10,23 +10,23 @@
             </div>
             <div class="base-inf">
                 <div class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
-                    src="~/assets/img/ic_positioning@2x.png" alt="posi">
+                    <img  style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_positioning@2x.png" loading="lazy" alt="posi">
                     <p class="base-inf-text">{{jobseekerData.location.city}}</p>
                 </div>
                 <div class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
-                    src="~/assets/img/ic_job@2x.png" alt="job">
+                    <img  style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_job@2x.png" loading="lazy" alt="job">
                     <p class="base-inf-text">{{jobseekerData.experience}}</p>
                 </div>
                 <div class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
-                    src="~/assets/img/ic_education@2x.png" alt="edu">
+                    <img  style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_education@2x.png" loading="lazy" alt="edu">
                     <p class="base-inf-text">{{jobseekerData.degree}}</p>
                 </div>
                 <div v-if="jobseekerData.workFromHome" class="base-inf-item">
-                    <img style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
-                    src="~/assets/img/ic_home@2x.png" alt="home">
+                    <img  style="width: 12px; height:12px; margin: 0px 6px -3px 0px;"
+                    src="~/assets/img/ic_home@2x.png" loading="lazy" alt="home">
                     <p class="base-inf-text" style="color: #15C39C;">Can Work From Home</p>
                 </div>
             </div>
@@ -34,11 +34,11 @@
         <el-divider style="margin: 0px;" />
         <div class="recruiter-inf">
             <div class="recruiter-avatar-container">
-                <img class="recruiter-avatar"
+                <img  class="recruiter-avatar"
                 :src="jobseekerData.recruiter.avatar ? jobseekerData.recruiter.avatar : '~/assets/img/male_us_default.png'"
-                alt="ava">
-                <img class="recruiter-avatar-passed"
-                src="~/assets/img/ic_verified@2x.png" alt="veri">
+                loading="lazy" alt="ava">
+                <img  class="recruiter-avatar-passed"
+                src="~/assets/img/ic_verified@2x.png" loading="lazy" alt="veri">
             </div>
             <div>
                 <div class="recruiter-text1">{{jobseekerData.recruiter.name}}</div>
@@ -57,8 +57,8 @@
             <el-divider style="margin: 0px;" />
             <div class="company-inf">
                 <div class="company-avatar-container">
-                    <img class="company-avatar" src="~/assets/img/male_us_default.png" alt="ava">
-                    <img class="company-avatar-passed" src="~/assets/img/ic_verified@2x.png" alt="veri">
+                    <img  class="company-avatar" src="~/assets/img/male_us_default.png" loading="lazy" alt="ava">
+                    <img  class="company-avatar-passed" src="~/assets/img/ic_verified@2x.png" loading="lazy" alt="veri">
                 </div>
                 <div class="company-inf-right">
                     <div class="company-name">{{jobseekerData.company.fullName}}</div>

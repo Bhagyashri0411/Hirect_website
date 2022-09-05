@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="schedule-a-call contact-ue-form">
-      <p class="schedule-title">Let us Simplify the Hiring Process</p>
+      <p class="schedule-title">{{ title}}</p>
       <p class="schedule-text">
-        Register to find your Next Hire. Get Started Soon.
+        {{ subtitle }}
       </p>
       <div class="input-container">
         <el-input id="user-name" v-model="getUserInf.userName" @focus="inputFocus(1)" placeholder="Name"
@@ -28,10 +28,26 @@
         <el-input id="user-email" v-model="getUserInf.userEmail" @focus="inputFocus(3)" placeholder="Official Email"
           class="input-item" />
         <p v-show="isUserEmailError" class="alertText">
-          Your work email is required
+          Enter valid work email
         </p>
       </div>
-      <div class="input-container-bottom">
+      <div class="input-container">
+         <el-input id="company-name" v-model="getUserInf.userCompanyName" @focus="inputFocus(4)"
+          placeholder="Company Name" class="inner-input-item" />
+        <p v-show="isCompanyNameError" class="alertText">
+          Your Company Name is Required
+        </p>
+      </div>
+      <div class="input-container">
+        <el-select id="user-position" v-model="getUserInf.userPosition" @focus="inputFocus(5)" class="inner-input-item"
+          placeholder="Designation">
+          <el-option v-for="item in positionOptions" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>
+        <p v-show="isUserPositionError" class="alertText" style="top: 65px">
+          Your Designation is Required
+        </p>
+      </div>
+      <!-- <div class="input-container-bottom">
         <el-input id="company-name" v-model="getUserInf.userCompanyName" @focus="inputFocus(4)"
           placeholder="Company Name" class="inner-input-item" />
         <el-select id="user-position" v-model="getUserInf.userPosition" @focus="inputFocus(5)" class="inner-input-item"
@@ -44,7 +60,7 @@
         <p v-show="isUserPositionError" class="alertText" style="left: 276px">
           Your Designation is Required
         </p>
-      </div>
+      </div> -->
       <el-checkbox v-model="getUserInf.isReceive" class="schedule-checkbox" style="color: #78787a; margin-left: 10px">I
         would like to receive updates via WhatsApp.</el-checkbox>
       <el-button type="primary" class="submitButton" :loading="isButtonLoading" @click="submitClick">Submit</el-button>
@@ -64,7 +80,7 @@
     </div>
     <el-dialog :visible.sync="dialogVisible" width="920px" :append-to-body="true" class="submit-dialog">
       <center>
-        <img src="~/assets/img/ic_congratulations.png" alt="ic_congratulations" class="ic_congratulations" />
+        <img  src="~/assets/img/ic_congratulations.png" loading="lazy" alt="ic_congratulations" class="ic_congratulations" />
         <p class="dialog_title">
           Congrats, Your Details are<br />Submitted Successfully.
         </p>
@@ -72,17 +88,17 @@
           We will get in touch with you in 30 minutes. Meanwhile,<br />Scan the
           QR Code to<span style="font-weight: bolder"> Download the App!</span>
         </p>
-        <img src="~/assets/img/qr_schedule.png" alt="qr_schedule" class="qr_schedule" />
+        <img  src="~/assets/img/qr_schedule.png" loading="lazy" alt="qr_schedule" class="qr_schedule" />
         <div class="download-container">
-          <img src="~/assets/img/btn_appstore.png" alt="btn_appstore" @click="appImgClickHandle" class="download_btn" />
-          <img src="~/assets/img/btn_googleplay.png" alt="btn_googleplay" @click="googleImgClickHandle"
+          <img  src="~/assets/img/btn_appstore.png" loading="lazy" alt="btn_appstore" @click="appImgClickHandle" class="download_btn" />
+          <img  src="~/assets/img/btn_googleplay.png" loading="lazy" alt="btn_googleplay" @click="googleImgClickHandle"
             class="download_btn" />
-          <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn"
+          <!-- <div class="downloadDialog-button-pkg-container" @mouseover="downloadPkgMouseIn"
             @mouseout="downloadPkgMouseOut">
-            <img src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" />
-            <img v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img"
-              src="~/assets/img/ic_download_guide.png" alt="download_guide" />
-          </div>
+            <img  src="~/assets/img/pkg_android.png" class="downloadDialog-button-pkg" @click="googlePkgClickHandle" loading="lazy" alt="google-play-badge"/>
+            <img  v-if="popoverImgShow" @mouseover="downloadPkgMouseIn" @click="openDownloadGuide" class="popover-img"
+              src="~/assets/img/ic_download_guide.png" loading="lazy" alt="download_guide" />
+          </div> -->
         </div>
       </center>
     </el-dialog>
@@ -92,6 +108,16 @@
 <script>
 export default {
   name: 'schedule-a-call',
+  props: {
+    title: {
+      type: String,
+      default: 'Let us Simplify the Hiring Process',
+    },
+    subtitle: {
+      type: String,
+      default: 'Register to find your Next Hire. Get Started Soon.',
+    },
+  },
   components: {},
   data() {
     return {
@@ -208,7 +234,7 @@ export default {
       } else {
         leadSourcePara = '';
       }
-      this.$ga.event('Leads', 'Submitted', 'form');
+      // this.$ga.event('Leads', 'Submitted', 'form');
       const formData = {
         __vtrftk: 'sid:3d4d1077ddbde35a14455b3381cf01cce7dcbe02,1626673660',
         publicid: 'db46e626a9177c57165bb18e99e676e3',
@@ -236,7 +262,7 @@ export default {
         position: 'in_recruiters_leads_popup',
       });
       // eslint-disable-next-line no-undef
-      fbq('track', 'LEAD');
+      // fbq('track', 'LEAD');
       this.clearFormData();
     },
     // click, check
@@ -246,12 +272,12 @@ export default {
         this.isUserNameError = true;
         return;
       }
-      if (this.getUserInf.phoneNumber.length < 10) {
+      if (this.getUserInf.phoneNumber.length < 10 || /[a-zA-Z!@#$%^&*()_+\-=;':"|,.<>/?]{1}/g.test(this.getUserInf.phoneNumber) === true || (/(6|7|8|9)\d{9}/g.test(this.getUserInf.phoneNumber)) !== true) {
         document.getElementById('phone-number').style.borderColor = '#EF444F';
         this.isPhoneNumberError = true;
         return;
       }
-      if (this.getUserInf.userEmail === '') {
+      if (this.getUserInf.userEmail === '' || (/(\w+)@(\w)*(\.\w{2,3})$/.test(this.getUserInf.userEmail) === false)) {
         document.getElementById('user-email').style.borderColor = '#EF444F';
         this.isUserEmailError = true;
         return;
@@ -295,11 +321,11 @@ export default {
       }
     },
     appImgClickHandle() {
-      this.$ga.event('click', 'ios', 'app', 2);
+      // this.$ga.event('click', 'ios', 'app', 2);
       window.open(this.iosDownloadAddressIN, '_blank');
     },
     googleImgClickHandle() {
-      this.$ga.event('click', 'android', 'app', 1);
+      // this.$ga.event('click', 'android', 'app', 1);
       window.open(this.androidDownloadAddressIN, '_blank');
     },
   },
@@ -324,8 +350,7 @@ export default {
   color: #000000;
   font-size: 16px;
   height: 42px;
-  left: 44px;
-  top: 492px;
+  position: relative;
 }
 
 .schedule-a-call.contact-ue-form .next-or {
@@ -392,7 +417,8 @@ h3.allredy-link a {
   position: absolute;
   font-size: 15px;
   color: #ef444f;
-  top: 65px;
+  top: 40px;
+  left: 10px;
 }
 
 .input-item {
@@ -478,7 +504,7 @@ h3.allredy-link a {
     width: 550px;
     margin: 0 auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 60px;
 
     .download_btn {

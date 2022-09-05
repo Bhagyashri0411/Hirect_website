@@ -99,8 +99,8 @@
     >
       <center>
         <img
-          src="~/assets/img/ic_congratulations.png"
-          alt="ic_congratulations"
+          src="~/assets/img/ic_congratulations.webp"
+          loading="lazy" alt="ic_congratulations"
           class="ic_congratulations"
         />
         <p class="dialog_title">
@@ -111,20 +111,20 @@
           QR code to<span style="font-weight: bolder"> download the app!</span>
         </p>
         <img
-          src="~/assets/img/qr_schedule.png"
-          alt="qr_schedule"
+          src="~/assets/img/qr_schedule.webp"
+          loading="lazy" alt="qr_schedule"
           class="qr_schedule"
         />
         <div class="download-container">
           <img
-            src="~/assets/img/btn_appstore.png"
-            alt="btn_appstore"
+            src="~/assets/img/btn_appstore.webp"
+            loading="lazy" alt="btn_appstore"
             @click="appImgClickHandle"
             class="download_btn"
           />
           <img
-            src="~/assets/img/btn_googleplay.png"
-            alt="btn_googleplay"
+            src="~/assets/img/btn_googleplay.webp"
+            loading="lazy" alt="btn_googleplay"
             @click="googleImgClickHandle"
             class="download_btn"
           />
@@ -134,7 +134,8 @@
             @mouseout="downloadPkgMouseOut"
           >
             <img
-              src="~/assets/img/pkg_android.png"
+              loading="lazy" alt="google-play-badge"
+              src="~/assets/img/pkg_android.webp"
               class="downloadDialog-button-pkg"
               @click="googlePkgClickHandle"
             />
@@ -143,8 +144,8 @@
               @mouseover="downloadPkgMouseIn"
               @click="openDownloadGuide"
               class="popover-img"
-              src="~/assets/img/ic_download_guide.png"
-              alt="download_guide"
+              src="~/assets/img/ic_download_guide.webp"
+              loading="lazy" alt="download_guide"
             />
           </div>
         </div>

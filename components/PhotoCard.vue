@@ -2,7 +2,7 @@
   <div class="container">
     <div class="photo-card" v-for="member in membersList" :key="member.id">
       <div class="photo-card-inner" @click="toggleModal(member)">
-        <img class="photo" :src="imgUrl(member.imgUrl)" />
+        <img class="photo" :src="imgUrl(member.imgUrl)" loading="lazy" :alt="member.name" />
         <p class="name">{{ member.name }}</p>
         <span class="designation">{{ member.designation }}</span>
       </div>
@@ -11,11 +11,12 @@
       <div class="modal">
         <div class="row model-image">
           <div class="column image-section">
-            <img :src="imgUrl(currentMember.imgUrl)" alt="" srcset="" />
+            <img :src="imgUrl(currentMember.imgUrl)" loading="lazy" :alt="currentMember.name" srcset="" />
           </div>
           <div class="column description" style="text-align: justify">
             <h3>
               <strong>{{ currentMember.name }}</strong>
+              <span class="designation-modal">{{ currentMember.fullDesignation }}</span>
             </h3>
             <span>{{ currentMember.description }}</span>
           </div>
@@ -41,9 +42,9 @@ export default {
   },
   methods: {
     toggleModal(member) {
-      if (this.$device.mobile) {
-        return;
-      }
+      // if (this.$device.isMobile) {
+      //   return;
+      // }
       this.showModal = !this.showModal;
       this.currentMember = member;
     },
@@ -59,7 +60,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 .photo-card:not(:first-child) {
   display: block;
   margin-left: 10px;
@@ -106,6 +107,14 @@ export default {
   font-size: 13px;
 }
 
+.designation-modal {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+  max-width: 74%;
+  text-align: start;
+}
+
 .modal-parent {
   position: fixed;
   top: 0;
@@ -128,7 +137,7 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 22px;
-  animation: 0.5s drop;
+  animation: drop .05s linear;
 }
 
 .model-image {
@@ -136,12 +145,19 @@ export default {
 }
 
 @keyframes drop {
-  0% {
+  /* 0% {
     top: -100px;
   }
 
   100% {
     top: 50%;
+  } */
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
   }
 }
 
@@ -177,5 +193,19 @@ section {
 
 .description h3 {
   margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 991px) {
+  .modal {
+    width: 100%;
+
+    .image-section {
+      display: none;
+    }
+  }
+
+  .modal-parent {
+    padding: 10px;
+  }
 }
 </style>

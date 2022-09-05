@@ -4,11 +4,18 @@
       <div class="Sgdef">+91 |</div>
       <input type="tel" maxlength="10" v-model="smsMobileNumber" class="form-search-mob"
         placeholder="Enter Mobile Number" />
-      <button class="btn btn-app" style="margin-left: 20px; border-radius:50px" @click="sendSms">
+      <el-button type="primary" class="btn btn-app" :loading="isButtonLoading" @click="sendSms">Get App</el-button>
+      <!-- <button class="btn btn-app" @click="sendSms">
         Get App
-      </button>
+      </button> -->
     </div>
-    <span v-if="isMobileError" class="alertText">{{ errorMsg }}</span>
+    <div class="input-container-mobile">
+      <a class="btn btn-app" style="margin-left: 20px; border-radius:50px"
+        href="https://hirectapp.onelink.me/DNX5/8ed93b94" target="_blank">
+        Get App
+      </a>
+    </div>
+    <span v-if="isMobileError" class="alertText" :class="errorClass">{{ errorMsg }}</span>
   </div>
 </template>
 <script>
@@ -18,19 +25,35 @@ export default {
       isMobileError: false,
       smsMobileNumber: '',
       errorMsg: '',
+      errorClass: '',
+      elementVisible: true,
+      isButtonLoading: false,
     };
   },
 
   methods: {
     async sendSms() {
+      this.isButtonLoading = true;
       // eslint-disable-next-line no-undef
       this.errorMsg = await this.$sendAppLink(this.smsMobileNumber, 'home_page_section');
+      // this.errorMsg = 'SMS request failed, Please try later';
       this.isMobileError = this.errorMsg !== '';
+      this.errorClass = this.errorMsg.indexOf('Success') > -1 ? 'success' : 'error';
+      this.smsMobileNumber = '';
+      this.isButtonLoading = false;
+
+      setTimeout(() => {
+        this.isMobileError = false;
+      }, 3000);
     },
   },
 };
 </script>
 <style lang="scss" scoped>
+.input-container-mobile {
+  display: none;
+}
+
 .input-container {
   display: flex;
   align-items: stretch;
@@ -87,18 +110,30 @@ export default {
   line-height: normal;
 }
 
+.btn-app:hover{
+  color: #0e101a;
+}
+
 .alertText {
+  position: absolute;
   font-size: 15px;
-  color: #ef444f;
   margin-left: 10px;
 }
+
+.error {
+    color: #ef444f;
+  }
+
+  .success{
+    color:#22bc84;
+  }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
   .btn-app {
     background-color: #2ce2a2;
     border-color: #2ce2a2;
     color: #0e101a;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     padding: 10px 30px;
     margin-left: 10px;
@@ -106,5 +141,23 @@ export default {
     width: 127px;
     line-height: normal;
   }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  .input-container {
+    display: none;
+  }
+
+  .input-container-mobile {
+    display: block;
+  }
+
+  button {
+    margin-top: 10px;
+    align-self: center;
+  }
+
 }
 </style>

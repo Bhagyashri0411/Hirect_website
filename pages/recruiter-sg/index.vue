@@ -3,7 +3,7 @@
   <div class="head_body">
     <section class="recruiter-section">
       <div class="containernewpage">
-        <img class="logostyle" src="~/assets/img/hirect-logo.png" alt="" />
+        <img  class="logostyle" src="~/assets/img/hirect-logo.png" loading="lazy" alt="Hirect Logo" />
       </div>
       <div class="recruiter-banner">
         <div class="containernewpage">
@@ -21,32 +21,32 @@
 
             <div class="schedule-div">
               <div class="px-0.5 py-0.5">
-                <newPage />
+                <RecruitersForm />
               </div>
             </div>
             <div class="recruiter-banner-details">
               <div class="recruiter-banner-imgborder">
                 <div>
-                  <img src="~/assets/img/check.jpg" class="image-new" alt="" />
+                  <img  src="~/assets/img/check.jpg" class="image-new" loading="lazy" alt="Ready to Connect Candidate Pool" />
                   <span class="imgtitle">Ready to Connect Candidate Pool</span>
                 </div>
                 <div>
-                  <img src="~/assets/img/check.jpg" class="image-new" alt="" />
+                  <img  src="~/assets/img/check.jpg" class="image-new" loading="lazy" alt="Dedicated Hiring Expert Support" />
                   <span class="imgtitle"> Dedicated Hiring Expert Support</span>
                 </div>
                 <div>
-                  <img src="~/assets/img/check.jpg" class="image-new" alt="" />
+                  <img  src="~/assets/img/check.jpg" class="image-new" loading="lazy" alt="Bulk Recruitment Solutions" />
                   <span class="imgtitle"> Bulk Recruitment Solutions</span>
                 </div>
                 <div>
-                  <img src="~/assets/img/check.jpg" class="image-new" alt="" />
+                  <img  src="~/assets/img/check.jpg" class="image-new" loading="lazy" alt="Affordable Skilled Talent" />
                   <span class="imgtitle"> Affordable Skilled Talent</span>
                 </div>
                 <div>
                   <img
                     src="~/assets/img/newpageimage.png"
                     class="card_content"
-                    alt=""
+                    loading="lazy" alt="Card"
                   />
                 </div>
               </div>
@@ -66,10 +66,15 @@
 <script>
 /* eslint-disable no-dupe-keys */
 export default {
-  components: {},
   head() {
     return {
       title: 'Hire Top Tech Talent from India',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/recruiter-sg',
+        },
+      ],
       meta: [
         {
           hid: 'description',
@@ -123,7 +128,7 @@ export default {
   // }
   jsonld() {
     return {
-      '@context': 'https://schema.org/',
+      '@context': 'https://schema.org/Organization',
       '@type': 'JobPosting',
       title: 'Job Posting for Employers',
       description:

@@ -24,14 +24,18 @@
                     enables recruiters to efficiently build a skilled workforce.
                   </p>
                   <div class="enteriprise-hiring-banner-img">
-                    <img src="~/assets/imgs/strategic-partnership.png" alt="" />
+                    <img
+                      src="~/assets/imgs/strategic-partnership.png"
+                      loading="lazy"
+                      alt="section image"
+                    />
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="Schedule-call">
-                <ConnectForm1 />
+                <ConnectForm />
               </div>
             </div>
           </div>
@@ -47,7 +51,7 @@
           <div class="col-md-12">
             <div class="enteriprise-AI-platform-heading">
               <h3 class="title-md">
-                What are the benifits of Enterprise Hiring Services?
+                What are the benefits of Enterprise Hiring Services?
               </h3>
             </div>
             <MultiStepSegment :stepData="stepFeedData" />
@@ -99,36 +103,47 @@
             <div class="col-md-12">
               <h3 class="title-sm">
                 Recruiters that have employed Enterprise
-                <span style="color: #2ce2a2">Hiring </span>services
+                <span style="color: #2ce2a2">Hiring </span>Services
               </h3>
               <div class="following-companies-jobs-list">
                 <ul class="following-companies-startups-logo-list">
                   <li>
-                    <img src="~/assets/imgs/websites-logo/Byju_s.png" alt="" />
+                    <img
+                      src="~/assets/imgs/websites-logo/Byju_s.png"
+                      loading="lazy"
+                      alt="Byjus"
+                    />
                   </li>
                   <li>
-                    <img src="~/assets/imgs/websites-logo/hp_logo.png" alt="" />
+                    <img
+                      src="~/assets/imgs/websites-logo/hp_logo.png"
+                      loading="lazy"
+                      alt="HP"
+                    />
                   </li>
                   <li>
                     <img
                       src="~/assets/imgs/websites-logo/emudra_logo.png"
-                      alt=""
+                      loading="lazy"
+                      alt="EMudra"
                     />
                   </li>
                   <li>
                     <img
                       src="~/assets/imgs/websites-logo/bajajfinserve.png"
-                      alt=""
+                      loading="lazy"
+                      alt="Bajaj Finserve"
                     />
                   </li>
                   <li>
                     <img
                       src="~/assets/imgs/websites-logo/technook.png"
-                      alt=""
+                      loading="lazy"
+                      alt="Technook"
                     />
                   </li>
                   <!-- <li>
-                    <img src="~/assets/imgs/websites-logo/Udaan.png" alt="" />
+                    <img  src="~/assets/imgs/websites-logo/Udaan.png" loading="lazy" alt="" />
                   </li> -->
                 </ul>
               </div>
@@ -150,13 +165,19 @@ export default {
   components: {},
   head() {
     return {
-      title: 'Free Job Posting for Employers | Best Recruitment App - Hirect',
+      title: 'Bulk Hiring | Mass Recruitment | Enterprise Hiring',
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://hirect.in/enterprise-hiring',
+        },
+      ],
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            'Free Job Portal connects highly matching jobseekers. Chat directly in-app and get the best candidates. Download Hirect to post a job for free online. ',
+            'Bulk Hiring, Mass Recruitment solution, Enterprise Hiring. Make your next Enterprise hiring on Hirect. Post a job for free. Post a Job With Ease ',
         },
       ],
     };
@@ -247,12 +268,12 @@ export default {
         {
           step: 1,
           imageSrc: 'Cost-effective.png',
-          title: 'Cost-effective',
+          title: 'Cost-Effective',
         },
         {
           step: 2,
           imageSrc: 'Time-efficient.png',
-          title: 'Time-efficient',
+          title: 'Time-Efficient',
         },
         {
           step: 3,
@@ -270,7 +291,7 @@ export default {
   },
   jsonld() {
     return {
-      '@context': 'https://schema.org/',
+      '@context': 'https://schema.org/Organization',
       '@type': 'JobPosting',
       title: 'Job Posting for Employers',
       description:
@@ -288,7 +309,7 @@ export default {
           '@type': 'ListItem',
           position: '1',
           name: 'Features',
-          item: 'https://www.hirect.in/recruiters',
+          item: 'https://www.hirect.in/connect',
         },
       ],
     };
@@ -313,7 +334,7 @@ export default {
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  min-width: 110%;
+  min-width: 100%;
 }
 
 .enteriprise-hiring-section {
@@ -328,16 +349,6 @@ export default {
 .enteriprise-hiring-banner {
   padding: 50px 0;
 }
-
-// .enteriprise-hiring-banner-img {
-//   // position: absolute;
-//   width: 558px;
-//   height: 356px;
-//   left: 131px;
-//   top: 450px;
-//   //   background: #c4c4c4;
-//   border-radius: 15px;
-// }
 
 // Hire Chat Section
 .enteriprise-Offerings-section {
@@ -373,7 +384,7 @@ export default {
 
 .available-list li:hover {
   transform: scale(1.1);
-  box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
+  box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25);
 }
 
 .available-list {
@@ -410,7 +421,7 @@ export default {
 .enteriprise-following-companies-section
   .following-companies-startups-logo-list
   li {
-  cursor: pointer;
+  // cursor: pointer;
   background-color: #ffffff;
   display: flex;
   padding: 0px 14px;
@@ -442,7 +453,6 @@ export default {
   border-radius: 100px;
   background: #2ce2a2;
   padding: 10px 0;
-  // margin: 50px 500px;
 }
 
 button.btn.eye-button {
@@ -473,9 +483,9 @@ button.btn.eye-button {
   border-radius: 24px;
   max-width: 476px;
   position: relative;
-  height: 96%;
+  height: 100%;
   left: 25%;
-  margin-top: 5%;
+  // margin-top: 5%;
 }
 
 // end following-companies-startups-logo
@@ -520,14 +530,14 @@ button.btn.eye-button {
 }
 
 @media only screen and (min-width: 300px) and (max-width: 767px) {
-   h3.title-md {
+  h3.title-md {
     font-size: 23px !important;
     margin-bottom: 25px;
   }
-
   .available-list {
     flex-direction: column;
     align-items: center;
+    margin: 0 0px;
   }
   .following-companies-startups-logo-list li {
     width: 48%;
@@ -546,6 +556,9 @@ button.btn.eye-button {
 
   .enteriprise-AI-platform-section .following-companies-startups-logo {
     padding-top: 50px;
+  }
+  .enteriprise-hiring-section {
+    padding-bottom: 20px;
   }
 
   .enteriprise-hiring-banner h1 {
@@ -568,11 +581,9 @@ button.btn.eye-button {
   }
 
   .enteriprise-hiring-banner-details {
-    padding: 0;
     padding-bottom: 50px;
     text-align: center;
     margin: auto;
-    padding-top: 40px;
   }
 
   .Schedule-call {
