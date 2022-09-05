@@ -1,14 +1,9 @@
 <template>
   <div class="container container-1">
-    <div class="photo-card" v-for="article in mediaList" :key="article.id">
+    <div class="photo-card" v-for="article in sentList" :key="article.id">
       <a :href="article.link" target="_blank">
         <div class="photo-card-inner">
-          <img
-            class="magzine-logo"
-            :src="imgSrc(article.logo)"
-            loading="lazy"
-            alt="logo"
-          />
+          <img class="magzine-logo" :src="imgSrc(article.logo)" loading="lazy" alt="logo" />
           <!-- <img
             class="photo"
             :src="imgSrc(article.imageSrc)"
@@ -30,7 +25,7 @@
 <script>
 export default {
   props: {
-    mediaList: {
+    sentList: {
       type: Array,
       required: true,
     },
@@ -55,11 +50,43 @@ export default {
 };
 </script>
 <style scoped>
+.container-1::-webkit-scrollbar {
+  height: 5px;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.container-1::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.container-1::-webkit-scrollbar-thumb {
+  position: relative;
+  background-color: var(--hirect-color);
+  height: 10px !important;
+  border-radius: 10px;
+}
+
+/* .container-1::-webkit-scrollbar-track-piece:end {
+  margin-right: 50px;
+}
+
+.container-1::-webkit-scrollbar-track-piece:start {
+  margin-left: 50px;
+} */
+
 .magzine-logo {
-  padding: 9px;
+  padding: 19px;
   height: 73px;
   width: auto;
   place-self: center;
+<<<<<<< HEAD
+  margin-top: 10%;
+=======
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 }
 .photo {
   padding: 8px;
@@ -76,6 +103,10 @@ export default {
   padding: 10px;
   font-weight: bold;
   /* height: 20%; */
+<<<<<<< HEAD
+  margin-top: 10%;
+=======
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
   color: black;
 }
 
@@ -89,10 +120,17 @@ export default {
   margin-left: 10px;
 }
 .photo-card-inner {
+<<<<<<< HEAD
+  height: 323px;
+  width: 260px;
+  display: grid;
+  grid-template-rows: 23% 45% 16%;
+=======
   height: 400px;
   width: 260px;
   display: grid;
   grid-template-rows: 15% 45% 25%;
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
   text-align: center;
   float: left;
   border-radius: 32px;
@@ -100,6 +138,10 @@ export default {
   margin: 32px;
   box-shadow: rgb(99 99 99 / 10%) 0px 5px 5px 5px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 .X {
   position: absolute;
   right: 20px;

@@ -1,11 +1,11 @@
 <template>
   <div class="container top-container">
     <ul class="ul-container">
-      <!-- <li class="list-items exp">Experience</li>
-            <li class="list-items">
-                <ExperienceSlider />
-            </li>
-            <hr /> -->
+      <li class="list-items exp">Experience</li>
+      <li class="list-items">
+        <ExperienceSlider />
+      </li>
+      <hr />
       <li class="list-items">
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
@@ -72,8 +72,9 @@
                 <li class="list-items">Bangalore</li>
                 <li class="list-items">Delhi</li>
                 <li class="list-items">Pune</li>
-                <li class="list-items" style="color:var(--hirect-color); font-weight:bold;">& many more
-                </li>
+              </ul>
+              <ul>
+                <li class="list-items" style="color:var(--hirect-color); font-weight:bold;">& many more</li>
               </ul>
             </div>
           </div>
@@ -96,8 +97,9 @@
                 <li class="list-items">Sales Executive</li>
                 <li class="list-items">Java Developer</li>
                 <li class="list-items">Customer Support</li>
-                <li class="list-items" style="color:var(--hirect-color); font-weight:bold;"> & many more
-                </li>
+              </ul>
+              <ul>
+                <li class="list-items" style="color:var(--hirect-color); font-weight:bold;"> & many more</li>
               </ul>
             </div>
           </div>
@@ -129,12 +131,12 @@ export default {
 
   methods: {
 
-    handleExperience(e) {
-      document.getElementById('ageOutputId').value = document.getElementById('ageInputId').value;
-      const exp = e.target.value;
-      // eslint-disable-next-line no-undef
-      $parent.handleExperience(exp);
-    },
+    // handleExperience(e) {
+    //   document.getElementById('ageOutputId').value = document.getElementById('ageInputId').value;
+    //   const exp = e.target.value;
+    //   // eslint-disable-next-line no-undef
+    //   $parent.handleExperience(exp);
+    // },
     handlePreferenceChange(e) {
       const q = e.target.parentElement.attributes.id.value;
       if (this.$device.isDesktopOrTablet) {

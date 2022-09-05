@@ -31,34 +31,39 @@
             <div class="row infographs">
               <div class="col-md-3">
                 <div class="image-placeholder">
-                  <img src="~/assets/imgs/verified-recruiters.svg" alt="" srcset=""/>
-                  </div>
-                  <p class="headline">190K+</p>
-                  <span>Verified Recruiters</span>
+                  <img src="~/assets/imgs/verified-recruiters.svg" alt="" srcset="" />
+                </div>
+                <p class="headline">190K+</p>
+                <span>Verified Recruiters</span>
               </div>
               <div class="col-md-3">
                 <div class="image-placeholder">
-                  <img src="~/assets/imgs/jobs-posted.svg" alt="" srcset=""/>
-                  </div>
-                  <p class="headline">500K+</p>
-                  <span>Posted Jobs</span>
+                  <img src="~/assets/imgs/jobs-posted.svg" alt="" srcset="" />
+                </div>
+                <p class="headline">500K+</p>
+                <span>Jobs Posted</span>
               </div>
               <div class="col-md-3">
                 <div class="image-placeholder">
-                  <img src="~/assets/imgs/chat-conversations.svg" alt="" srcset=""/>
-                  </div>
-                  <p class="headline">25M+</p>
-                  <span>Chat Conversations</span>
+                  <img src="~/assets/imgs/chat-conversations.svg" alt="" srcset="" />
+                </div>
+                <p class="headline">25M+</p>
+                <span>Chat Conversations</span>
               </div>
               <div class="col-md-3">
                 <div class="image-placeholder">
-                  <img src="~/assets/imgs/job-seekers.svg" alt="" srcset=""/>
-                  </div>
-                  <p class="headline">3.8M+</p>
-                  <span>Verified Candidates</span>
+                  <img src="~/assets/imgs/job-seekers.svg" alt="" srcset="" />
+                </div>
+                <p class="headline">3.8M+</p>
+                <span>Job Seekers</span>
               </div>
             </div>
           </div>
+          <!-- <div class="start-hiring-button">
+            <NuxtLink to="/connect" class="btn btn-app start-hiring">Start Hiring</NuxtLink>
+          </div> -->
+        </div>
+      </div>
           <!-- <div class="start-hiring-button">
             <NuxtLink to="/connect" class="btn btn-app start-hiring">Start Hiring</NuxtLink>
           </div> -->
@@ -106,48 +111,80 @@
             <div class="jobs-list">
               <ul class="available-list">
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/IT">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'IT' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span><span>IT Engineering</span> <br /><br /><span class="candi-value">685K+
                         Candidates</span></span>
                   </NuxtLink>
                 </li>
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/Operations">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'Operations' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span>Operations <br /><br /><span class="candi-value">490K+ Candidates
                       </span></span>
                   </NuxtLink>
                 </li>
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/BPO & KPO">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'BPO & KPO' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span>BPO & KPO <br /><br /><span class="candi-value">360K+ Candidates
                       </span></span>
                   </NuxtLink>
                 </li>
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/Sales & BD">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'Sales & BD' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span>Sales & BD<br /><br />
                       <span class="candi-value">350K+ Candidates </span></span>
                   </NuxtLink>
                 </li>
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/Finance">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'Finance' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span>Finance <br /><br /><span class="candi-value">320K+ Candidates</span></span>
                   </NuxtLink>
                 </li>
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/Marketing">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'Marketing' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span>Marketing<br /><br /><span class="candi-value">255K+ Candidates</span></span>
                   </NuxtLink>
                 </li>
                 <li>
+<<<<<<< HEAD
+                  <NuxtLink to="/hire/Personnel">
+=======
                   <NuxtLink  :to="{ name: 'search-job-seekers', params: { id: 'Personnel' }}">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                     <span>Personnel <br /><br /><span class="candi-value">215K+ Candidates
                       </span></span>
                   </NuxtLink>
                 </li>
                 <li>
                   <span style="text-align: center">
+<<<<<<< HEAD
+                    <NuxtLink class="nav-link" to="/hire">
+=======
                     <NuxtLink class="nav-link" to="/hire/candidates">
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-chevron-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -156,7 +193,11 @@
                       <br /><br />
                       <p style="font-size: 16px;">View More</p>
                     </NuxtLink>
+<<<<<<< HEAD
+
+=======
                     <!-- <div>View More</div> -->
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                   </span>
                 </li>
               </ul>
@@ -479,15 +520,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+<<<<<<< HEAD
+.infographs {
+  text-align: -webkit-center;
+  margin-bottom: 20px;
+}
+
+.headline {
+=======
 .infographs{
   text-align: -webkit-center;
   margin-bottom: 20px;
 }
 .headline{
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 5px !important;
 }
+<<<<<<< HEAD
+
+.image-placeholder {
+  width: 60px !important;
+  height: 60px;
+  border-radius: 50%;
+  padding-top: 5%;
+  background-color: #F2F4F8;
+}
+
+=======
 .image-placeholder{
   width: 60px !important;
     height: 60px;
@@ -495,6 +556,7 @@ export default {
     padding-top: 5%;
     background-color: #F2F4F8;
 }
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 .media-card-section {
   background-color: #f2f4f8;
 
@@ -903,10 +965,18 @@ export default {
 }
 
 @media only screen and (min-width: 336px) and (max-width: 767px) {
+<<<<<<< HEAD
+  .infographs div {
+    width: 50%;
+  }
+
+  .image-placeholder {
+=======
   .infographs div{
     width: 50%;
   }
   .image-placeholder{
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
     margin-top: 10%;
   }
 

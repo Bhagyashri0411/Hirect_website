@@ -1,30 +1,68 @@
 <template>
   <div class="wrapper">
     <Header />
-    <section class="milestone-section1">
-      <h2>
-        <strong>Media Coverage</strong>
-      </h2>
-    </section>
-    <section class="milestone-section">
-      <h2>
-        <strong>1. Press Release</strong>
-      </h2>
-      <MediaCard :mediaList="mediaList" />
-    </section>
-    <section class="milestone-section">
-      <h2>
-        <strong>2. Opinion Pieces </strong>
-      </h2>
-      <MediaCard :mediaList="mediaList" />
-    </section>
-    <section class="milestone-section">
-      <h2>
-        <strong>3. Profiling & Podcast</strong>
-      </h2>
-      <MediaCard :mediaList="mediaList" />
-    </section>
+    <div class="container">
+      <section class="milestone-section1">
+        <h2>
+          <strong>Media Coverage</strong>
+        </h2>
+      </section>
+      <section class="milestone-section">
+        <h2>
+          <strong>1. Press Release</strong>
+        </h2>
+        <MediaCard :sentList="pressList" />
+      </section>
+      <section class="milestone-section">
+        <h2>
+          <strong>2. Opinion Pieces </strong>
+        </h2>
+        <MediaCard :sentList="opinionsList" />
+      </section>
+      <section class="milestone-section">
+        <h2>
+          <strong>Podcast</strong>
+        </h2>
+        <div class="container podcast podcasts">
+          <iframe class="podcast-inner" style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/2iNmSKuh9icfBnANVAYKYb?utm_source=generator" width="50%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
+          <iframe class="podcast-inner" style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/6yJaQtWchim7DpUkQmMxet?utm_source=generator" width="50%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <iframe class="podcast-inner" style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/6rOmt60cHxx7vjAlsUtsjP?utm_source=generator" width="50%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <iframe class="podcast-inner" style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/4oH27RFr4s0soqZa0W4I0F?utm_source=generator" width="50%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <iframe class="podcast-inner" style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/5DoUyrgQuBP5AvQJt52SUb?utm_source=generator" width="50%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <iframe class="podcast-inner" style="border-radius:12px"
+            src="https://open.spotify.com/embed/episode/7IOGjfXNR2m49EWQAwTufo?utm_source=generator" width="50%"
+            height="352" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section class="milestone-section">
+        <h2>
+          <strong>4. Profiling </strong>
+        </h2>
+        <MediaCard :sentList="profilingList" />
+      </section>
+    </div>
     <!----scan-app start----------->
     <GetAppPage :eventName="'in_aboutus_bottom'" />
     <!----scan-app end----------->
@@ -37,6 +75,7 @@
 /* eslint-disable no-dupe-keys */
 import DownloadModal from '~/components/DownloadModal.vue';
 import MediaCard from '../../components/MediaCard.vue';
+import articles from './articles.json';
 
 export default {
   components: {
@@ -65,81 +104,9 @@ export default {
   data() {
     return {
       showModal: false,
-
-      mediaList: [
-        {
-          logo: 'BW-people-logo.webp',
-
-          imageSrc: 'publish1.webp',
-
-          headline:
-            'Hirect’s Latest Feature Allows Users To Search For Jobs ‘Nearby’',
-
-          date: '4 April, 2022',
-
-          link: 'http://bwpeople.businessworld.in/article/Hirect-s-Latest-Feature-Allows-Users-To-Search-For-Jobs-Nearby-/15-06-2022-432807/',
-        },
-        {
-          logo: 'myMobile.webp',
-
-          imageSrc: 'publish2.webp',
-
-          headline:
-            'Hirect App Review: A well-balanced platform for both companies and job seekers, with impressive interface',
-
-          date: '21 Feb, 2022',
-
-          link: 'https://www.mymobileindia.com/hirect-app-review/#gsc.tab=0',
-        },
-        {
-          logo: 'TOI_Logo.webp',
-
-          imageSrc: 'cxoImage.webp',
-
-          headline:
-            'Importance of practicing environmental ethics in workplace',
-
-          date: '16 May, 2022',
-
-          link: 'https://timesofindia.indiatimes.com/blogs/voices/importance-of-practicing-environmental-ethics-in-workplace/',
-        },
-        {
-          logo: 'BW-people-logo.webp',
-
-          imageSrc: 'publish1.webp',
-
-          headline:
-            'Hirect’s Latest Feature Allows Users To Search For Jobs ‘Nearby’',
-
-          date: '4 April, 2022',
-
-          link: 'http://bwpeople.businessworld.in/article/Hirect-s-Latest-Feature-Allows-Users-To-Search-For-Jobs-Nearby-/15-06-2022-432807/',
-        },
-        {
-          logo: 'myMobile.webp',
-
-          imageSrc: 'publish2.webp',
-
-          headline:
-            'Hirect App Review: A well-balanced platform for both companies and job seekers, with impressive interface',
-
-          date: '21 Feb, 2022',
-
-          link: 'https://www.mymobileindia.com/hirect-app-review/#gsc.tab=0',
-        },
-        {
-          logo: 'TOI_Logo.webp',
-
-          imageSrc: 'cxoImage.webp',
-
-          headline:
-            'Importance of practicing environmental ethics in workplace',
-
-          date: '16 May, 2022',
-
-          link: 'https://timesofindia.indiatimes.com/blogs/voices/importance-of-practicing-environmental-ethics-in-workplace/',
-        },
-      ],
+      pressList: articles.pressList,
+      opinionsList: articles.opinionsList,
+      profilingList: articles.profilingList
     };
   },
 
@@ -172,6 +139,38 @@ export default {
 
 <style lang="scss" scoped>
 /******* About Page ************/
+.podcast::-webkit-scrollbar {
+  height: 5px;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.podcast::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
+  background-color: white;
+}
+
+.podcast::-webkit-scrollbar-thumb {
+  position: relative;
+  background-color: var(--hirect-color);
+  height: 10px !important;
+  border-radius: 10px;
+}
+
+.podcast-inner {
+  margin-right: 5%;
+  width: 100%;
+}
+
+.podcasts {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 20px;
+}
 
 .mobile-hero {
   display: none;
@@ -181,12 +180,13 @@ export default {
   height: auto;
   margin-bottom: 40px;
 }
+
 .milestone-section h2 {
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   text-align: left;
-  margin-left: 212px;
+  margin-left: 5%;
 }
 
 .media-button {
@@ -206,9 +206,10 @@ export default {
   text-align: center;
   margin-bottom: 64px;
 }
+
 .milestone-section1 h2 {
   text-align: center;
-  margin-top: 96px;
+  margin-top: 4%;
   font-size: 60px;
 }
 
@@ -344,15 +345,18 @@ export default {
   .milestone-section1 {
     height: auto;
   }
+
   .milestone-section1 h2 {
     font-size: 40px;
     margin-top: 70px;
   }
+
   .milestone-section h2 {
     text-align: left;
     font-size: 20px;
     margin-left: 32px;
   }
+
   .about-section {
     padding: 35px 0;
   }

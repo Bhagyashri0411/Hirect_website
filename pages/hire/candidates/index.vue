@@ -25,7 +25,7 @@
 
         <div class="col-md-8" v-if="!loading">
           <CandidateCard :candidatesList="candidatesList" v-if="candidatesList.length" />
-          <FallbackPage v-else v-show="loading"/>
+          <FallbackPage v-else v-show="loading" />
           <button @click="ScheduleACallPopup" v-if="candidatesList.length" class="view-btn">View More</button>
         </div>
         <div v-else>
@@ -33,9 +33,10 @@
         </div>
       </div>
       <el-dialog :visible.sync="ScheduleCallVisible" class="schedule-dialog">
-        <RecruitersForm title="Connect with 3.8M+ verified jobseekers" subtitle="Register to find your Next Hire. Get Started Soon."/>
+        <RecruitersForm title="Connect with 3.8M+ verified jobseekers"
+          subtitle="Register to find your Next Hire. Get Started Soon." />
         <div class="enterprise-hiring text-center">
-            <NuxtLink to="/enterprise-hiring">Have Multiple Positions to Fill?</NuxtLink>
+          <NuxtLink to="/enterprise-hiring">Have Multiple Positions to Fill?</NuxtLink>
         </div>
       </el-dialog>
     </div>
@@ -44,6 +45,8 @@
 </template>
 
 <script>
+import { webRequest } from '../../../plugins/webRequest';
+
 export default {
   async mounted() {
     this.loading = true;
@@ -117,9 +120,9 @@ export default {
       if (this.checked.length) {
         const minSalary = (JSON.parse(this.checked)[0]);
         const maxSalary = (JSON.parse(this.checked)[1]);
-        this.candidatesList = await this.$webRequest(`filterCandidates?skills=${skill || ''}&location=${loc || ''}&min_sal=${minSalary}&max_sal=${maxSalary}`);
+        this.candidatesList = await this.$webRequest(`filterCandidates?skills=${skill || ''}&location=${loc || ''}&min_sal=${minSalary}&max_sal=${maxSalary}&min_exp=${this.minExp}&max_exp=${this.maxExp}`);
       } else {
-        this.candidatesList = await this.$webRequest(`filterCandidates?skills=${skill || ''}&location=${loc || ''}`);
+        this.candidatesList = await this.$webRequest(`filterCandidates?skills=${skill || ''}&location=${loc || ''}&min_exp=${this.minExp}&max_exp=${this.maxExp}`);
       }
 
       this.loading = false;
@@ -144,9 +147,9 @@ export default {
         if (e.target.checked) {
           this.loading = true;
           if (this.skill && this.location) {
-            this.candidatesList = await this.$webRequest(`filterCandidates?min_sal=${minSalary}&max_sal=${maxSalary}&skills=${this.skill}&location=${this.location}`);
+            this.candidatesList = await this.$webRequest(`filterCandidates?min_sal=${minSalary}&max_sal=${maxSalary}&skills=${this.skill}&location=${this.location}&min_exp=${this.minExp}&max_exp=${this.maxExp}`);
           } else {
-            this.candidatesList = await this.$webRequest(`filterCandidates?min_sal=${minSalary}&max_sal=${maxSalary}`);
+            this.candidatesList = await this.$webRequest(`filterCandidates?min_sal=${minSalary}&max_sal=${maxSalary}&min_exp=${this.minExp}&max_exp=${this.maxExp}`);
           }
 
           this.loading = false;
@@ -158,18 +161,32 @@ export default {
       }
     },
 
-    // async handleExperience(exp) {
-    //   this.loading = true;
-    //   const response = await fetch(`filterCandidates?min_exp=${min_exp}&max_exp=${max_exp}`);
-    //   this.flag = false;
-    //   this.loading = false;
-    //   this.candidatesList = await response.json();
-    //   if (this.candidatesList.length == 0) {
-    //     this.flag = true;
-    //   } else {
-    //     this.flag = false;
-    //   }
-    // },
+    async handleExperience(minExp, maxExp) {
+      this.minExp = minExp;
+      this.maxExp = maxExp;
+      this.loading = true;
+
+      if (this.checked.length) {
+        const minSalary = (JSON.parse(this.checked)[0]);
+        const maxSalary = (JSON.parse(this.checked)[1]);
+        this.candidatesList = await this.$webRequest(`filterCandidates?skills=${this.skill || ''}&location=${this.location || ''}&min_sal=${minSalary}&max_sal=${maxSalary}&min_exp=${minExp}&max_exp=${maxExp}`);
+      } else {
+        this.candidatesList = await this.$webRequest(`filterCandidates?skills=${this.skill || ''}&location=${this.location || ''}&min_exp=${minExp}&max_exp=${maxExp}`);
+      }
+
+      this.loading = false;
+      this.flag = false;
+
+      // const minSalary = (JSON.parse(this.checked)[0]);
+      // const maxSalary = (JSON.parse(this.checked)[1]);
+      // console.log("start experience");
+      // console.log(minExp + " " + maxExp);
+      // this.loading = true;
+      // this.candidatesList = await this.$webRequest(`filterCandidates?min_exp=${minExp}&max_exp=${maxExp}min_sal=${minSalary}&max_sal=${maxSalary}`);
+      // this.flag = false;
+      // this.loading = false;
+      // console.log("end experience");
+    },
   },
   data() {
     return {
@@ -180,6 +197,8 @@ export default {
       location: '',
       drawer: false,
       ScheduleCallVisible: false,
+      minExp: '',
+      maxExp: ''
     };
   },
 };
@@ -189,6 +208,7 @@ export default {
 .el-dialog__header {
   margin-bottom: 0px !important;
 }
+
 .el-dialog {
   border-radius: 30px;
 }

@@ -42,7 +42,7 @@
 export default {
   async mounted() {
     this.options1 = await this.$webRequest('skills');
-    if (Object.keys(this.$route.query).length && this.$route.query.location !== undefined) {
+    if (Object.keys(this.$route.query).length) {
       this.value = this.$route.query.skills;
       this.value1 = this.$route.query.location;
     } else {
@@ -66,7 +66,7 @@ export default {
         this.value = skills;
         this.value1 = location;
         this.$router.push({
-          path: 'hire/candidates',
+          path: '/hire/candidates',
           query: {
             skills,
             location,

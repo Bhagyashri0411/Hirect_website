@@ -3,9 +3,7 @@
     <Header />
     <section class="about-section">
       <h1 class="about-heading">
-        <strong
-          >About <span style="color: rgb(44, 226, 162)">Hirect</span></strong
-        >
+        <strong>About <span style="color: rgb(44, 226, 162)">Hirect</span></strong>
       </h1>
 
       <div class="container">
@@ -61,10 +59,15 @@
         <div class="row">
           <div class="col-md-12">
             <h2>
+<<<<<<< HEAD
+              <strong>Meet The
+                <span style="color: rgb(44, 226, 162)">Team</span></strong>
+=======
               <strong
                 >Meet The
                 <span style="color: rgb(44, 226, 162)">Team</span></strong
               >
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
             </h2>
             <div class="meet-team-list">
               <PhotoCard :members-list="peopleList" />
@@ -86,9 +89,13 @@
             <div class="row milestone-row py-4">
               <div class="col-md-6">
                 <h2>
+<<<<<<< HEAD
+                  <strong><span style="color: rgb(44, 226, 162)">190K+</span></strong>
+=======
                   <strong
                     ><span style="color: rgb(44, 226, 162)">190K+</span></strong
                   >
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                 </h2>
               </div>
               <div class="col-md-6" style="font-size: 14px">
@@ -103,9 +110,13 @@
             <div class="row milestone-row py-4">
               <div class="col-md-6">
                 <h2>
+<<<<<<< HEAD
+                  <strong><span style="color: rgb(44, 226, 162)">3.8M+</span></strong>
+=======
                   <strong
                     ><span style="color: rgb(44, 226, 162)">3.8M+</span></strong
                   >
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                 </h2>
               </div>
               <div class="col-md-6" style="font-size: 14px">
@@ -124,6 +135,10 @@
             <div class="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5981260167277!2d77.61025131514926!3d12.933531090880855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1599ebb05b63%3A0x751f37343a044d1b!2sHirect%20India%20-%20Startup%20Jobs%20%26%20Hiring!5e0!3m2!1sen!2sin!4v1657886405440!5m2!1sen!2sin"
+<<<<<<< HEAD
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+=======
                 width="600"
                 height="450"
                 style="border: 0"
@@ -131,6 +146,7 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
             </div>
           </div>
           <div class="col-md-6">
@@ -139,6 +155,17 @@
               <ul>
                 <li>
                   <span>
+<<<<<<< HEAD
+                    <img src="~/assets/imgs/location.png" loading="lazy" alt="location" /></span>Salarpuria Tower-II,
+                  2nd Floor, "B" Wing, Hosur Main Road,
+                  Koramangala, Bengaluru - 560034.
+                </li>
+                <li>
+                  <span><img src="~/assets/imgs/whatsapp.png" loading="lazy" alt="phone" /></span>+91 8446164920
+                </li>
+                <li>
+                  <span><img src="~/assets/imgs/email.png" loading="lazy" alt="mail" /></span>support@hirect.in
+=======
                     <img
                       src="~/assets/imgs/location.png"
                       loading="lazy"
@@ -161,12 +188,27 @@
                       loading="lazy"
                       alt="mail" /></span
                   >support@hirect.in
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </section>
+
+    <section class="milestone-section1">
+      <h2 style="text-align: center; margin-top:40px; margin-bottom:20px; font-size: 60px;">
+        <strong>Media Coverage</strong>
+      </h2>
+      <MediaCard :sentList="mediaList" />
+    </section>
+
+    <div class="media-button">
+      <NuxtLink to="/media-coverage" class="btn btn-app button1">View More</NuxtLink>
+    </div>
+=======
     </section>
 
     <section class="milestone-section1">
@@ -181,6 +223,7 @@
         >View More</NuxtLink
       >
     </div> -->
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 
     <GetAppPage :eventName="'in_aboutus_bottom'" />
 
@@ -395,9 +438,16 @@ export default {
 
 <style lang="scss" scoped>
 /******* About Page ************/
+<<<<<<< HEAD
+.container-1 {
+  overflow: hidden !important;
+}
+
+=======
 .container-1{
   overflow: hidden !important;
 }
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 .mobile-hero {
   display: none;
 }
@@ -450,6 +500,30 @@ export default {
   text-align: center;
   margin-bottom: 9px;
   font-size: 60px;
+<<<<<<< HEAD
+}
+
+.meet-team-section h2 {
+  text-align: center;
+  margin-bottom: 14px;
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+.milestone-section h2 {
+  text-align: center;
+  margin-bottom: 14px;
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+.milestone-section1 h2 {
+  text-align: center;
+  margin-bottom: 14px;
+  margin-top: 20px;
+  font-size: 60px;
+=======
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 }
 
 .meet-team-section h2 {
@@ -508,6 +582,155 @@ export default {
 .meet-team-list ul li:nth-child(2n) {
   margin-right: 0;
 }
+.get-in-touch {
+  padding-top: 85px;
+  padding-bottom: 70px;
+}
+
+.get-in-form {
+  border-radius: 20px;
+  background-color: #f1f4f7;
+  padding: 30px 40px;
+}
+
+.Bengaluru-list ul li img {
+  max-width: unset;
+}
+
+.get-in-form label {
+  color: #b4b4b4;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 10.68px;
+  margin-bottom: 13px;
+}
+
+.get-in-form input {
+  height: 48px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #0e101a;
+}
+
+.get-in-form label sup {
+  color: #eb5757;
+}
+
+.get-in-form .form-group {
+  margin-bottom: 25px;
+}
+
+.get-in-touch-form textarea {
+  height: 104px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.get-in-touch .row {
+  align-items: center;
+}
+
+.get-in-touch-form h4 {
+  color: #808080;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+
+p.support-in {
+  color: #808080;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+
+.support-in a {
+  color: #0e101a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.recruiter-form-img {
+  text-align: center;
+}
+
+.Bengaluru-Office {
+  background-color: #f1f4f7;
+  padding: 120px 0px;
+}
+
+.Bengaluru-list h1 {
+  color: #0e101a;
+  font-family: Helvetica;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+.Bengaluru-list ul li {
+  color: #808080;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.Bengaluru-list ul li span {
+  color: #000000;
+  padding-right: 15px;
+}
+
+.Bengaluru-list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.Bengaluru-Office .row {
+  align-items: center;
+}
+
+.Bengaluru-list {
+  margin-left: 100px;
+}
+
+.Bengaluru-list {
+  margin-left: 100px;
+}
+
+div.map-bg {
+  padding: 80px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 408px;
+}
+
+p.support-in {
+  margin-bottom: 0 !important;
+}
+
 .get-in-touch {
   padding-top: 85px;
   padding-bottom: 70px;
@@ -824,6 +1047,21 @@ p.support-in {
     margin-top: 20px;
     font-size: 40px;
   }
+<<<<<<< HEAD
+
+  .meet-team-section h2 {
+    font-size: 40px;
+  }
+
+  .milestone-section h2 {
+    font-size: 40px;
+  }
+
+  .milestone-section1 h2 {
+    font-size: 40px;
+  }
+
+=======
   .meet-team-section h2 {
     font-size: 40px;
   }
@@ -833,6 +1071,7 @@ p.support-in {
   .milestone-section1 h2 {
     font-size: 40px;
   }
+>>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
   .Bengaluru-Office {
     padding: 50px 0px;
   }
