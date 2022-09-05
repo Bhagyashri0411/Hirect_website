@@ -83,30 +83,28 @@ export default {
   height: 73px;
   width: auto;
   place-self: center;
-<<<<<<< HEAD
   margin-top: 10%;
-=======
->>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 }
+
 .photo {
   padding: 8px;
 }
+
 .media-button {
   text-align: center;
 }
+
 .button1 {
   border-radius: 10px;
   background-color: white;
 }
+
 .photo-card-inner p {
   font-size: 14px;
   padding: 10px;
   font-weight: bold;
   /* height: 20%; */
-<<<<<<< HEAD
   margin-top: 10%;
-=======
->>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
   color: black;
 }
 
@@ -115,22 +113,17 @@ export default {
   font-size: 16px;
   color: #4d5358;
 }
+
 .photo-card:not(:first-child) {
   display: block;
   margin-left: 10px;
 }
+
 .photo-card-inner {
-<<<<<<< HEAD
   height: 323px;
   width: 260px;
   display: grid;
   grid-template-rows: 23% 45% 16%;
-=======
-  height: 400px;
-  width: 260px;
-  display: grid;
-  grid-template-rows: 15% 45% 25%;
->>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
   text-align: center;
   float: left;
   border-radius: 32px;
@@ -138,10 +131,7 @@ export default {
   margin: 32px;
   box-shadow: rgb(99 99 99 / 10%) 0px 5px 5px 5px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 22d6192bd51c2652bd94517d0aa091bf4c5a844b
 .X {
   position: absolute;
   right: 20px;
@@ -158,16 +148,20 @@ section {
   display: grid;
   grid-auto-flow: column;
 }
+
 .column {
   padding: 10px;
 }
+
 .image-section img {
   border-radius: 15px;
 }
+
 .description {
   padding: 20px;
   font-size: 15px;
 }
+
 .description h3 {
   margin-bottom: 20px;
 }
